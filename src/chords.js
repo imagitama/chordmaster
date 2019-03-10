@@ -173,6 +173,24 @@ export const Chords = [
   },
 
   {
+    fullName: 'C sharp minor',
+    shortName: 'C#m',
+    strings: {
+      6: doNotPlayString
+    },
+    frets: {
+      4: barFret,
+      5: {
+        2: 2
+      },
+      6: {
+        3: 4,
+        4: 3
+      }
+    }
+  },
+
+  {
     fullName: 'D major',
     shortName: 'D',
     strings: {
