@@ -252,6 +252,7 @@ export const Chords = [
   {
     fullName: 'E flat',
     shortName: 'Eb',
+    alternativeShortName: 'D#',
     strings: {
       5: doNotPlayString,
       6: doNotPlayString
@@ -297,6 +298,7 @@ export const Chords = [
   {
     fullName: 'F sharp',
     shortName: 'F#',
+    alternativeShortName: 'Gb',
     frets: {
       2: barFret,
       3: {
@@ -345,6 +347,7 @@ export const Chords = [
   {
     fullName: 'G sharp',
     shortName: 'G#',
+    alternativeShortName: 'Ab',
     frets: {
       4: barFret,
       5: {

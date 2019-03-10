@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css';
 import chordsDefinition from './chords'
 import Chords from './components/chords/chords'
+import Header from './components/header/header'
 
 const populateCopiedChords = chords => chords.map(chordDefinition => {
   const copyFromName = chordDefinition.copyFrom
@@ -19,7 +20,10 @@ const populateCopiedChords = chords => chords.map(chordDefinition => {
 })
 
 const App = () => (
-  <Chords chords={populateCopiedChords(chordsDefinition)} />
+  <div>
+    <Header />
+    <Chords chords={populateCopiedChords(chordsDefinition)} />
+  </div>
 )
 
 export default App
