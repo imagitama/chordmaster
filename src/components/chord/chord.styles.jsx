@@ -1,30 +1,32 @@
 import styled from '@emotion/styled'
 
-const borderStyle = `0.1rem solid black`
+const stringColour = '#000'
+const stringWidth = '0.1rem'
+const chordChartWidth = '10rem'
 
-export const ChordsStyled = styled.div({
-  width: '10rem',
+export const ChordStyled = styled.div({
+  width: chordChartWidth,
   textAlign: 'center',
   margin: '2rem'
 })
 
 export const ChordChartStyled = styled.div({
-  width: '10rem',
-  borderTop: '0.2rem solid black',
+  width: chordChartWidth,
+  borderTop: `0.2rem solid ${stringColour}`,
   position: 'relative'
 })
 
 export const FretStyled = styled.div({
   width: '100%',
   height: '2rem',
-  borderBottom: '0.1rem solid black',
+  borderBottom: `${stringWidth} solid ${stringColour}`,
   position: 'relative'
 })
 
 export const StringStyled = styled.div(({ idx, fingerNumber }) => ({
-  width: '0.1rem',
+  width: stringWidth,
   height: '100%',
-  background: 'black',
+  background: stringColour,
   position: 'absolute',
   top: 0,
   left: `${((idx) / 5) * 100}%`,
@@ -32,8 +34,8 @@ export const StringStyled = styled.div(({ idx, fingerNumber }) => ({
   ':before': fingerNumber ? {
     content: `"${fingerNumber}"`,
     borderRadius: '100%',
-    background: 'black',
-    border: '0.5rem solid black',
+    background: stringColour,
+    border: `0.5rem solid ${stringColour}`,
     color: 'white',
     position: 'absolute',
     left: '-0.45rem',
@@ -76,4 +78,4 @@ export const FretNumberStyled = styled.div({
   right: '-2rem'
 })
 
-export default ChordsStyled
+export default ChordStyled
