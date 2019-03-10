@@ -8,7 +8,7 @@ export const Header = () => (
     </HeaderPullLeft>
     <HeaderPullRight>
       <HeaderButton>
-        Made by <a href="https://www.jaredwilliams.com.au">Jared Williams</a>
+        Made by <a href="http://www.jaredwilliams.com.au">Jared Williams</a>
       </HeaderButton>
       <HeaderButton>
         <a href="https://github.com/imagitama/chords" title="View the GitHub repo">GitHub</a>
