@@ -214,19 +214,14 @@ export const Chords = [
     fullName: 'D sharp',
     shortName: 'D#',
     alternativeShortName: 'Eb',
-    strings: {
-      5: doNotPlayString,
-      6: doNotPlayString
-    },
-    frets: {
-      3: {
-        1: 2,
-        3: 1
-      },
-      4: {
-        2: 3
-      }
-    }
+    copyFrom: 'Eb'
+  },
+
+  {
+    fullName: 'D flat',
+    shortName: 'Db',
+    alternativeShortName: 'C#',
+    copyFrom: 'C#'
   },
 
   {
@@ -344,16 +339,7 @@ export const Chords = [
     fullName: 'G flat',
     shortName: 'Gb',
     alternativeShortName: 'F#',
-    frets: {
-      2: barFret,
-      3: {
-        3: 2
-      },
-      4: {
-        4: 4,
-        5: 3
-      }
-    }
+    copyFrom: 'F#'
   },
 
   {
