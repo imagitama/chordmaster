@@ -7,24 +7,33 @@ const stringArray = [6, 5, 4, 3, 2, 1]
 const getIsChordHigh = frets => {
   const keys = Object.keys(frets)
 
-  const lastKey = keys[keys.length - 1]
+  const firstKey = keys[0]
 
-  return lastKey > 4
+  return firstKey > 2
 }
 
-export const Chords = ({ fullName, shortName, alternativeShortName, strings = {}, frets }) => {
+const populateFretNumbers = frets => {
+  const firstFretNumber = parseInt(Object.keys(frets).shift())
+
+  return firstFretNumber > 2 ? [firstFretNumber, firstFretNumber+1, firstFretNumber+2, firstFretNumber+3] : [1, 2, 3, 4]
+}
+
+export const Chords = ({ fullName, shortName, alternativeShortName, strings = {}, frets = {} }) => {
   const isChordHigh = getIsChordHigh(frets)
   const firstFretNumber = Object.keys(frets).shift()
+
+  const fretNumbers = populateFretNumbers(frets)
 
   return (
     <ChordsStyled>
       <span title={fullName}>{shortName}</span> {alternativeShortName ? `(${alternativeShortName})` : ''}
       <StringStatesStyled>
-        {stringArray.map((stringNumber, idx) => <StringState key={stringNumber} idx={idx} doNotPlayString={strings[stringNumber] === doNotPlayString} />)}
+        {stringArray.map((stringNumber, idx) =>
+          <StringState key={stringNumber} idx={idx} doNotPlayString={strings[stringNumber] === doNotPlayString} />)}
       </StringStatesStyled>
       <ChordChartStyled>
         {isChordHigh ? <FretNumberStyled>{`${firstFretNumber}fr`}</FretNumberStyled> : ''}
-        {[1, 2, 3, 4].map(fretNumber => <Fret key={fretNumber} fingers={frets[isChordHigh ? fretNumber + 3 : fretNumber]} />)}
+        {fretNumbers.map(fretNumber => <Fret key={fretNumber} fingers={frets[fretNumber]} />)}
       </ChordChartStyled>
     </ChordsStyled>
   )
