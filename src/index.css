@@ -16,3 +16,8 @@ code {
 * {
   box-sizing: border-box;
 }
+
+a {
+  font-family: inherit;
+  color: inherit;
+}

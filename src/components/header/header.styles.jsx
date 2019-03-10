@@ -5,7 +5,21 @@ export const HeaderStyled = styled.header({
   color: 'white',
   width: '100%',
   padding: '1rem',
-  marginBottom: '1rem'
+  marginBottom: '1rem',
+  display: 'flex',
+  justifyContent: 'space-between'
+})
+
+export const HeaderPullLeft = styled.div({
+  //flex: 1
+})
+
+export const HeaderPullRight = styled.div({
+  display: 'flex'
+})
+
+export const HeaderButton = styled.div({
+  marginLeft: '1rem'
 })
 
 export default HeaderStyled
