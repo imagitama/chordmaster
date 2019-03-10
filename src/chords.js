@@ -44,8 +44,8 @@ export const Chords = [
         3: 2,
       },
       6: {
-        4: 3,
-        5: 4
+        4: 4,
+        5: 3
       }
     }
   },
@@ -322,6 +322,18 @@ export const Chords = [
       3: {
         3: 2
       },
+      4: {
+        4: 4,
+        5: 3
+      }
+    }
+  },
+
+  {
+    fullName: 'F sharp minor',
+    shortName: 'F#m',
+    frets: {
+      2: barFret,
       4: {
         4: 4,
         5: 3
