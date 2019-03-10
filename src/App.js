@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import chordsDefinition from './chords'
-import Chords from './components/chord/chord' 
+import chords from './chords'
+import Chords from './components/chords/chords' 
 
 const App = () => (
-  <div>
-    {chordsDefinition.map(chordData => (
-      <Chords key={chordData.fullName} {...chordData} />
-    ))}
-  </div>
+  <Chords chords={chords} />
 )
 
 export default App

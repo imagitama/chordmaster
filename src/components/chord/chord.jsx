@@ -1,5 +1,5 @@
 import React from 'react'
-import { ChordsStyled, ChordChartStyled, BarFretStyled, FretNumberStyled, FretStyled, StringStyled, StringStatesStyled, StringStateStyled } from './chord.styles';
+import { ChordsStyled, ChordChartStyled, BarFretStyled, FretNumberStyled, FretStyled, StringStyled, StringStatesStyled, StringStateStyled } from './chord.styles'
 import { doNotPlayString, barFret } from '../../chords'
 
 const stringArray = [6, 5, 4, 3, 2, 1]
@@ -18,7 +18,7 @@ const populateFretNumbers = frets => {
   return firstFretNumber > 2 ? [firstFretNumber, firstFretNumber+1, firstFretNumber+2, firstFretNumber+3] : [1, 2, 3, 4]
 }
 
-export const Chords = ({ fullName, shortName, alternativeShortName, strings = {}, frets = {} }) => {
+export const Chord = ({ fullName, shortName, alternativeShortName, strings = {}, frets = {} }) => {
   const isChordHigh = getIsChordHigh(frets)
   const firstFretNumber = Object.keys(frets).shift()
 
@@ -56,4 +56,4 @@ const String = ({ idx, stringNumber, fingerNumber }) => (
   <StringStyled idx={idx} stringNumber={stringNumber} fingerNumber={fingerNumber} />
 )
 
-export default Chords
+export default Chord
