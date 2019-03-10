@@ -1,20 +1,34 @@
 import React from 'react'
-import { ChordsStyled, ChordChartStyled, FretStyled, StringStyled, StringStatesStyled, StringStateStyled } from './chord.styles';
-import { doNotPlayString } from '../../chords'
+import { ChordsStyled, ChordChartStyled, BarFretStyled, FretNumberStyled, FretStyled, StringStyled, StringStatesStyled, StringStateStyled } from './chord.styles';
+import { doNotPlayString, barFret } from '../../chords'
 
 const stringArray = [6, 5, 4, 3, 2, 1]
 
-export const Chords = ({ fullName, shortName, strings, frets }) => (
-  <ChordsStyled>
-    <span title={fullName}>{shortName}</span>
-    <StringStatesStyled>
-      {stringArray.map((stringNumber, idx) => <StringState key={stringNumber} idx={idx} doNotPlayString={strings[stringNumber] === doNotPlayString} />)}
-    </StringStatesStyled>
-    <ChordChartStyled>
-      {[1, 2, 3, 4].map(fretNumber => <Fret key={fretNumber} fingers={frets[fretNumber]} />)}
-    </ChordChartStyled>
-  </ChordsStyled>
-)
+const getIsChordHigh = frets => {
+  const keys = Object.keys(frets)
+
+  const lastKey = keys[keys.length - 1]
+
+  return lastKey > 4
+}
+
+export const Chords = ({ fullName, shortName, alternativeShortName, strings = {}, frets }) => {
+  const isChordHigh = getIsChordHigh(frets)
+  const firstFretNumber = Object.keys(frets).shift()
+
+  return (
+    <ChordsStyled>
+      <span title={fullName}>{shortName}</span> {alternativeShortName ? `(${alternativeShortName})` : ''}
+      <StringStatesStyled>
+        {stringArray.map((stringNumber, idx) => <StringState key={stringNumber} idx={idx} doNotPlayString={strings[stringNumber] === doNotPlayString} />)}
+      </StringStatesStyled>
+      <ChordChartStyled>
+        {isChordHigh ? <FretNumberStyled>{`${firstFretNumber}fr`}</FretNumberStyled> : ''}
+        {[1, 2, 3, 4].map(fretNumber => <Fret key={fretNumber} fingers={frets[isChordHigh ? fretNumber + 3 : fretNumber]} />)}
+      </ChordChartStyled>
+    </ChordsStyled>
+  )
+}
 
 const StringState = ({ idx, doNotPlayString }) => (
   <StringStateStyled idx={idx}>
@@ -22,9 +36,10 @@ const StringState = ({ idx, doNotPlayString }) => (
   </StringStateStyled>
 )
 
-const Fret = ({ fingers = {} }) => (
+const Fret = ({ fingers = {}, isChordHigh = false, fretNumber }) => (
   <FretStyled>
-    {stringArray.map((stringNumber, idx) => <String key={stringNumber} idx={idx} stringNumber={stringNumber} fingerNumber={fingers[stringNumber]} />)}
+    {fingers === barFret ? <BarFretStyled /> : null}
+    {stringArray.map((stringNumber, idx) => <String key={stringNumber} idx={idx} stringNumber={stringNumber} fingerNumber={fingers !== barFret && fingers[stringNumber]} />)}
   </FretStyled>
 )
 

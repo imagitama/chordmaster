@@ -11,6 +11,7 @@ export const ChordsStyled = styled.div({
 export const ChordChartStyled = styled.div({
   width: '10rem',
   borderTop: '0.2rem solid black',
+  position: 'relative'
 })
 
 export const FretStyled = styled.div({
@@ -58,5 +59,21 @@ export const StringStateStyled = styled.div(({ idx, doNotPlayString }) => ({
   width: `${100 / 6}%`,
   margin: '-0.5rem 0 0 -0.8rem'
 }))
+
+export const BarFretStyled = styled.div({
+  width: 'calc(100% + 1rem)',
+  height: '0.5rem',
+  background: 'black',
+  borderRadius: '0.5rem',
+  position: 'absolute',
+  top: '0.7rem',
+  left: '-0.5rem',
+})
+
+export const FretNumberStyled = styled.div({
+  position: 'absolute',
+  top: 0,
+  right: '-2rem'
+})
 
 export default ChordsStyled
