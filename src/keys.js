@@ -17,7 +17,7 @@ export const keys = [
   {
     fullName: 'Key of A major',
     shortName: 'A',
-    chords: [{
+    chords: {
       [I]: 'A', 
       [ii]: 'B',
       [iii]: 'C#',
@@ -25,7 +25,7 @@ export const keys = [
       [V]: 'E',
       [vi]: 'F#',
       [vii]: 'G#'
-    }],
+    },
     chordProgressions: [
       [I, IV, V],
       [I, vi, IV, V],

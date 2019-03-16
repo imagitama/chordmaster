@@ -4,11 +4,12 @@ const stringColour = '#000'
 const stringWidth = '0.1rem'
 const chordChartWidth = '10rem'
 
-export const ChordStyled = styled.div({
+export const ChordStyled = styled.div(({ isHighlighted }) => ({
   width: chordChartWidth,
   textAlign: 'center',
-  margin: '2rem'
-})
+  margin: '2rem',
+  opacity: isHighlighted ? 1 : 0.3
+}))
 
 export const ChordChartStyled = styled.div({
   width: chordChartWidth,

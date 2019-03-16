@@ -1,6 +1,8 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { ChordStyled, ChordChartStyled, BarFretStyled, FretNumberStyled, FretStyled, StringStyled, StringStatesStyled, StringStateStyled } from './chord.styles'
 import { doNotPlayString, barFret } from '../../chords'
+import { isChordShortNameInKey, getKeyFromShortName } from '../../utils'
 
 const stringArray = [6, 5, 4, 3, 2, 1]
 
@@ -11,13 +13,14 @@ const populateFretNumbers = frets => {
   return firstFretNumber > 2 ? [firstFretNumber, firstFretNumber+1, firstFretNumber+2, firstFretNumber+3] : [1, 2, 3, 4]
 }
 
-export const Chord = ({ fullName, shortName, alternativeShortName, strings = {}, frets = {} }) => {
+export const Chord = ({ selectedKeyShortName, fullName, shortName, alternativeShortName, strings = {}, frets = {} }) => {
+  const shouldBeHighlighted = selectedKeyShortName ? isChordShortNameInKey(getKeyFromShortName(selectedKeyShortName), shortName) : true
   const isChordHigh = getIsChordHigh(frets)
   const firstFretNumber = Object.keys(frets).shift()
   const fretNumbers = populateFretNumbers(frets)
 
   return (
-    <ChordStyled>
+    <ChordStyled isHighlighted={shouldBeHighlighted}>
       <span title={fullName}>{shortName}</span> {alternativeShortName ? `(${alternativeShortName})` : ''}
       <StringStatesStyled>
         {stringArray.map((stringNumber, idx) =>
@@ -48,4 +51,6 @@ const String = ({ idx, stringNumber, fingerNumber }) => (
   <StringStyled idx={idx} stringNumber={stringNumber} fingerNumber={fingerNumber} />
 )
 
-export default Chord
+const mapStateToProps = ({ keys: { selectedKeyShortName } }) => ({ selectedKeyShortName })
+
+export default connect(mapStateToProps)(Chord)
