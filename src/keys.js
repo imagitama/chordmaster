@@ -32,6 +32,7 @@ export const keys = [
       [ii, V, I]
     ]
   },
+
   {
     fullName: 'Key of B major',
     shortName: 'B',
@@ -49,7 +50,26 @@ export const keys = [
       [I, vi, IV, V],
       [ii, V, I]
     ]
-  }
+  },
+
+  {
+    fullName: 'Key of C major',
+    shortName: 'C',
+    chords: {
+      [I]: 'C',
+      [ii]: 'Dm',
+      [iii]: 'Em',
+      [IV]: 'F',
+      [V]: 'G',
+      [vi]: 'Am',
+      [vii]: 'Bm'
+    },
+    chordProgressions: [
+      [I, IV, V],
+      [I, vi, IV, V],
+      [ii, V, I]
+    ]
+  },
 ]
 
 export default keys
