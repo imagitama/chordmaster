@@ -107,6 +107,25 @@ export const keys = [
       [I, vi, IV, V],
       [ii, V, I]
     ]
+  },
+
+  {
+    fullName: 'Key of F major',
+    shortName: 'F',
+    chords: {
+      [I]: 'F',
+      [ii]: 'Gm',
+      [iii]: 'Am',
+      [IV]: 'Bb',
+      [V]: 'C',
+      [vi]: 'Dm',
+      [vii]: 'Em'
+    },
+    chordProgressions: [
+      [I, IV, V],
+      [I, vi, IV, V],
+      [ii, V, I]
+    ]
   }
 ]
 

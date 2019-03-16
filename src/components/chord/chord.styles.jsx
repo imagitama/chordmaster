@@ -8,7 +8,7 @@ export const ChordStyled = styled.div(({ isHighlighted }) => ({
   width: chordChartWidth,
   textAlign: 'center',
   margin: '2rem',
-  opacity: isHighlighted ? 1 : 0.3
+  opacity: isHighlighted ? 1 : 0.1
 }))
 
 export const ChordChartStyled = styled.div({
