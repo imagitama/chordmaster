@@ -126,6 +126,20 @@ export const keys = [
       [I, vi, IV, V],
       [ii, V, I]
     ]
+  },
+
+  {
+    fullName: 'Key of G major',
+    shortName: 'G',
+    chords: {
+      [I]: 'G',
+      [ii]: 'Am',
+      [iii]: 'Bm',
+      [IV]: 'C',
+      [V]: 'D',
+      [vi]: 'Em',
+      [vii]: 'F#m'
+    }
   }
 ]
 
