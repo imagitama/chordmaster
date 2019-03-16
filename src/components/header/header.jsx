@@ -1,10 +1,16 @@
 import React from 'react'
 import HeaderStyled, { HeaderPullLeft, HeaderPullRight, HeaderButton } from './header.styles'
+import KeySelector from '../key-selector/key-selector'
 
 export const Header = () => (
   <HeaderStyled>
     <HeaderPullLeft>
-      Chords
+      <HeaderButton>
+        Chords
+      </HeaderButton>
+      <HeaderButton>
+        <KeySelector />
+      </HeaderButton>
     </HeaderPullLeft>
     <HeaderPullRight>
       <HeaderButton>

@@ -1,7 +1,7 @@
 export const doNotPlayString = 'DoNotPlayString'
 export const barFret = 'BarFret'
 
-export const Chords = [
+export const chords = [
   {
     fullName: 'A major',
     shortName: 'A',
@@ -391,4 +391,4 @@ export const Chords = [
   }
 ]
 
-export default Chords
+export default chords

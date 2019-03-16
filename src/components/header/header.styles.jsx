@@ -11,7 +11,7 @@ export const HeaderStyled = styled.header({
 })
 
 export const HeaderPullLeft = styled.div({
-  //flex: 1
+  display: 'flex'
 })
 
 export const HeaderPullRight = styled.div({
