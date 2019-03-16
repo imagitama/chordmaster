@@ -5,3 +5,8 @@ export const selectKey = keyShortName => ({
     keyShortName
   }
 })
+
+export const TOGGLE_SORT_BY_SEQUENCE = 'TOGGLE_SORT_BY_SEQUENCE'
+export const toggleSortBySequence = () => ({
+  type: TOGGLE_SORT_BY_SEQUENCE
+})

@@ -1,7 +1,8 @@
-import { SELECT_KEY } from './actions'
+import { SELECT_KEY, TOGGLE_SORT_BY_SEQUENCE } from './actions'
 
 const defaultState = {
-  selectedKeyShortName: ''
+  selectedKeyShortName: '',
+  sortBySequence: false
 }
 
 export const reducer = (state = defaultState, action) => {
@@ -10,6 +11,11 @@ export const reducer = (state = defaultState, action) => {
       return {
         ...state,
         selectedKeyShortName: action.payload.keyShortName
+      }
+    case TOGGLE_SORT_BY_SEQUENCE:
+      return {
+        ...state,
+        sortBySequence: !state.sortBySequence
       }
     default: return state
   }
