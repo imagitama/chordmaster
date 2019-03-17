@@ -11,7 +11,8 @@ export const reducer = (state = defaultState, action) => {
     case SELECT_KEY:
       return {
         ...state,
-        selectedKeyShortName: action.payload.keyShortName
+        selectedKeyShortName: action.payload.keyShortName,
+        selectedChordProgressionIdx: null
       }
     case TOGGLE_SORT_BY_SEQUENCE:
       return {
