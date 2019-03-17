@@ -70,6 +70,7 @@ const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx
   return (
     <div>
       <Header />
+      {chords.length && <OutputMessage message="Type a chord name to search" />}
       {chords.length ? <Chords chords={chords} /> : <OutputMessage message="No search results" />}
       <Search />
     </div>
