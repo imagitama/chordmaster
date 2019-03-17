@@ -4,6 +4,7 @@ const III = 'III'
 const IV = 'IV'
 const V = 'V'
 const VI = 'VI'
+const VII = 'VII'
 
 const i = 'i'
 const ii = 'ii'
@@ -106,6 +107,28 @@ export const keys = [
       [I, IV, V],
       [I, vi, IV, V],
       [ii, V, I]
+    ]
+  },
+
+  {
+    fullName: 'Key of E minor',
+    shortName: 'Em',
+    chords: {
+      [i]: 'Em',
+      [ii]: 'F#o', // todo: add to chords?
+      [III]: 'G',
+      [iv]: 'Am',
+      [v]: 'Bm',
+      [VI]: 'C',
+      [VII]: 'D'
+    },
+    chordProgressions: [
+      [i, VI, VII],
+      [i, iv, VII],
+      [i, iv, v],
+      [i, VI, III, VII],
+      [i, VI, III, VII],
+      [ii, v, i]
     ]
   },
 

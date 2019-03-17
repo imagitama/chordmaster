@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const ToggleInput = ({ isSelected, label, onChange }) => (
+export const ToggleInput = ({ isEnabled, label, onChange }) => (
   <span>
-    <input type="checkbox" onChange={onChange} checked={isSelected} />
+    <input type="checkbox" onChange={() => onChange()} checked={isEnabled} />
     {label}
   </span>
 )
