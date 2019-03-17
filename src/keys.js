@@ -162,7 +162,12 @@ export const keys = [
       [V]: 'D',
       [vi]: 'Em',
       [vii]: 'F#m'
-    }
+    },
+    chordProgressions: [
+      [I, IV, V],
+      [I, vi, IV, V],
+      [ii, V, I]
+    ]
   }
 ]
 

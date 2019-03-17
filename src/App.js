@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import chordsDefinition from './chords'
 import Chords from './components/chords/chords'
 import Header from './components/header/header'
+import Search from './components/search/search'
 import { getKeyFromShortName, isChordShortNameInKey } from './utils'
 
 const populateCopiedChords = chords => chords.map(chordDefinition => {
@@ -45,7 +46,12 @@ const filterChordsByChordProgression = (chords, selectedKeyShortName, selectedCh
     .sort((chordA, chordB) => chordProgressionShortNames.indexOf(chordA.shortName) - chordProgressionShortNames.indexOf(chordB.shortName))
 }
 
-const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx }) => {
+const filterChordsBySearchTerm = (chords, searchTerm) =>
+  chords.filter(({ shortName }) =>
+    shortName.toLowerCase().includes(searchTerm.toLowerCase())
+  )
+
+const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm }) => {
   let chords = populateCopiedChords(chordsDefinition)
 
   if (selectedKeyShortName && sortBySequence) {
@@ -56,10 +62,15 @@ const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx
     chords = filterChordsByChordProgression(chords, selectedKeyShortName, selectedChordProgressionIdx)
   }
 
+  if (searchTerm) {
+    chords = filterChordsBySearchTerm(chords, searchTerm)
+  }
+
   return (
     <div>
       <Header />
       <Chords chords={chords} />
+      <Search />
     </div>
   )
 }
@@ -70,12 +81,16 @@ const mapStateToProps =
       selectedKeyShortName,
       sortBySequence,
       selectedChordProgressionIdx
+    },
+    chords: {
+      searchTerm
     }
   }) =>
   ({ 
     selectedKeyShortName, 
     sortBySequence, 
-    selectedChordProgressionIdx
+    selectedChordProgressionIdx,
+    searchTerm
   })
 
 export default connect(mapStateToProps)(App)
