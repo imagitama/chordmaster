@@ -2,7 +2,7 @@ import { SELECT_KEY, TOGGLE_SORT_BY_SEQUENCE, SELECT_CHORD_PROGRESSION } from '.
 
 const defaultState = {
   selectedKeyShortName: '',
-  sortBySequence: false,
+  sortBySequence: true,
   selectedChordProgressionIdx: null
 }
 
