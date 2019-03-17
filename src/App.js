@@ -4,6 +4,7 @@ import chordsDefinition from './chords'
 import Chords from './components/chords/chords'
 import Header from './components/header/header'
 import Search from './components/search/search'
+import OutputMessage from './components/output-message/output-message'
 import { getKeyFromShortName, isChordShortNameInKey } from './utils'
 
 const populateCopiedChords = chords => chords.map(chordDefinition => {
@@ -69,7 +70,7 @@ const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx
   return (
     <div>
       <Header />
-      <Chords chords={chords} />
+      {chords.length ? <Chords chords={chords} /> : <OutputMessage message="No search results" />}
       <Search />
     </div>
   )
