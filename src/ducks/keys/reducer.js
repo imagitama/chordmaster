@@ -1,8 +1,9 @@
-import { SELECT_KEY, TOGGLE_SORT_BY_SEQUENCE } from './actions'
+import { SELECT_KEY, TOGGLE_SORT_BY_SEQUENCE, SELECT_CHORD_PROGRESSION } from './actions'
 
 const defaultState = {
   selectedKeyShortName: '',
-  sortBySequence: false
+  sortBySequence: false,
+  selectedChordProgressionIdx: null
 }
 
 export const reducer = (state = defaultState, action) => {
@@ -16,6 +17,11 @@ export const reducer = (state = defaultState, action) => {
       return {
         ...state,
         sortBySequence: !state.sortBySequence
+      }
+    case SELECT_CHORD_PROGRESSION:
+      return {
+        ...state,
+        selectedChordProgressionIdx: action.payload.chordProgressionIdx
       }
     default: return state
   }

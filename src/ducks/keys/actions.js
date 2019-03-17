@@ -10,3 +10,11 @@ export const TOGGLE_SORT_BY_SEQUENCE = 'TOGGLE_SORT_BY_SEQUENCE'
 export const toggleSortBySequence = () => ({
   type: TOGGLE_SORT_BY_SEQUENCE
 })
+
+export const SELECT_CHORD_PROGRESSION = 'SELECT_CHORD_PROGRESSION'
+export const selectChordProgression = chordProgressionIdx => ({
+  type: SELECT_CHORD_PROGRESSION,
+  payload: {
+    chordProgressionIdx
+  }
+})

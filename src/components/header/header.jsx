@@ -1,6 +1,7 @@
 import React from 'react'
 import HeaderStyled, { HeaderPullLeft, HeaderPullRight, HeaderButton } from './header.styles'
 import KeySelector from '../key-selector/key-selector'
+import ChordProgressionSelector from '../chord-progression-selector/chord-progression-selector'
 
 export const Header = () => (
   <HeaderStyled>
@@ -10,6 +11,9 @@ export const Header = () => (
       </HeaderButton>
       <HeaderButton>
         <KeySelector />
+      </HeaderButton>
+      <HeaderButton>
+        <ChordProgressionSelector />
       </HeaderButton>
     </HeaderPullLeft>
     <HeaderPullRight>

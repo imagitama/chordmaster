@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import chordsDefinition from './chords'
-import keysDefinition from './keys'
 import Chords from './components/chords/chords'
 import Header from './components/header/header'
 import { getKeyFromShortName, isChordShortNameInKey } from './utils'
@@ -21,18 +20,6 @@ const populateCopiedChords = chords => chords.map(chordDefinition => {
   return chordDefinition
 })
 
-  /**
-   *     chords: {
-      [I]: 'F',
-      [ii]: 'Gm',
-      [iii]: 'Am',
-      [IV]: 'Bb',
-      [V]: 'C',
-      [vi]: 'Dm',
-      [vii]: 'Em'
-    },
-   */
-
 const sortChordsBySequence = (chords, selectedKeyShortName) => {
   const selectedKey = getKeyFromShortName(selectedKeyShortName)
   const keyChordDefinition = selectedKey.chords
@@ -41,16 +28,32 @@ const sortChordsBySequence = (chords, selectedKeyShortName) => {
 
   const keyNamesInOrder = Object.values(keyChordDefinition)
 
-  console.log('sort', keyNamesInOrder, chordsInKey)
-
   return chordsInKey.sort((chordA, chordB) => keyNamesInOrder.indexOf(chordA.shortName) - keyNamesInOrder.indexOf(chordB.shortName)) 
 }
 
-const App = ({ selectedKeyShortName, sortBySequence }) => {
+const filterChordsByChordProgression = (chords, selectedKeyShortName, selectedChordProgressionIdx) => {
+  const selectedKey = getKeyFromShortName(selectedKeyShortName)
+  const keyChordProgressions = selectedKey.chordProgressions
+  const keyChordDefinition = selectedKey.chords
+  
+  const selectedChordProgression = keyChordProgressions[selectedChordProgressionIdx]
+
+  const chordProgressionShortNames = selectedChordProgression.map(romanNumeral => keyChordDefinition[romanNumeral])
+
+  return chords
+    .filter(({ shortName: shortNameUnderTest }) => chordProgressionShortNames.includes(shortNameUnderTest))
+    .sort((chordA, chordB) => chordProgressionShortNames.indexOf(chordA.shortName) - chordProgressionShortNames.indexOf(chordB.shortName))
+}
+
+const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx }) => {
   let chords = populateCopiedChords(chordsDefinition)
 
   if (selectedKeyShortName && sortBySequence) {
     chords = sortChordsBySequence(chords, selectedKeyShortName)
+  }
+
+  if (selectedKeyShortName && selectedChordProgressionIdx) {
+    chords = filterChordsByChordProgression(chords, selectedKeyShortName, selectedChordProgressionIdx)
   }
 
   return (
@@ -61,6 +64,18 @@ const App = ({ selectedKeyShortName, sortBySequence }) => {
   )
 }
 
-const mapStateToProps = ({ keys: { selectedKeyShortName, sortBySequence }}) => ({ selectedKeyShortName, sortBySequence })
+const mapStateToProps =
+  ({ 
+    keys: {
+      selectedKeyShortName,
+      sortBySequence,
+      selectedChordProgressionIdx
+    }
+  }) =>
+  ({ 
+    selectedKeyShortName, 
+    sortBySequence, 
+    selectedChordProgressionIdx
+  })
 
 export default connect(mapStateToProps)(App)
