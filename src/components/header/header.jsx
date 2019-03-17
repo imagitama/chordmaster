@@ -7,7 +7,7 @@ export const Header = () => (
   <HeaderStyled>
     <HeaderPullLeft>
       <HeaderButton>
-        Chords
+        ChordMaster
       </HeaderButton>
       <HeaderButton>
         <KeySelector />
