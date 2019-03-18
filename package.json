@@ -1,6 +1,7 @@
 {
-  "name": "chords",
-  "version": "0.1.0",
+  "name": "chordmaster",
+  "description": "A React app that shows chords, keys and more.",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@emotion/core": "^10.0.7",

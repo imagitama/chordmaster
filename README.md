@@ -1,6 +1,6 @@
-# Chords
+# ChordMaster
 
-A React app that lists all common guitar chords.
+A React app that shows chords, keys and more.
 
 ## Usage
 
