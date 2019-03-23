@@ -2,19 +2,18 @@ import styled from '@emotion/styled'
 
 const stringColour = '#000'
 const stringWidth = '0.1rem'
-const chordChartWidth = '10rem'
 
 export const ChordStyled = styled.div(({ isHighlighted }) => ({
-  width: chordChartWidth,
   textAlign: 'center',
-  margin: '2rem',
-  opacity: isHighlighted ? 1 : 0.1
+  opacity: isHighlighted ? 1 : 0.1,
+  margin: '0.5rem 0'
 }))
 
 export const ChordChartStyled = styled.div({
-  width: chordChartWidth,
+  width: '75%',
   borderTop: `0.2rem solid ${stringColour}`,
-  position: 'relative'
+  position: 'relative',
+  margin: '0 auto'
 })
 
 export const FretStyled = styled.div({
@@ -51,8 +50,10 @@ export const StringStyled = styled.div(({ idx, fingerNumber }) => ({
 
 export const StringStatesStyled = styled.div({
   width: '100%',
-  position: 'relative',
-  height: '1rem'
+  position: 'absolute',
+  height: '1rem',
+  top: '-1rem',
+  left: 0
 })
 
 export const StringStateStyled = styled.div(({ idx, doNotPlayString }) => ({

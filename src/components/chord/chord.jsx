@@ -22,11 +22,11 @@ export const Chord = ({ selectedKeyShortName, fullName, shortName, alternativeSh
   return (
     <ChordStyled isHighlighted={shouldBeHighlighted}>
       <span title={fullName}>{shortName}</span> {alternativeShortName ? `(${alternativeShortName})` : ''}
-      <StringStatesStyled>
-        {stringArray.map((stringNumber, idx) =>
-          <StringState key={stringNumber} idx={idx} doNotPlayString={strings[stringNumber] === doNotPlayString} />)}
-      </StringStatesStyled>
       <ChordChartStyled>
+        <StringStatesStyled>
+          {stringArray.map((stringNumber, idx) =>
+            <StringState key={stringNumber} idx={idx} doNotPlayString={strings[stringNumber] === doNotPlayString} />)}
+        </StringStatesStyled>
         {isChordHigh ? <FretNumberStyled>{`${firstFretNumber}fr`}</FretNumberStyled> : ''}
         {fretNumbers.map(fretNumber => <Fret key={fretNumber} fingers={frets[fretNumber]} />)}
       </ChordChartStyled>
