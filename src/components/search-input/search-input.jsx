@@ -25,6 +25,12 @@ class SearchInput extends React.Component {
     if (!isMobileDevice) {
       this.focusOnTextInput()
     }
+
+    document.addEventListener('focusout', this.onBlur)
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('focusout', this.onBlur)
   }
 
   handleTap = () => {
@@ -63,28 +69,27 @@ class SearchInput extends React.Component {
     return (
       <div onClick={this.handleTap}>
         {isMobileDevice ? (
-          searchTerm ? (
-            <OutputMessage>
-              Type to search
-            </OutputMessage>
+          isFocused ? (
+            searchTerm ? (
+              <OutputMessage>
+                Keep typing...
+              </OutputMessage>
+            ) : (
+              <OutputMessage>
+                Start typing...
+              </OutputMessage>
+            )
           ) : (
-            !isFocused ? (
             <OutputMessage>
               Tap here to search
             </OutputMessage>
-            )
-            : (
-              <OutputMessage>
-              Type to search
-            </OutputMessage>
-            )
           )
         ) : (
           <OutputMessage>
             Type anywhere to search
           </OutputMessage>
         )}
-        
+      
         <SearchInputStyled type="text" ref={input => this.textInput = input} onBlur={this.onBlur} onChange={this.handleKeyDown} />
       </div>
     )
