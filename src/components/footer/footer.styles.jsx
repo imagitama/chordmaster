@@ -1,8 +1,6 @@
 import styled from '@emotion/styled'
 
-export const HeaderStyled = styled.header({
-  background: 'black',
-  color: 'white',
+export const FooterStyled = styled.header({
   width: '100%',
   padding: '1rem',
   marginBottom: '1rem',
@@ -10,8 +8,8 @@ export const HeaderStyled = styled.header({
   justifyContent: 'space-between'
 })
 
-export const HeaderSegment = styled.div({
+export const FooterSegment = styled.div({
   marginLeft: '1rem'
 })
 
-export default HeaderStyled
+export default FooterStyled

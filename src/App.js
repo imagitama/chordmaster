@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import chordsDefinition from './chords'
 import Chords from './components/chords/chords'
 import Header from './components/header/header'
+import Footer from './components/footer/footer'
 import SearchInput from './components/search-input/search-input'
 import SearchTerm from './components/search-term/search-term'
 import OutputMessage from './components/output-message/output-message'
@@ -74,6 +75,7 @@ const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx
       <SearchInput />
       <SearchTerm />
       {chords.length ? <Chords chords={chords} /> : <OutputMessage>No search results</OutputMessage>}
+      <Footer />
     </div>
   )
 }
