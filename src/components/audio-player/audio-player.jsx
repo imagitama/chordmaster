@@ -1,6 +1,8 @@
 import React from 'react'
+import AudioPlayerStyled from './audio-player.styles'
 
 const audioStates = {
+  WAITING: 'WAITING',
   LOADING: 'LOADING',
   READY: 'READY',
   PLAYING: 'PLAYING',
@@ -10,21 +12,25 @@ const audioStates = {
 
 export class AudioPlayer extends React.Component {
   state = {
-    audioState: audioStates.STOPPED
+    audioState: audioStates.WAITING
   }
 
   audio = null
 
-  componentDidMount() {
+  load() {
     this.audio = new Audio(this.props.src)
 
     this.audio.addEventListener('canplay', () => {
       this.setState({
         audioState: audioStates.READY
       })
+
+      this.audio.play()
     })
 
-    this.audio.addEventListener('error', () => {
+    this.audio.addEventListener('error', error => {
+      console.error('Error playing audio', error)
+
       this.setState({
         audioState: audioStates.ERROR
       })
@@ -44,6 +50,10 @@ export class AudioPlayer extends React.Component {
   }
 
   play = () => {
+    if (this.state.audioState === audioStates.WAITING) {
+      return this.load()
+    }
+
     this.audio.play()
   }
 
@@ -51,11 +61,13 @@ export class AudioPlayer extends React.Component {
     this.audio.pause()
   }
 
-  render() { 
+  getOutput = () => {
     switch (this.state.audioState) {
+      case audioStates.WAITING:
+        return <span onClick={this.play}><i className="fas fa-play"></i></span>
       case audioStates.LOADING:
-        return <span>...</span>
       case audioStates.READY:
+        return <i className="fas fa-stopwatch"></i>
       case audioStates.PAUSED:
         return <span onClick={this.play}><i className="fas fa-play"></i></span>
       case audioStates.PLAYING:
@@ -65,6 +77,14 @@ export class AudioPlayer extends React.Component {
       default:
         return `Unknown state: ${this.state.audioState}`
     }
+  }
+
+  render() {
+    return (
+      <AudioPlayerStyled>
+        {this.getOutput()}
+      </AudioPlayerStyled>
+    )
   }
 }
 

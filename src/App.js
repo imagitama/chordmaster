@@ -7,7 +7,7 @@ import Footer from './components/footer/footer'
 import SearchInput from './components/search-input/search-input'
 import SearchTerm from './components/search-term/search-term'
 import OutputMessage from './components/output-message/output-message'
-import { getKeyFromShortName, isChordShortNameInKey } from './utils'
+import { getKeyFromShortName, isChordShortNameInKey, isFullNameMajorMinor } from './utils'
 
 const populateCopiedChords = chords => chords.map(chordDefinition => {
   const copyFromName = chordDefinition.copyFrom
@@ -54,7 +54,7 @@ const filterChordsBySearchTerm = (chords, searchTerm) =>
     shortName.toLowerCase().includes(searchTerm.toLowerCase())
   )
 
-const filterMajorMinorChordsOnly = chords => chords.filter(({ fullName }) => fullName.includes('major') || fullName.includes('minor') || fullName.includes('sharp') || fullName.includes('flat'))
+const filterMajorMinorChordsOnly = chords => chords.filter(({ fullName }) => isFullNameMajorMinor(fullName))
 
 const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm, majorMinorChordsOnly }) => {
   let chords = populateCopiedChords(chordsDefinition)

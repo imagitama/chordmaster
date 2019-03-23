@@ -408,16 +408,7 @@ export const chords = [
     fullName: 'G sharp',
     shortName: 'G#',
     alternativeShortName: 'Ab',
-    frets: {
-      4: barFret,
-      5: {
-        3: 2,
-      },
-      6: {
-        4: 4,
-        5: 3
-      }
-    }
+    copyFrom: 'Ab'
   },
 
   {
