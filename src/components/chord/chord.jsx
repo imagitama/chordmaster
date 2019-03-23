@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { ChordStyled, ChordChartStyled, BarFretStyled, FretNumberStyled, FretStyled, StringStyled, StringStatesStyled, StringStateStyled, FingerNumberStyled } from './chord.styles'
 import { doNotPlayString, barFret } from '../../chords'
 import { isChordShortNameInKey, getKeyFromShortName } from '../../utils'
+import AudioPlayer from '../audio-player/audio-player';
 
 const stringArray = [6, 5, 4, 3, 2, 1]
 
@@ -13,6 +14,9 @@ const populateFretNumbers = frets => {
   return firstFretNumber > 2 ? [firstFretNumber, firstFretNumber+1, firstFretNumber+2, firstFretNumber+3] : [1, 2, 3, 4]
 }
 
+//const getSoundFilename = shortName => shortName.toLowerCase()
+const getSoundFilename = () => 'g-major'
+
 export const Chord = ({ selectedKeyShortName, fullName, shortName, alternativeShortName, strings = {}, frets = {} }) => {
   const shouldBeHighlighted = selectedKeyShortName ? isChordShortNameInKey(getKeyFromShortName(selectedKeyShortName), shortName) : true
   const isChordHigh = getIsChordHigh(frets)
@@ -22,6 +26,7 @@ export const Chord = ({ selectedKeyShortName, fullName, shortName, alternativeSh
   return (
     <ChordStyled isHighlighted={shouldBeHighlighted}>
       <span title={fullName}>{shortName}</span> {alternativeShortName ? `(${alternativeShortName})` : ''}
+      <AudioPlayer src={require(`../../sounds/${getSoundFilename(shortName)}.mp3`)} />
       <ChordChartStyled>
         <StringStatesStyled>
           {stringArray.map((stringNumber, idx) =>
