@@ -18,7 +18,9 @@ class SearchInput extends React.Component {
       isFocused: true
     })
 
-    this.textInput.focus()
+    this.textInput.focus({
+      preventScroll: true
+    })
   }
 
   componentDidMount() {
