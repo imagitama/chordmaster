@@ -23,14 +23,14 @@ export const FretStyled = styled.div({
   position: 'relative'
 })
 
-export const StringStyled = styled.div(({ idx, fingerNumber }) => ({
+export const StringStyled = styled.div(({ idx }) => ({
   width: stringWidth,
   height: '100%',
   background: stringColour,
   position: 'absolute',
   top: 0,
   left: `${((idx) / 5) * 100}%`,
-  marginLeft: '-1px'
+  marginLeft: idx === 0 ? 0 : '-1px'
 }))
 
 export const FingerNumberStyled = styled.div({
