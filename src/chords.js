@@ -68,6 +68,20 @@ export const chords = [
   },
 
   {
+    fullName: 'A dominant 7',
+    shortName: 'A7',
+    strings: {
+      6: doNotPlayString
+    },
+    frets: {
+      2: {
+        2: 2,
+        4: 1
+      }
+    }
+  },
+
+  {
     fullName: 'B major',
     shortName: 'B',
     strings: {

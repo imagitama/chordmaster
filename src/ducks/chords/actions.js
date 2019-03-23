@@ -15,3 +15,8 @@ export const HIDE_SEARCH_TERM = 'HIDE_SEARCH_TERM'
 export const hideSearchTerm = () => ({
   type: HIDE_SEARCH_TERM
 })
+
+export const TOGGLE_MAJOR_MINOR_CHORDS_ONLY = 'TOGGLE_MAJOR_MINOR_CHORDS_ONLY'
+export const toggleMinorMajorChordsOnly = () => ({
+  type: TOGGLE_MAJOR_MINOR_CHORDS_ONLY
+})

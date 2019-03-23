@@ -1,8 +1,9 @@
-import { CHANGE_SEARCH_TERM, SHOW_SEARCH_TERM, HIDE_SEARCH_TERM } from './actions'
+import { CHANGE_SEARCH_TERM, SHOW_SEARCH_TERM, HIDE_SEARCH_TERM, TOGGLE_MAJOR_MINOR_CHORDS_ONLY } from './actions'
 
 const defaultState = {
   searchTerm: '',
   searchTermVisible: true,
+  majorMinorChordsOnly: true
 }
 
 export default (state = defaultState, action) => {
@@ -23,6 +24,12 @@ export default (state = defaultState, action) => {
       return {
         ...state,
         searchTermVisible: false
+      }
+
+    case TOGGLE_MAJOR_MINOR_CHORDS_ONLY:
+      return {
+        ...state,
+        majorMinorChordsOnly: !state.majorMinorChordsOnly
       }
 
     default:
