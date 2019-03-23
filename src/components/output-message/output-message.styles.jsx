@@ -3,5 +3,6 @@ import styled from '@emotion/styled'
 export const OutputMessageStyled = styled.div({
   color: 'grey',
   textAlign: 'center',
-  fontSize: '0.7rem'
+  fontSize: '0.7rem',
+  marginBottom: '1rem'
 })

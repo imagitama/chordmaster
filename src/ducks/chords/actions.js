@@ -5,3 +5,13 @@ export const changeSearchTerm = searchTerm => ({
     searchTerm
   }
 })
+
+export const SHOW_SEARCH_TERM = 'SHOW_SEARCH_TERM'
+export const showSearchTerm = () => ({
+  type: SHOW_SEARCH_TERM
+})
+
+export const HIDE_SEARCH_TERM = 'HIDE_SEARCH_TERM'
+export const hideSearchTerm = () => ({
+  type: HIDE_SEARCH_TERM
+})

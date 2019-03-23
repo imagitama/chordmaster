@@ -1,9 +1,9 @@
 import React from 'react'
 import { OutputMessageStyled } from './output-message.styles'
 
-export const OutputMessage = ({ message }) => (
+export const OutputMessage = ({ children }) => (
   <OutputMessageStyled>
-    {message}
+    {children}
   </OutputMessageStyled>
 )
 
