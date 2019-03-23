@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 const stringColour = '#000'
-const stringWidth = '0.1rem'
+const stringWidth = '1px'
 
 export const ChordStyled = styled.div(({ isHighlighted }) => ({
   textAlign: 'center',
@@ -11,9 +11,9 @@ export const ChordStyled = styled.div(({ isHighlighted }) => ({
 
 export const ChordChartStyled = styled.div({
   width: '75%',
-  borderTop: `0.2rem solid ${stringColour}`,
+  borderTop: `2px solid ${stringColour}`,
   position: 'relative',
-  margin: '0 auto'
+  margin: '1rem auto 0'
 })
 
 export const FretStyled = styled.div({
@@ -30,23 +30,23 @@ export const StringStyled = styled.div(({ idx, fingerNumber }) => ({
   position: 'absolute',
   top: 0,
   left: `${((idx) / 5) * 100}%`,
-  marginLeft: '-0.1rem',
-  ':before': fingerNumber ? {
-    content: `"${fingerNumber}"`,
-    borderRadius: '100%',
-    background: stringColour,
-    border: `0.5rem solid ${stringColour}`,
-    color: 'white',
-    position: 'absolute',
-    left: '-0.45rem',
-    top: '0.5rem',
-    width: 0,
-    height: 0,
-    fontSize: '50%',
-    lineHeight: '0.1',
-    textAlign: 'center'
-  } : null
+  marginLeft: '-1px'
 }))
+
+export const FingerNumberStyled = styled.div({
+  borderRadius: '100%',
+  background: stringColour,
+  color: 'white',
+  position: 'absolute',
+  left: '-0.45rem',
+  top: '0.5rem',
+  width: '1rem',
+  height: '1rem',
+  fontSize: '50%',
+  lineHeight: '0.1',
+  textAlign: 'center',
+  paddingTop: '0.5rem'
+})
 
 export const StringStatesStyled = styled.div({
   width: '100%',
@@ -76,8 +76,9 @@ export const BarFretStyled = styled.div({
 
 export const FretNumberStyled = styled.div({
   position: 'absolute',
-  top: 0,
-  right: '-2rem'
+  top: '0.4rem',
+  right: '-1.5rem',
+  fontSize: '75%'
 })
 
 export default ChordStyled

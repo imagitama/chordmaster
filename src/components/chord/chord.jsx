@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { ChordStyled, ChordChartStyled, BarFretStyled, FretNumberStyled, FretStyled, StringStyled, StringStatesStyled, StringStateStyled } from './chord.styles'
+import { ChordStyled, ChordChartStyled, BarFretStyled, FretNumberStyled, FretStyled, StringStyled, StringStatesStyled, StringStateStyled, FingerNumberStyled } from './chord.styles'
 import { doNotPlayString, barFret } from '../../chords'
 import { isChordShortNameInKey, getKeyFromShortName } from '../../utils'
 
@@ -48,7 +48,9 @@ const Fret = ({ fingers = {}, isChordHigh = false, fretNumber }) => (
 )
 
 const String = ({ idx, stringNumber, fingerNumber }) => (
-  <StringStyled idx={idx} stringNumber={stringNumber} fingerNumber={fingerNumber} />
+  <StringStyled idx={idx} stringNumber={stringNumber} fingerNumber={fingerNumber}>
+    {fingerNumber && <FingerNumberStyled>{fingerNumber}</FingerNumberStyled>}
+  </StringStyled>
 )
 
 const mapStateToProps = ({ keys: { selectedKeyShortName } }) => ({ selectedKeyShortName })

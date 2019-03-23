@@ -13,7 +13,8 @@ export const KeySelector = ({ selectedKeyShortName, selectKey, toggleSortBySeque
       <DropDownOption value="" label="(none)" />
       {keyDefinition.map(({ shortName }) => <DropDownOption key={shortName} value={shortName} label={shortName} />)}
     </Dropdown>
-    {selectedKeyShortName && <ToggleInput onChange={() => toggleSortBySequence()} isEnabled={sortBySequence} label="Toggle sequence" />}
+    {selectedKeyShortName && <br />}
+    {selectedKeyShortName && <ToggleInput onChange={() => toggleSortBySequence()} isEnabled={sortBySequence} label="Filter" />}
   </React.Fragment>
 )
 

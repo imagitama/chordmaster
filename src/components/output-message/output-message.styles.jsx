@@ -4,5 +4,5 @@ export const OutputMessageStyled = styled.div({
   color: 'grey',
   textAlign: 'center',
   fontSize: '0.7rem',
-  marginBottom: '1rem'
+  padding: '1rem'
 })
