@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { changeSearchTerm, showSearchTerm, hideSearchTerm } from '../../ducks/chords/actions'
@@ -7,69 +7,58 @@ import SearchInputStyled from './search-input.styles'
 
 const isMobileDevice = 'ontouchstart' in document.documentElement
 
-class SearchInput extends React.Component {
-  state = {
-    isFocused: false
-  }
-  textInput = null
+const SearchInput = ({ searchTerm, changeSearchTerm, showSearchTerm, hideSearchTerm }) => {
+  const [isFocused, setIsFocused] = useState(false)
+  const textInput = useRef(null)
+  const timeout = useRef(null)
   
-  focusOnTextInput() {
-    this.setState({
-      isFocused: true
-    })
+  const focusOnTextInput = () => {
+    setIsFocused(true)
 
-    this.textInput.focus({
+    textInput.current.focus({
       preventScroll: true
     })
   }
 
-  componentDidMount() {
+  useEffect(() => {
     if (!isMobileDevice) {
-      this.focusOnTextInput()
+      focusOnTextInput()
     }
 
-    document.addEventListener('focusout', this.onBlur)
+    document.addEventListener('focusout', onBlur)
+
+    return () => document.removeEventListener('focusout', onBlur)
+  }, [])
+
+  const handleTap = () => {
+    focusOnTextInput()
   }
 
-  componentWillUnmount() {
-    document.removeEventListener('focusout', this.onBlur)
-  }
-
-  handleTap = () => {
-    this.focusOnTextInput()
-  }
-
-  onBlur = () => {
+  const onBlur = () => {
     if (!isMobileDevice) {
-      this.focusOnTextInput()
+      focusOnTextInput()
       return
     }
 
-    this.setState({
-      isFocused: false
-    })
+    setIsFocused(false)
   }
 
-  handleKeyDown = event => {
+  const handleKeyDown = event => {
     const textInputValue = event.target.value
-    const { changeSearchTerm, showSearchTerm, hideSearchTerm } = this.props
 
-    clearTimeout(this.timeout)
+    clearTimeout(timeout.current)
 
     changeSearchTerm(textInputValue)
 
     showSearchTerm()
 
-    this.timeout = setTimeout(() => {
+    timeout.current = setTimeout(() => {
       hideSearchTerm()
     }, 1000)
   }
 
-  render() {
-    const { searchTerm } = this.props
-    const { isFocused } = this.state
     return (
-      <div onClick={this.handleTap}>
+      <div onClick={handleTap}>
         {isMobileDevice ? (
           isFocused ? (
             searchTerm ? (
@@ -92,11 +81,10 @@ class SearchInput extends React.Component {
           </OutputMessage>
         )}
       
-        <SearchInputStyled type="text" ref={input => this.textInput = input} onBlur={this.onBlur} onChange={this.handleKeyDown} />
+        <SearchInputStyled type="text" ref={textInput} onBlur={onBlur} onChange={handleKeyDown} />
       </div>
     )
   }
-}
 
 const mapStateToProps = ({ chords: { searchTerm } }) => ({
   searchTerm
