@@ -5,6 +5,7 @@ import { doNotPlayString, barFret } from '../../chords'
 import { isChordShortNameInKey, getKeyFromShortName, cleanNameForSounds } from '../../utils'
 import AudioPlayer from '../audio-player/audio-player'
 import soundFiles from './soundFiles'
+import FavouriteChordButton from '../favourite-chord-button/favourite-chord-button'
 
 const stringArray = [6, 5, 4, 3, 2, 1]
 
@@ -15,7 +16,7 @@ const populateFretNumbers = frets => {
   return firstFretNumber > 2 ? [firstFretNumber, firstFretNumber+1, firstFretNumber+2, firstFretNumber+3] : [1, 2, 3, 4]
 }
 
-export const Chord = ({ selectedKeyShortName, fullName, shortName, alternativeShortName, strings = {}, frets = {}, copyFrom }) => {
+export const Chord = ({ selectedKeyShortName, fullName, shortName, alternativeShortName, strings = {}, frets = {} }) => {
   const shouldBeHighlighted = selectedKeyShortName ? isChordShortNameInKey(getKeyFromShortName(selectedKeyShortName), shortName) : true
   const isChordHigh = getIsChordHigh(frets)
   const firstFretNumber = Object.keys(frets).shift()
@@ -25,6 +26,7 @@ export const Chord = ({ selectedKeyShortName, fullName, shortName, alternativeSh
     <ChordStyled isHighlighted={shouldBeHighlighted}>
       <span title={fullName}>{shortName}</span> {alternativeShortName ? `(${alternativeShortName})` : ''}
       {cleanNameForSounds(shortName) in soundFiles && <AudioPlayer src={soundFiles[cleanNameForSounds(shortName)]} />}
+      <FavouriteChordButton chordShortName={shortName} />
       <ChordChartStyled>
         <StringStatesStyled>
           {stringArray.map((stringNumber, idx) =>
@@ -56,6 +58,6 @@ const String = ({ idx, stringNumber, fingerNumber }) => (
   </StringStyled>
 )
 
-const mapStateToProps = ({ keys: { selectedKeyShortName } }) => ({ selectedKeyShortName })
+const mapStateToProps = ({ keys: { selectedKeyShortName }, chords: { favouritedChords } }) => ({ selectedKeyShortName, favouritedChords })
 
 export default connect(mapStateToProps)(Chord)

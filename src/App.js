@@ -56,7 +56,9 @@ const filterChordsBySearchTerm = (chords, searchTerm) =>
 
 const filterMajorMinorChordsOnly = chords => chords.filter(({ fullName }) => isFullNameMajorMinor(fullName))
 
-const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm, majorMinorChordsOnly }) => {
+const filterFavouriteChordsOnly = (chords, favouriteChords) => chords.filter(({ shortName }) => favouriteChords.includes(shortName))
+
+const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm, majorMinorChordsOnly, favouriteChords, favouritesOnly }) => {
   let chords = populateCopiedChords(chordsDefinition)
 
   if (majorMinorChordsOnly) {
@@ -75,12 +77,16 @@ const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx
     chords = filterChordsBySearchTerm(chords, searchTerm)
   }
 
+  if (favouritesOnly) {
+    chords = filterFavouriteChordsOnly(chords, favouriteChords)
+  }
+
   return (
     <div>
       <Header />
       <SearchInput />
       <SearchTerm />
-      {chords.length ? <Chords chords={chords} /> : <OutputMessage>No search results</OutputMessage>}
+      {chords.length ? <Chords chords={chords} /> : <OutputMessage>No chords found</OutputMessage>}
       <Footer />
     </div>
   )
@@ -95,7 +101,9 @@ const mapStateToProps =
     },
     chords: {
       searchTerm,
-      majorMinorChordsOnly
+      majorMinorChordsOnly,
+      favouritesOnly,
+      favouriteChords
     }
   }) =>
   ({ 
@@ -103,7 +111,9 @@ const mapStateToProps =
     sortBySequence, 
     selectedChordProgressionIdx,
     searchTerm,
-    majorMinorChordsOnly
+    majorMinorChordsOnly,
+    favouriteChords,
+    favouritesOnly
   })
 
 export default connect(mapStateToProps)(App)

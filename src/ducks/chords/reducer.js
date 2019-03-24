@@ -1,9 +1,11 @@
-import { CHANGE_SEARCH_TERM, SHOW_SEARCH_TERM, HIDE_SEARCH_TERM, TOGGLE_MAJOR_MINOR_CHORDS_ONLY } from './actions'
+import { CHANGE_SEARCH_TERM, SHOW_SEARCH_TERM, HIDE_SEARCH_TERM, TOGGLE_MAJOR_MINOR_CHORDS_ONLY, TOGGLE_FAVOURITE_CHORD, TOGGLE_FAVOURITES_ONLY } from './actions'
 
 const defaultState = {
   searchTerm: '',
   searchTermVisible: true,
-  majorMinorChordsOnly: true
+  majorMinorChordsOnly: true,
+  favouriteChords: [],
+  favouritesOnly: false
 }
 
 export default (state = defaultState, action) => {
@@ -30,6 +32,21 @@ export default (state = defaultState, action) => {
       return {
         ...state,
         majorMinorChordsOnly: !state.majorMinorChordsOnly
+      }
+
+    case TOGGLE_FAVOURITE_CHORD:
+      return {
+        ...state,
+        favouriteChords: 
+          state.favouriteChords.find(chordShortName => chordShortName === action.payload.chordShortName) ? 
+            state.favouriteChords.filter(chordShortName => chordShortName !== action.payload.chordShortName) : 
+            state.favouriteChords.concat([action.payload.chordShortName])
+      }
+
+    case TOGGLE_FAVOURITES_ONLY:
+      return {
+        ...state,
+        favouritesOnly: !state.favouritesOnly
       }
 
     default:

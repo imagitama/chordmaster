@@ -81,7 +81,7 @@ export class AudioPlayer extends React.Component {
 
   render() {
     return (
-      <AudioPlayerStyled>
+      <AudioPlayerStyled isPlaying={this.state.audioState === audioStates.PLAYING}>
         {this.getOutput()}
       </AudioPlayerStyled>
     )
