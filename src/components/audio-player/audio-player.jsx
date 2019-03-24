@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
 import AudioPlayerStyled from './audio-player.styles'
 
 const audioStates = {
@@ -10,82 +10,63 @@ const audioStates = {
   ERROR: 'ERROR'
 }
 
-export class AudioPlayer extends React.Component {
-  state = {
-    audioState: audioStates.WAITING
-  }
+const AudioPlayer = ({ src }) => {
+  const [audioState, setAudioState] = useState(audioStates.WAITING)
+  const audio = useRef(null)
+  
+  const load = () => {
+    audio.current = new Audio(src)
 
-  audio = null
-
-  load() {
-    this.audio = new Audio(this.props.src)
-
-    this.audio.addEventListener('canplay', () => {
-      this.setState({
-        audioState: audioStates.READY
-      })
-
-      this.audio.play()
+    audio.current.addEventListener('canplay', () => {
+      setAudioState(audioStates.READY)
+      audio.current.play()
     })
 
-    this.audio.addEventListener('error', error => {
+    audio.current.addEventListener('error', error => {
       console.error('Error playing audio', error) // eslint-disable-line
-
-      this.setState({
-        audioState: audioStates.ERROR
-      })
+      setAudioState(audioStates.ERROR)
     })
 
-    this.audio.addEventListener('pause', () => {
-      this.setState({
-        audioState: audioStates.PAUSED
-      })
-    })
+    audio.current.addEventListener('pause', () => setAudioState(audioStates.PAUSED))
 
-    this.audio.addEventListener('playing', () => {
-      this.setState({
-        audioState: audioStates.PLAYING
-      })
-    })
+    audio.current.addEventListener('playing', () => setAudioState(audioStates.PLAYING))
   }
 
-  play = () => {
-    if (this.state.audioState === audioStates.WAITING) {
-      return this.load()
+  const play = () => {
+    if (audioState === audioStates.WAITING) {
+      return load()
     }
 
-    this.audio.play()
+    audio.current.play()
   }
 
-  pause = () => {
-    this.audio.pause()
+  const pause = () => {
+    audio.current.pause()
   }
 
-  getOutput = () => {
-    switch (this.state.audioState) {
+  const getOutput = () => {
+    switch (audioState) {
       case audioStates.WAITING:
-        return <span onClick={this.play}><i className="fas fa-play"></i></span>
+        return <span onClick={play}><i className="fas fa-play"></i></span>
       case audioStates.LOADING:
       case audioStates.READY:
         return <i className="fas fa-stopwatch"></i>
       case audioStates.PAUSED:
-        return <span onClick={this.play}><i className="fas fa-play"></i></span>
+        return <span onClick={play}><i className="fas fa-play"></i></span>
       case audioStates.PLAYING:
-        return <span onClick={this.pause}><i className="fas fa-pause"></i></span>
+        return <span onClick={pause}><i className="fas fa-pause"></i></span>
       case audioStates.ERROR:
         return <span>Error</span>
       default:
-        return `Unknown state: ${this.state.audioState}`
+        return `Unknown state: ${audioState}`
     }
   }
 
-  render() {
-    return (
-      <AudioPlayerStyled isPlaying={this.state.audioState === audioStates.PLAYING}>
-        {this.getOutput()}
-      </AudioPlayerStyled>
-    )
-  }
+  return (
+    <AudioPlayerStyled isPlaying={audioState === audioStates.PLAYING}>
+      {getOutput()}
+    </AudioPlayerStyled>
+  )
 }
 
 export default AudioPlayer
