@@ -29,7 +29,7 @@ export class AudioPlayer extends React.Component {
     })
 
     this.audio.addEventListener('error', error => {
-      console.error('Error playing audio', error)
+      console.error('Error playing audio', error) // eslint-disable-line
 
       this.setState({
         audioState: audioStates.ERROR

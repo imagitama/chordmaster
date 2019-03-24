@@ -56,7 +56,7 @@ export const StringStatesStyled = styled.div({
   left: 0
 })
 
-export const StringStateStyled = styled.div(({ idx, doNotPlayString }) => ({
+export const StringStateStyled = styled.div(({ idx }) => ({
   position: 'absolute',
   top: 0,
   left: `${((idx) / 5) * 100}%`,

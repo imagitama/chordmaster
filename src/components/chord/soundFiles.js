@@ -7,8 +7,6 @@ const buildSoundFiles = () => {
       return obj
     }
 
-    console.log('new name', cleanNameForSounds('G#'))
-
     const fileName = copyFrom ? cleanNameForSounds(copyFrom) : cleanNameForSounds(shortName)
 
     return {
