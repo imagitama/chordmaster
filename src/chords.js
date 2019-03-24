@@ -148,11 +148,11 @@ export const chords = [
       6: doNotPlayString
     },
     frets: {
-      4: barFret,
-      5: {
+      3: barFret,
+      4: {
         2: 2
       },
-      6: {
+      5: {
         3: 4,
         4: 3
       }
