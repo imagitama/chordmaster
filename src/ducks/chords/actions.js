@@ -33,3 +33,8 @@ export const TOGGLE_FAVOURITES_ONLY = 'TOGGLE_FAVOURITES_ONLY'
 export const toggleFavouritesOnly = () => ({
   type: TOGGLE_FAVOURITES_ONLY
 })
+
+export const CLEAR_FAVOURITES = 'CLEAR_FAVOURITES'
+export const clearFavourites = () => ({
+  type: CLEAR_FAVOURITES
+})
