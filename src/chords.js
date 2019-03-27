@@ -459,6 +459,23 @@ export const chords = [
   },
 
   {
+    fullName: 'G slash B',
+    shortName: 'G/B',
+    strings: {
+      6: doNotPlayString
+    },
+    frets: {
+      2: {
+        5: 1
+      },
+      3: {
+        1: 3,
+        2: 2
+      }
+    }
+  },
+
+  {
     fullName: 'G slash F#',
     shortName: 'G/F#',
     frets: {
