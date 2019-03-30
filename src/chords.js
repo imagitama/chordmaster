@@ -294,6 +294,7 @@ export const chords = [
   {
     fullName: 'D sharp minor',
     shortName: 'D#m',
+    alternativeShortName: 'Ebm',
     strings: {
       5: doNotPlayString,
       6: doNotPlayString
@@ -383,6 +384,13 @@ export const chords = [
         2: 4
       }
     }
+  },
+
+  {
+    fullName: 'E flat minor',
+    shortName: 'Ebm',
+    alternativeShortName: 'D#m',
+    copyFrom: 'D#m'
   },
 
   {
