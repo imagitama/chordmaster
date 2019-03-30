@@ -5,6 +5,7 @@ import storage from 'redux-persist/lib/storage' // defaults to localStorage for 
 import keysReducer from './ducks/keys/reducer'
 import chordsReducer from './ducks/chords/reducer'
 import appReducer from './ducks/app/reducer'
+import analyticsMiddleware from './analytics'
 
 const persistConfig = {
   key: 'root',
@@ -20,7 +21,7 @@ const rootReducer = combineReducers({
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 export default () => {
-  let store = createStore(persistedReducer, applyMiddleware(logger))
-  let persistor = persistStore(store)
+  const store = createStore(persistedReducer, applyMiddleware(logger, analyticsMiddleware))
+  const persistor = persistStore(store)
   return { store, persistor }
 }
