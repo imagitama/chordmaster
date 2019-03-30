@@ -40,9 +40,26 @@ export const filterChordsByChordProgression = (chords, selectedKeyShortName, sel
     .sort((chordA, chordB) => chordProgressionShortNames.indexOf(chordA.shortName) - chordProgressionShortNames.indexOf(chordB.shortName))
 }
 
-export const filterChordsBySearchTerm = (chords, searchTerm) =>
+const replaceCommonTerms = searchTerm => searchTerm
+  .replace('sharp', '#')
+  .replace('shar', '#')
+  .replace('sha', '#')
+  .replace('sh', '#')
+  .replace('s', '#')
+  .replace('flat', 'b')
+  .replace('fla', 'b')
+  .replace('fl', 'b')
+  .replace('f', 'b')
+  .replace('minor', 'm')
+  .replace('mino', 'm')
+  .replace('min', 'm')
+  .replace('mi', 'm')
+
+const cleanUpSearchTerm = searchTerm => searchTerm.replace(/ /g, '').toLowerCase()
+
+export const filterChordsBySearchTerm = (chords, searchTerm) => !console.log('result', cleanUpSearchTerm(replaceCommonTerms(searchTerm))) &&
   chords.filter(({ shortName }) =>
-    shortName.toLowerCase().includes(searchTerm.toLowerCase())
+    shortName.toLowerCase().includes(cleanUpSearchTerm(replaceCommonTerms(searchTerm)))
   )
 
 export const filterMajorMinorChordsOnly = chords => chords.filter(({ fullName }) => isFullNameMajorMinor(fullName))
