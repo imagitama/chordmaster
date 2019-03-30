@@ -39,7 +39,7 @@ export const keys = [
     shortName: 'Am',
     chords: {
       [i]: 'Am',
-      [ii]: 'Bm',
+      [ii]: 'Bo',
       [III]: 'C',
       [iv]: 'Dm',
       [v]: 'Em',
@@ -65,7 +65,7 @@ export const keys = [
       [IV]: 'E',
       [V]: 'F#',
       [vi]: 'G#m',
-      [vii]: 'A#'
+      [vii]: 'A#dim'
     },
     chordProgressions: [
       [I, IV, V],
@@ -84,7 +84,7 @@ export const keys = [
       [IV]: 'F',
       [V]: 'G',
       [vi]: 'Am',
-      [vii]: 'Bm'
+      [vii]: 'Bdim'
     },
     chordProgressions: [
       [I, IV, V],
@@ -103,7 +103,7 @@ export const keys = [
       [IV]: 'G',
       [V]: 'A',
       [vi]: 'Bm',
-      [vii]: 'C#m'
+      [vii]: 'C#dim'
     },
     chordProgressions: [
       [I, IV, V],
@@ -122,7 +122,7 @@ export const keys = [
       [IV]: 'A',
       [V]: 'B',
       [vi]: 'C#m',
-      [vii]: 'D#m'
+      [vii]: 'D#dim'
     },
     chordProgressions: [
       [I, IV, V],
@@ -136,7 +136,7 @@ export const keys = [
     shortName: 'Em',
     chords: {
       [i]: 'Em',
-      [ii]: 'F#o', // todo: add to chords?
+      [ii]: 'F#dim',
       [III]: 'G',
       [iv]: 'Am',
       [v]: 'Bm',
@@ -163,7 +163,7 @@ export const keys = [
       [IV]: 'Bb',
       [V]: 'C',
       [vi]: 'Dm',
-      [vii]: 'Em'
+      [vii]: 'Edim'
     },
     chordProgressions: [
       [I, IV, V],
@@ -182,7 +182,7 @@ export const keys = [
       [IV]: 'C',
       [V]: 'D',
       [vi]: 'Em',
-      [vii]: 'F#m'
+      [vii]: 'F#dim'
     },
     chordProgressions: [
       [I, IV, V],
