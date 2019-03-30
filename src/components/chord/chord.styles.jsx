@@ -9,34 +9,34 @@ export const ChordStyled = styled.div(({ isHighlighted }) => ({
   margin: '0.5rem 0'
 }))
 
-export const ChordChartStyled = styled.div({
+export const ChordChartStyled = styled.div(({ theme }) => ({
   width: '75%',
-  borderTop: `2px solid ${stringColour}`,
+  borderTop: `2px solid ${theme.textColor}`,
   position: 'relative',
   margin: '1rem auto 0'
-})
+}))
 
-export const FretStyled = styled.div({
+export const FretStyled = styled.div(({ theme }) => ({
   width: '100%',
   height: '2rem',
-  borderBottom: `${stringWidth} solid ${stringColour}`,
+  borderBottom: `${stringWidth} solid ${theme.textColor}`,
   position: 'relative'
-})
+}))
 
-export const StringStyled = styled.div(({ idx }) => ({
+export const StringStyled = styled.div(({ theme, idx }) => ({
   width: stringWidth,
   height: '100%',
-  background: stringColour,
+  background: theme.textColor,
   position: 'absolute',
   top: 0,
   left: `${((idx) / 5) * 100}%`,
   marginLeft: idx === 0 ? 0 : '-1px'
 }))
 
-export const FingerNumberStyled = styled.div({
+export const FingerNumberStyled = styled.div(({ theme }) => ({
   borderRadius: '100%',
-  background: stringColour,
-  color: 'white',
+  background: theme.textColor,
+  color: theme.backgroundColor,
   position: 'absolute',
   left: '-0.45rem',
   top: '0.5rem',
@@ -46,7 +46,7 @@ export const FingerNumberStyled = styled.div({
   lineHeight: '0.1',
   textAlign: 'center',
   paddingTop: '0.5rem'
-})
+}))
 
 export const StringStatesStyled = styled.div({
   width: '100%',
@@ -64,15 +64,15 @@ export const StringStateStyled = styled.div(({ idx }) => ({
   margin: '-0.5rem 0 0 -0.8rem'
 }))
 
-export const BarFretStyled = styled.div({
+export const BarFretStyled = styled.div(({ theme }) => ({
   width: 'calc(100% + 1rem)',
   height: '0.5rem',
-  background: 'black',
+  background: theme.backgroundColor,
   borderRadius: '0.5rem',
   position: 'absolute',
   top: '0.7rem',
   left: '-0.5rem',
-})
+}))
 
 export const FretNumberStyled = styled.div({
   position: 'absolute',
