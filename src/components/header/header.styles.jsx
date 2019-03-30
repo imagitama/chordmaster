@@ -3,7 +3,7 @@ import mediaQuery from '../../mediaQueries'
 
 export const HeaderStyled = styled.header`
   background-color ${({ theme }) => theme.headerBackgroundColor};
-  color: ${({ theme }) => theme.backgroundColor};
+  color: ${({ theme }) => theme.headerTextColor};
   width: 100%;
   display: flex;
   justify-content: space-between;
