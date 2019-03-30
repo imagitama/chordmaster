@@ -26,7 +26,7 @@ export const sortChordsBySequence = (chords, selectedKeyShortName) => {
     chordsInKey.push({
       shortName,
       fullName: `Unknown chord ${shortName}`
-    }) && console.log('added', shortName)
+    })
     : null
   )
 
