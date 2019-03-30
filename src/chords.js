@@ -431,6 +431,7 @@ export const chords = [
   {
     fullName: 'F sharp minor',
     shortName: 'F#m',
+    alternativeShortName: 'Gbm',
     frets: {
       2: barFret,
       4: {
@@ -471,6 +472,13 @@ export const chords = [
     shortName: 'Gb',
     alternativeShortName: 'F#',
     copyFrom: 'F#'
+  },
+
+  {
+    fullName: 'G flat minor',
+    shortName: 'Gbm',
+    alternativeShortName: 'F#m',
+    copyFrom: 'F#m'
   },
 
   {
