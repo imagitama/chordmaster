@@ -6,6 +6,8 @@ import { isChordShortNameInKey, getKeyFromShortName, cleanNameForSounds } from '
 import AudioPlayer from '../audio-player/audio-player'
 import soundFiles from './soundFiles'
 import FavouriteChordButton from '../favourite-chord-button/favourite-chord-button'
+import OutputMessage from '../output-message/output-message'
+import settings from '../../settings'
 
 const stringArray = [6, 5, 4, 3, 2, 1]
 
@@ -22,9 +24,19 @@ export const Chord = ({ selectedKeyShortName, fullName, shortName, alternativeSh
   const firstFretNumber = Object.keys(frets).shift()
   const fretNumbers = populateFretNumbers(frets)
 
+  
+
   return (
     <ChordStyled isHighlighted={shouldBeHighlighted}>
       <span title={fullName}>{shortName}</span> {alternativeShortName ? `(${alternativeShortName})` : ''}
+
+      {!Object.keys(frets).length ? (
+        <OutputMessage>
+          This chord is in a key but has not been defined.
+          Please <a href={settings.githubRepoUrl}>send an issue or open a PR on GitHub</a>.
+        </OutputMessage>
+      ) : (
+      <>
       {cleanNameForSounds(shortName) in soundFiles && <AudioPlayer src={soundFiles[cleanNameForSounds(shortName)]} />}
       <FavouriteChordButton chordShortName={shortName} />
       <ChordChartStyled>
@@ -35,6 +47,8 @@ export const Chord = ({ selectedKeyShortName, fullName, shortName, alternativeSh
         {isChordHigh ? <FretNumberStyled>{`${firstFretNumber}fr`}</FretNumberStyled> : ''}
         {fretNumbers.map(fretNumber => <Fret key={fretNumber} fingers={frets[fretNumber]} />)}
       </ChordChartStyled>
+      </>
+    )}
     </ChordStyled>
   )
 }
