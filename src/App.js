@@ -11,10 +11,9 @@ import Footer from './components/footer/footer'
 import SearchInput from './components/search-input/search-input'
 import SearchTerm from './components/search-term/search-term'
 import OutputMessage from './components/output-message/output-message'
-import OutputBar from './components/output-bar/output-bar'
 import { populateCopiedChords, filterMajorMinorChordsOnly, sortChordsBySequence, filterChordsByChordProgression, filterChordsBySearchTerm, filterFavouriteChordsOnly } from './filters'
 import globalStyles from './globalStyles'
-import settings from './settings'
+import WelcomeMessage from './components/welcome-message/welcome-message'
 
 const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm, majorMinorChordsOnly, favouriteChords, favouritesOnly, isDarkModeEnabled }) => {
   let chords = populateCopiedChords(chordsDefinition)
@@ -43,9 +42,7 @@ const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx
     <ThemeProvider theme={isDarkModeEnabled ? darkTheme : lightTheme}>
       <Global styles={globalStyles} />
       <Header />
-      <OutputBar>
-        Welcome to the ChordMaster app. Not all chords and keys are available so if you want more, please <a href={settings.githubRepoUrl}>submit a PR or open an issue</a>. Thank you
-      </OutputBar>
+      <WelcomeMessage />
       <SearchInput />
       <SearchTerm />
       {chords.length ? <Chords chords={chords} /> : <OutputMessage>No chords found</OutputMessage>}

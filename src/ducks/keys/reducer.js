@@ -14,18 +14,22 @@ export const reducer = (state = defaultState, action) => {
         selectedKeyShortName: action.payload.keyShortName,
         selectedChordProgressionIdx: null
       }
+
     case TOGGLE_SORT_BY_SEQUENCE:
       return {
         ...state,
         sortBySequence: !state.sortBySequence
       }
+
     case SELECT_CHORD_PROGRESSION:
       return {
         ...state,
         selectedChordProgressionIdx: action.payload.chordProgressionIdx
       }
+      
     case RESET_KEYS:
       return defaultState
+
     default: return state
   }
 }
