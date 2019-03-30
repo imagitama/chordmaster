@@ -18,7 +18,7 @@ import WelcomeMessage from './components/welcome-message/welcome-message'
 const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm, majorMinorChordsOnly, favouriteChords, favouritesOnly, isDarkModeEnabled }) => {
   let chords = populateCopiedChords(chordsDefinition)
 
-  if (majorMinorChordsOnly) {
+  if (majorMinorChordsOnly && !selectedKeyShortName) {
     chords = filterMajorMinorChordsOnly(chords)
   }
 

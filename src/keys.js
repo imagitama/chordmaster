@@ -39,7 +39,7 @@ export const keys = [
     shortName: 'Am',
     chords: {
       [i]: 'Am',
-      [ii]: 'Bo',
+      [ii]: 'Bdim',
       [III]: 'C',
       [iv]: 'Dm',
       [v]: 'Em',

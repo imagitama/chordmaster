@@ -80,6 +80,27 @@ export const chords = [
   },
 
   {
+    fullName: 'A sharp diminished',
+    shortName: 'A#dim',
+    strings: {
+      1: doNotPlayString,
+      6: doNotPlayString
+    },
+    frets: {
+      1: {
+        5: 1
+      },
+      2: {
+        4: 2,
+        2: 3
+      },
+      3: {
+        3: 4
+      }
+    }
+  },
+
+  {
     fullName: 'A dominant 7',
     shortName: 'A7',
     strings: {
@@ -153,6 +174,27 @@ export const chords = [
   },
 
   {
+    fullName: 'B diminished',
+    shortName: 'Bdim',
+    strings: {
+      1: doNotPlayString,
+      6: doNotPlayString
+    },
+    frets: {
+      2: {
+        5: 1
+      },
+      3: {
+        4: 2,
+        2: 3
+      },
+      4: {
+        3: 4
+      }
+    }
+  },
+
+  {
     fullName: 'C major',
     shortName: 'C',
     strings: {
@@ -220,6 +262,27 @@ export const chords = [
       6: {
         3: 4,
         4: 3
+      }
+    }
+  },
+
+  {
+    fullName: 'C sharp diminished',
+    shortName: 'C#dim',
+    strings: {
+      1: doNotPlayString,
+      6: doNotPlayString
+    },
+    frets: {
+      4: {
+        5: 1
+      },
+      5: {
+        4: 2,
+        2: 3
+      },
+      6: {
+        3: 4
       }
     }
   },
@@ -341,6 +404,27 @@ export const chords = [
   },
 
   {
+    fullName: 'D sharp diminished',
+    shortName: 'D#dim',
+    strings: {
+      1: doNotPlayString,
+      6: doNotPlayString
+    },
+    frets: {
+      6: {
+        5: 1
+      },
+      7: {
+        4: 2,
+        2: 3
+      },
+      8: {
+        3: 4
+      }
+    }
+  },
+
+  {
     fullName: 'D flat',
     shortName: 'Db',
     alternativeShortName: 'C#',
@@ -419,6 +503,23 @@ export const chords = [
   },
 
   {
+    fullName: 'E diminished',
+    shortName: 'Edim',
+    strings: {
+      1: doNotPlayString,
+      2: doNotPlayString
+    },
+    frets: {
+      1: {
+        5: 1
+      },
+      2: {
+        4: 2
+      }
+    }
+  },
+
+  {
     fullName: 'F major',
     shortName: 'F',
     frets: {
@@ -470,6 +571,27 @@ export const chords = [
       4: {
         4: 4,
         5: 3
+      }
+    }
+  },
+
+  {
+    fullName: 'F sharp diminished',
+    shortName: 'F#dim',
+    strings: {
+      1: doNotPlayString,
+      6: doNotPlayString
+    },
+    frets: {
+      6: {
+        5: 1
+      },
+      7: {
+        4: 2,
+        2: 3
+      },
+      8: {
+        3: 4
       }
     }
   },
@@ -529,6 +651,24 @@ export const chords = [
       6: {
         4: 4,
         5: 3
+      }
+    }
+  },
+
+  {
+    fullName: 'G sharp diminished',
+    shortName: 'G#dim',
+    strings: {
+      1: doNotPlayString,
+      2: doNotPlayString
+    },
+    frets: {
+      4: barFret,
+      5: {
+        5: 2
+      },
+      6: {
+        4: 3
       }
     }
   },

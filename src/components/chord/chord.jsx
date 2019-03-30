@@ -24,12 +24,9 @@ export const Chord = ({ selectedKeyShortName, fullName, shortName, alternativeSh
   const firstFretNumber = Object.keys(frets).shift()
   const fretNumbers = populateFretNumbers(frets)
 
-  
-
   return (
     <ChordStyled isHighlighted={shouldBeHighlighted}>
       <span title={fullName}>{shortName}</span> {alternativeShortName ? `(${alternativeShortName})` : ''}
-
       {!Object.keys(frets).length ? (
         <OutputMessage>
           This chord is in a key but has not been defined.

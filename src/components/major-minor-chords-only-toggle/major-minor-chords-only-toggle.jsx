@@ -3,13 +3,17 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import ToggleInput from '../toggle-input/toggle-input'
 import { toggleMinorMajorChordsOnly } from '../../ducks/chords/actions'
+import MajorMinorChordsOnlyToggleStyled from './major-minor-chords-only-toggle.styles'
 
-export const MajorMinorChordsOnlyToggle = ({ toggleMinorMajorChordsOnly, majorMinorChordsOnly }) => (
-  <ToggleInput onChange={toggleMinorMajorChordsOnly} label="Major and minor only" isEnabled={majorMinorChordsOnly} />
+export const MajorMinorChordsOnlyToggle = ({ toggleMinorMajorChordsOnly, majorMinorChordsOnly, selectedKeyShortName }) => (
+  <MajorMinorChordsOnlyToggleStyled isKeySelected={selectedKeyShortName !== ''}>
+    <ToggleInput onChange={toggleMinorMajorChordsOnly} label="Major and minor only" isEnabled={majorMinorChordsOnly} />
+  </MajorMinorChordsOnlyToggleStyled>
 )
 
-const mapStateToProps = ({ chords: { majorMinorChordsOnly } }) => ({
-  majorMinorChordsOnly
+const mapStateToProps = ({ chords: { majorMinorChordsOnly }, keys: { selectedKeyShortName } }) => ({
+  majorMinorChordsOnly,
+  selectedKeyShortName
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({ toggleMinorMajorChordsOnly }, dispatch)
