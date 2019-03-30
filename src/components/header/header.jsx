@@ -5,6 +5,7 @@ import ChordProgressionSelector from '../chord-progression-selector/chord-progre
 import MajorMinorChordsOnlyToggle from '../major-minor-chords-only-toggle/major-minor-chords-only-toggle'
 import FavouritesOnlyToggle from '../favourites-only-toggle/favourites-only-toggle'
 import ResetButton from '../reset-button/reset-button'
+import DarkModeToggle from '../dark-mode-toggle/dark-mode-toggle'
 
 export const Header = () => (
   <HeaderStyled>
@@ -25,6 +26,9 @@ export const Header = () => (
     </HeaderSegment>
     <HeaderSegment>
       <ResetButton />
+    </HeaderSegment>
+    <HeaderSegment>
+      <DarkModeToggle />
     </HeaderSegment>
   </HeaderStyled>
 )
