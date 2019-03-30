@@ -20,12 +20,12 @@ export const keys = [
     shortName: 'A',
     chords: {
       [I]: 'A', 
-      [ii]: 'B',
-      [iii]: 'C#',
+      [ii]: 'Bm',
+      [iii]: 'C#m',
       [IV]: 'D',
       [V]: 'E',
-      [vi]: 'F#',
-      [vii]: 'G#'
+      [vi]: 'F#m',
+      [vii]: 'G#dim'
     },
     chordProgressions: [
       [I, IV, V],
