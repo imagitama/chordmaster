@@ -51,6 +51,18 @@ export const chords = [
   },
 
   {
+    fullName: 'A flat minor',
+    shortName: 'Abm',
+    frets: {
+      4: barFret,
+      6: {
+        4: 3,
+        5: 2
+      }
+    }
+  },
+
+  {
     fullName: 'A sharp',
     shortName: 'A#',
     alternativeShortName: 'Bb',
