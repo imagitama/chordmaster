@@ -1,4 +1,5 @@
 export default {
-  backgroundColor: 'black',
-  textColor: 'white'
+  backgroundColor: 'rgb(50, 50, 50)',
+  headerBackgroundColor: 'rgb(100, 100, 100)',
+  textColor: 'rgb(220, 220, 220)'
 }
