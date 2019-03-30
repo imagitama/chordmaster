@@ -57,7 +57,7 @@ const replaceCommonTerms = searchTerm => searchTerm
 
 const cleanUpSearchTerm = searchTerm => searchTerm.replace(/ /g, '').toLowerCase()
 
-export const filterChordsBySearchTerm = (chords, searchTerm) => !console.log('result', cleanUpSearchTerm(replaceCommonTerms(searchTerm))) &&
+export const filterChordsBySearchTerm = (chords, searchTerm) => 
   chords.filter(({ shortName }) =>
     shortName.toLowerCase().includes(cleanUpSearchTerm(replaceCommonTerms(searchTerm)))
   )

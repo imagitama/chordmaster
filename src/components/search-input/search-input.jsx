@@ -81,7 +81,7 @@ const SearchInput = ({ searchTerm, changeSearchTerm, showSearchTerm, hideSearchT
           </OutputMessage>
         )}
       
-        <SearchInputStyled type="text" ref={textInput} onBlur={onBlur} onChange={handleKeyDown} />
+        <SearchInputStyled type="text" ref={textInput} defaultValue={searchTerm} onBlur={onBlur} onChange={handleKeyDown} />
       </div>
     )
   }
