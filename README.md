@@ -7,4 +7,12 @@ A React app that shows chords, keys and more.
     npm i
     npm start
 
-Uses create-react-app
+## About
+
+Technologies:
+
+- create-react-app (not ejected)
+- Redux
+- Emotion (with theming)
+
+All chords are defined in `src/chords.js` and all keys in `src/keys.js`.
