@@ -123,6 +123,24 @@ export const chords = [
   },
 
   {
+    fullName: 'B flat minor',
+    shortName: 'Bbm',
+    strings: {
+      6: doNotPlayString
+    },
+    frets: {
+      1: barFret,
+      2: {
+        2: 2
+      },
+      3: {
+        3: 4,
+        4: 3
+      }
+    }
+  },
+
+  {
     fullName: 'C major',
     shortName: 'C',
     strings: {

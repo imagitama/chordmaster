@@ -1,17 +1,19 @@
 import chordsDefinition from '../../chords'
-import { isFullNameMajorMinor, cleanNameForSounds } from '../../utils'
+import { cleanNameForSounds } from '../../utils'
 
 const buildSoundFiles = () => {
-  return chordsDefinition.reduce((obj, { fullName, shortName, copyFrom }) => {
-    if (!isFullNameMajorMinor(fullName)) {
-      return obj
-    }
-
+  return chordsDefinition.reduce((obj, { shortName, copyFrom }) => {
     const fileName = copyFrom ? cleanNameForSounds(copyFrom) : cleanNameForSounds(shortName)
 
-    return {
-      ...obj,
-      [cleanNameForSounds(shortName)]: require(`../../sounds/${fileName}.mp3`)
+    try {
+      const fileContents = require(`../../sounds/${fileName}.mp3`)
+
+      return {
+        ...obj,
+        [cleanNameForSounds(shortName)]: fileContents
+      }
+    } catch (err) {
+      return obj
     }
   }, {})
 }
