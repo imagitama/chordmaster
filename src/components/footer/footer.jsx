@@ -1,5 +1,6 @@
 import React from 'react'
 import FooterStyled, { FooterSegment } from './footer.styles'
+import settings from '../../settings'
 
 export const Footer = () => (
   <FooterStyled>
@@ -7,7 +8,7 @@ export const Footer = () => (
       Made by <a href="http://www.jaredwilliams.com.au">Jared Williams</a>
     </FooterSegment>
     <FooterSegment>
-      <a href="https://github.com/imagitama/chords" title="View the GitHub repo">GitHub</a>
+      <a href={settings.githubRepoUrl} title="View the GitHub repo">GitHub</a>
     </FooterSegment>
   </FooterStyled>
 )
