@@ -230,6 +230,23 @@ export const chords = [
   },
 
   {
+    fullName: 'C add 9',
+    shortName: 'Cadd9',
+    strings: {
+      6: doNotPlayString
+    },
+    frets: {
+      2: {
+        4: 1
+      },
+      3: {
+        2: 3,
+        5: 2
+      }
+    }
+  },
+
+  {
     fullName: 'D major',
     shortName: 'D',
     strings: {
@@ -302,6 +319,23 @@ export const chords = [
     shortName: 'Db',
     alternativeShortName: 'C#',
     copyFrom: 'C#'
+  },
+
+  {
+    fullName: 'D suspended 2',
+    shortName: 'Dsus2',
+    strings: {
+      5: doNotPlayString,
+      6: doNotPlayString
+    },
+    frets: {
+      2: {
+        3: 2
+      },
+      3: {
+        2: 3
+      }
+    }
   },
 
   {
