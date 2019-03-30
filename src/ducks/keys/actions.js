@@ -18,3 +18,8 @@ export const selectChordProgression = chordProgressionIdx => ({
     chordProgressionIdx
   }
 })
+
+export const RESET_KEYS = 'RESET_KEYS'
+export const resetKeys = () => ({
+  type: RESET_KEYS
+})

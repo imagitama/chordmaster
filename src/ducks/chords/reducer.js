@@ -1,4 +1,4 @@
-import { CHANGE_SEARCH_TERM, SHOW_SEARCH_TERM, HIDE_SEARCH_TERM, TOGGLE_MAJOR_MINOR_CHORDS_ONLY, TOGGLE_FAVOURITE_CHORD, TOGGLE_FAVOURITES_ONLY, CLEAR_FAVOURITES } from './actions'
+import { CHANGE_SEARCH_TERM, SHOW_SEARCH_TERM, HIDE_SEARCH_TERM, TOGGLE_MAJOR_MINOR_CHORDS_ONLY, TOGGLE_FAVOURITE_CHORD, TOGGLE_FAVOURITES_ONLY, CLEAR_FAVOURITES, RESET_CHORDS } from './actions'
 
 const defaultState = {
   searchTerm: '',
@@ -54,6 +54,9 @@ export default (state = defaultState, action) => {
         ...state,
         favouriteChords: []  
       }
+
+    case RESET_CHORDS:
+      return defaultState
 
     default:
       return state

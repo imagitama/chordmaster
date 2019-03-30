@@ -38,3 +38,8 @@ export const CLEAR_FAVOURITES = 'CLEAR_FAVOURITES'
 export const clearFavourites = () => ({
   type: CLEAR_FAVOURITES
 })
+
+export const RESET_CHORDS = 'RESET_CHORDS'
+export const resetChords = () => ({
+  type: RESET_CHORDS
+})
