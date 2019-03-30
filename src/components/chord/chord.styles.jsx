@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 
-const stringColour = '#000'
 const stringWidth = '1px'
 
 export const ChordStyled = styled.div(({ isHighlighted }) => ({
@@ -67,7 +66,7 @@ export const StringStateStyled = styled.div(({ idx }) => ({
 export const BarFretStyled = styled.div(({ theme }) => ({
   width: 'calc(100% + 1rem)',
   height: '0.5rem',
-  background: theme.backgroundColor,
+  background: theme.textColor,
   borderRadius: '0.5rem',
   position: 'absolute',
   top: '0.7rem',
