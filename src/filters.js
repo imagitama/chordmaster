@@ -22,7 +22,7 @@ export const sortChordsBySequence = (chords, selectedKeyShortName) => {
   const chordsInKey = chords.filter(({ shortName: shortNameUnderTest }) => isChordShortNameInKey(selectedKey, shortNameUnderTest))
 
   Object.values(keyChordDefinition).forEach(
-    shortName => chords.find(({ shortName: shortNameUnderTest }) => !console.log(shortNameUnderTest, shortName) && shortNameUnderTest === shortName) === undefined ?
+    shortName => chords.find(({ shortName: shortNameUnderTest }) => shortNameUnderTest === shortName) === undefined ?
     chordsInKey.push({
       shortName,
       fullName: `Unknown chord ${shortName}`
