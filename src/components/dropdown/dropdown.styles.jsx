@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 
 export const DropdownWrapperStyled = styled.div`
+  display: inline-block;
   position: relative;
   background: ${({ theme }) => theme.buttonBackgroundColor};
 `
