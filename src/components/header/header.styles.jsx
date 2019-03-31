@@ -21,6 +21,43 @@ export const HeaderSegment = styled.div`
   }
 `
 
+export const LogoSegment = styled.div`
+  position: relative;
+  color: ${({ theme }) => theme.logoTextColor};
+  overflow: hidden;
+
+  ::before {
+    content: " ";
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: ${({ theme }) => theme.logoBackgroundColor};
+    right: 10%;
+    z-index: 1;
+  }
+`
+
+export const LogoLabel = styled.div`
+  position: relative;
+  z-index: 10;
+  padding: 0 2rem 0 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+`
+
+export const LogoBackground = styled.div`
+  width: 20%;
+  height: 150%;
+  position: absolute;
+  top: -50%;
+  right: 10%;
+  transform: rotate(10deg);
+  background: ${({ theme }) => theme.logoBackgroundColor};
+  z-index: 1;
+`
+
 export const PrimaryHeaderStyled = styled.div`
   ${headerChildStyle}
   background-color: ${({ theme }) => theme.headerBackgroundColor};

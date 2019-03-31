@@ -7,5 +7,7 @@ export default {
   outputBarBackgroundColor: 'rgb(75, 75, 75)',
   outputBarTextColor: 'rgb(225, 225, 225)',
   buttonTextColor: 'rgb(50, 50, 50)',
-  buttonBackgroundColor: 'rgb(225, 225, 225)'
+  buttonBackgroundColor: 'rgb(225, 225, 225)',
+  logoBackgroundColor: 'rgb(220, 220, 220)',
+  logoTextColor: 'rgb(50, 50, 50)'
 }

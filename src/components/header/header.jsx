@@ -1,5 +1,5 @@
 import React from 'react'
-import HeaderStyled, { HeaderSegment, PrimaryHeaderStyled, SecondaryHeaderStyled } from './header.styles'
+import HeaderStyled, { HeaderSegment, LogoSegment, LogoLabel, LogoBackground, PrimaryHeaderStyled, SecondaryHeaderStyled } from './header.styles'
 import KeySelector from '../key-selector/key-selector'
 import ChordProgressionSelector from '../chord-progression-selector/chord-progression-selector'
 import MajorMinorChordsOnlyToggle from '../major-minor-chords-only-toggle/major-minor-chords-only-toggle'
@@ -11,11 +11,12 @@ import ShowFeedbackFormButton from '../show-feedback-form-button/show-feedback-f
 export const Header = () => (
   <HeaderStyled>
     <PrimaryHeaderStyled>
-      <HeaderSegment primary>
-        <strong>
+      <LogoSegment>
+        <LogoLabel>
           ChordMaster
-        </strong>
-      </HeaderSegment>
+        </LogoLabel>
+        <LogoBackground />
+      </LogoSegment>
       <HeaderSegment>
         <DarkModeToggle />
       </HeaderSegment>
