@@ -1,10 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import SearchTermStyled from './search-term.styles'
+import SearchTermStyled, { SearchTermTextStyled } from './search-term.styles'
 
 export const SearchTerm = ({ searchTerm, searchTermVisible }) => searchTerm ? (
   <SearchTermStyled searchTermVisible={searchTermVisible}>
-    {searchTerm}
+    <SearchTermTextStyled>
+      {searchTerm}
+    </SearchTermTextStyled>
   </SearchTermStyled>
 ) : null
 
