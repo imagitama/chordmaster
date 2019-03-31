@@ -14,6 +14,7 @@ import OutputMessage from './components/output-message/output-message'
 import { populateCopiedChords, filterMajorMinorChordsOnly, sortChordsBySequence, filterChordsByChordProgression, filterChordsBySearchTerm, filterFavouriteChordsOnly } from './filters'
 import globalStyles from './globalStyles'
 import WelcomeMessage from './components/welcome-message/welcome-message'
+import FeedbackForm from './components/feedback-form/feedback-form'
 
 const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm, majorMinorChordsOnly, favouriteChords, favouritesOnly, isDarkModeEnabled }) => {
   let chords = populateCopiedChords(chordsDefinition)
@@ -43,6 +44,7 @@ const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx
       <Global styles={globalStyles} />
       <Header />
       <WelcomeMessage />
+      <FeedbackForm />
       <SearchInput />
       <SearchTerm />
       {chords.length ? <Chords chords={chords} /> : <OutputMessage>No chords found</OutputMessage>}

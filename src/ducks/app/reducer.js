@@ -1,8 +1,9 @@
-import { TOGGLE_DARK_MODE, HIDE_WELCOME_MESSAGE } from './actions'
+import { TOGGLE_DARK_MODE, HIDE_WELCOME_MESSAGE, SHOW_FEEDBACK_FORM, HIDE_FEEDBACK_FORM } from './actions'
 
 const defaultState = {
   isDarkModeEnabled: false,
-  isWelcomeMessageHidden: false
+  isWelcomeMessageHidden: false,
+  isFeedbackFormVisible: false
 }
 
 export default (state = defaultState, action) => {
@@ -17,6 +18,18 @@ export default (state = defaultState, action) => {
       return {
         ...state,
         isWelcomeMessageHidden: true
+      }
+
+    case SHOW_FEEDBACK_FORM:
+      return {
+        ...state,
+        isFeedbackFormVisible: true
+      }
+
+    case HIDE_FEEDBACK_FORM:
+      return {
+        ...state,
+        isFeedbackFormVisible: false
       }
 
     default:

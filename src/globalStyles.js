@@ -27,4 +27,9 @@ export default theme => css`
     font-family: inherit;
     color: inherit;
   }
+
+  p {
+    padding: 0;
+    margin: 0;
+  }
 `

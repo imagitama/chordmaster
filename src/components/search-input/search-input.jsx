@@ -7,7 +7,7 @@ import SearchInputStyled from './search-input.styles'
 
 const isMobileDevice = 'ontouchstart' in document.documentElement
 
-const SearchInput = ({ searchTerm, changeSearchTerm, showSearchTerm, hideSearchTerm }) => {
+const SearchInput = ({ searchTerm, changeSearchTerm, showSearchTerm, hideSearchTerm, isFeedbackFormVisible }) => {
   const [isFocused, setIsFocused] = useState(false)
   const textInput = useRef(null)
   const timeout = useRef(null)
@@ -35,7 +35,7 @@ const SearchInput = ({ searchTerm, changeSearchTerm, showSearchTerm, hideSearchT
   }
 
   const onBlur = () => {
-    if (!isMobileDevice) {
+    if (!isMobileDevice && !isFeedbackFormVisible) {
       focusOnTextInput()
       return
     }
@@ -86,8 +86,9 @@ const SearchInput = ({ searchTerm, changeSearchTerm, showSearchTerm, hideSearchT
     )
   }
 
-const mapStateToProps = ({ chords: { searchTerm } }) => ({
-  searchTerm
+const mapStateToProps = ({ chords: { searchTerm }, app: { isFeedbackFormVisible } }) => ({
+  searchTerm,
+  isFeedbackFormVisible
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({

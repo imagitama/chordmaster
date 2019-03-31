@@ -6,6 +6,7 @@ import MajorMinorChordsOnlyToggle from '../major-minor-chords-only-toggle/major-
 import FavouritesOnlyToggle from '../favourites-only-toggle/favourites-only-toggle'
 import ResetButton from '../reset-button/reset-button'
 import DarkModeToggle from '../dark-mode-toggle/dark-mode-toggle'
+import ShowFeedbackFormButton from '../show-feedback-form-button/show-feedback-form-button'
 
 export const Header = () => (
   <HeaderStyled>
@@ -29,6 +30,9 @@ export const Header = () => (
     </HeaderSegment>
     <HeaderSegment>
       <DarkModeToggle />
+    </HeaderSegment>
+    <HeaderSegment>
+      <ShowFeedbackFormButton />
     </HeaderSegment>
   </HeaderStyled>
 )
