@@ -8,6 +8,7 @@ export const ToggleInputStyled = styled.input`
   position: relative;
   vertical-align: middle;
   margin: 0 0.5rem 0 0;
+  color: ${({ theme }) => theme.buttonTextColor};
 
   :checked {
     ::before {
