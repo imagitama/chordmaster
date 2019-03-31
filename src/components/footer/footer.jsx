@@ -11,7 +11,7 @@ export const Footer = () => (
       <a href={settings.githubRepoUrl} title="View the GitHub repo">GitHub</a>
     </FooterSegment>
     <FooterSegment>
-      Version {'COMMIT_REF' in process.env ? process.env.COMMIT_REF : 'Unknown'}
+      Version {'REACT_APP_COMMIT_REF' in process.env ? process.env.REACT_APP_COMMIT_REF : 'Unknown'}
     </FooterSegment>
   </FooterStyled>
 )
