@@ -35,11 +35,6 @@ const SearchInput = ({ searchTerm, changeSearchTerm, showSearchTerm, hideSearchT
   }
 
   const onBlur = () => {
-    if (!isMobileDevice && !isFeedbackFormVisible) {
-      focusOnTextInput()
-      return
-    }
-
     setIsFocused(false)
   }
 

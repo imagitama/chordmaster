@@ -8,8 +8,8 @@ import FeedbackFormStyled from './feedback-form.styles'
 
 const encode = (data) => {
   return Object.keys(data)
-      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&');
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
 }
 
 export const FeedbackForm = ({ isFeedbackFormVisible, hideFeedbackForm }) => {
@@ -48,6 +48,7 @@ export const FeedbackForm = ({ isFeedbackFormVisible, hideFeedbackForm }) => {
       </p>
       <TextInput onChange={event => setFeedbackTextInput(event.target.value)} />
       <Button onClick={submitFeedback}>Submit</Button>
+      <Button onClick={hideFeedbackForm}>Hide</Button>
     </FeedbackFormStyled>
   )
 }
