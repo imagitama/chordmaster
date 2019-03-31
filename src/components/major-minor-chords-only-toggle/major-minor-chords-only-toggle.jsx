@@ -7,7 +7,7 @@ import MajorMinorChordsOnlyToggleStyled from './major-minor-chords-only-toggle.s
 
 export const MajorMinorChordsOnlyToggle = ({ toggleMinorMajorChordsOnly, majorMinorChordsOnly, selectedKeyShortName }) => (
   <MajorMinorChordsOnlyToggleStyled isKeySelected={selectedKeyShortName !== ''}>
-    <ToggleInput onChange={toggleMinorMajorChordsOnly} label="Major and minor only" isEnabled={majorMinorChordsOnly} />
+    <ToggleInput onChange={toggleMinorMajorChordsOnly} label="Common chords only" isEnabled={majorMinorChordsOnly} />
   </MajorMinorChordsOnlyToggleStyled>
 )
 
