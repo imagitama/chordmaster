@@ -18,14 +18,26 @@ const populateFretNumbers = frets => {
   return firstFretNumber > 2 ? [firstFretNumber, firstFretNumber+1, firstFretNumber+2, firstFretNumber+3] : [1, 2, 3, 4]
 }
 
+const getRomanNumeral = (chordShortName, selectedKeyShortName) => {
+  if (!selectedKeyShortName) {
+    return
+  }
+
+  const chordsInKey = getKeyFromShortName(selectedKeyShortName).chords
+
+  return Object.entries(chordsInKey).find(([romanNumeral, chordShortNameUnderTest]) => chordShortNameUnderTest === chordShortName)[0]
+}
+
 export const Chord = ({ selectedKeyShortName, fullName, shortName, alternativeShortName, strings = {}, frets = {} }) => {
   const shouldBeHighlighted = selectedKeyShortName ? isChordShortNameInKey(getKeyFromShortName(selectedKeyShortName), shortName) : true
   const isChordHigh = getIsChordHigh(frets)
   const firstFretNumber = Object.keys(frets).shift()
   const fretNumbers = populateFretNumbers(frets)
+  const romanNumeral = getRomanNumeral(shortName, selectedKeyShortName)
 
   return (
     <ChordStyled isHighlighted={shouldBeHighlighted}>
+      {romanNumeral && `${romanNumeral} - `}
       <span title={fullName}>{shortName}</span> {alternativeShortName ? `(${alternativeShortName})` : ''}
       {!Object.keys(frets).length ? (
         <OutputMessage>
