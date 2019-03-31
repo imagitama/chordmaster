@@ -8,7 +8,7 @@ import settings from '../../settings'
 
 export const WelcomeMessage = ({ hideWelcomeMessage, isWelcomeMessageHidden }) => isWelcomeMessageHidden === false ? (
   <OutputBar>
-    Welcome to the ChordMaster app. Not all chords and keys are available so if you want more, please <a href={settings.githubRepoUrl}>submit a PR or open an issue</a>. Thank you.
+    Welcome to the ChordMaster app. If you would like a feature or a chord please click Feedback above or visit the <a href={settings.githubRepoUrl}>GitHub repo</a>. Thank you.
     <br />
     <Button onClick={hideWelcomeMessage}>Hide</Button>
   </OutputBar>
