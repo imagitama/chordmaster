@@ -8,6 +8,7 @@ import soundFiles from './soundFiles'
 import FavouriteChordButton from '../favourite-chord-button/favourite-chord-button'
 import OutputMessage from '../output-message/output-message'
 import settings from '../../settings'
+import { logError } from '../../logging'
 
 const stringArray = [6, 5, 4, 3, 2, 1]
 
@@ -25,7 +26,14 @@ const getRomanNumeral = (chordShortName, selectedKeyShortName) => {
 
   const chordsInKey = getKeyFromShortName(selectedKeyShortName).chords
 
-  return Object.entries(chordsInKey).find(([romanNumeral, chordShortNameUnderTest]) => chordShortNameUnderTest === chordShortName)[0]
+  const chord = Object.entries(chordsInKey).find(([romanNumeral, chordShortNameUnderTest]) => chordShortNameUnderTest === chordShortName)
+
+  if (!chord) {
+    logError(new Error(`Failed to get roman numeral for chord ${chordShortName} (selected key ${selectedKeyShortName})`))
+    return
+  }
+
+  return chord[0]
 }
 
 export const Chord = ({ selectedKeyShortName, fullName, shortName, alternativeShortName, strings = {}, frets = {} }) => {
