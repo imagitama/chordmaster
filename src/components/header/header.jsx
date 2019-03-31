@@ -1,5 +1,5 @@
 import React from 'react'
-import HeaderStyled, { HeaderSegment } from './header.styles'
+import HeaderStyled, { HeaderSegment, PrimaryHeaderStyled, SecondaryHeaderStyled } from './header.styles'
 import KeySelector from '../key-selector/key-selector'
 import ChordProgressionSelector from '../chord-progression-selector/chord-progression-selector'
 import MajorMinorChordsOnlyToggle from '../major-minor-chords-only-toggle/major-minor-chords-only-toggle'
@@ -10,30 +10,38 @@ import ShowFeedbackFormButton from '../show-feedback-form-button/show-feedback-f
 
 export const Header = () => (
   <HeaderStyled>
-    <HeaderSegment>
-      ChordMaster
-    </HeaderSegment>
-    <HeaderSegment>
-      <MajorMinorChordsOnlyToggle />
-    </HeaderSegment>
-    <HeaderSegment>
-      <KeySelector />
-    </HeaderSegment>
-    <HeaderSegment>
-      <ChordProgressionSelector />
-    </HeaderSegment>
-    <HeaderSegment>
-      <FavouritesOnlyToggle />
-    </HeaderSegment>
-    <HeaderSegment>
-      <ResetButton />
-    </HeaderSegment>
-    <HeaderSegment>
-      <DarkModeToggle />
-    </HeaderSegment>
-    <HeaderSegment>
-      <ShowFeedbackFormButton />
-    </HeaderSegment>
+    <PrimaryHeaderStyled>
+      <HeaderSegment primary>
+        <strong>
+          ChordMaster
+        </strong>
+      </HeaderSegment>
+      <HeaderSegment>
+        <DarkModeToggle />
+      </HeaderSegment>
+      <HeaderSegment>
+        <ShowFeedbackFormButton />
+      </HeaderSegment>
+    </PrimaryHeaderStyled>
+
+    <SecondaryHeaderStyled>
+      <HeaderSegment>
+        <MajorMinorChordsOnlyToggle />
+      </HeaderSegment>
+      <HeaderSegment>
+        <KeySelector />
+      </HeaderSegment>
+      <HeaderSegment>
+        <ChordProgressionSelector />
+      </HeaderSegment>
+      <HeaderSegment>
+        <FavouritesOnlyToggle />
+      </HeaderSegment>
+      <HeaderSegment>
+        <ResetButton />
+      </HeaderSegment>
+    </SecondaryHeaderStyled>
+
   </HeaderStyled>
 )
 

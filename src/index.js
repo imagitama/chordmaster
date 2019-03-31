@@ -9,21 +9,21 @@ import createStore from './store'
 
 const { store, persistor } = createStore()
 
-Sentry.init({
- dsn: 'https://f4afba1340004de7b22b7e7eccbec25c@sentry.io/1427601',
- beforeSend: event => {
-    if (event.exception) {
-      Sentry.showReportDialog({
-        title: 'Something bad has happened',
-        subtitle: 'Thanks for using my app. Unfortunately it has broken but the creator has been notified. Please fill out this form to help me debug. :)',
-        subtitle2: ''
-      })
+if (process.env.NODE_ENV === 'production') {
+  Sentry.init({
+  dsn: 'https://f4afba1340004de7b22b7e7eccbec25c@sentry.io/1427601',
+  beforeSend: event => {
+      if (event.exception) {
+        Sentry.showReportDialog({
+          title: 'Something bad has happened',
+          subtitle: 'Thanks for using my app. Unfortunately it has broken but the creator has been notified. Please fill out this form to help me debug. :)',
+          subtitle2: ''
+        })
+      }
+      return event
     }
-    return event
-  }
-})
-
-window.Sentry = Sentry
+  })
+}
 
 ReactDOM.render(
   <Provider store={store}>
