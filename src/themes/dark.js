@@ -5,5 +5,7 @@ export default {
   headerTextColor: 'rgb(200, 200, 200)',
   textColor: 'rgb(220, 220, 220)',
   outputBarBackgroundColor: 'rgb(125, 125, 125)',
-  outputBarTextColor: 'rgb(200, 200, 200)'
+  outputBarTextColor: 'rgb(200, 200, 200)',
+  buttonTextColor: 'rgb(220, 220, 220)',
+  buttonBackgroundColor: 'rgb(150, 150, 150)'
 }
