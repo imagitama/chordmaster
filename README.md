@@ -19,7 +19,7 @@ All chords are defined in `src/chords.js` and all keys in `src/keys.js`.
 
 ## Browser testing
 
-<img src="https://3fxtqy18kygf3on3bu39kh93-wpengine.netdna-ssl.com/wp-content/themes/browserstack/img/browserstack-logo.svg" />
+<img src="./browserstack-logo.png" />
 
 Thanks to [BrowserStack](https://www.browserstack.com/) for providing me a way to test 
 in all browsers and devices when I don't own them!
