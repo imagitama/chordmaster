@@ -6,6 +6,7 @@ import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2'
 import keysReducer from './ducks/keys/reducer'
 import chordsReducer from './ducks/chords/reducer'
 import appReducer from './ducks/app/reducer'
+import songsReducer from './ducks/songs/reducer'
 import analyticsMiddleware from './analytics'
 
 const persistConfig = {
@@ -17,7 +18,8 @@ const persistConfig = {
 const rootReducer = combineReducers({
   keys: keysReducer,
   chords: chordsReducer,
-  app: appReducer
+  app: appReducer,
+  songs: songsReducer
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

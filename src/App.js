@@ -15,8 +15,10 @@ import { populateCopiedChords, filterMajorMinorChordsOnly, sortChordsBySequence,
 import globalStyles from './globalStyles'
 import WelcomeMessage from './components/welcome-message/welcome-message'
 import FeedbackForm from './components/feedback-form/feedback-form'
+import KeySongs from './components/key-songs/key-songs'
+import Song from './components/song/song'
 
-const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm, majorMinorChordsOnly, favouriteChords, favouritesOnly, isDarkModeEnabled }) => {
+const ChordsContainer = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm, majorMinorChordsOnly, favouriteChords, favouritesOnly }) => {
   let chords = populateCopiedChords(chordsDefinition)
 
   if (majorMinorChordsOnly && !selectedKeyShortName) {
@@ -40,14 +42,24 @@ const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx
   }
 
   return (
+    <>
+      <SearchInput />
+      <SearchTerm />
+      {chords.length ? <Chords chords={chords} /> : <OutputMessage>No chords found</OutputMessage>}
+      <KeySongs />
+    </>
+  )
+}
+
+const App = ({ isDarkModeEnabled, selectedSong, ...props }) => {
+  return (
     <ThemeProvider theme={isDarkModeEnabled ? darkTheme : lightTheme}>
       <Global styles={globalStyles} />
       <Header />
       <WelcomeMessage />
       <FeedbackForm />
-      <SearchInput />
-      <SearchTerm />
-      {chords.length ? <Chords chords={chords} /> : <OutputMessage>No chords found</OutputMessage>}
+      {!selectedSong && <ChordsContainer {...props} />}
+      <Song />
       <Footer />
     </ThemeProvider>
   )
@@ -68,6 +80,9 @@ const mapStateToProps =
     },
     app: {
       isDarkModeEnabled
+    },
+    songs: {
+      selectedSong
     }
   }) =>
   ({ 
@@ -78,7 +93,8 @@ const mapStateToProps =
     majorMinorChordsOnly,
     favouriteChords,
     favouritesOnly,
-    isDarkModeEnabled
+    isDarkModeEnabled,
+    selectedSong
   })
 
 export default connect(mapStateToProps)(App)
