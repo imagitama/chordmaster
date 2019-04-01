@@ -28,8 +28,8 @@ const getRomanNumeral = (chordShortName, selectedKeyShortName) => {
 
   const chord = Object.entries(chordsInKey).find(([romanNumeral, chordShortNameUnderTest]) => chordShortNameUnderTest === chordShortName)
 
+  // This happens when you show every chord when filtering by key
   if (!chord) {
-    logError(new Error(`Failed to get roman numeral for chord ${chordShortName} (selected key ${selectedKeyShortName})`))
     return
   }
 
