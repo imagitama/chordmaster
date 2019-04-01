@@ -11,17 +11,7 @@ const { store, persistor } = createStore()
 
 if (process.env.NODE_ENV === 'production') {
   Sentry.init({
-  dsn: 'https://f4afba1340004de7b22b7e7eccbec25c@sentry.io/1427601',
-  beforeSend: event => {
-      if (event.exception) {
-        Sentry.showReportDialog({
-          title: 'Something bad has happened',
-          subtitle: 'Thanks for using my app. Unfortunately it has broken but the creator has been notified. Please fill out this form to help me debug. :)',
-          subtitle2: ''
-        })
-      }
-      return event
-    }
+    dsn: 'https://f4afba1340004de7b22b7e7eccbec25c@sentry.io/1427601'
   })
 }
 
