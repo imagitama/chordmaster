@@ -703,7 +703,96 @@ export const chords = [
         2: 3
       }
     }
-  }
+  },
+
+  {
+    isUku: true,
+    fullName: 'A major',
+    shortName: 'A',
+    frets: {
+      1: {
+        3: 1
+      },
+      2: {
+        4: 2
+      },
+      3: barFret
+    },
+  },
+
+  {
+    isUku: true,
+    fullName: 'A major',
+    shortName: 'A',
+    strings: {
+      2: doNotPlayString
+    },
+    frets: {
+      1: {
+        3: 1
+      },
+      2: {
+        4: 2
+      }
+    },
+  },
+
+  {
+    isUku: true,
+    fullName: 'A major',
+    shortName: 'A',
+    frets: {
+      1: {
+        3: 1
+      },
+      2: {
+        4: 2
+      }
+    },
+  },
+
+  {
+    isUku: true,
+    fullName: 'A major',
+    shortName: 'A',
+    frets: {
+      1: {
+        3: 1
+      },
+      2: {
+        4: 2
+      }
+    },
+  },
+
+  {
+    isUku: true,
+    fullName: 'A major',
+    shortName: 'A',
+    frets: {
+      1: {
+        3: 1
+      },
+      2: {
+        4: 2
+      }
+    },
+  },
+
+  {
+    isUku: true,
+    fullName: 'A major',
+    shortName: 'A',
+    frets: {
+      1: {
+        3: 1
+      },
+      2: {
+        4: 2
+      }
+    },
+  },
+  
 ]
 
 export default chords

@@ -6,18 +6,20 @@ import darkTheme from './themes/dark'
 import lightTheme from './themes/light'
 import chordsDefinition from './chords'
 import Chords from './components/chords/chords'
+import UkuChords from './components/uku-chords/ukuChords'
 import Header from './components/header/header'
 import Footer from './components/footer/footer'
 import SearchInput from './components/search-input/search-input'
 import SearchTerm from './components/search-term/search-term'
 import OutputMessage from './components/output-message/output-message'
-import { populateCopiedChords, filterMajorMinorChordsOnly, sortChordsBySequence, filterChordsByChordProgression, filterChordsBySearchTerm, filterFavouriteChordsOnly } from './filters'
+import { populateCopiedChords, filterMajorMinorChordsOnly, sortChordsBySequence, filterChordsByChordProgression, filterChordsBySearchTerm, filterFavouriteChordsOnly, filterUkuChordsOnly } from './filters'
 import globalStyles from './globalStyles'
 import WelcomeMessage from './components/welcome-message/welcome-message'
 import FeedbackForm from './components/feedback-form/feedback-form'
 
-const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm, majorMinorChordsOnly, favouriteChords, favouritesOnly, isDarkModeEnabled }) => {
+const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm, majorMinorChordsOnly, favouriteChords, favouritesOnly, isDarkModeEnabled}) => {
   let chords = populateCopiedChords(chordsDefinition)
+  let ukuChords
 
   if (majorMinorChordsOnly && !selectedKeyShortName) {
     chords = filterMajorMinorChordsOnly(chords)
@@ -35,6 +37,10 @@ const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx
     chords = filterChordsBySearchTerm(chords, searchTerm)
   }
 
+  if (true) {
+    ukuChords = filterUkuChordsOnly(chords)
+  }
+
   if (favouritesOnly) {
     chords = filterFavouriteChordsOnly(chords, favouriteChords)
   }
@@ -47,14 +53,15 @@ const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx
       <FeedbackForm />
       <SearchInput />
       <SearchTerm />
-      {chords.length ? <Chords chords={chords} /> : <OutputMessage>No chords found</OutputMessage>}
+      {ukuChords.length ? <UkuChords ukuChords={ukuChords} /> : <OutputMessage>Try some ukulele chords too!</OutputMessage>}
+      {chords.length ? <Chords chords={chords} /> : <OutputMessage>Try some guitar chords too!</OutputMessage>}
       <Footer />
     </ThemeProvider>
   )
 }
 
 const mapStateToProps =
-  ({ 
+  ({
     keys: {
       selectedKeyShortName,
       sortBySequence,
@@ -70,9 +77,9 @@ const mapStateToProps =
       isDarkModeEnabled
     }
   }) =>
-  ({ 
-    selectedKeyShortName, 
-    sortBySequence, 
+  ({
+    selectedKeyShortName,
+    sortBySequence,
     selectedChordProgressionIdx,
     searchTerm,
     majorMinorChordsOnly,

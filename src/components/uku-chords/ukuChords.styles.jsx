@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-export const ChordsStyled = styled.div`
+export const UkuChordsStyled = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   @media (min-width: 768px) {
@@ -11,4 +11,4 @@ export const ChordsStyled = styled.div`
   }
 `
 
-export default ChordsStyled
+export default UkuChordsStyled
