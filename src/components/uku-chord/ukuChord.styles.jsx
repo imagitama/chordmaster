@@ -10,7 +10,7 @@ export const UkuChordStyled = styled.div`
 
 export const UkuChordChartStyled = styled.div`
   width: 40%;
-  border-top: 2px solid ${({ theme }) => theme.textColor};
+  border-top: 3px solid ${({ theme }) => theme.textColor};
   position: relative;
   margin: 1rem auto 0;
 `

@@ -11,11 +11,11 @@ import settings from '../../settings'
 
 const stringArray = [4, 3, 2, 1]
 
-const getIsChordHigh = frets => Object.keys(frets)[0] > 2
+const getIsChordHigh = frets => Object.keys(frets)[0] > 3
 
 const populateFretNumbers = frets => {
   const firstFretNumber = parseInt(Object.keys(frets).shift())
-  return firstFretNumber > 2 ? [firstFretNumber, firstFretNumber+1, firstFretNumber+2, firstFretNumber+3] : [1, 2, 3, 4]
+  return firstFretNumber > 3 ? [firstFretNumber, firstFretNumber+1, firstFretNumber+2, firstFretNumber+3] : [1, 2, 3, 4]
 }
 
 const getRomanNumeral = (chordShortName, selectedKeyShortName) => {

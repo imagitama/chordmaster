@@ -2,6 +2,7 @@ export const doNotPlayString = 'DoNotPlayString'
 export const barFret = 'BarFret'
 
 export const chords = [
+  //Guitar chords
   {
     fullName: 'A major',
     shortName: 'A',
@@ -704,7 +705,9 @@ export const chords = [
       }
     }
   },
+// End of guitar chords
 
+// Ukulele chords
   {
     isUku: true,
     fullName: 'A major',
@@ -716,83 +719,367 @@ export const chords = [
       2: {
         4: 2
       },
-      3: barFret
+    }
+  },
+
+  {
+    isUku: true,
+    fullName: 'A minor',
+    shortName: 'Am',
+    frets: {
+      2: {
+        4: 2
+      }
+    }
+  },
+
+  {
+    isUku: true,
+    fullName: 'A sharp major',
+    shortName: 'A#',
+    frets: {
+      1: {
+        1: 1,
+        2: 1
+      },
+      2: {
+        3: 2
+      },
+      3:{
+        4: 3
+      }
+    }
+  },
+
+  {
+    isUku: true,
+    fullName: 'A sharp minor',
+    shortName: 'A#m',
+    frets: {
+      1: {
+        1: 1,
+        2: 1,
+        3: 1
+      },
+      3: {
+        4: 3
+      }
+    }
+  },
+
+  {
+    isUku: true,
+    fullName: 'B major',
+    shortName: 'B',
+    frets: {
+      2: {
+        1: 1,
+        2: 1
+      },
+      3: {
+        3: 2
+      },
+      4:{
+        4: 3
+      }
+    }
+  },
+
+  {
+    isUku: true,
+    fullName: 'B minor',
+    shortName: 'Bm',
+    frets: {
+      2: {
+        1: 1,
+        2: 1,
+        3: 1
+      },
+      4: {
+        4: 3
+      }
+    }
+  },
+
+  {
+    isUku: true,
+    fullName: 'C major',
+    shortName: 'C',
+    frets: {
+      3: {
+        1: 3
+      }
+    }
+  },
+
+  {
+    isUku: true,
+    fullName: 'C minor',
+    shortName: 'Cm',
+    frets: {
+      3: {
+        1: 1,
+        2: 1,
+        3: 1
+      }
+    }
+  },
+
+  {
+    isUku: true,
+    fullName: 'C sharp major',
+    shortName: 'C#',
+    frets: {
+      1: barFret,
+      4: {
+        1: 4
+      }
+    }
+  },
+
+  {
+    isUku: true,
+    fullName: 'C sharp minor',
+    shortName: 'C#m',
+    frets: {
+      1: {
+        3: 1,
+        4: 1
+      },
+      4: {
+        1: 4
+      }
+    }
+  },
+
+  {
+    isUku: true,
+    fullName: 'D major',
+    shortName: 'D',
+    frets: {
+      2: {
+        2: 3,
+        3: 2,
+        4: 1
+      }
+    }
+  },
+
+  {
+    isUku: true,
+    fullName: 'D minor',
+    shortName: 'Dm',
+    frets: {
+      1: {
+        2: 1
+      },
+      2: {
+        3: 3,
+        4: 2
+      }
+    }
+  },
+
+  {
+    isUku: true,
+    fullName: 'D sharp major',
+    shortName: 'D#',
+    frets: {
+      1: {
+        1: 1
+      },
+      3: {
+        2: 3,
+        3: 2
+      }
+    }
+  },
+
+  {
+    isUku: true,
+    fullName: 'D sharp minor',
+    shortName: 'D#m',
+    frets: {
+      1: {
+        1: 1
+      },
+      2: {
+        2: 2
+      },
+      3: {
+        3: 4,
+        4: 3
+      }
+    }
+  },
+
+  {
+    isUku: true,
+    fullName: 'E major',
+    shortName: 'E',
+    frets: {
+      1: {
+        4: 1
+      },
+      2: {
+        1: 2,
+      },
+      4: {
+        3: 4
+      }
+    }
+  },
+
+  {
+    isUku: true,
+    fullName: 'E minor',
+    shortName: 'Em',
+    frets: {
+      2: {
+        1: 1,
+      },
+      3:{
+        2: 2
+      },
+      4: {
+        3: 3
+      }
+    }
+  },
+
+  {
+    isUku: true,
+    fullName: 'F major',
+    shortName: 'F',
+    frets: {
+      1: {
+        2: 1
+      },
+      2: {
+        4: 2
+      }
+    }
+  },
+
+  {
+    isUku: true,
+    fullName: 'F minor',
+    shortName: 'Fm',
+    frets: {
+      1: {
+        2: 2,
+        4: 1
+      },
+      3: {
+        1: 4
+      }
+    }
+  },
+
+  {
+    isUku: true,
+    fullName: 'F sharp major',
+    shortName: 'F#',
+    frets: {
+      1: {
+        1: 2,
+        3: 1
+      },
+      2: {
+        2: 3,
+      },
+      4: {
+        4: 4
+      }
+    }
+  },
+
+  {
+    isUku: true,
+    fullName: 'F sharp minor',
+    shortName: 'F#m',
+    frets: {
+      1: {
+        3: 1
+      },
+      2: {
+        2: 3,
+        4: 2
+      }
+    }
+  },
+
+  {
+    isUku: true,
+    fullName: 'G major',
+    shortName: 'G',
+    frets: {
+      2: {
+        1: 2,
+        3: 1
+      },
+      3: {
+        2: 3
+      }
     },
   },
 
   {
     isUku: true,
-    fullName: 'A major',
-    shortName: 'A',
+    fullName: 'G minor',
+    shortName: 'Gm',
+    frets: {
+      1: {
+        1: 1
+      },
+      2: {
+        3: 2
+      },
+      3: {
+        2: 3
+      }
+    }
+  },
+
+  {
+    isUku: true,
+    fullName: 'G sharp major',
+    shortName: 'G#',
     strings: {
-      2: doNotPlayString
+      4: doNotPlayString
     },
     frets: {
-      1: {
+      3: {
+        1: 2,
         3: 1
       },
-      2: {
-        4: 2
+      4: {
+        2: 3
       }
-    },
+    }
   },
 
   {
     isUku: true,
-    fullName: 'A major',
-    shortName: 'A',
-    frets: {
-      1: {
-        3: 1
-      },
-      2: {
-        4: 2
-      }
+    fullName: 'G sharp minor',
+    shortName: 'G#m',
+    strings: {
+      4: doNotPlayString
     },
+    frets: {
+      2: {
+        1: 1
+      },
+      3: {
+        3: 2
+      },
+      4: {
+        2: 3
+      }
+    }
   },
 
-  {
-    isUku: true,
-    fullName: 'A major',
-    shortName: 'A',
-    frets: {
-      1: {
-        3: 1
-      },
-      2: {
-        4: 2
-      }
-    },
-  },
-
-  {
-    isUku: true,
-    fullName: 'A major',
-    shortName: 'A',
-    frets: {
-      1: {
-        3: 1
-      },
-      2: {
-        4: 2
-      }
-    },
-  },
-
-  {
-    isUku: true,
-    fullName: 'A major',
-    shortName: 'A',
-    frets: {
-      1: {
-        3: 1
-      },
-      2: {
-        4: 2
-      }
-    },
-  },
-  
 ]
+//End of ukulele chords
 
 export default chords

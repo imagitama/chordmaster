@@ -75,4 +75,6 @@ export const filterMajorMinorChordsOnly = chords => chords.filter(({ fullName })
 
 export const filterFavouriteChordsOnly = (chords, favouriteChords) => chords.filter(({ shortName }) => favouriteChords.includes(shortName))
 
-export const filterUkuChordsOnly = chords => chords.filter(({ isUku }) => isUku === true)
+export const filterUkuChordsOnly = chords => chords.filter(({ isUku }) => (isUku) && isUku === true)
+
+export const filterGuitarChordsOnly = chords => chords.filter(({ isUku }) => !(isUku) || isUku === false )

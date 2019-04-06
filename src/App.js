@@ -12,14 +12,13 @@ import Footer from './components/footer/footer'
 import SearchInput from './components/search-input/search-input'
 import SearchTerm from './components/search-term/search-term'
 import OutputMessage from './components/output-message/output-message'
-import { populateCopiedChords, filterMajorMinorChordsOnly, sortChordsBySequence, filterChordsByChordProgression, filterChordsBySearchTerm, filterFavouriteChordsOnly, filterUkuChordsOnly } from './filters'
+import { populateCopiedChords, filterMajorMinorChordsOnly, sortChordsBySequence, filterChordsByChordProgression, filterChordsBySearchTerm, filterFavouriteChordsOnly, filterUkuChordsOnly, filterGuitarChordsOnly } from './filters'
 import globalStyles from './globalStyles'
 import WelcomeMessage from './components/welcome-message/welcome-message'
 import FeedbackForm from './components/feedback-form/feedback-form'
 
-const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm, majorMinorChordsOnly, favouriteChords, favouritesOnly, isDarkModeEnabled}) => {
+const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm, majorMinorChordsOnly, favouriteChords, favouritesOnly, isDarkModeEnabled }) => {
   let chords = populateCopiedChords(chordsDefinition)
-  let ukuChords
 
   if (majorMinorChordsOnly && !selectedKeyShortName) {
     chords = filterMajorMinorChordsOnly(chords)
@@ -37,13 +36,12 @@ const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx
     chords = filterChordsBySearchTerm(chords, searchTerm)
   }
 
-  if (true) {
-    ukuChords = filterUkuChordsOnly(chords)
-  }
-
   if (favouritesOnly) {
     chords = filterFavouriteChordsOnly(chords, favouriteChords)
   }
+
+  let ukuChords = filterUkuChordsOnly(chords)
+  let guitarChords = filterGuitarChordsOnly(chords)
 
   return (
     <ThemeProvider theme={isDarkModeEnabled ? darkTheme : lightTheme}>
@@ -53,8 +51,10 @@ const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx
       <FeedbackForm />
       <SearchInput />
       <SearchTerm />
-      {ukuChords.length ? <UkuChords ukuChords={ukuChords} /> : <OutputMessage>Try some ukulele chords too!</OutputMessage>}
-      {chords.length ? <Chords chords={chords} /> : <OutputMessage>Try some guitar chords too!</OutputMessage>}
+      {!((ukuChords) && ukuChords.length) ? <OutputMessage>Try some ukulele chords too!</OutputMessage> : ''}
+      {!((guitarChords) && guitarChords.length) ? <OutputMessage>Try some guitar chords too!</OutputMessage> : ''}
+      {((ukuChords) && ukuChords.length) ? <UkuChords ukuChords={ukuChords} /> : ''}
+      {(guitarChords) && guitarChords.length ? <Chords chords={guitarChords} /> : ''}
       <Footer />
     </ThemeProvider>
   )
