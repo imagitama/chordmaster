@@ -17,8 +17,10 @@ import globalStyles from './globalStyles'
 import WelcomeMessage from './components/welcome-message/welcome-message'
 import FeedbackForm from './components/feedback-form/feedback-form'
 
-const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm, majorMinorChordsOnly, favouriteChords, favouritesOnly, isDarkModeEnabled }) => {
+const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm, majorMinorChordsOnly, favouriteChords, favouritesOnly, isDarkModeEnabled, selectedInstrumentShortName }) => {
   let chords = populateCopiedChords(chordsDefinition)
+  let ukuChords
+  let guitarChords
 
   if (majorMinorChordsOnly && !selectedKeyShortName) {
     chords = filterMajorMinorChordsOnly(chords)
@@ -40,8 +42,14 @@ const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx
     chords = filterFavouriteChordsOnly(chords, favouriteChords)
   }
 
-  let ukuChords = filterUkuChordsOnly(chords)
-  let guitarChords = filterGuitarChordsOnly(chords)
+  if (selectedInstrumentShortName === 'uku') {
+    ukuChords = filterUkuChordsOnly(chords)
+  } else if (selectedInstrumentShortName === 'gtr') {
+    guitarChords = filterGuitarChordsOnly(chords)
+  } else {
+    ukuChords = null
+    guitarChords = null
+  }
 
   return (
     <ThemeProvider theme={isDarkModeEnabled ? darkTheme : lightTheme}>
@@ -51,10 +59,10 @@ const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx
       <FeedbackForm />
       <SearchInput />
       <SearchTerm />
-      {!((ukuChords) && ukuChords.length) ? <OutputMessage>Try some ukulele chords too!</OutputMessage> : ''}
-      {!((guitarChords) && guitarChords.length) ? <OutputMessage>Try some guitar chords too!</OutputMessage> : ''}
       {((ukuChords) && ukuChords.length) ? <UkuChords ukuChords={ukuChords} /> : ''}
       {(guitarChords) && guitarChords.length ? <Chords chords={guitarChords} /> : ''}
+      {!((ukuChords) && ukuChords.length) ? <OutputMessage>Try some ukulele chords too!</OutputMessage> : ''}
+      {!((guitarChords) && guitarChords.length) ? <OutputMessage>Try some guitar chords too!</OutputMessage> : ''}
       <Footer />
     </ThemeProvider>
   )
@@ -75,6 +83,9 @@ const mapStateToProps =
     },
     app: {
       isDarkModeEnabled
+    },
+    instruments: {
+      selectedInstrumentShortName
     }
   }) =>
   ({
@@ -85,7 +96,8 @@ const mapStateToProps =
     majorMinorChordsOnly,
     favouriteChords,
     favouritesOnly,
-    isDarkModeEnabled
+    isDarkModeEnabled,
+    selectedInstrumentShortName
   })
 
 export default connect(mapStateToProps)(App)

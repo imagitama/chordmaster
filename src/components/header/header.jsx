@@ -1,5 +1,6 @@
 import React from 'react'
 import HeaderStyled, { HeaderSegment, LogoSegment, LogoLabel, LogoBackground, PrimaryHeaderStyled, SecondaryHeaderStyled } from './header.styles'
+import InstrumentSelector from '../instrument-selector/instrument-selector'
 import KeySelector from '../key-selector/key-selector'
 import ChordProgressionSelector from '../chord-progression-selector/chord-progression-selector'
 import MajorMinorChordsOnlyToggle from '../major-minor-chords-only-toggle/major-minor-chords-only-toggle'
@@ -28,6 +29,9 @@ export const Header = () => (
     <SecondaryHeaderStyled>
       <HeaderSegment>
         <MajorMinorChordsOnlyToggle />
+      </HeaderSegment>
+      <HeaderSegment>
+        <InstrumentSelector />
       </HeaderSegment>
       <HeaderSegment>
         <KeySelector />
