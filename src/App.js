@@ -6,18 +6,21 @@ import darkTheme from './themes/dark'
 import lightTheme from './themes/light'
 import chordsDefinition from './chords'
 import Chords from './components/chords/chords'
+import UkuChords from './components/uku-chords/ukuChords'
 import Header from './components/header/header'
 import Footer from './components/footer/footer'
 import SearchInput from './components/search-input/search-input'
 import SearchTerm from './components/search-term/search-term'
 import OutputMessage from './components/output-message/output-message'
-import { populateCopiedChords, filterMajorMinorChordsOnly, sortChordsBySequence, filterChordsByChordProgression, filterChordsBySearchTerm, filterFavouriteChordsOnly } from './filters'
+import { populateCopiedChords, filterMajorMinorChordsOnly, sortChordsBySequence, filterChordsByChordProgression, filterChordsBySearchTerm, filterFavouriteChordsOnly, filterUkuChordsOnly, filterGuitarChordsOnly } from './filters'
 import globalStyles from './globalStyles'
 import WelcomeMessage from './components/welcome-message/welcome-message'
 import FeedbackForm from './components/feedback-form/feedback-form'
 
-const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm, majorMinorChordsOnly, favouriteChords, favouritesOnly, isDarkModeEnabled }) => {
+const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm, majorMinorChordsOnly, favouriteChords, favouritesOnly, isDarkModeEnabled, selectedInstrumentShortName }) => {
   let chords = populateCopiedChords(chordsDefinition)
+  let ukuChords
+  let guitarChords
 
   if (majorMinorChordsOnly && !selectedKeyShortName) {
     chords = filterMajorMinorChordsOnly(chords)
@@ -39,6 +42,15 @@ const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx
     chords = filterFavouriteChordsOnly(chords, favouriteChords)
   }
 
+  if (selectedInstrumentShortName === 'uku') {
+    ukuChords = filterUkuChordsOnly(chords)
+  } else if (selectedInstrumentShortName === 'gtr') {
+    guitarChords = filterGuitarChordsOnly(chords)
+  } else {
+    ukuChords = null
+    guitarChords = null
+  }
+
   return (
     <ThemeProvider theme={isDarkModeEnabled ? darkTheme : lightTheme}>
       <Global styles={globalStyles} />
@@ -47,14 +59,17 @@ const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx
       <FeedbackForm />
       <SearchInput />
       <SearchTerm />
-      {chords.length ? <Chords chords={chords} /> : <OutputMessage>No chords found</OutputMessage>}
+      {((ukuChords) && ukuChords.length) ? <UkuChords ukuChords={ukuChords} /> : ''}
+      {(guitarChords) && guitarChords.length ? <Chords chords={guitarChords} /> : ''}
+      {!((ukuChords) && ukuChords.length) ? <OutputMessage>Try some ukulele chords too!</OutputMessage> : ''}
+      {!((guitarChords) && guitarChords.length) ? <OutputMessage>Try some guitar chords too!</OutputMessage> : ''}
       <Footer />
     </ThemeProvider>
   )
 }
 
 const mapStateToProps =
-  ({ 
+  ({
     keys: {
       selectedKeyShortName,
       sortBySequence,
@@ -68,17 +83,21 @@ const mapStateToProps =
     },
     app: {
       isDarkModeEnabled
+    },
+    instruments: {
+      selectedInstrumentShortName
     }
   }) =>
-  ({ 
-    selectedKeyShortName, 
-    sortBySequence, 
+  ({
+    selectedKeyShortName,
+    sortBySequence,
     selectedChordProgressionIdx,
     searchTerm,
     majorMinorChordsOnly,
     favouriteChords,
     favouritesOnly,
-    isDarkModeEnabled
+    isDarkModeEnabled,
+    selectedInstrumentShortName
   })
 
 export default connect(mapStateToProps)(App)

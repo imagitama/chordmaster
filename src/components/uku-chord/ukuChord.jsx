@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { ChordStyled, ChordChartStyled, BarFretStyled, FretNumberStyled, FretStyled, StringStyled, StringStatesStyled, StringStateStyled, FingerNumberStyled } from './chord.styles'
+import { UkuChordStyled, UkuChordChartStyled, BarFretStyled, FretNumberStyled, FretStyled, StringStyled, UkuStringStatesStyled, UkuStringStateStyled, FingerNumberStyled } from '../uku-chord/ukuChord.styles'
 import { doNotPlayString, barFret } from '../../chords'
 import { isChordShortNameInKey, getKeyFromShortName, cleanNameForSounds } from '../../utils'
 import AudioPlayer from '../audio-player/audio-player'
@@ -9,13 +9,13 @@ import FavouriteChordButton from '../favourite-chord-button/favourite-chord-butt
 import OutputMessage from '../output-message/output-message'
 import settings from '../../settings'
 
-const stringArray = [6, 5, 4, 3, 2, 1]
+const stringArray = [4, 3, 2, 1]
 
-const getIsChordHigh = frets => Object.keys(frets)[0] > 2
+const getIsChordHigh = frets => Object.keys(frets)[0] > 3
 
 const populateFretNumbers = frets => {
   const firstFretNumber = parseInt(Object.keys(frets).shift())
-  return firstFretNumber > 2 ? [firstFretNumber, firstFretNumber+1, firstFretNumber+2, firstFretNumber+3] : [1, 2, 3, 4]
+  return firstFretNumber > 3 ? [firstFretNumber, firstFretNumber+1, firstFretNumber+2, firstFretNumber+3] : [1, 2, 3, 4]
 }
 
 const getRomanNumeral = (chordShortName, selectedKeyShortName) => {
@@ -35,7 +35,7 @@ const getRomanNumeral = (chordShortName, selectedKeyShortName) => {
   return chord[0]
 }
 
-export const Chord = ({ selectedKeyShortName, fullName, shortName, alternativeShortName, strings = {}, frets = {} }) => {
+export const UkuChord = ({ selectedKeyShortName, fullName, shortName, alternativeShortName, strings = {}, frets = {} }) => {
   const shouldBeHighlighted = selectedKeyShortName ? isChordShortNameInKey(getKeyFromShortName(selectedKeyShortName), shortName) : true
   const isChordHigh = getIsChordHigh(frets)
   const firstFretNumber = Object.keys(frets).shift()
@@ -43,7 +43,7 @@ export const Chord = ({ selectedKeyShortName, fullName, shortName, alternativeSh
   const romanNumeral = getRomanNumeral(shortName, selectedKeyShortName)
 
   return (
-    <ChordStyled isHighlighted={shouldBeHighlighted}>
+    <UkuChordStyled isHighlighted={shouldBeHighlighted}>
       {romanNumeral && `${romanNumeral} - `}
       <span title={fullName}>{shortName}</span> {alternativeShortName ? `(${alternativeShortName})` : ''}
       {!Object.keys(frets).length ? (
@@ -55,24 +55,24 @@ export const Chord = ({ selectedKeyShortName, fullName, shortName, alternativeSh
       <>
       {cleanNameForSounds(shortName) in soundFiles && <AudioPlayer src={soundFiles[cleanNameForSounds(shortName)]} />}
       <FavouriteChordButton chordShortName={shortName} />
-      <ChordChartStyled>
-        <StringStatesStyled>
+      <UkuChordChartStyled>
+        <UkuStringStatesStyled>
           {stringArray.map((stringNumber, idx) =>
             <StringState key={stringNumber} idx={idx} doNotPlayString={strings[stringNumber] === doNotPlayString} />)}
-        </StringStatesStyled>
+        </UkuStringStatesStyled>
         {isChordHigh ? <FretNumberStyled>{`${firstFretNumber}fr`}</FretNumberStyled> : ''}
         {fretNumbers.map(fretNumber => <Fret key={fretNumber} fingers={frets[fretNumber]} />)}
-      </ChordChartStyled>
+      </UkuChordChartStyled>
       </>
     )}
-    </ChordStyled>
+    </UkuChordStyled>
   )
 }
 
 const StringState = ({ idx, doNotPlayString }) => (
-  <StringStateStyled idx={idx}>
+  <UkuStringStateStyled idx={idx}>
     {doNotPlayString ? 'x' : ''}
-  </StringStateStyled>
+  </UkuStringStateStyled>
 )
 
 const Fret = ({ fingers = {} }) => (
@@ -90,4 +90,4 @@ const String = ({ idx, stringNumber, fingerNumber }) => (
 
 const mapStateToProps = ({ keys: { selectedKeyShortName }, chords: { favouritedChords } }) => ({ selectedKeyShortName, favouritedChords })
 
-export default connect(mapStateToProps)(Chord)
+export default connect(mapStateToProps)(UkuChord)

@@ -32,14 +32,14 @@ export const sortChordsBySequence = (chords, selectedKeyShortName) => {
 
   const keyNamesInOrder = Object.values(keyChordDefinition)
 
-  return chordsInKey.sort((chordA, chordB) => keyNamesInOrder.indexOf(chordA.shortName) - keyNamesInOrder.indexOf(chordB.shortName)) 
+  return chordsInKey.sort((chordA, chordB) => keyNamesInOrder.indexOf(chordA.shortName) - keyNamesInOrder.indexOf(chordB.shortName))
 }
 
 export const filterChordsByChordProgression = (chords, selectedKeyShortName, selectedChordProgressionIdx) => {
   const selectedKey = getKeyFromShortName(selectedKeyShortName)
   const keyChordProgressions = selectedKey.chordProgressions
   const keyChordDefinition = selectedKey.chords
-  
+
   const selectedChordProgression = keyChordProgressions[selectedChordProgressionIdx]
 
   const chordProgressionShortNames = selectedChordProgression.map(romanNumeral => keyChordDefinition[romanNumeral])
@@ -66,7 +66,7 @@ const replaceCommonTerms = searchTerm => searchTerm
 
 const cleanUpSearchTerm = searchTerm => searchTerm.replace(/ /g, '').toLowerCase()
 
-export const filterChordsBySearchTerm = (chords, searchTerm) => 
+export const filterChordsBySearchTerm = (chords, searchTerm) =>
   chords.filter(({ shortName }) =>
     shortName.toLowerCase().includes(cleanUpSearchTerm(replaceCommonTerms(searchTerm)))
   )
@@ -74,3 +74,7 @@ export const filterChordsBySearchTerm = (chords, searchTerm) =>
 export const filterMajorMinorChordsOnly = chords => chords.filter(({ fullName }) => isFullNameMajorMinor(fullName))
 
 export const filterFavouriteChordsOnly = (chords, favouriteChords) => chords.filter(({ shortName }) => favouriteChords.includes(shortName))
+
+export const filterUkuChordsOnly = chords => chords.filter(({ isUku }) => (isUku) && isUku === true)
+
+export const filterGuitarChordsOnly = chords => chords.filter(({ isUku }) => !(isUku) || isUku === false )

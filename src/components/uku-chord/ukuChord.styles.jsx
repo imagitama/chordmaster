@@ -2,15 +2,15 @@ import styled from '@emotion/styled'
 
 const stringWidth = '1px'
 
-export const ChordStyled = styled.div`
+export const UkuChordStyled = styled.div`
   text-align: center;
   opacity: ${({ isHighlighted }) => isHighlighted ? 1 : 0.1};
   margin: 0.5rem 0;
 `
 
-export const ChordChartStyled = styled.div`
-  width: 75%;
-  border-top: 2px solid ${({ theme }) => theme.textColor};
+export const UkuChordChartStyled = styled.div`
+  width: 40%;
+  border-top: 3px solid ${({ theme }) => theme.textColor};
   position: relative;
   margin: 1rem auto 0;
 `
@@ -28,7 +28,7 @@ export const StringStyled = styled.div`
   background: ${({ theme }) => theme.textColor};
   position: absolute;
   top: 0;
-  left: ${({ idx }) => ((idx) / 5) * 100}%;
+  left: ${({ idx }) => ((idx) / 3) * 100}%;
   margin-left: ${({ idx }) => idx === 0 ? 0 : '-1px'};
 `
 
@@ -47,7 +47,7 @@ export const FingerNumberStyled = styled.div`
   padding-top: 0.5rem;
 `
 
-export const StringStatesStyled = styled.div`
+export const UkuStringStatesStyled = styled.div`
   width: 100%;
   position: absolute;
   height: 1rem;
@@ -55,11 +55,11 @@ export const StringStatesStyled = styled.div`
   left: 0;
 `
 
-export const StringStateStyled = styled.div`
+export const UkuStringStateStyled = styled.div`
   position: absolute;
   top: 0;
-  left: ${({ idx }) => ((idx) / 5) * 100}%;
-  width: ${100 / 6}%;
+  left: ${({ idx }) => ((idx) / 3) * 100}%;
+  width: ${100 / 4}%;
   margin: -0.5rem 0 0 -0.8rem;
 `
 
@@ -77,7 +77,7 @@ export const FretNumberStyled = styled.div`
   position: absolute;
   top: 0.4rem;
   right: -1.5rem;
-  font-size: 75%;
+  font-size: 100%;
 `
 
-export default ChordStyled
+export default UkuChordStyled
