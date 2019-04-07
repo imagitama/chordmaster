@@ -14,7 +14,8 @@ export const chords = [
         3: 1,
         4: 2
       }
-    }
+    },
+    isCommonChord: true
   },
 
   {
@@ -31,7 +32,8 @@ export const chords = [
         4: 2,
         3: 3
       }
-    }
+    },
+    isCommonChord: true
   },
 
   {
@@ -127,7 +129,8 @@ export const chords = [
         3: 3,
         4: 2
       }
-    }
+    },
+    isCommonChord: true
   },
 
   {
@@ -145,14 +148,16 @@ export const chords = [
         3: 4,
         4: 3
       }
-    }
+    },
+    isCommonChord: true
   },
 
   {
     fullName: 'B flat',
     shortName: 'Bb',
     alternativeShortName: 'A#',
-    copyFrom: 'A#'
+    copyFrom: 'A#',
+    isCommonChord: true
   },
 
   {
@@ -210,7 +215,8 @@ export const chords = [
       3: {
         5: 3
       }
-    }
+    },
+    isCommonChord: true
   },
 
   {
@@ -354,7 +360,8 @@ export const chords = [
       3: {
         2: 3
       }
-    }
+    },
+    isCommonChord: true
   },
 
   {
@@ -374,7 +381,8 @@ export const chords = [
       3: {
         2: 3
       }
-    }
+    },
+    isCommonChord: true
   },
 
   {
@@ -459,7 +467,8 @@ export const chords = [
         4: 2,
         5: 3
       }
-    }
+    },
+    isCommonChord: true
   },
 
   {
@@ -470,7 +479,8 @@ export const chords = [
         4: 2,
         5: 3
       }
-    }
+    },
+    isCommonChord: true
   },
 
   {
@@ -531,7 +541,8 @@ export const chords = [
         4: 4,
         5: 3
       }
-    }
+    },
+    isCommonChord: true
   },
 
   {
@@ -607,7 +618,8 @@ export const chords = [
         1: 3,
         6: 2
       }
-    }
+    },
+    isCommonChord: true
   },
 
   {

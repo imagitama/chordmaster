@@ -11,7 +11,7 @@ import Footer from './components/footer/footer'
 import SearchInput from './components/search-input/search-input'
 import SearchTerm from './components/search-term/search-term'
 import OutputMessage from './components/output-message/output-message'
-import { populateCopiedChords, filterMajorMinorChordsOnly, sortChordsBySequence, filterChordsByChordProgression, filterChordsBySearchTerm, filterFavouriteChordsOnly } from './filters'
+import { populateCopiedChords, filterCommonChordsOnly, sortChordsBySequence, filterChordsByChordProgression, filterChordsBySearchTerm, filterFavouriteChordsOnly } from './filters'
 import globalStyles from './globalStyles'
 import WelcomeMessage from './components/welcome-message/welcome-message'
 import FeedbackForm from './components/feedback-form/feedback-form'
@@ -20,7 +20,7 @@ const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx
   let chords = populateCopiedChords(chordsDefinition)
 
   if (majorMinorChordsOnly && !selectedKeyShortName) {
-    chords = filterMajorMinorChordsOnly(chords)
+    chords = filterCommonChordsOnly(chords)
   }
 
   if (selectedKeyShortName && sortBySequence) {

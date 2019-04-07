@@ -4,12 +4,4 @@ export const isChordShortNameInKey = (key, chordShortName) => Object.values(key.
 
 export const getKeyFromShortName = shortName => keys.find(({ shortName: shortNameUnderTest }) => shortNameUnderTest === shortName)
 
-export const isFullNameMajorMinor = fullName => 
-  (
-    fullName.includes('major') || 
-    fullName.includes('minor') || 
-    fullName.includes('sharp') || 
-    fullName.includes('flat')
-  ) && !fullName.includes('dim')
-
 export const cleanNameForSounds = name => name.replace('#', 'sharp').toLowerCase()

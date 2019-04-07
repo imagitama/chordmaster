@@ -1,4 +1,4 @@
-import { getKeyFromShortName, isChordShortNameInKey, isFullNameMajorMinor } from './utils'
+import { getKeyFromShortName, isChordShortNameInKey } from './utils'
 
 export const populateCopiedChords = chords => chords.map(chordDefinition => {
   const copyFromName = chordDefinition.copyFrom
@@ -71,6 +71,6 @@ export const filterChordsBySearchTerm = (chords, searchTerm) =>
     shortName.toLowerCase().includes(cleanUpSearchTerm(replaceCommonTerms(searchTerm)))
   )
 
-export const filterMajorMinorChordsOnly = chords => chords.filter(({ fullName }) => isFullNameMajorMinor(fullName))
+export const filterCommonChordsOnly = chords => chords.filter(({ isCommonChord }) => isCommonChord === true)
 
 export const filterFavouriteChordsOnly = (chords, favouriteChords) => chords.filter(({ shortName }) => favouriteChords.includes(shortName))
