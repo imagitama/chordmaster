@@ -19,7 +19,7 @@ import FeedbackForm from './components/feedback-form/feedback-form'
 const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm, majorMinorChordsOnly, favouriteChords, favouritesOnly, isDarkModeEnabled }) => {
   let chords = populateCopiedChords(chordsDefinition)
 
-  if (majorMinorChordsOnly && !selectedKeyShortName) {
+  if (!searchTerm && majorMinorChordsOnly && !selectedKeyShortName) {
     chords = filterCommonChordsOnly(chords)
   }
 
