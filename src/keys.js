@@ -59,12 +59,31 @@ export const keys = [
 
   {
     fullName: 'Key of A flat',
-    shortName: 'Ab'
+    shortName: 'Ab',
+    chords: {
+      [I]: 'Ab',
+      [ii]: 'Bbm',
+      [iii]: 'Cm',
+      [IV]: 'Db',
+      [V]: 'Eb',
+      [vi]: 'Fm',
+      [vii]: 'Gdim'
+    }
   },
 
   {
     fullName: 'Key of A sharp',
-    shortName: 'A#'
+    shortName: 'A#',
+    alternativeShortName: 'Bb',
+    chords: {
+      [I]: 'Bb',
+      [ii]: 'Cm',
+      [iii]: 'Dm',
+      [IV]: 'Eb',
+      [V]: 'F',
+      [VI]: 'Gm',
+      [vii]: 'Adim'
+    }
   },
 
   {
@@ -97,6 +116,15 @@ export const keys = [
   {
     fullName: 'Key of B flat minor',
     shortName: 'Bbm',
+    chords: {
+      [i]: 'Bbm',
+      [ii]: 'Cdim',
+      [III]: 'Db',
+      [iv]: 'Ebm',
+      [v]: 'Fm',
+      [VI]: 'Gb',
+      [VII]: 'Ab'
+    }
   },
 
   {
@@ -121,13 +149,31 @@ export const keys = [
 
   {
     fullName: 'Key of C minor',
-    shortName: 'Cm'
+    shortName: 'Cm',
+    chords: {
+      [i]: 'Cm',
+      [ii]: 'Ddim',
+      [III]: 'Eb',
+      [iv]: 'Fm',
+      [V]: 'Gm',
+      [VI]: 'Ab',
+      [VII]: 'Bb'
+    }
   },
 
   {
     fullName: 'Key of C sharp minor',
     shortName: 'C#m',
-    alternativeShortName: 'Db'
+    alternativeShortName: 'Db',
+    chords: {
+      [i]: 'C#m',
+      [ii]: 'D#dim',
+      [III]: 'E',
+      [iv]: 'F#m',
+      [v]: 'G#m',
+      [VI]: 'A',
+      [VII]: 'B'
+    }
   },
 
   {
@@ -152,13 +198,31 @@ export const keys = [
 
   {
     fullName: 'Key of D minor',
-    shortName: 'Dm'
+    shortName: 'Dm',
+    chords: {
+      [i]: 'Dm',
+      [ii]: 'Edim',
+      [III]: 'F',
+      [iv]: 'Gm',
+      [v]: 'Am',
+      [VI]: 'Bb',
+      [VII]: 'C'
+    }
   },
 
   {
     fullName: 'Key of D sharp minor',
     shortName: 'D#m',
     alternativeShortName: 'Eb',
+    chords: {
+      [i]: 'D#m',
+      [ii]: 'E#dim',
+      [III]: 'F#',
+      [iv]: 'G#m',
+      [v]: 'A#m',
+      [VI]: 'B',
+      [VII]: 'C#'
+    }
   },
 
   {
@@ -234,17 +298,44 @@ export const keys = [
   {
     fullName: 'Key of F sharp',
     shortName: 'F#',
-    alternativeShortName: 'Gb'
+    alternativeShortName: 'Gb',
+    chords: {
+      [I]: 'F#',
+      [ii]: 'G#m',
+      [iii]: 'A#m',
+      [IV]: 'B',
+      [V]: 'C#',
+      [vi]: 'D#m',
+      [vii]: 'Fdim'
+    }
   },
 
   {
     fullName: 'Key of F minor',
-    shortName: 'Fm'
+    shortName: 'Fm',
+    chords: {
+      [i]: 'Fm',
+      [ii]: 'Gdim',
+      [III]: 'Ab',
+      [iv]: 'Bbm',
+      [v]: 'Cm',
+      [VI]: 'Db',
+      [VII]: 'Eb'
+    }
   },
 
   {
     fullName: 'Key of F sharp minor',
-    shortName: 'F#m'
+    shortName: 'F#m',
+    chords: {
+      [i]: 'F#m',
+      [ii]: 'G#dim',
+      [III]: 'A',
+      [iv]: 'Bm',
+      [v]: 'C#m',
+      [VI]: 'D',
+      [VII]: 'E'
+    }
   },
 
   {
@@ -269,7 +360,16 @@ export const keys = [
 
   {
     fullName: 'Key of G minor',
-    shortName: 'Gm'
+    shortName: 'Gm',
+    chords: {
+      [i]: 'Gm',
+      [ii]: 'Adim',
+      [III]: 'Bb',
+      [iv]: 'Cm',
+      [v]: 'Dm',
+      [VI]: 'Eb',
+      [VII]: 'F'
+    }
   },
 
   {
