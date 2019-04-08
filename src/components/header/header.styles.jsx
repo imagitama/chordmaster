@@ -14,11 +14,15 @@ export const headerChildStyle = ({ theme }) => css`
 
 export const HeaderSegment = styled.div`
   padding: 0.25rem;
-  ${({ primary }) => primary ? 'margin-right: auto;' : null}
 
   @media (min-width: ${mediaQuery.large}) {
     padding: 1rem;
   }
+`
+
+export const MostRecentCommitsSegment = styled(HeaderSegment)`
+  font-size: 75%;
+  margin-right: auto;
 `
 
 export const LogoSegment = styled.div`

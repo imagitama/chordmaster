@@ -1,5 +1,5 @@
 import React from 'react'
-import HeaderStyled, { HeaderSegment, LogoSegment, LogoLabel, LogoBackground, PrimaryHeaderStyled, SecondaryHeaderStyled } from './header.styles'
+import HeaderStyled, { HeaderSegment, LogoSegment, LogoLabel, LogoBackground, MostRecentCommitsSegment,  PrimaryHeaderStyled, SecondaryHeaderStyled } from './header.styles'
 import KeySelector from '../key-selector/key-selector'
 import ChordProgressionSelector from '../chord-progression-selector/chord-progression-selector'
 import MajorMinorChordsOnlyToggle from '../major-minor-chords-only-toggle/major-minor-chords-only-toggle'
@@ -18,9 +18,9 @@ export const Header = () => (
         </LogoLabel>
         <LogoBackground />
       </LogoSegment>
-      <HeaderSegment primary>
+      <MostRecentCommitsSegment>
         <MostRecentCommit />
-      </HeaderSegment>
+      </MostRecentCommitsSegment>
       <HeaderSegment>
         <DarkModeToggle />
       </HeaderSegment>
