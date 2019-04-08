@@ -9,6 +9,7 @@
     "@fortawesome/fontawesome-free": "^5.8.1",
     "@sentry/browser": "^4.6.6",
     "emotion-theming": "^10.0.10",
+    "moment": "^2.24.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-redux": "^6.0.1",

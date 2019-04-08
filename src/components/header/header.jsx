@@ -7,6 +7,7 @@ import FavouritesOnlyToggle from '../favourites-only-toggle/favourites-only-togg
 import ResetButton from '../reset-button/reset-button'
 import DarkModeToggle from '../dark-mode-toggle/dark-mode-toggle'
 import ShowFeedbackFormButton from '../show-feedback-form-button/show-feedback-form-button'
+import MostRecentCommit from '../most-recent-commit/most-recent-commit'
 
 export const Header = () => (
   <HeaderStyled>
@@ -17,6 +18,9 @@ export const Header = () => (
         </LogoLabel>
         <LogoBackground />
       </LogoSegment>
+      <HeaderSegment primary>
+        <MostRecentCommit />
+      </HeaderSegment>
       <HeaderSegment>
         <DarkModeToggle />
       </HeaderSegment>

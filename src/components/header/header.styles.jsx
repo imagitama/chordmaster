@@ -25,7 +25,6 @@ export const LogoSegment = styled.div`
   position: relative;
   color: ${({ theme }) => theme.logoTextColor};
   overflow: hidden;
-  margin-right: auto;
 
   ::before {
     content: " ";
