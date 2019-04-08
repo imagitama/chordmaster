@@ -8,7 +8,7 @@ import soundFiles from './soundFiles'
 import FavouriteChordButton from '../favourite-chord-button/favourite-chord-button'
 import OutputMessage from '../output-message/output-message'
 import settings from '../../settings'
-import { logError } from '../../logging'
+import A from '../anchor/anchor'
 
 const stringArray = [6, 5, 4, 3, 2, 1]
 
@@ -50,7 +50,7 @@ export const Chord = ({ selectedKeyShortName, fullName, shortName, alternativeSh
       {!Object.keys(frets).length ? (
         <OutputMessage>
           This chord is in a key but has not been defined.
-          Please <a href={settings.githubRepoUrl}>send an issue or open a PR on GitHub</a>.
+          Please <A href={settings.githubRepoUrl} context="Chord in key but not defined">send an issue or open a PR on GitHub</A>.
         </OutputMessage>
       ) : (
       <>

@@ -17,3 +17,12 @@ export const HIDE_FEEDBACK_FORM = 'HIDE_FEEDBACK_FORM'
 export const hideFeedbackForm = () => ({
   type: HIDE_FEEDBACK_FORM
 })
+
+export const NAVIGATED_AWAY = 'NAVIGATED_AWAY'
+export const navigatedAway = (url, context) => ({
+  type: NAVIGATED_AWAY,
+  payload: {
+    url,
+    context
+  }
+})

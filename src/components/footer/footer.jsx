@@ -1,14 +1,15 @@
 import React from 'react'
 import FooterStyled, { FooterSegment } from './footer.styles'
 import settings from '../../settings'
+import A from '../anchor/anchor'
 
 export const Footer = () => (
   <FooterStyled>
     <FooterSegment>
-      Made by <a href="http://www.jaredwilliams.com.au">Jared Williams</a>
+      Made by <A href="http://www.jaredwilliams.com.au" context="Footer">Jared Williams</A>
     </FooterSegment>
     <FooterSegment>
-      <a href={settings.githubRepoUrl} title="View the GitHub repo">GitHub</a>
+      <A href={settings.githubRepoUrl} title="View the GitHub repo" context="Footer">GitHub</A>
     </FooterSegment>
   </FooterStyled>
 )

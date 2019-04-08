@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import moment from 'moment'
 import { getCommits, gotCommits } from '../../ducks/commits/actions'
 import { performFetch } from '../../utils'
+import A from '../anchor/anchor'
 
 const MostRecentCommit = ({ commits, getCommits, gotCommits }) => {
   useEffect(() => {
@@ -27,7 +28,7 @@ const MostRecentCommit = ({ commits, getCommits, gotCommits }) => {
   return (
     <span>
       Recent changes:<br />
-      <a href={mostRecentCommitBlob.html_url}>{mostRecentCommitBlob.commit.message}</a> - {moment(mostRecentCommitBlob.commit.committer.date).fromNow()}
+      <A href={mostRecentCommitBlob.html_url} context="Header most recent commit">{mostRecentCommitBlob.commit.message}</A> - {moment(mostRecentCommitBlob.commit.committer.date).fromNow()}
     </span>
   )
 }
