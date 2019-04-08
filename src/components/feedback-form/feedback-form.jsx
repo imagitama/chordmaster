@@ -46,7 +46,7 @@ export const FeedbackForm = ({ isFeedbackFormVisible, hideFeedbackForm }) => {
       <p>
         Want a feature? Want a chord added? Please let me know. Please include your email!
       </p>
-      <TextInput onChange={event => setFeedbackTextInput(event.target.value)} placeholder="Your message" />
+      <TextInput onChange={event => setFeedbackTextInput(event.target.value)} placeholder="Your message" onFocus={e => e.stopPropagation()} />
       &nbsp;
       <Button onClick={submitFeedback}>Submit</Button>
       &nbsp;
