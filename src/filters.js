@@ -16,7 +16,12 @@ export const populateCopiedChords = chords => chords.map(chordDefinition => {
 })
 
 export const sortChordsBySequence = (chords, selectedKeyShortName) => {
-  const selectedKey = getKeyFromShortName(selectedKeyShortName)
+  let selectedKey = getKeyFromShortName(selectedKeyShortName)
+
+  if (selectedKey.copyFrom) {
+    selectedKey = getKeyFromShortName(selectedKey.copyFrom)
+  }
+
   const keyChordDefinition = selectedKey.chords
 
   if (!keyChordDefinition) {
