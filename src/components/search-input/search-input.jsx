@@ -24,17 +24,17 @@ const SearchInput = ({ searchTerm, changeSearchTerm, showSearchTerm, hideSearchT
       focusOnTextInput()
     }
 
-    document.addEventListener('focusout', onBlur)
+    document.addEventListener('focusout', onDocumentBlur)
 
-    return () => document.removeEventListener('focusout', onBlur)
+    return () => document.removeEventListener('focusout', onDocumentBlur)
   }, [])
 
   const handleTap = () => {
     focusOnTextInput()
   }
 
-  const onBlur = event => {
-    if (!isMobileDevice && event.target.type !== 'text') {
+  const onDocumentBlur = event => {
+    if (!isMobileDevice && event.relatedTarget && (event.relatedTarget.type !== 'text' || event.relatedTarget.name === 'search-input')) {
       focusOnTextInput()
       return
     }
@@ -80,7 +80,7 @@ const SearchInput = ({ searchTerm, changeSearchTerm, showSearchTerm, hideSearchT
           </OutputMessage>
         )}
       
-        <SearchInputStyled type="text" ref={textInput} defaultValue={searchTerm} onBlur={onBlur} onChange={handleKeyDown} />
+        <SearchInputStyled name="search-input" type="text" ref={textInput} defaultValue={searchTerm} onChange={handleKeyDown} />
       </div>
     )
   }
