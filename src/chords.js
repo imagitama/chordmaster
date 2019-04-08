@@ -82,6 +82,24 @@ export const chords = [
   },
 
   {
+    fullName: 'A sharp minor',
+    shortName: 'A#m',
+    strings: {
+      6: doNotPlayString
+    },
+    frets: {
+      1: barFret,
+      2: {
+        2: 2
+      },
+      3: {
+        3: 4,
+        4: 3
+      }
+    }
+  },
+
+  {
     fullName: 'A sharp diminished',
     shortName: 'A#dim',
     strings: {
@@ -163,19 +181,8 @@ export const chords = [
   {
     fullName: 'B flat minor',
     shortName: 'Bbm',
-    strings: {
-      6: doNotPlayString
-    },
-    frets: {
-      1: barFret,
-      2: {
-        2: 2
-      },
-      3: {
-        3: 4,
-        4: 3
-      }
-    }
+    alternativeShortName: 'A#m',
+    copyFrom: 'A#m'
   },
 
   {
@@ -602,6 +609,27 @@ export const chords = [
         2: 3
       },
       8: {
+        3: 4
+      }
+    }
+  },
+
+  {
+    fullName: 'F major diminished',
+    shortName: 'Fdim',
+    strings: {
+      1: doNotPlayString,
+      6: doNotPlayString
+    },
+    frets: {
+      8: {
+        5: 1
+      },
+      9: {
+        4: 2,
+        2: 3
+      },
+      10: {
         3: 4
       }
     }
