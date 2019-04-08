@@ -2,7 +2,9 @@ import styled from '@emotion/styled'
 import { css } from '@emotion/core'
 import mediaQuery from '../../mediaQueries'
 
-export const HeaderStyled = styled.header()
+export const HeaderStyled = styled.header`
+  overflow: hidden;
+`
 
 export const headerChildStyle = ({ theme }) => css`
   color: ${theme.headerTextColor};
