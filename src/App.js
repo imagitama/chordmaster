@@ -19,24 +19,26 @@ import FeedbackForm from './components/feedback-form/feedback-form'
 const App = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm, majorMinorChordsOnly, favouriteChords, favouritesOnly, isDarkModeEnabled }) => {
   let chords = populateCopiedChords(chordsDefinition)
 
-  if (!searchTerm && majorMinorChordsOnly && !selectedKeyShortName) {
-    chords = filterCommonChordsOnly(chords)
-  }
+  if (!favouritesOnly) {
+    if (!searchTerm && majorMinorChordsOnly && !selectedKeyShortName) {
+      chords = filterCommonChordsOnly(chords)
+    }
 
-  if (selectedKeyShortName && sortBySequence) {
-    chords = sortChordsBySequence(chords, selectedKeyShortName)
-  }
+    if (selectedKeyShortName && sortBySequence) {
+      chords = sortChordsBySequence(chords, selectedKeyShortName)
+    }
 
-  if (selectedKeyShortName && selectedChordProgressionIdx) {
-    chords = filterChordsByChordProgression(chords, selectedKeyShortName, selectedChordProgressionIdx)
-  }
-
-  if (searchTerm) {
-    chords = filterChordsBySearchTerm(chords, searchTerm)
+    if (selectedKeyShortName && selectedChordProgressionIdx) {
+      chords = filterChordsByChordProgression(chords, selectedKeyShortName, selectedChordProgressionIdx)
+    }
   }
 
   if (favouritesOnly) {
     chords = filterFavouriteChordsOnly(chords, favouriteChords)
+  }
+
+  if (searchTerm) {
+    chords = filterChordsBySearchTerm(chords, searchTerm)
   }
 
   return (
