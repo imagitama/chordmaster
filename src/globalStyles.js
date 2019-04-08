@@ -32,4 +32,10 @@ export default theme => css`
     padding: 0;
     margin: 0;
   }
+
+  #root {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
 `
