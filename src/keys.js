@@ -31,7 +31,8 @@ export const keys = [
       [I, IV, V],
       [I, vi, IV, V],
       [ii, V, I]
-    ]
+    ],
+    isCommonKey: true
   },
 
   {
@@ -52,7 +53,8 @@ export const keys = [
       [i, iv, v],
       [i, VI, III, VII],
       [ii, v, i]
-    ]
+    ],
+    isCommonKey: true
   },
 
   {
@@ -71,7 +73,8 @@ export const keys = [
       [I, IV, V],
       [I, vi, IV, V],
       [ii, V, I]
-    ]
+    ],
+    isCommonKey: true
   },
 
   {
@@ -90,7 +93,8 @@ export const keys = [
       [I, IV, V],
       [I, vi, IV, V],
       [ii, V, I]
-    ]
+    ],
+    isCommonKey: true
   },
 
   {
@@ -109,7 +113,8 @@ export const keys = [
       [I, IV, V],
       [I, vi, IV, V],
       [ii, V, I]
-    ]
+    ],
+    isCommonKey: true
   },
 
   {
@@ -128,7 +133,8 @@ export const keys = [
       [I, IV, V],
       [I, vi, IV, V],
       [ii, V, I]
-    ]
+    ],
+    isCommonKey: true
   },
 
   {
@@ -150,7 +156,8 @@ export const keys = [
       [i, VI, III, VII],
       [i, VI, III, VII],
       [ii, v, i]
-    ]
+    ],
+    isCommonKey: true
   },
 
   {
@@ -169,7 +176,8 @@ export const keys = [
       [I, IV, V],
       [I, vi, IV, V],
       [ii, V, I]
-    ]
+    ],
+    isCommonKey: true
   },
 
   {
@@ -188,7 +196,8 @@ export const keys = [
       [I, IV, V],
       [I, vi, IV, V],
       [ii, V, I]
-    ]
+    ],
+    isCommonKey: true
   }
 ]
 

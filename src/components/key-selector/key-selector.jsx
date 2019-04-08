@@ -11,7 +11,12 @@ export const KeySelector = ({ selectedKeyShortName, selectKey, toggleSortBySeque
     <span>Key: </span>
     <Dropdown onChange={event => selectKey(event.target.value)} value={selectedKeyShortName}>
       <DropDownOption value="" label="(none)" />
-      {keyDefinition.map(({ shortName }) => <DropDownOption key={shortName} value={shortName} label={shortName} />)}
+      <optgroup label="Common keys">
+        {keyDefinition.filter(({ isCommonKey }) => isCommonKey === true).map(({ shortName }) => <DropDownOption key={shortName} value={shortName} label={shortName} />)}
+      </optgroup>
+      <optgroup label="More keys">
+        {keyDefinition.filter(({ isCommonKey }) => isCommonKey !== true).map(({ shortName }) => <DropDownOption key={shortName} value={shortName} label={shortName} />)}
+      </optgroup>
     </Dropdown>
     {selectedKeyShortName && <br />}
     {selectedKeyShortName && <ToggleInput onChange={() => toggleSortBySequence()} isEnabled={sortBySequence} label="Filter" />}
