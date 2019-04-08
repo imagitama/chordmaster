@@ -4,8 +4,7 @@ import { bindActionCreators } from 'redux'
 import { changeSearchTerm, showSearchTerm, hideSearchTerm } from '../../ducks/chords/actions'
 import OutputMessage from '../output-message/output-message'
 import SearchInputStyled from './search-input.styles'
-
-const isMobileDevice = 'ontouchstart' in document.documentElement
+import { isMobileDevice } from '../../utils'
 
 const SearchInput = ({ searchTerm, changeSearchTerm, showSearchTerm, hideSearchTerm, isFeedbackFormVisible }) => {
   const [isFocused, setIsFocused] = useState(false)

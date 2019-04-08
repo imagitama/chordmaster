@@ -15,3 +15,5 @@ export const performFetch = (url, method = 'GET', opts = {}) => fetch(url, {
   }
   return response.json()
 })
+
+export const isMobileDevice = 'ontouchstart' in document.documentElement
