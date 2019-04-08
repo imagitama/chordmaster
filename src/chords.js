@@ -100,6 +100,24 @@ export const chords = [
   },
 
   {
+    fullName: 'A diminished',
+    shortName: 'Adim',
+    strings: {
+      1: doNotPlayString,
+      6: doNotPlayString
+    },
+    frets: {
+      1: {
+        2: 2,
+        4: 1
+      },
+      2: {
+        3: 3,
+      }
+    }
+  },
+
+  {
     fullName: 'A sharp diminished',
     shortName: 'A#dim',
     strings: {
