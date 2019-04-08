@@ -19,6 +19,10 @@ export const sortChordsBySequence = (chords, selectedKeyShortName) => {
   const selectedKey = getKeyFromShortName(selectedKeyShortName)
   const keyChordDefinition = selectedKey.chords
 
+  if (!keyChordDefinition) {
+    return []
+  }
+
   const chordsInKey = chords.filter(({ shortName: shortNameUnderTest }) => isChordShortNameInKey(selectedKey, shortNameUnderTest))
 
   Object.values(keyChordDefinition).forEach(

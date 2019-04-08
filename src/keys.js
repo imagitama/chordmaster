@@ -58,6 +58,16 @@ export const keys = [
   },
 
   {
+    fullName: 'Key of A flat',
+    shortName: 'Ab'
+  },
+
+  {
+    fullName: 'Key of A sharp',
+    shortName: 'A#'
+  },
+
+  {
     fullName: 'Key of B major',
     shortName: 'B',
     chords: {
@@ -75,6 +85,18 @@ export const keys = [
       [ii, V, I]
     ],
     isCommonKey: true
+  },
+
+  {
+    fullName: 'Key of B flat',
+    shortName: 'Bb',
+    alternativeShortName: 'A#',
+    copyFrom: 'A#'
+  },
+
+  {
+    fullName: 'Key of B flat minor',
+    shortName: 'Bbm',
   },
 
   {
@@ -98,6 +120,17 @@ export const keys = [
   },
 
   {
+    fullName: 'Key of C minor',
+    shortName: 'Cm'
+  },
+
+  {
+    fullName: 'Key of C sharp minor',
+    shortName: 'C#m',
+    alternativeShortName: 'Db'
+  },
+
+  {
     fullName: 'Key of D major',
     shortName: 'D',
     chords: {
@@ -115,6 +148,17 @@ export const keys = [
       [ii, V, I]
     ],
     isCommonKey: true
+  },
+
+  {
+    fullName: 'Key of D minor',
+    shortName: 'Dm'
+  },
+
+  {
+    fullName: 'Key of D sharp minor',
+    shortName: 'D#m',
+    alternativeShortName: 'Eb',
   },
 
   {
@@ -161,6 +205,13 @@ export const keys = [
   },
 
   {
+    fullName: 'Key of E flat',
+    shortName: 'Eb',
+    alternativeShortName: 'D#',
+    copyFrom: 'D#'
+  },
+
+  {
     fullName: 'Key of F major',
     shortName: 'F',
     chords: {
@@ -181,6 +232,22 @@ export const keys = [
   },
 
   {
+    fullName: 'Key of F sharp',
+    shortName: 'F#',
+    alternativeShortName: 'Gb'
+  },
+
+  {
+    fullName: 'Key of F minor',
+    shortName: 'Fm'
+  },
+
+  {
+    fullName: 'Key of F sharp minor',
+    shortName: 'F#m'
+  },
+
+  {
     fullName: 'Key of G major',
     shortName: 'G',
     chords: {
@@ -198,7 +265,19 @@ export const keys = [
       [ii, V, I]
     ],
     isCommonKey: true
-  }
+  },
+
+  {
+    fullName: 'Key of G minor',
+    shortName: 'Gm'
+  },
+
+  {
+    fullName: 'Key of G sharp minor',
+    shortName: 'G#m',
+    alternativeShortName: 'Ab',
+    copyFrom: 'Ab'
+  },
 ]
 
 export default keys
