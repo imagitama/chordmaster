@@ -6,16 +6,20 @@ import ToggleInput from '../toggle-input/toggle-input'
 import { selectKey, toggleSortBySequence } from '../../ducks/keys/actions'
 import keyDefinition from '../../keys'
 
+const KeyOption = ({ shortName, alternativeShortName }) => (
+  <DropDownOption value={shortName} label={`${shortName}${alternativeShortName ? ` (${alternativeShortName})` : ''}`} />
+)
+
 export const KeySelector = ({ selectedKeyShortName, selectKey, toggleSortBySequence, sortBySequence }) => (
   <React.Fragment>
     <span>Key: </span>
     <Dropdown onChange={event => selectKey(event.target.value)} value={selectedKeyShortName}>
       <DropDownOption value="" label="(none)" />
       <optgroup label="Common keys">
-        {keyDefinition.filter(({ isCommonKey }) => isCommonKey === true).map(({ shortName }) => <DropDownOption key={shortName} value={shortName} label={shortName} />)}
+        {keyDefinition.filter(({ isCommonKey }) => isCommonKey === true).map(key => <KeyOption key={key.shortName} {...key} />)}
       </optgroup>
       <optgroup label="More keys">
-        {keyDefinition.filter(({ isCommonKey }) => isCommonKey !== true).map(({ shortName }) => <DropDownOption key={shortName} value={shortName} label={shortName} />)}
+        {keyDefinition.filter(({ isCommonKey }) => isCommonKey !== true).map(key => <KeyOption key={key.shortName} {...key} />)}
       </optgroup>
     </Dropdown>
     {selectedKeyShortName && <br />}

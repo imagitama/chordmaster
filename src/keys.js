@@ -226,6 +226,13 @@ export const keys = [
   },
 
   {
+    fullName: 'Key of D flat',
+    shortName: 'Db',
+    alternativeShortName: 'C#',
+    copyFrom: 'C#'
+  },
+
+  {
     fullName: 'Key of E major',
     shortName: 'E',
     chords: {
