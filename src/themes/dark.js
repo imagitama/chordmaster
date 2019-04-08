@@ -9,5 +9,6 @@ export default {
   buttonTextColor: 'rgb(220, 220, 220)',
   buttonBackgroundColor: 'rgb(150, 150, 150)',
   logoBackgroundColor: 'rgb(220, 220, 220)',
-  logoTextColor: 'rgb(50, 50, 50)'
+  logoTextColor: 'rgb(50, 50, 50)',
+  searchTermTextColor: 'rgb(220, 220, 220)'
 }

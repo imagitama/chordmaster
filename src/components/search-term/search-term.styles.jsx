@@ -8,7 +8,7 @@ export const SearchTermStyled = styled.div`
   fontSize: 200%;
   opacity: ${({ searchTermVisible }) => searchTermVisible ? 1 : '0.1'};
   background: ${({ searchTermVisible }) => searchTermVisible ? 'rgba(0, 0, 0, 0.5)' : ''};
-  color: ${({ searchTermVisible, theme }) => searchTermVisible ? theme.backgroundColor : ''};
+  color: ${({ searchTermVisible, theme }) => searchTermVisible ? theme.searchTermTextColor : ''};
 `
 
 export const SearchTermTextStyled = styled.div`
