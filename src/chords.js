@@ -336,6 +336,27 @@ export const chords = [
   },
 
   {
+    fullName: 'C diminished',
+    shortName: 'Cdim',
+    strings: {
+      1: doNotPlayString,
+      6: doNotPlayString
+    },
+    frets: {
+      3: {
+        5: 1
+      },
+      4: {
+        4: 2,
+        2: 3
+      },
+      5: {
+        3: 4
+      }
+    }
+  },
+
+  {
     fullName: 'C ninth',
     shortName: 'C9',
     strings: {
@@ -462,6 +483,27 @@ export const chords = [
     shortName: 'Db',
     alternativeShortName: 'C#',
     copyFrom: 'C#'
+  },
+
+  {
+    fullName: 'D diminished',
+    shortName: 'Ddim',
+    strings: {
+      1: doNotPlayString,
+      6: doNotPlayString
+    },
+    frets: {
+      5: {
+        5: 1
+      },
+      6: {
+        4: 2,
+        2: 3
+      },
+      7: {
+        3: 4
+      }
+    }
   },
 
   {
@@ -761,7 +803,28 @@ export const chords = [
         2: 3
       }
     }
-  }
+  },
+
+  {
+    fullName: 'G diminished',
+    shortName: 'Gdim',
+    strings: {
+      1: doNotPlayString,
+      6: doNotPlayString
+    },
+    frets: {
+      10: {
+        5: 1
+      },
+      11: {
+        4: 2,
+        2: 3
+      },
+      12: {
+        3: 4
+      }
+    }
+  },
 ]
 
 export default chords

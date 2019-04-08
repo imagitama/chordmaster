@@ -257,7 +257,15 @@ export const keys = [
     fullName: 'Key of D flat',
     shortName: 'Db',
     alternativeShortName: 'C#',
-    copyFrom: 'C#'
+    chords: {
+      [I]: 'Db',
+      [ii]: 'Ebm',
+      [iii]: 'Fm',
+      [IV]: 'Gb',
+      [V]: 'Ab',
+      [vi]: 'Bbm',
+      [vii]: 'Cdim'
+    }
   },
 
   {
@@ -419,7 +427,15 @@ export const keys = [
     fullName: 'Key of G sharp minor',
     shortName: 'G#m',
     alternativeShortName: 'Abm',
-    copyFrom: 'Abm'
+    chords: {
+      [i]: 'G#m',
+      [ii]: 'A#dim',
+      [III]: 'B',
+      [iv]: 'C#m',
+      [v]: 'D#m',
+      [VI]: 'E',
+      [VII]: 'F#'
+    }
   },
 ]
 
