@@ -1,9 +1,10 @@
 import React from 'react'
 import settings from '../../settings'
 import A from '../../components/anchor/anchor'
+import ContentArea from '../../components/content-area/content-area'
 
 export default () => (
-  <div>
+  <ContentArea>
     <h1>About Chordmaster</h1>
     <p>
       This web app was created by <A href={settings.personalSiteUrl}>Jared Williams</A> in 2019
@@ -22,5 +23,5 @@ export default () => (
     <p>
       <A href="/" isInternal context="About container">Return to app</A>
     </p>
-  </div>
+  </ContentArea>
 )
