@@ -80,11 +80,6 @@ export const PrimaryHeaderStyled = styled.div`
   background-color: ${({ theme }) => theme.headerBackgroundColor};
 `
 
-export const SecondaryHeaderStyled = styled.div`
-  ${headerChildStyle}
-  background-color: ${({ theme }) => theme.headerSecondaryBackgroundColor};
-`
-
 export const Navigation = styled.ul`
   margin: 0;
   padding: 0;

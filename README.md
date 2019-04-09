@@ -14,6 +14,7 @@ Technologies:
 - create-react-app (not ejected)
 - Redux
 - Emotion (with theming)
+- ReactRouter
 
 All chords are defined in `src/chords.js` and all keys in `src/keys.js`.
 

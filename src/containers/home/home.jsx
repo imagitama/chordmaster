@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import Filters from '../../components/filters/filters'
 import SearchInput from '../../components/search-input/search-input'
 import SearchTerm from '../../components/search-term/search-term'
 import OutputMessage from '../../components/output-message/output-message'
@@ -34,6 +35,7 @@ const HomeContainer = ({ selectedKeyShortName, sortBySequence, selectedChordProg
 
   return (
     <>
+      <Filters />
       <SearchInput />
       <SearchTerm />
       {chords.length ? <Chords chords={chords} /> : <OutputMessage>No chords found. Maybe try turning off a filter?</OutputMessage>}

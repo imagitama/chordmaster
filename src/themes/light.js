@@ -1,7 +1,6 @@
 export default {
   backgroundColor: 'rgb(255, 255, 255)',
   headerBackgroundColor: 'rgb(50, 50, 50)',
-  headerSecondaryBackgroundColor: 'rgb(60, 60, 60)',
   headerTextColor: 'rgb(225, 225, 225)',
   textColor: 'rgb(25, 25, 25)',
   outputBarBackgroundColor: 'rgb(75, 75, 75)',
@@ -11,5 +10,7 @@ export default {
   logoBackgroundColor: 'rgb(220, 220, 220)',
   logoTextColor: 'rgb(50, 50, 50)',
   searchTermTextColor: 'rgb(255, 255, 255)',
-  footerBackgroundColor: 'rgb(240, 240, 240)'
+  footerBackgroundColor: 'rgb(240, 240, 240)',
+  filtersTextColor: 'rgb(225, 225, 225)',
+  filtersBackgroundColor: 'rgb(60, 60, 60)',
 }
