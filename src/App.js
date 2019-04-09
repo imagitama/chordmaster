@@ -19,13 +19,15 @@ const App = ({  isDarkModeEnabled }) => (
     <Router>
       <Global styles={globalStyles} />
       <Header />
-      <WelcomeMessage />
-      <FeedbackForm />
-      <Switch>
-        <Route path="/" exact component={HomeContainer} />
-        <Route path="/about" component={AboutContainer} />
-        <Route path="/changes" component={ChangesContainer} />
-      </Switch>
+      <div>
+        <WelcomeMessage />
+        <FeedbackForm />
+        <Switch>
+          <Route path="/" exact component={HomeContainer} />
+          <Route path="/about" component={AboutContainer} />
+          <Route path="/changes" component={ChangesContainer} />
+        </Switch>
+      </div>
       <Footer />
     </Router>
   </ThemeProvider>
