@@ -36,7 +36,7 @@ const HomeContainer = ({ selectedKeyShortName, sortBySequence, selectedChordProg
     <>
       <SearchInput />
       <SearchTerm />
-      {chords.length ? <Chords chords={chords} /> : <OutputMessage>No chords found</OutputMessage>}
+      {chords.length ? <Chords chords={chords} /> : <OutputMessage>No chords found. Maybe try turning off a filter?</OutputMessage>}
     </>
   )
 }
