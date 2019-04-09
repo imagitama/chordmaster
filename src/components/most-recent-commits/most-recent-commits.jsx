@@ -10,7 +10,7 @@ const MostRecentCommits = ({ commits, getCommits, gotCommits }) => {
   useEffect(() => {
     getCommits()
 
-    performFetch(`https://api.github.com/repos/imagitama/chordmaster/commits?since=${moment().subtract(7,'d').toISOString()}`)
+    performFetch(`https://api.github.com/repos/imagitama/chordmaster/commits?per_page=10`)
       .then(commits => {
         gotCommits(commits)
       })
