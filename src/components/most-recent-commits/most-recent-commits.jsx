@@ -6,7 +6,7 @@ import { getCommits, gotCommits } from '../../ducks/commits/actions'
 import { performFetch } from '../../utils'
 import A from '../anchor/anchor'
 
-const MostRecentCommit = ({ commits, getCommits, gotCommits }) => {
+const MostRecentCommits = ({ commits, getCommits, gotCommits }) => {
   useEffect(() => {
     getCommits()
 
@@ -20,16 +20,17 @@ const MostRecentCommit = ({ commits, getCommits, gotCommits }) => {
   }, [])
 
   if (!commits.length) {
-    return null
+    return 'Loading...'
   }
 
-  const mostRecentCommitBlob = commits.shift()
-
   return (
-    <span>
-      Recent changes:<br />
-      <A href={mostRecentCommitBlob.html_url} context="Header most recent commit">{mostRecentCommitBlob.commit.message}</A> - {moment(mostRecentCommitBlob.commit.committer.date).fromNow()}
-    </span>
+    <ul>
+      {commits.map(({ html_url: url, commit: { message, committer } }) => (
+        <li key={message}>
+          <A href={url} context="Most recent commits">{message}</A> - {moment(committer.date).fromNow()}
+        </li>
+      ))}
+    </ul>
   )
 }
 
@@ -42,4 +43,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
   gotCommits
 }, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(MostRecentCommit)
+export default connect(mapStateToProps, mapDispatchToProps)(MostRecentCommits)

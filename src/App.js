@@ -12,6 +12,7 @@ import WelcomeMessage from './components/welcome-message/welcome-message'
 import FeedbackForm from './components/feedback-form/feedback-form'
 import HomeContainer from './containers/home/home'
 import AboutContainer from './containers/about/about'
+import ChangesContainer from './containers/changes/changes'
 
 const App = ({  isDarkModeEnabled }) => (
   <ThemeProvider theme={isDarkModeEnabled ? darkTheme : lightTheme}>
@@ -23,6 +24,7 @@ const App = ({  isDarkModeEnabled }) => (
       <Switch>
         <Route path="/" exact component={HomeContainer} />
         <Route path="/about" component={AboutContainer} />
+        <Route path="/changes" component={ChangesContainer} />
       </Switch>
       <Footer />
     </Router>

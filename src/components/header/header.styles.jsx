@@ -81,4 +81,16 @@ export const SecondaryHeaderStyled = styled.div`
   background-color: ${({ theme }) => theme.headerSecondaryBackgroundColor};
 `
 
+export const Navigation = styled.ul`
+  margin: 0;
+  padding: 0;
+`
+
+export const NavigationLink = styled.li`
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  padding-right: 1rem;
+`
+
 export default HeaderStyled

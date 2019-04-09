@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import HeaderStyled, { HeaderSegment, LogoSegment, LogoLink, LogoLabel, LogoBackground, NavigationSegment,  PrimaryHeaderStyled, SecondaryHeaderStyled } from './header.styles'
+import HeaderStyled, { HeaderSegment, LogoSegment, LogoLink, LogoLabel, LogoBackground, NavigationSegment,  PrimaryHeaderStyled, SecondaryHeaderStyled, Navigation, NavigationLink } from './header.styles'
 import KeySelector from '../key-selector/key-selector'
 import ChordProgressionSelector from '../chord-progression-selector/chord-progression-selector'
 import MajorMinorChordsOnlyToggle from '../major-minor-chords-only-toggle/major-minor-chords-only-toggle'
@@ -21,7 +21,14 @@ export const Header = () => (
         </LogoLink>
       </LogoSegment>
       <NavigationSegment>
-        <Link to="/about">About</Link>
+        <Navigation>
+          <NavigationLink>
+            <Link to="/about">About</Link>
+          </NavigationLink>
+          <NavigationLink>
+            <Link to="/changes">Recent Changes</Link>
+          </NavigationLink>
+        </Navigation>
       </NavigationSegment>
       <HeaderSegment>
         <DarkModeToggle />
