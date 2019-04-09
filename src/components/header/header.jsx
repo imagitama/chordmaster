@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import HeaderStyled, { HeaderSegment, LogoSegment, LogoLink, LogoLabel, LogoBackground, NavigationSegment,  PrimaryHeaderStyled, SecondaryHeaderStyled, Navigation, NavigationLink } from './header.styles'
 import KeySelector from '../key-selector/key-selector'
 import ChordProgressionSelector from '../chord-progression-selector/chord-progression-selector'
@@ -8,12 +7,13 @@ import FavouritesOnlyToggle from '../favourites-only-toggle/favourites-only-togg
 import ResetButton from '../reset-button/reset-button'
 import DarkModeToggle from '../dark-mode-toggle/dark-mode-toggle'
 import ShowFeedbackFormButton from '../show-feedback-form-button/show-feedback-form-button'
+import A from '../anchor/anchor'
 
 export const Header = () => (
   <HeaderStyled>
     <PrimaryHeaderStyled>
       <LogoSegment>
-        <LogoLink to="/">
+        <LogoLink href="/" isInternal context="Header">
           <LogoLabel>
             ChordMaster
           </LogoLabel>
@@ -23,10 +23,10 @@ export const Header = () => (
       <NavigationSegment>
         <Navigation>
           <NavigationLink>
-            <Link to="/about">About</Link>
+            <A href="/about" isInternal context="Header">About</A>
           </NavigationLink>
           <NavigationLink>
-            <Link to="/changes">Recent Changes</Link>
+            <A href="/changes" isInternal context="Header">Recent Changes</A>
           </NavigationLink>
         </Navigation>
       </NavigationSegment>

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
-import { Link } from 'react-router-dom'
 import mediaQuery from '../../mediaQueries'
+import A from '../anchor/anchor'
 
 export const HeaderStyled = styled.header`
   overflow: hidden;
@@ -49,7 +49,7 @@ export const LogoSegment = styled.div`
   }
 `
 
-export const LogoLink = styled(Link)`
+export const LogoLink = styled(A)`
   width: 100%;
   height: 100%;
   display: block;

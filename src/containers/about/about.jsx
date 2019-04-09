@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import settings from '../../settings'
 import A from '../../components/anchor/anchor'
 
@@ -12,14 +11,16 @@ export default () => (
       search and filter.
     </p>
     <p>
-      He works on it each week but relies on community contribution as it is an <A href={settings.githubRepoUrl}>open source project</A>.
-      If you can code, he appreciates your contribution. Otherwise you can send feedback using the app itself.
+      Although the creator actively maintains and improves it, he relies on community contribution as it is an <A href={settings.githubRepoUrl}>open source project</A>.
+      If you can code, he appreciates your contribution. Otherwise you can send feedback using the
+      feedback button at the top right of the page. 
     </p>
     <p>
       Thanks for using Chordmaster!
     </p>
+    <br />
     <p>
-      <Link to="/">Return to app</Link>
+      <A href="/" isInternal context="About container">Return to app</A>
     </p>
   </div>
 )

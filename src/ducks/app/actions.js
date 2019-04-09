@@ -26,3 +26,12 @@ export const navigatedAway = (url, context) => ({
     context
   }
 })
+
+export const NAVIGATED_INTERNALLY = 'NAVIGATED_INTERNALLY'
+export const navigatedInternally = (url, context) => ({
+  type: NAVIGATED_INTERNALLY,
+  payload: {
+    url,
+    context
+  }
+})
