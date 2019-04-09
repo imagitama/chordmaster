@@ -43,6 +43,10 @@ export const LogoSegment = styled.div`
     right: 10%;
     z-index: 1;
   }
+
+  @media (max-width: ${mediaQuery.small}) {
+    min-width: 9rem;
+  }
 `
 
 export const LogoLink = styled(Link)`
@@ -91,6 +95,11 @@ export const NavigationLink = styled.li`
   padding: 0;
   display: inline-block;
   padding-right: 1rem;
+
+  @media (max-width: ${mediaQuery.small}) {
+    font-size: 75%;
+    padding-right: 0.5rem;
+  }
 `
 
 export default HeaderStyled
