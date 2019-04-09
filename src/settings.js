@@ -1,4 +1,7 @@
+const githubRepoUrl = 'https://github.com/imagitama/chords'
+
 export default {
-  githubRepoUrl: 'https://github.com/imagitama/chords',
+  githubRepoUrl,
+  githubRepoCommitsUrl: `${githubRepoUrl}/commits`,
   personalSiteUrl: 'http://www.jaredwilliams.com.au'
 }
