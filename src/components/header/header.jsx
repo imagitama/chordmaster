@@ -1,5 +1,6 @@
 import React from 'react'
-import HeaderStyled, { HeaderSegment, LogoSegment, LogoLabel, LogoBackground, MostRecentCommitsSegment,  PrimaryHeaderStyled, SecondaryHeaderStyled } from './header.styles'
+import { Link } from 'react-router-dom'
+import HeaderStyled, { HeaderSegment, LogoSegment, LogoLink, LogoLabel, LogoBackground, NavigationSegment,  PrimaryHeaderStyled, SecondaryHeaderStyled } from './header.styles'
 import KeySelector from '../key-selector/key-selector'
 import ChordProgressionSelector from '../chord-progression-selector/chord-progression-selector'
 import MajorMinorChordsOnlyToggle from '../major-minor-chords-only-toggle/major-minor-chords-only-toggle'
@@ -7,21 +8,21 @@ import FavouritesOnlyToggle from '../favourites-only-toggle/favourites-only-togg
 import ResetButton from '../reset-button/reset-button'
 import DarkModeToggle from '../dark-mode-toggle/dark-mode-toggle'
 import ShowFeedbackFormButton from '../show-feedback-form-button/show-feedback-form-button'
-import MostRecentCommit from '../most-recent-commit/most-recent-commit'
-import { isMobileDevice } from '../../utils'
 
 export const Header = () => (
   <HeaderStyled>
     <PrimaryHeaderStyled>
       <LogoSegment>
-        <LogoLabel>
-          ChordMaster
-        </LogoLabel>
-        <LogoBackground />
+        <LogoLink to="/">
+          <LogoLabel>
+            ChordMaster
+          </LogoLabel>
+          <LogoBackground />
+        </LogoLink>
       </LogoSegment>
-      {!isMobileDevice && <MostRecentCommitsSegment>
-        <MostRecentCommit />
-      </MostRecentCommitsSegment>}
+      <NavigationSegment>
+        <Link to="/about">About</Link>
+      </NavigationSegment>
       <HeaderSegment>
         <DarkModeToggle />
       </HeaderSegment>

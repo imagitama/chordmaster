@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
+import { Link } from 'react-router-dom'
 import mediaQuery from '../../mediaQueries'
 
 export const HeaderStyled = styled.header`
@@ -22,8 +23,7 @@ export const HeaderSegment = styled.div`
   }
 `
 
-export const MostRecentCommitsSegment = styled(HeaderSegment)`
-  font-size: 75%;
+export const NavigationSegment = styled(HeaderSegment)`
   margin-right: auto;
 `
 
@@ -43,6 +43,13 @@ export const LogoSegment = styled.div`
     right: 10%;
     z-index: 1;
   }
+`
+
+export const LogoLink = styled(Link)`
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-decoration: none;
 `
 
 export const LogoLabel = styled.div`

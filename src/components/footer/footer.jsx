@@ -7,7 +7,7 @@ export const Footer = () => (
   <>
     <FooterStyled>
       <FooterSegment>
-        Made by <A href="http://www.jaredwilliams.com.au" context="Footer">Jared Williams</A>
+        Made by <A href={settings.personalSiteUrl} context="Footer">Jared Williams</A>
       </FooterSegment>
       <FooterSegment>
         <A href={settings.githubRepoUrl} title="View the GitHub repo" context="Footer">GitHub</A>

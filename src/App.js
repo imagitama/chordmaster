@@ -11,19 +11,21 @@ import globalStyles from './globalStyles'
 import WelcomeMessage from './components/welcome-message/welcome-message'
 import FeedbackForm from './components/feedback-form/feedback-form'
 import HomeContainer from './containers/home/home'
+import AboutContainer from './containers/about/about'
 
 const App = ({  isDarkModeEnabled }) => (
   <ThemeProvider theme={isDarkModeEnabled ? darkTheme : lightTheme}>
-    <Global styles={globalStyles} />
-    <Header />
-    <WelcomeMessage />
-    <FeedbackForm />
     <Router>
+      <Global styles={globalStyles} />
+      <Header />
+      <WelcomeMessage />
+      <FeedbackForm />
       <Switch>
-        <Route match="/" component={HomeContainer} />
+        <Route path="/" exact component={HomeContainer} />
+        <Route path="/about" component={AboutContainer} />
       </Switch>
+      <Footer />
     </Router>
-    <Footer />
   </ThemeProvider>
 )
 
