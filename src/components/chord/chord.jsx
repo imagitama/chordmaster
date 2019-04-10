@@ -15,8 +15,6 @@ const stringArray = [6, 5, 4, 3, 2, 1]
 const getIsChordHigh = frets => {
   const firstFretNumber = parseInt(Object.keys(frets).shift())
   const lastFretNumber = parseInt(Object.keys(frets).pop())
-  
-  console.log(firstFretNumber, lastFretNumber)
 
   return firstFretNumber > 2 || (firstFretNumber === 2 && lastFretNumber === 5)
 }

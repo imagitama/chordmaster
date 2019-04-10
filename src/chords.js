@@ -289,6 +289,24 @@ export const chords = [
   },
 
   {
+    fullName: 'B dominant 7',
+    shortName: 'B7',
+    strings: {
+      6: doNotPlayString
+    },
+    frets: {
+      1: {
+        4: 1
+      },
+      2: {
+        1: 4,
+        3: 3,
+        5: 2
+      }
+    }
+  },
+
+  {
     fullName: 'C major',
     shortName: 'C',
     strings: {
@@ -489,6 +507,26 @@ export const chords = [
   },
 
   {
+    fullName: 'C dominant 7',
+    shortName: 'C7',
+    strings: {
+      6: doNotPlayString
+    },
+    frets: {
+      1: {
+        2: 1
+      },
+      2: {
+        4: 2
+      },
+      3: {
+        3: 4,
+        5: 3
+      }
+    }
+  },
+
+  {
     fullName: 'D major',
     shortName: 'D',
     strings: {
@@ -639,6 +677,24 @@ export const chords = [
   },
 
   {
+    fullName: 'D dominant 7',
+    shortName: 'D7',
+    strings: {
+      5: doNotPlayString,
+      6: doNotPlayString
+    },
+    frets: {
+      1: {
+        2: 1
+      },
+      2: {
+        1: 3,
+        3: 2
+      }
+    }
+  },
+
+  {
     fullName: 'E major',
     shortName: 'E',
     frets: {
@@ -745,6 +801,19 @@ export const chords = [
       2: {
         3: 4,
         4: 3,
+        5: 2
+      }
+    }
+  },
+
+  {
+    fullName: 'E dominant 7',
+    shortName: 'E7',
+    frets: {
+      1: {
+        3: 1
+      },
+      2: {
         5: 2
       }
     }
@@ -870,6 +939,20 @@ export const chords = [
         3: 4,
         4: 3,
         5: 2
+      }
+    }
+  },
+
+  {
+    fullName: 'F dominant 7',
+    shortName: 'F7',
+    frets: {
+      1: barFret,
+      2: {
+        3: 2
+      },
+      3: {
+        5: 3
       }
     }
   },
@@ -1031,6 +1114,22 @@ export const chords = [
         1: 4,
         5: 3,
         6: 2
+      }
+    }
+  },
+
+  {
+    fullName: 'G dominant 7',
+    shortName: 'G7',
+    frets: {
+      1: {
+        1: 1
+      },
+      2: {
+        5: 2
+      },
+      3: {
+        6: 3
       }
     }
   },
