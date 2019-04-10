@@ -551,6 +551,27 @@ export const chords = [
   },
 
   {
+    fullName: 'E sharp diminished',
+    shortName: 'E#dim',
+    strings: {
+      1: doNotPlayString,
+      6: doNotPlayString
+    },
+    frets: {
+      7: {
+        5: 1
+      },
+      8: {
+        4: 2,
+        2: 3
+      },
+      9: {
+        3: 4
+      }
+    }
+  },
+
+  {
     fullName: 'E flat',
     shortName: 'Eb',
     alternativeShortName: 'D#',
