@@ -70,6 +70,12 @@ const replaceCommonTerms = searchTerm => searchTerm
   .replace('mino', 'm')
   .replace('min', 'm')
   .replace('mi', 'm')
+  .replace('suspended', 'sus')
+  .replace('suspende', 'sus')
+  .replace('suspend', 'sus')
+  .replace('suspen', 'sus')
+  .replace('suspe', 'sus')
+  .replace('susp', 'sus')
 
 const cleanUpSearchTerm = searchTerm => searchTerm.replace(/ /g, '')
 
