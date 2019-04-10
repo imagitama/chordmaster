@@ -63,21 +63,19 @@ const replaceCommonTerms = searchTerm => searchTerm
   .replace('shar', '#')
   .replace('sha', '#')
   .replace('sh', '#')
-  .replace('s', '#')
   .replace('flat', 'b')
   .replace('fla', 'b')
   .replace('fl', 'b')
-  .replace('f', 'b')
   .replace('minor', 'm')
   .replace('mino', 'm')
   .replace('min', 'm')
   .replace('mi', 'm')
 
-const cleanUpSearchTerm = searchTerm => searchTerm.replace(/ /g, '').toLowerCase()
+const cleanUpSearchTerm = searchTerm => searchTerm.replace(/ /g, '')
 
 export const filterChordsBySearchTerm = (chords, searchTerm) => 
   chords.filter(({ shortName }) =>
-    shortName.toLowerCase().includes(cleanUpSearchTerm(replaceCommonTerms(searchTerm)))
+    shortName.toLowerCase().includes(cleanUpSearchTerm(replaceCommonTerms(searchTerm.toLowerCase())))
   )
 
 export const filterCommonChordsOnly = chords => chords.filter(({ isCommonChord }) => isCommonChord === true)
