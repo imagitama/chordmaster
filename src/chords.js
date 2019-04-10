@@ -575,21 +575,13 @@ export const chords = [
     fullName: 'E flat',
     shortName: 'Eb',
     alternativeShortName: 'D#',
-    strings: {
-      5: doNotPlayString,
-      6: doNotPlayString
-    },
     frets: {
-      1: {
-        4: 1
+      6: barFret,
+      8: {
+        2: 4,
+        3: 3,
+        4: 2
       },
-      3: {
-        1: 3,
-        3: 2
-      },
-      4: {
-        2: 4
-      }
     }
   },
 
