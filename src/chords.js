@@ -139,6 +139,37 @@ export const chords = [
   },
 
   {
+    fullName: 'A suspended 2',
+    shortName: 'Asus2',
+    strings: {
+      6: doNotPlayString
+    },
+    frets: {
+      2: {
+        3: 3,
+        4: 2
+      }
+    }
+  },
+
+  {
+    fullName: 'A suspended 4',
+    shortName: 'Asus4',
+    strings: {
+      6: doNotPlayString
+    },
+    frets: {
+      2: {
+        3: 2,
+        4: 1
+      },
+      3: {
+        2: 3
+      }
+    }
+  },
+
+  {
     fullName: 'A dominant 7',
     shortName: 'A7',
     strings: {
@@ -220,6 +251,39 @@ export const chords = [
       },
       4: {
         3: 4
+      }
+    }
+  },
+
+  {
+    fullName: 'B suspended 2',
+    shortName: 'Bsus2',
+    strings: {
+      6: doNotPlayString
+    },
+    frets: {
+      2: barFret,
+      4: {
+        3: 4,
+        4: 3
+      }
+    }
+  },
+
+  {
+    fullName: 'B suspended 4',
+    shortName: 'Bsus4',
+    strings: {
+      6: doNotPlayString
+    },
+    frets: {
+      2: barFret,
+      4: {
+        3: 3,
+        4: 2
+      },
+      5: {
+        2: 4
       }
     }
   },
@@ -392,6 +456,39 @@ export const chords = [
   },
 
   {
+    fullName: 'C suspended 2',
+    shortName: 'Csus2',
+    strings: {
+      6: doNotPlayString
+    },
+    frets: {
+      1: {
+        2: 1
+      },
+      3: {
+        5: 3
+      }
+    }
+  },
+
+  {
+    fullName: 'C suspended 4',
+    shortName: 'Csus4',
+    strings: {
+      6: doNotPlayString
+    },
+    frets: {
+      1: {
+        2: 1
+      },
+      3: {
+        4: 4,
+        5: 3
+      }
+    }
+  },
+
+  {
     fullName: 'D major',
     shortName: 'D',
     strings: {
@@ -524,6 +621,24 @@ export const chords = [
   },
 
   {
+    fullName: 'D suspended 4',
+    shortName: 'Dsus4',
+    strings: {
+      5: doNotPlayString,
+      6: doNotPlayString
+    },
+    frets: {
+      2: {
+        3: 2
+      },
+      3: {
+        1: 4,
+        2: 3
+      }
+    }
+  },
+
+  {
     fullName: 'E major',
     shortName: 'E',
     frets: {
@@ -605,6 +720,32 @@ export const chords = [
       },
       2: {
         4: 2
+      }
+    }
+  },
+
+  {
+    fullName: 'E suspended 2',
+    shortName: 'Esus2',
+    frets: {
+      2: {
+        5: 1
+      },
+      4: {
+        3: 4,
+        4: 3
+      }
+    }
+  },
+
+  {
+    fullName: 'E suspended 4',
+    shortName: 'Esus4',
+    frets: {
+      2: {
+        3: 4,
+        4: 3,
+        5: 2
       }
     }
   },
@@ -704,6 +845,31 @@ export const chords = [
       },
       10: {
         3: 4
+      }
+    }
+  },
+
+  {
+    fullName: 'F suspended 2',
+    shortName: 'Fsus2',
+    frets: {
+      8: barFret,
+      10: {
+        3: 4,
+        4: 3
+      }
+    }
+  },
+
+  {
+    fullName: 'F suspended 4',
+    shortName: 'Fsus4',
+    frets: {
+      1: barFret,
+      3: {
+        3: 4,
+        4: 3,
+        5: 2
       }
     }
   },
@@ -835,6 +1001,36 @@ export const chords = [
       },
       12: {
         3: 4
+      }
+    }
+  },
+
+  {
+    fullName: 'G suspended 2',
+    shortName: 'Gsus2',
+    frets: {
+      2: {
+        3: 1
+      },
+      3: {
+        1: 4,
+        2: 3,
+        6: 2
+      }
+    }
+  },
+
+  {
+    fullName: 'G suspended 4',
+    shortName: 'Gsus4',
+    frets: {
+      1: {
+        2: 1
+      },
+      3: {
+        1: 4,
+        5: 3,
+        6: 2
       }
     }
   },
