@@ -12,11 +12,18 @@ import A from '../anchor/anchor'
 
 const stringArray = [6, 5, 4, 3, 2, 1]
 
-const getIsChordHigh = frets => Object.keys(frets)[0] > 2
+const getIsChordHigh = frets => {
+  const firstFretNumber = parseInt(Object.keys(frets).shift())
+  const lastFretNumber = parseInt(Object.keys(frets).pop())
+  
+  console.log(firstFretNumber, lastFretNumber)
+
+  return firstFretNumber > 2 || (firstFretNumber === 2 && lastFretNumber === 5)
+}
 
 const populateFretNumbers = frets => {
-  const firstFretNumber = parseInt(Object.keys(frets).shift())
-  return firstFretNumber > 2 ? [firstFretNumber, firstFretNumber+1, firstFretNumber+2, firstFretNumber+3] : [1, 2, 3, 4]
+  const firstFretNumber = parseInt(Object.keys(frets)[0])
+  return getIsChordHigh(frets) ? [firstFretNumber, firstFretNumber+1, firstFretNumber+2, firstFretNumber+3] : [1, 2, 3, 4]
 }
 
 const getRomanNumeral = (chordShortName, selectedKeyShortName) => {
