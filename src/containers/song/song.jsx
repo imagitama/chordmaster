@@ -1,6 +1,7 @@
 import React from 'react'
 import songsDefinition from '../../songs'
 import ContentArea from '../../components/content-area/content-area'
+import A from '../../components/anchor/anchor'
 
 const getSelectedSong = artistAndTitle => songsDefinition.find(({ artistAndTitle: artistAndTitleUnderTest }) => artistAndTitleUnderTest === artistAndTitle)
 
@@ -35,6 +36,10 @@ export default ({ artistAndTitle: selectedSongArtistAndTitle }) => {
           </li>
         ))}
       </ul>
+      <br />
+      <A href="/" isInternal>Back to main app</A>
+      <br /><br />
+      <A href="/songs" isInternal>Back to all songs</A>
     </ContentArea>
   )
 }
