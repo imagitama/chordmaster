@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Global } from '@emotion/core'
 import { ThemeProvider } from 'emotion-theming'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import darkTheme from './themes/dark'
 import lightTheme from './themes/light'
 import Header from './components/header/header'
@@ -16,20 +16,18 @@ import ChangesContainer from './containers/changes/changes'
 
 const App = ({  isDarkModeEnabled }) => (
   <ThemeProvider theme={isDarkModeEnabled ? darkTheme : lightTheme}>
-    <Router>
-      <Global styles={globalStyles} />
-      <Header />
-      <div>
-        <WelcomeMessage />
-        <FeedbackForm />
-        <Switch>
-          <Route path="/" exact component={HomeContainer} />
-          <Route path="/about" component={AboutContainer} />
-          <Route path="/changes" component={ChangesContainer} />
-        </Switch>
-      </div>
-      <Footer />
-    </Router>
+    <Global styles={globalStyles} />
+    <Header />
+    <div>
+      <WelcomeMessage />
+      <FeedbackForm />
+      <Switch>
+        <Route path="/" exact component={HomeContainer} />
+        <Route path="/about" component={AboutContainer} />
+        <Route path="/changes" component={ChangesContainer} />
+      </Switch>
+    </div>
+    <Footer />
   </ThemeProvider>
 )
 

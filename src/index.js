@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 import '@fortawesome/fontawesome-free/css/all.css'
 import * as Sentry from '@sentry/browser'
+import { BrowserRouter as Router } from 'react-router-dom'
 import App from './App'
 import createStore from './store'
 
@@ -15,10 +16,23 @@ if (process.env.NODE_ENV === 'production') {
   })
 }
 
-ReactDOM.render(
+const rootElement = document.getElementById('root')
+
+const render = Component => ReactDOM.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <App />
+      <Router>
+        <Component />
+      </Router>
     </PersistGate>
   </Provider>,
-document.getElementById('root'))
+  rootElement)
+
+render(App)
+
+if (module.hot) {
+  module.hot.accept('./App', () => {
+    const NextApp = require('./App').default
+    render(NextApp)
+  })
+}
