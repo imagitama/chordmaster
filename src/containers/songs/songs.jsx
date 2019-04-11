@@ -20,7 +20,7 @@ export default () => {
             <ul>
               {songsDefinition.filter(({ key }) => key === shortName).map(({ artistAndTitle }) => (
                 <li key={artistAndTitle}>
-                  <A href={getLinkToSongWithArtistAndTitle(artistAndTitle)} isInternal>{artistAndTitle}</A>
+                  <A href={getLinkToSongWithArtistAndTitle(artistAndTitle)} isInternal context="Songs">{artistAndTitle}</A>
                 </li>
               ))}
             </ul>

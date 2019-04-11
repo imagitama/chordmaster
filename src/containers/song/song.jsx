@@ -37,9 +37,9 @@ export default ({ artistAndTitle: selectedSongArtistAndTitle }) => {
         ))}
       </ul>
       <br />
-      <A href="/" isInternal>Back to main app</A>
+      <A href="/" isInternal context="Song">Back to main app</A>
       <br /><br />
-      <A href="/songs" isInternal>Back to all songs</A>
+      <A href="/songs" isInternal context="Song">Back to all songs</A>
     </ContentArea>
   )
 }
