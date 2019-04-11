@@ -7,6 +7,7 @@ import OutputMessage from '../../components/output-message/output-message'
 import Chords from '../../components/chords/chords'
 import { populateCopiedChords, filterCommonChordsOnly, sortChordsBySequence, filterChordsByChordProgression, filterChordsBySearchTerm, filterFavouriteChordsOnly } from '../../filters'
 import chordsDefinition from '../../chords'
+import SongsForKey from '../../components/songs-for-key/songs-for-key'
 
 const HomeContainer = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm, majorMinorChordsOnly, favouriteChords, favouritesOnly }) => {
   let chords = populateCopiedChords(chordsDefinition)
@@ -39,6 +40,7 @@ const HomeContainer = ({ selectedKeyShortName, sortBySequence, selectedChordProg
       <SearchInput />
       <SearchTerm />
       {chords.length ? <Chords chords={chords} /> : <OutputMessage>No chords found. Maybe try turning off a filter?</OutputMessage>}
+      <SongsForKey />
     </>
   )
 }
