@@ -22,19 +22,31 @@ export default ({ artistAndTitle: selectedSongArtistAndTitle }) => {
       Key: {key}
       <hr />
       <ul>
-        {verses.map(({ verseTitle, lyricsWithChords }) => (
-          <li key={verseTitle}>
-            {verseTitle}
-            <ul style={{ fontFamily: 'monospace' }}>
-              {lyricsWithChords.map(([chords, lyric]) => (
-                <li key={lyric}>
-                  <strong>{formatChords(chords)}</strong><br />
-                  {lyric}
-                </li>
-              ))}
-            </ul>
-          </li>
-        ))}
+        {verses.map(({ verseTitle, lyricsWithChords, copyFrom }) => {
+          if (copyFrom) {
+            const copiedVerse = verses.find(({ verseTitle }) => verseTitle === copyFrom)
+
+            if (!copiedVerse) {
+              throw new Error(`Failed to copy from verse "${copyFrom}" in song ${artistAndTitle}`)
+            }
+
+            lyricsWithChords = copiedVerse.lyricsWithChords
+          }
+
+          return (
+            <li key={verseTitle}>
+              {verseTitle}
+              <ul style={{ fontFamily: 'monospace' }}>
+                {lyricsWithChords.map(([chords, lyric]) => (
+                  <li key={lyric}>
+                    <strong>{formatChords(chords)}</strong><br />
+                    {lyric}
+                  </li>
+                ))}
+              </ul>
+            </li>
+          )
+        })}
       </ul>
       <br />
       <A href="/" isInternal context="Song">Back to main app</A>
