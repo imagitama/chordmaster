@@ -1,5 +1,117 @@
 export default [
   {
+    artistAndTitle: 'Oasis - Wonderwall',
+    artist: 'Oasis',
+    title: 'Wonderwall',
+    key: 'A',
+    verses: [
+      {
+        verseTitle: 'Verse 1',
+        lyricsWithChords: [
+          [
+            '    F#m         A          E                                   Bm',
+            `Today is gonna be the day that they're gonna throw it back to you`
+          ],
+          [
+            '   F#m     A                 E                       Bm',
+            `By now you should've somehow realized what you gotta do`
+          ],
+          [
+            '  F#m                A       E               Bm',
+            `I don't believe that anybody feels the way I do`
+          ],
+          [
+            'D     E   Bm',
+            `about you now`
+          ]
+        ]
+      },
+      {
+        verseTitle: 'Verse 2',
+        lyricsWithChords: [
+          [
+            '     F#m      A                               E                     Bm',
+            `Back beat the word was on the street that the fire in your heart is out`
+          ],
+          [
+            '    F#m         A                           E                  Bm   ',
+            `I'm sure you've heard it all before But you never really had a doubt`
+          ],
+
+          [
+            'F#m                A       E               Bm',
+            `I don't believe that anybody Feels the way I do`
+          ],
+          [
+            'A     E   Bm',
+            `About you now`
+
+          ]
+        ]
+      },
+      {
+
+        verseTitle: 'Refrain 1',
+        lyricsWithChords: [
+          [
+            '    D                E                F#m    ',
+            `And all the roads we have to walk are winding`
+          ],
+          [
+            '    D                   E                 F#m     ',
+            `And all the lights that lead us there are blinding`
+          ],
+          [
+            'D              E                   A       E/G#   F#m',
+            `There are many things that I Would like to say to you`
+          ],
+          [
+            '      E          Bm ',
+            `But I don't know how`
+          ]
+        ]
+      },
+      {
+
+        verseTitle: 'Chorus 1',
+        lyricsWithChords: [
+          [
+            '        D    F#m A',
+            `Because maybe     `
+          ],
+          [
+            '       F#m                   D     F#m A',
+            `you're gonna be the one that saves me   `,
+          ],
+          [
+            '    F#m   D  F#m A',
+            `And after all     `,
+          ],
+          [
+            '          F#m   D   F#m A F#m',
+            `you're my wonderwall         `
+          ]
+        ]
+      },
+      {
+        verseTitle: 'Verse 3',
+        copyFrom: 'Verse 1'
+      },
+      {
+        verseTitle: 'Refrain 2',
+        copyFrom: 'Refrain 1'
+      },
+      {
+        verseTitle: 'Chorus 2',
+        copyFrom: 'Chorus 1'
+      },
+      {
+        verseTitle: 'Chorus 3',
+        copyFrom: 'Chorus 1'
+      },
+    ]
+  },
+  {
     artistAndTitle: 'Green Day - Boulevard of Broken Dreams',
     artist: 'Green Day',
     title: 'Boulevard of Broken Dreams',
