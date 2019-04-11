@@ -35,3 +35,13 @@ export const navigatedInternally = (url, context) => ({
     context
   }
 })
+
+export const ENTER_PRINT_MODE = 'ENTER_PRINT_MODE'
+export const enterPrintMode = () => ({
+  type: ENTER_PRINT_MODE
+})
+
+export const LEAVE_PRINT_MODE = 'LEAVE_PRINT_MODE'
+export const leavePrintMode = () => ({
+  type: LEAVE_PRINT_MODE
+})

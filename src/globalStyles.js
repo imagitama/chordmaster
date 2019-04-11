@@ -21,6 +21,7 @@ export default theme => css`
 
   * {
     box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
   }
 
   a {

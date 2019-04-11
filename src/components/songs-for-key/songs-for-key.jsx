@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import A from '../../components/anchor/anchor'
 import songsDefinition from '../../songs'
 import { getLinkToSongWithArtistAndTitle } from '../../utils'
+import ContentArea from '../content-area/content-area'
 
 const getSongsInKey = keyShortName => songsDefinition.filter(({ key }) => key === keyShortName)
 
@@ -18,7 +19,7 @@ export const SongsForKey = ({ selectedKeyShortName }) => {
   }
 
   return (
-    <>
+    <ContentArea noPrint>
       Popular songs in this key:
       <ul>
         {songsInKey.map(({ artistAndTitle }) => (
@@ -27,7 +28,7 @@ export const SongsForKey = ({ selectedKeyShortName }) => {
           </li>
         ))}
       </ul>
-    </>
+    </ContentArea>
   )  
 }
 

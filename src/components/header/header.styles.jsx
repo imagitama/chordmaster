@@ -5,6 +5,8 @@ import A from '../anchor/anchor'
 
 export const HeaderStyled = styled.header`
   overflow: hidden;
+
+  ${mediaQuery.hidePrint}
 `
 
 export const headerChildStyle = ({ theme }) => css`

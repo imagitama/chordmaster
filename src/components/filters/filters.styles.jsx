@@ -16,6 +16,7 @@ export const FiltersStyled = styled.div`
   justify-content: space-between;
   flex-direction: row;
   background-color: ${({ theme }) => theme.filtersBackgroundColor};
+  ${mediaQuery.hidePrint}
 `
 
 export default FiltersStyled

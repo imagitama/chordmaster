@@ -15,6 +15,7 @@ import AboutContainer from './containers/about/about'
 import ChangesContainer from './containers/changes/changes'
 import SongContainer from './containers/song/song'
 import SongsContainer from './containers/songs/songs'
+import PrintModeHandler from './components/print-mode-handler/print-mode-handler'
 
 const parseArtistAndTitle = artistAndTitleFromUrl => artistAndTitleFromUrl.replace(/\+/g, ' ')
 
@@ -34,6 +35,7 @@ const App = ({  isDarkModeEnabled }) => (
       </Switch>
     </div>
     <Footer />
+    <PrintModeHandler />
   </ThemeProvider>
 )
 
