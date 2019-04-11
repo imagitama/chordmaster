@@ -111,6 +111,193 @@ export default [
       },
     ]
   },
+
+  {
+    artistAndTitle: 'Red Hot Chili Peppers - Otherside',
+    artist: 'Red Hot Chili Peppers',
+    title: 'Otherside',
+    key: 'Am',
+    verses: [
+      {
+        verseTitle: 'Chorus 1',
+        lyricsWithChords: [
+          [
+            `Am        F              C`,
+            ` How long, how long will I slide?`
+          ], [
+            `G            Am    F`,
+            `Separate my side`
+          ], [
+            `C        G                 Am    F`,
+            `I don't, don't believe it's bad`
+          ], [
+            `C                   G`,
+            `Slittin' my throat it's all I ever`
+          ]
+        ]
+      },
+
+      {
+        verseTitle: 'Verse 1',
+        lyricsWithChords: [
+          [
+            `Am                         Em`,
+            `I heard your voice through a photograph`,
+          ], [
+            `Am                           Em`,
+            `I thought it up and brought up the past`,
+          ], [
+            `Am                          Em`,
+            `Once you know you can never go back`
+          ], [
+            `G                       A`,
+            `I've got to take it on the otherside`
+          ]
+        ]
+      },
+
+      {
+        verseTitle: 'Verse 2',
+        lyricsWithChords: [
+          [
+            `Am                    Em`,
+            `Centuries are what it meant to me`
+          ], [
+            `Am                  Em`,
+            `A cemetery where I marry the sea`
+          ], [
+            `Am                     Em`,
+            `Stranger things never change my mind`
+          ], [
+            `G                       A`,
+            `I've got to take it on the otherside`,
+          ], [
+            `G           A`,
+            `Take it on the otherside`,
+          ], [
+            `G`,
+            `Take it on`,
+          ], [
+            `A`,
+            `Take it on`
+          ]
+
+        ]
+      },
+
+      {
+        verseTitle: 'Chorus 2',
+        copyFrom: 'Chorus 1',
+      },
+
+      {
+        verseTitle: 'Verse 3',
+        lyricsWithChords: [
+          [
+            `Am                  Em`,
+            `Pour my life into a paper cup`,
+          ], [
+            `Am                         Em`,
+            `The ashtray's full and I'm spillin' my guts`,
+          ], [
+            `Am                    Em`,
+            `She wants to know am I still a slut`,
+          ], [
+            `G                       A`,
+            `I've got to take it on the otherside`
+          ]
+
+        ]
+      },
+
+      {
+        verseTitle: 'Verse 4',
+        lyricsWithChords: [
+          [
+            `Am                   Em`,
+            `Scarlet starlet and she's in my bed`
+          ], [
+            `Am                  Em`,
+            `A candidate for my soul mate bled`
+          ], [
+            `Am                   Em`,
+            `Push the trigger and pull the thread`
+          ], [
+            `G                       A`,
+            `I've got to take it on the otherside`
+          ], [
+            `G           A`,
+            `Take it on the otherside`
+          ], [
+            `G`,
+            `Take it on`,
+          ], [
+            `A`,
+            `Take it on`
+
+          ]
+        ]
+      },
+
+      {
+        verseTitle: 'Chorus 3',
+        copyFrom: 'Chorus 1'
+      },
+
+      {
+        verseTitle: 'Instrumental 1',
+        lyricsWithChords: [
+
+          [
+            `Em - C`,
+            ``
+          ], [
+            `Em - C`,
+            ``
+          ]
+
+        ]
+      },
+
+      {
+        verseTitle: 'Bridge',
+        lyricsWithChords: [
+          [
+            `Em`,
+            `Turn me on take me for a hard ride`
+          ], [
+            `C`,
+            `Burn me out leave me on the otherside`
+          ], [
+            `Em`,
+            `I yell and tell it that`
+          ], [
+            `It's not my friend`,
+            `C`
+          ], [
+            `I tear it down I tear it down`,
+            `And then it's born again`
+          ]
+        ]
+      },
+
+      {
+        verseTitle: 'Instrumental 2',
+        lyricsWithChords: [
+          [
+            `Am - F - C - G`,
+            ''
+          ]
+        ]
+      },
+
+      {
+        verseTitle: 'Chorus 4',
+        copyFrom: 'Chorus 1',
+      }
+    ]
+  },
+
   {
     artistAndTitle: 'Green Day - Boulevard of Broken Dreams',
     artist: 'Green Day',
