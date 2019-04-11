@@ -14,6 +14,7 @@ import HomeContainer from './containers/home/home'
 import AboutContainer from './containers/about/about'
 import ChangesContainer from './containers/changes/changes'
 import SongContainer from './containers/song/song'
+import SongsContainer from './containers/songs/songs'
 
 const parseArtistAndTitle = artistAndTitleFromUrl => artistAndTitleFromUrl.replace(/\+/g, ' ')
 
@@ -28,6 +29,7 @@ const App = ({  isDarkModeEnabled }) => (
         <Route path="/" exact component={HomeContainer} />
         <Route path="/about" component={AboutContainer} />
         <Route path="/changes" component={ChangesContainer} />
+        <Route path="/songs" component={SongsContainer} />
         <Route path="/song/:artistAndTitle" component={({ match: { params: { artistAndTitle } }}) => <SongContainer artistAndTitle={parseArtistAndTitle(artistAndTitle)} />} />
       </Switch>
     </div>

@@ -23,6 +23,9 @@ export const Header = () => (
           <NavigationLink>
             <A href="/changes" isInternal context="Header">Recent Changes</A>
           </NavigationLink>
+          <NavigationLink>
+            <A href="/songs" isInternal context="Header">Songs</A>
+          </NavigationLink>
         </Navigation>
       </NavigationSegment>
       <HeaderSegment>

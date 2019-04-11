@@ -17,3 +17,7 @@ export const performFetch = (url, method = 'GET', opts = {}) => fetch(url, {
 })
 
 export const isMobileDevice = 'ontouchstart' in document.documentElement
+
+const cleanUpArtistAndTitleForHref = artistAndTitle => artistAndTitle.replace(/ /g, '+')
+
+export const getLinkToSongWithArtistAndTitle = artistAndTitle => `/song/${cleanUpArtistAndTitleForHref(artistAndTitle)}`
