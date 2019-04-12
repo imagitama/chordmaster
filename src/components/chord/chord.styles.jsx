@@ -23,13 +23,14 @@ export const FretStyled = styled.div`
 `
 
 export const StringStyled = styled.div`
-  width: ${stringWidth};
+  width: 1px;
   height: 100%;
   background: ${({ theme }) => theme.textColor};
   position: absolute;
   top: 0;
   left: ${({ idx }) => ((idx) / 5) * 100}%;
   margin-left: ${({ idx }) => idx === 0 ? 0 : '-1px'};
+  transform: scale(1.01);
 `
 
 export const FingerNumberStyled = styled.div`
