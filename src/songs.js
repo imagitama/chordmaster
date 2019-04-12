@@ -299,6 +299,124 @@ export default [
   },
 
   {
+    artistAndTitle: 'The Beatles - Let It Be',
+    artist: 'The Beatles',
+    title: 'Let It Be',
+    key: 'C',
+    verses: [
+      {
+        verseTitle: 'Verse 1',
+        lyricsWithChords: [
+          [
+            `C              G                 Am          Fmaj7    F6`,
+            `When I find myself in times of trouble, Mother Mary comes to me`
+          ], [
+            `C                 G              F  C/E Dm C`,
+            `Speaking words of wisdom, let it be`
+          ], [
+            `    C              G                 Am              Fmaj7    F6`,
+            `And in my hour of darkness, She is standing right in front of me`
+          ], [
+            `C                 G              F  C/E Dm C`,
+            `Speaking words of wisdom, Let it be`
+          ]
+        ]
+      },
+      {
+        verseTitle: 'Chorus 1',
+        lyricsWithChords: [
+          [
+            `        Am        C/G          F          C`,
+            `Let it be, let it be,  let it be, let it be`
+          ], [
+            `C                G              F  C/E Dm C`,
+            ` Whisper words of wisdom, let it be`
+          ]
+        ]
+      },
+      {
+        verseTitle: 'Verse 2',
+        lyricsWithChords: [
+          [
+            `       C              G              Am           Fmaj7    F6`,
+            `And when the broken hearted people, Living in the world agree`
+          ], [
+            `C                 G              F  C/E Dm C`,
+            `There will be an answer, let it be`
+          ], [
+            `       C                 G              Am                  Fmaj7    F6`,
+            `For though they may be parted, There is still a chance that they may see`
+          ], [
+            `C                 G              F  C/E Dm C`,
+            `There will be an answer, let it be`
+          ]
+        ]
+      },
+      {
+        verseTitle: 'Chorus 2',
+        copyFrom: 'Chorus 1'
+      },
+      {
+        verseTitle: 'Instrumental',
+        lyricsWithChords: [
+          [
+          `F   C/E Dm C   Bb F/A G    F    C      x2`,
+          ''
+          ]
+        ]
+      },
+      {
+        verseTitle: 'Solo',
+        lyricsWithChords: [
+          [
+          `C  G  Am  F  C  G  F  C  x2`,
+          ''
+          ]
+        ]
+      },
+
+      {
+        verseTitle: 'Chorus 3',
+        copyFrom: 'Chorus 1',
+      },
+      {
+        verseTitle: 'Verse 3',
+        lyricsWithChords: [
+          [
+            `      C                 G`,
+            `And when the night is cloudy,`
+          ], [
+            `                 Am          Fmaj7    F6`,
+            `There is still a light that shines on me`
+          ], [
+            `   C             G              F  C/E Dm C`,
+            `Shine on till tomorrow, let it be`
+          ], [
+            `   C               G               Am        Fmaj7    F6`,
+            `I wake up to the sound of music, Mother Mary comes to me`
+          ], [
+            `   C                G            F  C/E Dm C`,
+            `Speaking words of wisdom, let it be`
+          ]
+        ]
+      },
+      {
+        verseTitle: 'Chorus 4',
+        copyFrom: 'Chorus 1'
+      },
+      {
+        verseTitle: 'Outro',
+        lyricsWithChords: [
+          [
+            `F   C/E Dm C   Bb F/A G    F    C`,
+            ''
+          ]
+        ]
+      }
+    ]
+  },
+
+  {
     artistAndTitle: 'Green Day - Boulevard of Broken Dreams',
     artist: 'Green Day',
     title: 'Boulevard of Broken Dreams',
