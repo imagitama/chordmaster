@@ -76,6 +76,10 @@ const SearchInput = ({ searchTerm, changeSearchTerm, showSearchTerm, hideSearchT
               Tap here to search
             </OutputMessage>
           )
+        ) : searchTerm ? (
+          <OutputMessage>
+            Keep typing...
+          </OutputMessage>
         ) : (
           <OutputMessage>
             Type anywhere to search
