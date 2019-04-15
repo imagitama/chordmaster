@@ -236,6 +236,26 @@ export const chords = [
   },
 
   {
+    fullName: 'B flat diminished',
+    shortName: 'Bbdim',
+    strings: {
+      6: doNotPlayString,
+    },
+    frets: {
+      1: {
+        5: 1
+      },
+      2: {
+        4: 2,
+        2: 3
+      },
+      3: {
+        3: 4
+      }
+    }
+  },
+
+  {
     fullName: 'B diminished',
     shortName: 'Bdim',
     strings: {
@@ -528,6 +548,13 @@ export const chords = [
   },
 
   {
+    fullName: 'C flat',
+    shortName: 'Cb',
+    alternativeShortName: 'B',
+    copyFrom: 'B'
+  },
+
+  {
     fullName: 'D major',
     shortName: 'D',
     strings: {
@@ -619,6 +646,13 @@ export const chords = [
     shortName: 'Db',
     alternativeShortName: 'C#',
     copyFrom: 'C#'
+  },
+
+  {
+    fullName: 'D flat minor',
+    shortName: 'Dbm',
+    alternativeShortName: 'C#m',
+    copyFrom: 'C#m'
   },
 
   {
@@ -956,6 +990,13 @@ export const chords = [
         5: 3
       }
     }
+  },
+
+  {
+    fullName: 'F flat',
+    shortName: 'Fb',
+    alternativeShortName: 'E',
+    copyFrom: 'E'
   },
 
   {
