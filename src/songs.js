@@ -299,6 +299,254 @@ export default [
   },
 
   {
+    artistAndTitle: `Jason Mraz - I'm Yours`,
+    artist: 'Jason Mraz',
+    title: `I'm Yours`,
+    key: 'B',
+    verses: [
+      {
+        verseTitle: "Intro",
+        lyricsWithChords: [
+          [
+            "C  G  Am  F",
+            ""
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse 1",
+        lyricsWithChords: [
+          [
+            "      C",
+            "Well, you done done me an' you bet I felt it."
+          ],
+          [
+            "  G",
+            "I tried to be chill, but you're so hot that I melted."
+          ],
+          [
+            "  Am",
+            "I fell right through the cracks."
+          ],
+          [
+            "        F",
+            "Now I'm trying to get back."
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse 2",
+        lyricsWithChords: [
+          [
+            "C                                                   G",
+            "Before the cool done run out, I'll be giving it my bestest,"
+          ],
+          [
+            "                       Am",
+            "And nothing's gonna stop me but divine intervention."
+          ],
+          [
+            "                                      F",
+            "I reckon it's again my turn"
+          ],
+          [
+            "                     D7/F#",
+            "To win some or learn some."
+          ]
+        ]
+      },
+      {
+        verseTitle: "Chorus 1",
+        lyricsWithChords: [
+          [
+            "    C           G               Am",
+            "But I won't hesitate no more, no more."
+          ],
+          [
+            "          F           C",
+            "It cannot wait, I'm yours."
+          ],
+          [
+            "    G        Am",
+            "Mm, mm, hmm, mm..."
+          ],
+          [
+            "                       F",
+            "Hey, hey-ey, hey, hey, hey..."
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse 3",
+        lyricsWithChords: [
+          [
+            "C                                    G",
+            "Well, open up your mind and see like me."
+          ],
+          [
+            "                                     Am",
+            "Open up your plans and, damn, you're free."
+          ],
+          [
+            "                                     F",
+            "Look into your heart and you'll find love, love, love, love."
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse 4",
+        lyricsWithChords: [
+          [
+            "C                                                   G",
+            "Listen to the music of the moment; people dance and sing."
+          ],
+          [
+            "                       Am",
+            "We're just one big family."
+          ],
+          [
+            "                                      F",
+            "And it's our god forsaken right to be loved,"
+          ],
+          [
+            "                     D7/F#",
+            "Loved, loved, loved, loved."
+          ]
+        ]
+      },
+      {
+        verseTitle: "Chorus 2",
+        lyricsWithChords: [
+          [
+            "   C           G               Am",
+            "So I won't hesitate no more, no more."
+          ],
+          [
+            "          F",
+            "It cannot wait, I'm sure."
+          ],
+          [
+            "           C             G",
+            "There's no need to complicate."
+          ],
+          [
+            "            Am",
+            "Our time is short."
+          ],
+          [
+            "            F",
+            "This is our fate, I'm yours."
+          ],
+          [
+            "C       G/B Am G",
+            "Tuch-tu..."
+          ],
+          [
+            "               F",
+            "Skooch on over closer, dear,"
+          ],
+          [
+            "                       D7/F#",
+            "And I will nibble your ear."
+          ]
+        ]
+      },
+      {
+        verseTitle: "Interlude",
+        lyricsWithChords: [
+          [
+            "C   G/B  |Am   G   |F       |D7/F#",
+            ""
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse 5",
+        lyricsWithChords: [
+          [
+            "                   C",
+            "I've been spending way too long checking my tongue in the mirror"
+          ],
+          [
+            "    G",
+            "And bending over backwards just to try to see it clearer."
+          ],
+          [
+            "    Am",
+            "But my breath fogged up the glass,"
+          ],
+          [
+            "         F",
+            "And so I drew a new face and I laughed."
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse 6",
+        lyricsWithChords: [
+          [
+            "  C",
+            "I guess what I'll be saying is there ain't no better reason"
+          ],
+          [
+            "   G",
+            "To rid yourself of vanities and just go with the seasons."
+          ],
+          [
+            "Am",
+            "It's what we aim to do."
+          ],
+          [
+            "    F",
+            "Our name is our virtue."
+          ]
+        ]
+      },
+      {
+        verseTitle: "Chorus 3",
+        lyricsWithChords: [
+          [
+            "    C           G               Am",
+            "But I won't hesitate no more, no more."
+          ],
+          [
+            "          F",
+            "It cannot wait, I'm yours."
+          ],
+          [
+            "C                              G",
+            "Open up your mind and see like me."
+          ],
+          [
+            "                                     Am",
+            "Open up your plans and, damn, you're free."
+          ],
+          [
+            "                                     F",
+            "Look into your heart and you'll find that the sky is yours."
+          ],
+          [
+            "   C",
+            "So please don't, please don't, please don't..."
+          ],
+          [
+            "           G",
+            "There's no need to complicate."
+          ],
+          [
+            "           Am",
+            "'Cause our time is short."
+          ],
+          [
+            "                              F           D7/F#  C G Am F",
+            "This, oh this, oh this is our fate. I'm yours."
+          ]
+        ]
+      }
+    ]
+  },
+
+  {
     artistAndTitle: 'The Beatles - Let It Be',
     artist: 'The Beatles',
     title: 'Let It Be',
@@ -360,8 +608,8 @@ export default [
         verseTitle: 'Instrumental',
         lyricsWithChords: [
           [
-          `F   C/E Dm C   Bb F/A G    F    C      x2`,
-          ''
+            `F   C/E Dm C   Bb F/A G    F    C      x2`,
+            ''
           ]
         ]
       },
@@ -369,8 +617,8 @@ export default [
         verseTitle: 'Solo',
         lyricsWithChords: [
           [
-          `C  G  Am  F  C  G  F  C  x2`,
-          ''
+            `C  G  Am  F  C  G  F  C  x2`,
+            ''
           ]
         ]
       },
