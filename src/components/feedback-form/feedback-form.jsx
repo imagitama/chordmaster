@@ -27,7 +27,7 @@ export const FeedbackForm = ({ isFeedbackFormVisible, hideFeedbackForm }) => {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'feedback', 'message': feedbackTextInput })
+      body: encode({ 'form-name': 'feedback', message: feedbackTextInput })
     })
       .then(() => {
         console.log('Successfully submitted feedback')
