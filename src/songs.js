@@ -665,6 +665,183 @@ export default [
   },
 
   {
+    artistAndTitle: "The Eagles - Hotel California",
+    key: "Bm",
+    artist: "The Eagles",
+    title: "Hotel California",
+    verses: [
+      {
+        verseTitle: "Verse",
+        lyricsWithChords: [
+          [
+            "Bm                        F#7",
+            "On a dark desert highway, cool wind in my hair"
+          ],
+          [
+            "A                     E7",
+            "Warm smell of colitas rising up through the air"
+          ],
+          [
+            "G                         D",
+            "Up ahead in the distance, I saw a shimmering light"
+          ],
+          [
+            "Em                                        F#7",
+            "My head grew heavy and my sight grew dim; I had to stop for the night."
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse",
+        lyricsWithChords: [
+          [
+            "Bm                              F#7",
+            "There she stood in the doorway; I heard the mission bell"
+          ],
+          [
+            "A                                            E7",
+            "And I was thinking to myself, \"This could be Heaven or this could be Hell\""
+          ],
+          [
+            "G                        D",
+            "Then she lit up a candle and she showed me the way"
+          ],
+          [
+            "Em                                  F#7",
+            "There were voices down the corridor I thought I heard them say..."
+          ]
+        ]
+      },
+      {
+        verseTitle: "Chorus",
+        lyricsWithChords: [
+          [
+            "G                        D ",
+            "Welcome to the Hotel California... "
+          ],
+          [
+            "       F#7                                      Bm        F#7(on C#)Bm(on D)",
+            "Such a lovely place,(such a lovely place)such a lovely face..."
+          ],
+          [
+            "G                               D",
+            "Plenty of room at the Hotel California... "
+          ],
+          [
+            "    Em                                     F#7",
+            "Any time of year,(any time of year)you can find it here..."
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse",
+        lyricsWithChords: [
+          [
+            "Bm                           F#7",
+            "Her mind is Tiffany-twisted, she got the Mercedes Bends"
+          ],
+          [
+            "A                                     E7",
+            "She got a lot of pretty, pretty boys, that she calls friends"
+          ],
+          [
+            "G                                D",
+            "How they dance in the courtyard, sweet summer sweat"
+          ],
+          [
+            "Em                      F#7",
+            "Some dance to remember, some dance to forget"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse",
+        lyricsWithChords: [
+          [
+            "Bm                           F#7",
+            "So I called up the Captain, \"Please bring me my wine\""
+          ],
+          [
+            "          A                                     E7",
+            "He said, \"We haven't had that spirit here since nineteen sixty nine\""
+          ],
+          [
+            "G                                       D",
+            "And still those voices are calling from far away,"
+          ],
+          [
+            "Em                                     F#7",
+            "Wake you up in the middle of the night just to hear them say..."
+          ]
+        ]
+      },
+      {
+        verseTitle: "Chorus",
+        lyricsWithChords: [
+          [
+            "G                        D ",
+            "Welcome to the Hotel California... "
+          ],
+          [
+            "       F#7                                      Bm        F#7(on C#)Bm(on D)",
+            "Such a lovely place,(such a lovely place)such a lovely face..."
+          ],
+          [
+            "G                                  D",
+            "They livin' it up at the Hotel California... "
+          ],
+          [
+            "       Em                                             F#7",
+            "What a nice surprise,(what a nice surprise)bring your alibis..."
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse",
+        lyricsWithChords: [
+          [
+            "Bm                      F#7",
+            "Mirrors on the ceiling, the pink champagne on ice"
+          ],
+          [
+            "              A                               E7",
+            "And she said \"We are all just prisoners here, of our own device\""
+          ],
+          [
+            "G",
+            "And in the master's chambers, they gathered for the feast"
+          ],
+          [
+            "Em",
+            "They stab it with their steely knives, but they just can't kill the beast"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse",
+        lyricsWithChords: [
+          [
+            "Bm                           F#7",
+            "Last thing I remember, I was running for the door"
+          ],
+          [
+            "A                                 E7",
+            "I had to find the passage back to place I was before"
+          ],
+          [
+            "G                                   D",
+            "\"Relax\" said the night man, \"We are programmed to receive."
+          ],
+          [
+            "Em                                   F#7",
+            "You can check out any time you like, but you can never leave\"."
+          ]
+        ]
+      }
+    ]
+  },
+
+  {
     artistAndTitle: 'Green Day - Boulevard of Broken Dreams',
     artist: 'Green Day',
     title: 'Boulevard of Broken Dreams',
