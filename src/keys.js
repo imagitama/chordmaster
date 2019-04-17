@@ -122,6 +122,28 @@ export const keys = [
   },
 
   {
+    fullName: 'Key of B minor',
+    shortName: 'Bm',
+    chords: {
+      [i]: 'Bm',
+      [ii]: 'C#dim',
+      [III]: 'D',
+      [iv]: 'Em',
+      [v]: 'F#m',
+      [VI]: 'G',
+      [VII]: 'A'
+    },
+    chordProgressions: [
+      [i, IV, VII],
+      [i, iv, VII],
+      [i, iv, v],
+      [i, VI, III, VII],
+      [ii, v, i]
+    ],
+    isCommonKey: true
+  },
+
+  {
     fullName: 'Key of B flat',
     shortName: 'Bb',
     alternativeShortName: 'A#',
