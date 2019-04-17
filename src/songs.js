@@ -1447,6 +1447,153 @@ export default [
   },
 
   {
+    artistAndTitle: "Fleetwood Mac - Go Your Own Way",
+    artist: "Fleetwood Mac",
+    title: "Go Your Own Way",
+    key: "F",
+    source: "https://tabs.ultimate-guitar.com/tab/fleetwood_mac/go_your_own_way_chords_13586",
+    verses: [
+      {
+        verseTitle: "Intro",
+        lyricsWithChords: [
+          [
+            "F",
+            ""
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse",
+        lyricsWithChords: [
+          [
+            "F                                       C  Bb",
+            "Loving you,   isn t the right thing to do?"
+          ],
+          [
+            "Bb                                      F        ",
+            "How can I,    ever change things that I feel"
+          ],
+          [
+            "F                                   C    Bb",
+            "If I could,   maybe I d give you my world"
+          ],
+          [
+            "Bb                                       F",
+            "How can I,    when you wont take it from me?"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Chorus",
+        lyricsWithChords: [
+          [
+            "Dm      Bb          C ",
+            "You can go your own way,     Go your own way"
+          ],
+          [
+            "Dm      Bb       C         ",
+            "You can call it  Another lonely day"
+          ],
+          [
+            "Dm      Bb          C ",
+            "You can go your own way,   Go your own way"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse",
+        lyricsWithChords: [
+          [
+            "F                                 C     Bb",
+            "Tell me why,   everything turned around?"
+          ],
+          [
+            "Bb                                          F",
+            "Packing up,    shacking up is all you wanna do"
+          ],
+          [
+            "F                                    C    Bb",
+            "If I could,    baby Id give you my world"
+          ],
+          [
+            "Bb                                      F",
+            "Open up,       everything s waiting for you"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Chorus",
+        lyricsWithChords: [
+          [
+            "Dm      Bb          C ",
+            "You can go your own way,     Go your own way"
+          ],
+          [
+            "Dm      Bb       C         ",
+            "You can call it  Another lonely day"
+          ],
+          [
+            "Dm      Bb          C ",
+            "You can go your own way,   Go your own way"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Break 1",
+        lyricsWithChords: [
+          [
+            "F  C   Bb   F    C   Bb    F    C    Bb     F    C    Bb    F",
+            ""
+          ]
+        ]
+      },
+      {
+        verseTitle: "Chorus",
+        lyricsWithChords: [
+          [
+            "Dm      Bb          C ",
+            "You can go your own way,     Go your own way"
+          ],
+          [
+            "Dm      Bb       C         ",
+            "You can call it  Another lonely day"
+          ],
+          [
+            "Dm      Bb          C ",
+            "You can go your own way,   Go your own way"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Solo",
+        lyricsWithChords: [
+          [
+            "Dm Bb C   ",
+            ""
+          ]
+        ]
+      },
+      {
+        verseTitle: "Chorus",
+        lyricsWithChords: [
+          [
+            "Dm      Bb          C ",
+            "You can go your own way,     Go your own way"
+          ],
+          [
+            "Dm      Bb       C         ",
+            "You can call it  Another lonely day"
+          ],
+          [
+            "Dm      Bb          C ",
+            "You can go your own way,   Go your own way"
+          ]
+        ]
+      }
+    ]
+  },
+
+  {
     artistAndTitle: 'Green Day - Boulevard of Broken Dreams',
     artist: 'Green Day',
     title: 'Boulevard of Broken Dreams',
