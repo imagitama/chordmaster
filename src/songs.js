@@ -842,6 +842,245 @@ export default [
   },
 
   {
+    artistAndTitle: "Guns N' Roses - Sweet Child O Mine",
+    artist: "Guns N' Roses",
+    title: "Sweet Child O Mine",
+    key: "D",
+    verses: [
+      {
+        verseTitle: "Intro",
+        lyricsWithChords: [
+          [
+            "D C G D",
+            ""
+          ],
+          [
+            "D C G D",
+            ""
+          ],
+          [
+            "D C G D",
+            ""
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse",
+        lyricsWithChords: [
+          [
+            "D",
+            "She's got a smile that it seems to me"
+          ],
+          [
+            "  C",
+            "Reminds me of childhood memories"
+          ],
+          [
+            "       G",
+            "Where everything"
+          ],
+          [
+            "                                D",
+            "Was as fresh as a bright blue sky"
+          ],
+          [
+            "D",
+            "Now and then when I see her face"
+          ],
+          [
+            "    C",
+            "She takes me away to that special place"
+          ],
+          [
+            "         G",
+            "And if I stared to long"
+          ],
+          [
+            "                              D",
+            "I'd probably break down and cry"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Chorus",
+        lyricsWithChords: [
+          [
+            "A               C              D",
+            "Whoa Oh, Sweet child o' mine"
+          ],
+          [
+            "A               C              D",
+            "Whoa, Oh, Oh, Oh Sweet love o' mine"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Instrumental",
+        lyricsWithChords: [
+          [
+            "D C G D",
+            ""
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse",
+        lyricsWithChords: [
+          [
+            "D",
+            "She's got eyes of the bluest skies"
+          ],
+          [
+            "   C",
+            "As if they thought of rain"
+          ],
+          [
+            "  G",
+            "I hate to look into those eyes"
+          ],
+          [
+            "    D",
+            "And see an ounce of pain"
+          ],
+          [
+            "    D",
+            "Her hair reminds me of a warm safe place"
+          ],
+          [
+            "      C",
+            "Where as a child I'd hide"
+          ],
+          [
+            "    G",
+            "And pray for the thunder and rain"
+          ],
+          [
+            "     D",
+            "To quietly pass me by"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Chorus",
+        lyricsWithChords: [
+          [
+            "A        C              D",
+            "Whoa Oh, oh, Sweet child o' mine"
+          ],
+          [
+            "A              C                D",
+            "Whoa, Oh, Oh, Oh Sweet love o' mine"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Instrumental",
+        lyricsWithChords: [
+          [
+            "D C G D",
+            ""
+          ],
+          [
+            "D C G D",
+            ""
+          ]
+        ]
+      },
+      {
+        verseTitle: "Chorus",
+        lyricsWithChords: [
+          [
+            "A               C              D",
+            "Whoa Oh, Sweet child o' mine"
+          ],
+          [
+            "A               C              D",
+            "Whoa, Oh, Oh, Oh Sweet love o' mine"
+          ],
+          [
+            "A               C              D",
+            "Whoa Oh, Oh, Oh Sweet child o' mine"
+          ],
+          [
+            "A               C         D",
+            "Ooooooooh Sweet love o' mine"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Instrumental",
+        lyricsWithChords: [
+          [
+            "Em C B A",
+            ""
+          ],
+          [
+            "Em C B A ",
+            ""
+          ],
+          [
+            "Em C B A ",
+            ""
+          ],
+          [
+            "Em C B A",
+            ""
+          ],
+          [
+            "Em G A C D",
+            ""
+          ],
+          [
+            "Em G A C D ",
+            ""
+          ],
+          [
+            "Em G A C D",
+            ""
+          ]
+        ]
+      },
+      {
+        verseTitle: "Outro",
+        lyricsWithChords: [
+          [
+            "Em              G               A                 C D",
+            "Where do we go, Where do we go, Where do we go now----"
+          ],
+          [
+            "Em              G               A                 C D",
+            "Where do we go, Where do we go, Where do we go now----"
+          ],
+          [
+            "Em              G            A                 C D",
+            "Where do we go, Sweet child, Where do we go now----"
+          ],
+          [
+            " Em                  G             A                              C D",
+            " Aih, Aih, Aih, Aih, Aih, Aih, Aih where do we gooooooooooooo  now----"
+          ],
+          [
+            " Em            G          A                 C D",
+            "Where do we gooooooooooo, where do we go now----"
+          ],
+          [
+            "Em            G       A                 C D",
+            "Where do we gooooooo, where do we go now---- "
+          ],
+          [
+            "Em             G     A                  C           D",
+            "Where do we go-----, where do we go now Now-now-now-now-now-now-now"
+          ],
+          [
+            " Em     G             A C D      Em  ",
+            "Sweet child, sweet chi-. . ld of mine"
+          ]
+        ]
+      }
+    ]
+  },
+
+  {
     artistAndTitle: 'Green Day - Boulevard of Broken Dreams',
     artist: 'Green Day',
     title: 'Boulevard of Broken Dreams',

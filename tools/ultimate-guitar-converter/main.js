@@ -37,10 +37,6 @@ lyricsAndChordsAndVerseTitles.forEach((lyricOrChordsOrVerseTitle, index) => {
 
       currentLyricAndChordGroup.push(remainingLineInVerse)
 
-      if (idx === remainingLinesInVerse.length - 1) {
-        console.log('last line', remainingLineInVerse)
-      }
-
       if (isOdd) {
         lyricsWithChords.push(currentLyricAndChordGroup)
         currentLyricAndChordGroup = []
