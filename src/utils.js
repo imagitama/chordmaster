@@ -1,8 +1,9 @@
-import keys from './keys'
+import keysDefinition from './keys'
+import chordsDefinition from './chords'
 
 export const isChordShortNameInKey = (key, chordShortName) => key.chords && Object.values(key.chords).includes(chordShortName)
 
-export const getKeyFromShortName = shortName => keys.find(({ shortName: shortNameUnderTest }) => shortNameUnderTest === shortName)
+export const getKeyFromShortName = shortName => keysDefinition.find(({ shortName: shortNameUnderTest }) => shortNameUnderTest === shortName)
 
 export const cleanNameForSounds = name => name.replace('#', 'sharp').toLowerCase()
 
@@ -21,3 +22,5 @@ export const isMobileDevice = 'ontouchstart' in document.documentElement
 const cleanUpArtistAndTitleForHref = artistAndTitle => artistAndTitle.replace(/ /g, '+')
 
 export const getLinkToSongWithArtistAndTitle = artistAndTitle => `/song/${cleanUpArtistAndTitleForHref(artistAndTitle)}`
+
+export const getChordFromShortName = shortName => chordsDefinition.find(({ shortName: shortNameUnderTest }) => shortNameUnderTest === shortName)

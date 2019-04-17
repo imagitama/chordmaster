@@ -61,7 +61,7 @@ const getIfChordShouldBeHighlighted = (chordShortName, selectedKeyShortName) => 
   return isChordShortNameInKey(key, chordShortName)
 }
 
-export const Chord = ({ selectedKeyShortName, fullName, shortName, alternativeShortName, strings = {}, frets = {} }) => {
+export const Chord = ({ selectedKeyShortName, fullName, shortName, alternativeShortName, strings = {}, frets = {}, canFavourite = true, displayNotDefinedMessage = true }) => {
   const shouldBeHighlighted = getIfChordShouldBeHighlighted(shortName, selectedKeyShortName)
   const isChordHigh = getIsChordHigh(frets)
   const firstFretNumber = Object.keys(frets).shift()
@@ -72,7 +72,7 @@ export const Chord = ({ selectedKeyShortName, fullName, shortName, alternativeSh
     <ChordStyled isHighlighted={shouldBeHighlighted}>
       {romanNumeral && `${romanNumeral} - `}
       <span title={fullName}>{shortName}</span> {alternativeShortName ? `(${alternativeShortName})` : ''}
-      {!Object.keys(frets).length ? (
+      {!Object.keys(frets).length && displayNotDefinedMessage ? (
         <OutputMessage>
           This chord is in a key but has not been defined.
           Please <A href={settings.githubRepoUrl} context="Chord in key but not defined">send an issue or open a PR on GitHub</A>.
@@ -80,7 +80,7 @@ export const Chord = ({ selectedKeyShortName, fullName, shortName, alternativeSh
       ) : (
       <>
       {cleanNameForSounds(shortName) in soundFiles && <AudioPlayer src={soundFiles[cleanNameForSounds(shortName)]} />}
-      <FavouriteChordButton chordShortName={shortName} />
+      {canFavourite && <FavouriteChordButton chordShortName={shortName} />}
       <ChordChartStyled>
         <StringStatesStyled>
           {stringArray.map((stringNumber, idx) =>

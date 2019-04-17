@@ -249,10 +249,10 @@ export default [
         lyricsWithChords: [
 
           [
-            `Em - C`,
+            `Em  C`,
             ``
           ], [
-            `Em - C`,
+            `Em  C`,
             ``
           ]
 
@@ -272,10 +272,13 @@ export default [
             `Em`,
             `I yell and tell it that`
           ], [
-            `It's not my friend`,
-            `C`
-          ], [
+            '',
+            `It's not my friend`
+          ],[
+            `C`,
             `I tear it down I tear it down`,
+          ],[
+            '',
             `And then it's born again`
           ]
         ]
@@ -285,7 +288,7 @@ export default [
         verseTitle: 'Instrumental 2',
         lyricsWithChords: [
           [
-            `Am - F - C - G`,
+            `Am  F  C  G`,
             ''
           ]
         ]
@@ -455,7 +458,7 @@ export default [
         verseTitle: "Interlude",
         lyricsWithChords: [
           [
-            "C   G/B  |Am   G   |F       |D7/F#",
+            "C   G/B  Am   G   F       D7/F#",
             ""
           ]
         ]
@@ -608,7 +611,11 @@ export default [
         verseTitle: 'Instrumental',
         lyricsWithChords: [
           [
-            `F   C/E Dm C   Bb F/A G    F    C      x2`,
+            `F   C/E Dm C   Bb F/A G    F    C`,
+            ''
+          ],
+          [
+            `F   C/E Dm C   Bb F/A G    F    C`,
             ''
           ]
         ]
@@ -617,7 +624,11 @@ export default [
         verseTitle: 'Solo',
         lyricsWithChords: [
           [
-            `C  G  Am  F  C  G  F  C  x2`,
+            `C  G  Am  F  C  G  F  C`,
+            ''
+          ],
+          [
+            `C  G  Am  F  C  G  F  C`,
             ''
           ]
         ]
@@ -720,7 +731,7 @@ export default [
             "Welcome to the Hotel California... "
           ],
           [
-            "       F#7                                      Bm        F#7(on C#)Bm(on D)",
+            "       F#7                                      Bm        F#7  Bm",
             "Such a lovely place,(such a lovely place)such a lovely face..."
           ],
           [
@@ -783,7 +794,7 @@ export default [
             "Welcome to the Hotel California... "
           ],
           [
-            "       F#7                                      Bm        F#7(on C#)Bm(on D)",
+            "       F#7                                      Bm        F#7  Bm  ",
             "Such a lovely place,(such a lovely place)such a lovely face..."
           ],
           [
@@ -1132,19 +1143,19 @@ export default [
         verseTitle: "Chorus",
         lyricsWithChords: [
           [
-            "      F#m                  E/B  B*     F#m",
+            "      F#m                  E/B  B      F#m",
             "Well, I don't ever want to feel like I did that day"
           ],
           [
-            "F#m                    E/B   B*      F#m",
+            "F#m                    E/B   B       F#m",
             "Take me to the place I love, take me all the way"
           ],
           [
-            "F#m                  E/B  B*     F#m",
+            "F#m                  E/B  B      F#m",
             "I don't ever want to feel like I did that day"
           ],
           [
-            "F#m                    E/B   B*      F#m       E/B  B   C#m   G#m    A    E/B    B    C#m    A",
+            "F#m                    E/B   B       F#m       E/B  B   C#m   G#m    A    E/B    B    C#m    A",
             "Take me to the place I love, take me all the way, yeah, yeah, yeah"
           ]
         ]
@@ -1174,19 +1185,19 @@ export default [
         verseTitle: "Chorus",
         lyricsWithChords: [
           [
-            "     F#m                  E/B  B*     F#m    ",
+            "     F#m                  E/B  B      F#m    ",
             "Well, I don't ever want to feel like I did that day"
           ],
           [
-            "F#m                    E/B   B*      F#m",
+            "F#m                    E/B   B       F#m",
             "Take me to the place I love, take me all the way"
           ],
           [
-            "      F#m                  E/B  B*     F#m",
+            "      F#m                  E/B  B      F#m",
             "Well, I don't ever want to feel like I did that day"
           ],
           [
-            "F#m                    E/B   B*      F#m       A  Am    G     F    ",
+            "F#m                    E/B   B       F#m       A  Am    G     F    ",
             "Take me to the place I love, take me all the way, yeah, yeah, yeah"
           ]
         ]
@@ -1724,6 +1735,7 @@ export default [
     artist: "Green Day",
     title: "Good Riddance (Time Of Your Life)",
     key: "G",
+    source: "https://tabs.ultimate-guitar.com/tab/green_day/good_riddance_time_of_your_life_chords_12835",
     verses: [
       {
         verseTitle: "Intro",

@@ -8,4 +8,10 @@ export const Chords = ({ chords }) => (
   </ChordsStyled>
 )
 
+export const ChordsWrapper = ({ children }) => (
+  <ChordsStyled>
+    {children}
+  </ChordsStyled>
+)
+
 export default Chords
