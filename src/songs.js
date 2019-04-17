@@ -1081,6 +1081,216 @@ export default [
   },
 
   {
+    artistAndTitle: "Red Hot Chili Peppers - Under The Bridge",
+    artist: "Red Hot Chili Peppers",
+    title: "Under The Bridge",
+    key: "E",
+    verses: [
+      {
+        verseTitle: "Verse",
+        lyricsWithChords: [
+          [
+            "E/B       B             C#m          G#m A",
+            "Sometimes I feel like I don't have a partner"
+          ],
+          [
+            "E/B       B           C#m     A",
+            "Sometimes I feel like my only friend"
+          ],
+          [
+            "       E/B    B            C#m     G#m  A",
+            "Is the city I live in, the city of angels"
+          ],
+          [
+            "E/B       B       C#m       A      Emaj7",
+            "Lonely as I am, together we cry"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse",
+        lyricsWithChords: [
+          [
+            "E/B            B              C#m         G#m  A",
+            "I drive on her streets 'cause she's my companion"
+          ],
+          [
+            "E/B                B            C#m             A",
+            "I walk through her hills 'cause she knows who I am"
+          ],
+          [
+            "    E/B          B             C#m       G#m  A",
+            "She sees my good deeds and she kisses me windy"
+          ],
+          [
+            "E/B     B          C#m       A       Emaj7",
+            "I never worry, now that is a lie."
+          ]
+        ]
+      },
+      {
+        verseTitle: "Chorus",
+        lyricsWithChords: [
+          [
+            "      F#m                  E/B  B*     F#m",
+            "Well, I don't ever want to feel like I did that day"
+          ],
+          [
+            "F#m                    E/B   B*      F#m",
+            "Take me to the place I love, take me all the way"
+          ],
+          [
+            "F#m                  E/B  B*     F#m",
+            "I don't ever want to feel like I did that day"
+          ],
+          [
+            "F#m                    E/B   B*      F#m       E/B  B   C#m   G#m    A    E/B    B    C#m    A",
+            "Take me to the place I love, take me all the way, yeah, yeah, yeah"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse",
+        lyricsWithChords: [
+          [
+            "     E/B        B                 C#m    G#m A",
+            "It's hard to believe that there's nobody out there"
+          ],
+          [
+            "     E/B        B        C#m     A",
+            "It's hard to believe and I'm all alone"
+          ],
+          [
+            "   E/B          B             C#m      G#m   A",
+            "At least I have her love, the city she loves me"
+          ],
+          [
+            "E/B       B       C#m       A      Emaj7",
+            "Lonely as I am, together we cry"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Chorus",
+        lyricsWithChords: [
+          [
+            "     F#m                  E/B  B*     F#m    ",
+            "Well, I don't ever want to feel like I did that day"
+          ],
+          [
+            "F#m                    E/B   B*      F#m",
+            "Take me to the place I love, take me all the way"
+          ],
+          [
+            "      F#m                  E/B  B*     F#m",
+            "Well, I don't ever want to feel like I did that day"
+          ],
+          [
+            "F#m                    E/B   B*      F#m       A  Am    G     F    ",
+            "Take me to the place I love, take me all the way, yeah, yeah, yeah"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Bridge",
+        lyricsWithChords: [
+          [
+            "A  Am          G     F",
+            "oh no, no, no, yeah, yeah"
+          ],
+          [
+            "A    Am         G    F",
+            "love me, i say, yeah yeah"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse",
+        lyricsWithChords: [
+          [
+            "A                    Am",
+            "under the bridge downtown"
+          ],
+          [
+            "G             F",
+            "...is where I drew some blood"
+          ],
+          [
+            "A                    Am",
+            "under the bridge downtown"
+          ],
+          [
+            "G              F",
+            "...I could not get enough"
+          ],
+          [
+            "A                    Am",
+            "under the bridge downtown"
+          ],
+          [
+            "G          F",
+            "...forgot about my love"
+          ],
+          [
+            "A                    Am",
+            "under the bridge downtown"
+          ],
+          [
+            "G            F",
+            "...I gave my life away"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Outro",
+        lyricsWithChords: [
+          [
+            "A    Am    G     F    ",
+            "way, yeah, yeah, yeah"
+          ],
+          [
+            "A  Am          G     F",
+            "oh no, no, no, no, yeah, yeah"
+          ],
+          [
+            "A  Am         G    F",
+            "Oh no, i say, yeah yeah"
+          ],
+          [
+            "A  Am         G    F",
+            "              yeah yeah"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Instrumental",
+        lyricsWithChords: [
+          [
+            "A  C    G    F",
+            ""
+          ],
+          [
+            "A  C    G    F ",
+            ""
+          ],
+          [
+            "A  C    G    F ",
+            ""
+          ],
+          [
+            "A  C    G    F ",
+            ""
+          ],
+          [
+            "A",
+            ""
+          ]
+        ]
+      }
+    ]
+  },
+
+  {
     artistAndTitle: 'Green Day - Boulevard of Broken Dreams',
     artist: 'Green Day',
     title: 'Boulevard of Broken Dreams',
