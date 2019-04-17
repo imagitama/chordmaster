@@ -1291,6 +1291,162 @@ export default [
   },
 
   {
+    artistAndTitle: "The Beatles - Eleanor Rigby",
+    artist: "The Beatles",
+    title: "Eleanor Rigby",
+    key: "Em",
+    verses: [
+      {
+        verseTitle: "Intro",
+        lyricsWithChords: [
+          [
+            "C                          Em",
+            "Ah, look at all the lonely people"
+          ],
+          [
+            "C                          Em",
+            "Ah, look at all the lonely people"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse",
+        lyricsWithChords: [
+          [
+            "Em                                                                C            ",
+            "Eleanor Rigby picks up the rice in the church where a wedding has been"
+          ],
+          [
+            "",
+            "Lives in a dream"
+          ],
+          [
+            "Em                                                                   C",
+            "Waits at the window, wearing the face that she keeps in a jar by the door",
+          ],
+          [
+            "          Em",
+            "Who is it for?"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Chorus",
+        lyricsWithChords: [
+          [
+            "Em7            Em6",
+            "All the lonely people"
+          ],
+          [
+            "C                      Em",
+            "Where do they all come from?"
+          ],
+          [
+            "Em7            Em6",
+            "All the lonely people"
+          ],
+          [
+            "C                   Em",
+            "Where do they all belong?"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse 2",
+        lyricsWithChords: [
+          [
+            "Em                                                             C",
+            "Father McKenzie writing the words of a sermon that no one will hear"
+          ],
+          [
+            "",
+            "No one comes near.",
+          ],
+          [
+            "Em                                                                      C",
+            "Look at him working. darning his socks in the night when there's nobody there"
+          ],
+          [
+            "             Em",
+            "What does he care?"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Chorus",
+        lyricsWithChords: [
+          [
+            "Em7            Em6",
+            "All the lonely people"
+          ],
+          [
+            "C                      Em",
+            "Where do they all come from?"
+          ],
+          [
+            "Em7            Em6",
+            "All the lonely people"
+          ],
+          [
+            "C                   Em",
+            "Where do they all belong?"
+          ],
+          [
+            "C                          Em     ",
+            "Ah, look at all the lonely people"
+          ],
+          [
+            "C                         Em",
+            "Ah, look at All the lonely people"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse 3",
+        lyricsWithChords: [
+          [
+            "Em                                                             C",
+            "Eleanor Rigby died in the church and was buried along with her name"
+          ],
+          [
+            "",
+            "Nobody came",
+          ],
+          [
+            "Em                                                                  C",
+            "Father McKenzie wiping the dirt from his hands as he walks from the grave",
+          ],
+          [
+            "           Em",
+            "No one was saved"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Chorus",
+        lyricsWithChords: [
+          [
+            "Em7            Em6",
+            "All the lonely people"
+          ],
+          [
+            "C                      Em",
+            "Where do they all come from?"
+          ],
+          [
+            "Em7            Em6",
+            "All the lonely people"
+          ],
+          [
+            "C                   Em",
+            "Where do they all belong?"
+          ]
+        ]
+      }
+    ]
+  },
+
+  {
     artistAndTitle: 'Green Day - Boulevard of Broken Dreams',
     artist: 'Green Day',
     title: 'Boulevard of Broken Dreams',
