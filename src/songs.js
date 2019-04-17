@@ -1717,5 +1717,193 @@ export default [
         copyFrom: 'Chorus 1'
       }
     ]
+  },
+
+  {
+    artistAndTitle: "Green Day - Good Riddance (Time Of Your Life)",
+    artist: "Green Day",
+    title: "Good Riddance (Time Of Your Life)",
+    key: "G",
+    verses: [
+      {
+        verseTitle: "Intro",
+        lyricsWithChords: [
+          [
+            "G G Cadd9 D",
+            ""
+          ],
+          [
+            "G G Cadd9 D",
+            ""
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse 1",
+        lyricsWithChords: [
+          [
+            "G                       C                 D",
+            "Another turning point a fork stuck in the road,"
+          ],
+          [
+            "G                                C                   D  ",
+            "Time grabs you by the wrist, and directs you where to go"
+          ],
+          [
+            "Em          D            C                 G",
+            "So make the best of this test and don't ask why"
+          ],
+          [
+            "Em         D              C                 G",
+            "It's not a question but a lesson learned in time"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Chorus",
+        lyricsWithChords: [
+          [
+            "Em                    G           Em           G             ",
+            "Its something unpredictable but in the end it's right"
+          ],
+          [
+            "Em                 D            G ",
+            "I hope you had the time of your life."
+          ]
+        ]
+      },
+      {
+        verseTitle: "Interlude",
+        lyricsWithChords: [
+          [
+            "G G Cadd9 D",
+            ""
+          ],
+          [
+            "G G Cadd9 D",
+            ""
+          ]
+        ]
+      },
+      {
+        verseTitle: "Verse 2",
+        lyricsWithChords: [
+          [
+            "G                             C                    D",
+            "So take the photographs and still frames in your mind"
+          ],
+          [
+            "G                         C                    D",
+            "Hang it on a shelf and in good health and good time"
+          ],
+          [
+            "Em          D             C            G",
+            "Tattoos of memories and dead skin on trial"
+          ],
+          [
+            "Em            D            C             G    ",
+            "For what it's worth it was worth all the while"
+          ]
+        ]
+      },
+      {
+        verseTitle: "Chorus",
+        lyricsWithChords: [
+          [
+            "Em                    G           Em           G             ",
+            "Its something unpredictable but in the end it's right"
+          ],
+          [
+            "Em                 D            G",
+            "I hope you had the time of your life."
+          ]
+        ]
+      },
+      {
+        verseTitle: "Instrumental",
+        lyricsWithChords: [
+          [
+            "G G Cadd9 D",
+            ""
+          ],
+          [
+            "G G Cadd9 D",
+            ""
+          ],
+          [
+            "G G Cadd9 D ",
+            ""
+          ],
+          [
+            "G G Cadd9 D ",
+            ""
+          ],
+          [
+            "Em  D  C  G",
+            ""
+          ],
+          [
+            "Em  D  C  G",
+            ""
+          ]
+        ]
+      },
+      {
+        verseTitle: "Chorus",
+        lyricsWithChords: [
+          [
+            "Em                    G           Em           G             ",
+            "Its something unpredictable but in the end it's right"
+          ],
+          [
+            "Em                 D            G",
+            "I hope you had the time of your life."
+          ]
+        ]
+      },
+      {
+        verseTitle: "Interlude",
+        lyricsWithChords: [
+          [
+            "G G Cadd9 D",
+            ""
+          ],
+          [
+            "G G Cadd9 D ",
+            ""
+          ]
+        ]
+      },
+      {
+        verseTitle: "Chorus",
+        lyricsWithChords: [
+          [
+            "Em                    G           Em           G             ",
+            "Its something unpredictable but in the end it's right"
+          ],
+          [
+            "Em                 D            G",
+            "I hope you had the time of your life."
+          ]
+        ]
+      },
+      {
+        verseTitle: "Outro",
+        lyricsWithChords: [
+          [
+            "G G Cadd9 D",
+            ""
+          ],
+          [
+            "G G Cadd9 D",
+            ""
+          ],
+          [
+            "G",
+            ""
+          ]
+        ]
+      }
+    ]
   }
 ]
