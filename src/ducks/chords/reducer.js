@@ -1,6 +1,6 @@
 import { CHANGE_SEARCH_TERM, SHOW_SEARCH_TERM, HIDE_SEARCH_TERM, TOGGLE_MAJOR_MINOR_CHORDS_ONLY, TOGGLE_FAVOURITE_CHORD, TOGGLE_FAVOURITES_ONLY, CLEAR_FAVOURITES, RESET_CHORDS } from './actions'
 
-const defaultState = {
+export const defaultState = {
   searchTerm: '',
   searchTermVisible: true,
   majorMinorChordsOnly: true,
@@ -8,7 +8,7 @@ const defaultState = {
   favouritesOnly: false
 }
 
-export default (state = defaultState, action) => {
+export default (state = defaultState, action = {}) => {
   switch (action.type) {
     case CHANGE_SEARCH_TERM:
       return {

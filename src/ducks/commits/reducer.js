@@ -1,11 +1,11 @@
 import { GET_COMMITS, GOT_COMMITS } from './actions'
 
-const defaultState = {
+export const defaultState = {
   isGettingCommits: false,
   commits: []
 }
 
-export default (state = defaultState, action) => {
+export default (state = defaultState, action = {}) => {
   switch (action.type) {
     case GET_COMMITS:
       return {

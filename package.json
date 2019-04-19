@@ -46,5 +46,9 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "devDependencies": {}
+  "devDependencies": {},
+  "jest": {
+    "collectCoverageFrom": ["src/**/*/*.{js,jsx}"],
+    "coverageReporters": ["html", "text"]
+  }
 }
