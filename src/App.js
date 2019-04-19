@@ -19,7 +19,7 @@ import PrintModeHandler from './components/print-mode-handler/print-mode-handler
 
 const parseArtistAndTitle = artistAndTitleFromUrl => artistAndTitleFromUrl.replace(/\+/g, ' ')
 
-const App = ({  isDarkModeEnabled }) => (
+export const App = ({ isDarkModeEnabled }) => (
   <ThemeProvider theme={isDarkModeEnabled ? darkTheme : lightTheme}>
     <Global styles={globalStyles} />
     <Header />

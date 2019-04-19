@@ -25,7 +25,7 @@ const rootReducer = combineReducers({
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 export default () => {
-  const store = createStore(persistedReducer, applyMiddleware(logger, analyticsMiddleware))
+  const store = process.env.NODE_ENV !== 'test' ? createStore(persistedReducer, applyMiddleware(logger, analyticsMiddleware)) : createStore(rootReducer)
   const persistor = persistStore(store)
   return { store, persistor }
 }
