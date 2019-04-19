@@ -24,3 +24,5 @@ const cleanUpArtistAndTitleForHref = artistAndTitle => artistAndTitle.replace(/ 
 export const getLinkToSongWithArtistAndTitle = artistAndTitle => `/song/${cleanUpArtistAndTitleForHref(artistAndTitle)}`
 
 export const getChordFromShortName = shortName => chordsDefinition.find(({ shortName: shortNameUnderTest }) => shortNameUnderTest === shortName)
+
+export const doesKeyShortNameExist = shortName => keysDefinition.find(({ shortName: shortNameUnderTest }) => shortNameUnderTest === shortName) !== undefined

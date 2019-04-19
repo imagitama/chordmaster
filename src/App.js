@@ -27,7 +27,7 @@ const App = ({  isDarkModeEnabled }) => (
       <WelcomeMessage />
       <FeedbackForm />
       <Switch>
-        <Route path="/" exact component={HomeContainer} />
+        <Route path="/" exact component={({ location: { search }}) => <HomeContainer search={search} />} />
         <Route path="/about" component={AboutContainer} />
         <Route path="/changes" component={ChangesContainer} />
         <Route path="/songs" component={SongsContainer} />

@@ -41,7 +41,7 @@ export default ({ artistAndTitle: selectedSongArtistAndTitle }) => {
       <h2>{artist}</h2>
       <hr />
       <h3>Key</h3>
-      {key}
+      <A href={`/?key=${key}`} isInternal>{key}</A>
       <hr />
       <h3>Chords</h3>
       <ChordsForSong chordShortNames={getChordShortNamesForSong(verses)} />

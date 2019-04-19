@@ -1,72 +1,35 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { parse } from 'query-string'
 import Filters from '../../components/filters/filters'
 import SearchInput from '../../components/search-input/search-input'
 import SearchTerm from '../../components/search-term/search-term'
-import OutputMessage from '../../components/output-message/output-message'
 import Chords from '../../components/chords/chords'
-import { populateCopiedChords, filterCommonChordsOnly, sortChordsBySequence, filterChordsByChordProgression, filterChordsBySearchTerm, filterFavouriteChordsOnly } from '../../filters'
-import chordsDefinition from '../../chords'
 import SongsForKey from '../../components/songs-for-key/songs-for-key'
+import { selectKey } from '../../ducks/keys/actions'
+import { doesKeyShortNameExist } from '../../utils'
 
-const HomeContainer = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm, majorMinorChordsOnly, favouriteChords, favouritesOnly }) => {
-  let chords = populateCopiedChords(chordsDefinition)
+const HomeContainer = ({ search, selectKey }) => {
+  const { key: providedKeyShortName } = parse(search)
 
-  if (!favouritesOnly) {
-    if (!searchTerm && majorMinorChordsOnly && !selectedKeyShortName) {
-      chords = filterCommonChordsOnly(chords)
+  useEffect(() => {
+    if (providedKeyShortName && doesKeyShortNameExist(providedKeyShortName)) {
+      selectKey(providedKeyShortName)
     }
-
-    if (selectedKeyShortName && sortBySequence) {
-      chords = sortChordsBySequence(chords, selectedKeyShortName)
-    }
-
-    if (selectedKeyShortName && selectedChordProgressionIdx) {
-      chords = filterChordsByChordProgression(chords, selectedKeyShortName, selectedChordProgressionIdx)
-    }
-  }
-
-  if (favouritesOnly) {
-    chords = filterFavouriteChordsOnly(chords, favouriteChords)
-  }
-
-  if (searchTerm) {
-    chords = filterChordsBySearchTerm(chords, searchTerm)
-  }
+  }, [search])
 
   return (
     <>
       <Filters />
       <SearchInput />
       <SearchTerm />
-      {chords.length ? <Chords chords={chords} /> : <OutputMessage>No chords found. Maybe try turning off a filter?</OutputMessage>}
+      <Chords />
       <SongsForKey />
     </>
   )
 }
 
-const mapStateToProps =
-  ({ 
-    keys: {
-      selectedKeyShortName,
-      sortBySequence,
-      selectedChordProgressionIdx
-    },
-    chords: {
-      searchTerm,
-      majorMinorChordsOnly,
-      favouritesOnly,
-      favouriteChords
-    }
-  }) =>
-  ({ 
-    selectedKeyShortName, 
-    sortBySequence, 
-    selectedChordProgressionIdx,
-    searchTerm,
-    majorMinorChordsOnly,
-    favouriteChords,
-    favouritesOnly
-  })
+const mapDispatchToProps = dispatch => bindActionCreators({ selectKey }, dispatch)
 
-export default connect(mapStateToProps)(HomeContainer)
+export default connect(null, mapDispatchToProps)(HomeContainer)
