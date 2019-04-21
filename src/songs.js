@@ -1,114 +1,146 @@
 export default [
   {
-    artistAndTitle: 'Oasis - Wonderwall',
-    artist: 'Oasis',
-    title: 'Wonderwall',
-    key: 'A',
+    artistAndTitle: "Snow Patrol - Chasing Cars",
+    artist: "Snow Patrol",
+    title: "Chasing Cars",
+    key: "A",
     verses: [
       {
-        verseTitle: 'Verse 1',
+        verseTitle: "Intro",
         lyricsWithChords: [
           [
-            '    F#m         A          E                                   Bm',
-            `Today is gonna be the day that they're gonna throw it back to you`
-          ],
-          [
-            '   F#m     A                 E                       Bm',
-            `By now you should've somehow realized what you gotta do`
-          ],
-          [
-            '  F#m                A       E               Bm',
-            `I don't believe that anybody feels the way I do`
-          ],
-          [
-            'D     E   Bm',
-            `about you now`
+            "A",
+            ""
           ]
         ]
       },
       {
-        verseTitle: 'Verse 2',
+        verseTitle: "Verse 1",
         lyricsWithChords: [
           [
-            '     F#m      A                               E                     Bm',
-            `Back beat the word was on the street that the fire in your heart is out`
+            "A             E/G#       D               A",
+            "We'll do it all, everything, on our own."
           ],
           [
-            '    F#m         A                           E                  Bm   ',
-            `I'm sure you've heard it all before But you never really had a doubt`
-          ],
-
-          [
-            'F#m                A       E               Bm',
-            `I don't believe that anybody Feels the way I do`
-          ],
-          [
-            'A     E   Bm',
-            `About you now`
-
+            "A          E/G#       D             A",
+            "We don't need anything, or anyone."
           ]
         ]
       },
       {
-
-        verseTitle: 'Refrain 1',
+        verseTitle: "Chorus",
         lyricsWithChords: [
           [
-            '    D                E                F#m    ',
-            `And all the roads we have to walk are winding`
+            "         A                E/G#",
+            "If I lay here, if I just lay here"
           ],
           [
-            '    D                   E                 F#m     ',
-            `And all the lights that lead us there are blinding`
-          ],
-          [
-            'D              E                   A       E/G#   F#m',
-            `There are many things that I Would like to say to you`
-          ],
-          [
-            '      E          Bm ',
-            `But I don't know how`
+            "                Dmaj7                                A",
+            "Would you lie with me, and just forget the world."
           ]
         ]
       },
       {
-
-        verseTitle: 'Chorus 1',
+        verseTitle: "Verse 2",
         lyricsWithChords: [
           [
-            '        D    F#m A',
-            `Because maybe     `
+            "A              E/G#         D             A",
+            "I don't quite know how to say how I feel"
           ],
           [
-            '       F#m                   D     F#m A',
-            `you're gonna be the one that saves me   `,
-          ],
-          [
-            '    F#m   D  F#m A',
-            `And after all     `,
-          ],
-          [
-            '          F#m   D   F#m A F#m',
-            `you're my wonderwall         `
+            "A              E/G#               D                 A",
+            "Those three words, I said too much, but not enough."
           ]
         ]
       },
       {
-        verseTitle: 'Verse 3',
-        copyFrom: 'Verse 1'
+        verseTitle: "Chorus",
+        lyricsWithChords: [
+          [
+            "         A                E/G#",
+            "If I lay here, if I just lay here"
+          ],
+          [
+            "                Dmaj7                                 A",
+            "Would you lie with me, and just forget the world."
+          ],
+          [
+            "                 A                      E/G#",
+            "Forget what we're told, before we get too old"
+          ],
+          [
+            "           Dmaj7                                A",
+            "Show me a garden that's bursting into life."
+          ]
+        ]
       },
       {
-        verseTitle: 'Refrain 2',
-        copyFrom: 'Refrain 1'
+        verseTitle: "Verse 3",
+        lyricsWithChords: [
+          [
+            "A               E/G#          D                   A",
+            "Let's waste time, chasing cars, around our heads."
+          ],
+          [
+            "A              E/G#          D                   A",
+            "I need your grace to remind me, to find my own."
+          ]
+        ]
       },
       {
-        verseTitle: 'Chorus 2',
-        copyFrom: 'Chorus 1'
+        verseTitle: "Chorus",
+        lyricsWithChords: [
+          [
+            "         A                E/G#",
+            "If I lay here, if I just lay here"
+          ],
+          [
+            "                  Dmaj7                               A",
+            "Would you lie with me, and just forget the world."
+          ],
+          [
+            "                 A                      E/G#",
+            "Forget what we're told, before we get too old"
+          ],
+          [
+            "           Dmaj7                                A",
+            "Show me a garden that's bursting into life."
+          ],
+          [
+            "              A             E/G#",
+            "All that I am, all that I ever was"
+          ],
+          [
+            "                        Dmaj7                            A",
+            "Is here in your perfect eyes, they're all I can see"
+          ],
+          [
+            "               A                          E/G#",
+            "I don't know where, confused about how as well"
+          ],
+          [
+            "                        Dmaj7                                  A",
+            "just know that these things will never change for us at all."
+          ]
+        ]
       },
       {
-        verseTitle: 'Chorus 3',
-        copyFrom: 'Chorus 1'
-      },
+        verseTitle: "Outro",
+        lyricsWithChords: [
+          [
+            "A                         E/G#",
+            "If I lay here, if I just lay here"
+          ],
+          [
+            "                Dmaj7                                 A",
+            "Would you lie with me, and just forget the world."
+          ],
+          [
+            "A",
+            ""
+          ]
+        ]
+      }
     ]
   },
 
