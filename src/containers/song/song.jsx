@@ -4,6 +4,7 @@ import ContentArea from '../../components/content-area/content-area'
 import A from '../../components/anchor/anchor'
 import SongVerses from '../../components/song-verses/song-verses'
 import ChordsForSong from '../../components/chords-for-song/chords-for-song'
+import EasierChordsToggle from '../../components/easier-chords-toggle/easier-chords-toggle'
 
 const getSelectedSong = artistAndTitle => songsDefinition.find(({ artistAndTitle: artistAndTitleUnderTest }) => artistAndTitleUnderTest === artistAndTitle)
 
@@ -44,6 +45,7 @@ export default ({ artistAndTitle: selectedSongArtistAndTitle }) => {
       <A href={`/?key=${key}`} isInternal>{key}</A>
       <hr />
       <h3>Chords</h3>
+      <EasierChordsToggle />
       <ChordsForSong chordShortNames={getChordShortNamesForSong(verses)} />
       <hr />
       <h3>Verses</h3>
