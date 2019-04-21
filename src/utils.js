@@ -26,3 +26,19 @@ export const getLinkToSongWithArtistAndTitle = artistAndTitle => `/song/${cleanU
 export const getChordFromShortName = shortName => chordsDefinition.find(({ shortName: shortNameUnderTest }) => shortNameUnderTest === shortName)
 
 export const doesKeyShortNameExist = shortName => keysDefinition.find(({ shortName: shortNameUnderTest }) => shortNameUnderTest === shortName) !== undefined
+
+export const convertToEasierChord = shortName => {
+  if (shortName.includes('/')) {
+    return convertToEasierChord(shortName.split('/')[0])
+  }
+  if (shortName.includes('add')) {
+    return convertToEasierChord(shortName.split('add')[0])
+  }
+  if (/[0-9]/.test(shortName)) {
+    return convertToEasierChord(shortName.replace(/[0-9]/g, ''))
+  }
+  if (shortName.includes('maj')) {
+    return convertToEasierChord(shortName.replace('maj', ''))
+  }
+  return shortName
+}
