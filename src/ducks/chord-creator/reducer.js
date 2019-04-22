@@ -82,7 +82,7 @@ export default (state = defaultState, action = {}) => {
           ...newState2.frets,
           [action.payload.fretNumber]: {
             ...newState2.frets[action.payload.fretNumber],
-            [action.payload.stringNumber]: newState2.frets[action.payload.fretNumber][action.payload.stringNumber] === 6 ? 0 : newState2.frets[action.payload.fretNumber][action.payload.stringNumber] + 1
+            [action.payload.stringNumber]: newState2.frets[action.payload.fretNumber][action.payload.stringNumber] === 6 ? null : newState2.frets[action.payload.fretNumber][action.payload.stringNumber] + 1
           }
         }
       }
