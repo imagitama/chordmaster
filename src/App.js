@@ -15,6 +15,7 @@ import AboutContainer from './containers/about/about'
 import ChangesContainer from './containers/changes/changes'
 import SongContainer from './containers/song/song'
 import SongsContainer from './containers/songs/songs'
+import ChordCreatorContainer from './containers/chord-creator/chord-creator'
 import PrintModeHandler from './components/print-mode-handler/print-mode-handler'
 
 const parseArtistAndTitle = artistAndTitleFromUrl => artistAndTitleFromUrl.replace(/\+/g, ' ')
@@ -31,6 +32,7 @@ export const App = ({ isDarkModeEnabled }) => (
         <Route path="/about" component={AboutContainer} />
         <Route path="/changes" component={ChangesContainer} />
         <Route path="/songs" component={SongsContainer} />
+        <Route path="/chord-creator" component={ChordCreatorContainer} />
         <Route path="/song/:artistAndTitle" component={({ match: { params: { artistAndTitle } }}) => <SongContainer artistAndTitle={parseArtistAndTitle(artistAndTitle)} />} />
       </Switch>
     </div>

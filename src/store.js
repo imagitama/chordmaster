@@ -8,6 +8,7 @@ import chordsReducer from './ducks/chords/reducer'
 import appReducer from './ducks/app/reducer'
 import commitsReducer from './ducks/commits/reducer'
 import songsReducer from './ducks/songs/reducer'
+import chordCreatorReducer from './ducks/chord-creator/reducer'
 import analyticsMiddleware from './analytics'
 
 const persistConfig = {
@@ -21,7 +22,8 @@ const rootReducer = combineReducers({
   chords: chordsReducer,
   app: appReducer,
   commits: commitsReducer,
-  songs: songsReducer
+  songs: songsReducer,
+  chordCreator: chordCreatorReducer
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

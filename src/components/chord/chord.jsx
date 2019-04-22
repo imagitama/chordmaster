@@ -61,7 +61,7 @@ const getIfChordShouldBeHighlighted = (chordShortName, selectedKeyShortName) => 
   return isChordShortNameInKey(key, chordShortName)
 }
 
-export const Chord = ({ selectedKeyShortName, fullName, shortName, alternativeShortName, strings = {}, frets = {}, canFavourite = true, displayNotDefinedMessage = true }) => {
+export const Chord = ({ selectedKeyShortName, fullName = '', shortName = '', alternativeShortName = '', strings = {}, frets = {}, canFavourite = true, displayNotDefinedMessage = true }) => {
   const shouldBeHighlighted = getIfChordShouldBeHighlighted(shortName, selectedKeyShortName)
   const isChordHigh = getIsChordHigh(frets)
   const firstFretNumber = Object.keys(frets).shift()
@@ -79,7 +79,7 @@ export const Chord = ({ selectedKeyShortName, fullName, shortName, alternativeSh
         </OutputMessage>
       ) : (
       <>
-      {cleanNameForSounds(shortName) in soundFiles && <AudioPlayer src={soundFiles[cleanNameForSounds(shortName)]} />}
+      {shortName && cleanNameForSounds(shortName) in soundFiles && <AudioPlayer src={soundFiles[cleanNameForSounds(shortName)]} />}
       {canFavourite && <FavouriteChordButton chordShortName={shortName} />}
       <ChordChartStyled>
         <StringStatesStyled>

@@ -48,6 +48,10 @@ export const FingerNumberStyled = styled.div`
   padding-top: 0.5rem;
 `
 
+export const EmptyFingerNumber = styled(FingerNumberStyled)`
+  opacity: 0;
+`
+
 export const StringStatesStyled = styled.div`
   width: 100%;
   position: absolute;
