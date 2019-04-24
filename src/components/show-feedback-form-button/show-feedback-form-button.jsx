@@ -5,7 +5,7 @@ import Button from '../button/button'
 import { showFeedbackForm } from '../../ducks/app/actions'
 
 export const ShowFeedbackFormButton = ({ showFeedbackForm }) => (
-  <Button onClick={() => showFeedbackForm()}>Feedback</Button>
+  <Button onClick={() => showFeedbackForm()}>Feedback (top)</Button>
 )
 
 const mapDispatchToProps = dispatch => bindActionCreators({ showFeedbackForm }, dispatch)

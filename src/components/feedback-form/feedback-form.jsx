@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { hideFeedbackForm } from '../../ducks/app/actions'
 import Button from '../button/button'
 import TextInput from '../text-input/text-input'
-import FeedbackFormStyled from './feedback-form.styles'
+import OutputBar from '../output-bar/output-bar'
 
 const encode = (data) => {
   return Object.keys(data)
@@ -42,16 +42,14 @@ export const FeedbackForm = ({ isFeedbackFormVisible, hideFeedbackForm }) => {
   }
    
   return (
-    <FeedbackFormStyled>
+    <OutputBar onCloseClick={hideFeedbackForm}>
       <p>
         Want a feature? Want a chord added? Please let me know. Please include your email!
       </p>
       <TextInput onChange={event => setFeedbackTextInput(event.target.value)} placeholder="Your message" onFocus={e => e.stopPropagation()} />
       &nbsp;
       <Button onClick={submitFeedback}>Submit</Button>
-      &nbsp;
-      <Button onClick={hideFeedbackForm}>Hide</Button>
-    </FeedbackFormStyled>
+    </OutputBar>
   )
 }
 

@@ -5,6 +5,8 @@ import MajorMinorChordsOnlyToggle from '../major-minor-chords-only-toggle/major-
 import FavouritesOnlyToggle from '../favourites-only-toggle/favourites-only-toggle'
 import ResetButton from '../reset-button/reset-button'
 import FiltersStyled, { Filter } from './filters.styles'
+import SearchInput from '../../components/search-input/search-input'
+import SearchTerm from '../../components/search-term/search-term'
 
 export default () => (
   <FiltersStyled>
@@ -22,6 +24,10 @@ export default () => (
     </Filter>
     <Filter>
       <ResetButton />
+    </Filter>
+    <Filter>
+      <SearchInput />
+      <SearchTerm />
     </Filter>
   </FiltersStyled>
 )

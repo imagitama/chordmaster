@@ -1,9 +1,12 @@
 import React from 'react'
-import OutputBarStyled from './output-bar.styles'
+import OutputBarStyled, { CloseButton } from './output-bar.styles'
 
-export const OutputBar = ({ children }) => (
+export const OutputBar = ({ children, onCloseClick = () => null }) => (
   <OutputBarStyled>
     {children}
+    <CloseButton onClick={onCloseClick}>
+      Hide
+    </CloseButton>
   </OutputBarStyled>
 )
 

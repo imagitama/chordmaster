@@ -1,41 +1,20 @@
 import React from 'react'
-import HeaderStyled, { HeaderSegment, LogoSegment, LogoLink, LogoLabel, LogoBackground, NavigationSegment,  PrimaryHeaderStyled, Navigation, NavigationLink } from './header.styles'
-import DarkModeToggle from '../dark-mode-toggle/dark-mode-toggle'
-import ShowFeedbackFormButton from '../show-feedback-form-button/show-feedback-form-button'
+import { withRouter } from 'react-router-dom'
+import HeaderStyled, { Logo, ReturnToMainAppLink } from './header.styles'
+import Filters from '../filters/filters'
 import A from '../anchor/anchor'
 
-export const Header = () => (
+export const Header = ({ location: { pathname } }) => (
   <HeaderStyled>
-    <PrimaryHeaderStyled>
-      <LogoSegment>
-        <LogoLink href="/" isInternal context="Header">
-          <LogoLabel>
-            ChordMaster
-          </LogoLabel>
-          <LogoBackground />
-        </LogoLink>
-      </LogoSegment>
-      <NavigationSegment>
-        <Navigation>
-          <NavigationLink>
-            <A href="/about" isInternal context="Header">About</A>
-          </NavigationLink>
-          <NavigationLink>
-            <A href="/changes" isInternal context="Header">Recent Changes</A>
-          </NavigationLink>
-          <NavigationLink>
-            <A href="/songs" isInternal context="Header">Songs</A>
-          </NavigationLink>
-        </Navigation>
-      </NavigationSegment>
-      <HeaderSegment>
-        <DarkModeToggle />
-      </HeaderSegment>
-      <HeaderSegment>
-        <ShowFeedbackFormButton />
-      </HeaderSegment>
-    </PrimaryHeaderStyled>
+    <Logo href="/" isInternal context="Header">
+      Chordmaster
+    </Logo>
+    {pathname === '/' ? <Filters /> : (
+      <ReturnToMainAppLink href="/" isInternal>
+        Return to main app
+      </ReturnToMainAppLink>
+    )}
   </HeaderStyled>
 )
 
-export default Header
+export default withRouter(Header)

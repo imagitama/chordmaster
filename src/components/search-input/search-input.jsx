@@ -2,8 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { changeSearchTerm, showSearchTerm, hideSearchTerm } from '../../ducks/chords/actions'
-import OutputMessage from '../output-message/output-message'
-import SearchInputStyled from './search-input.styles'
+import SearchInputStyled, { SearchInputLabelStyled } from './search-input.styles'
 import { isMobileDevice } from '../../utils'
 
 const SearchInput = ({ searchTerm, changeSearchTerm, showSearchTerm, hideSearchTerm, isFeedbackFormVisible }) => {
@@ -60,32 +59,23 @@ const SearchInput = ({ searchTerm, changeSearchTerm, showSearchTerm, hideSearchT
 
     return (
       <div onClick={handleTap}>
+        <SearchInputLabelStyled>
         {isMobileDevice ? (
           isFocused ? (
             searchTerm ? (
-              <OutputMessage>
-                Keep typing...
-              </OutputMessage>
+              'Keep typing...'
             ) : (
-              <OutputMessage>
-                Start typing...
-              </OutputMessage>
+              'Start typing...'
             )
           ) : (
-            <OutputMessage>
-              Tap here to search
-            </OutputMessage>
+            'Tap here to search'
           )
         ) : searchTerm ? (
-          <OutputMessage>
-            Keep typing...
-          </OutputMessage>
+          'Keep typing...'
         ) : (
-          <OutputMessage>
-            Type anywhere to search
-          </OutputMessage>
+          'Type anywhere to search'
         )}
-      
+        </SearchInputLabelStyled>
         <SearchInputStyled name="search-input" type="text" ref={textInput} defaultValue={searchTerm} onChange={handleKeyDown} />
       </div>
     )
