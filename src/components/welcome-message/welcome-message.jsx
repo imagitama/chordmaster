@@ -8,7 +8,7 @@ import A from '../anchor/anchor'
 
 export const WelcomeMessage = ({ hideWelcomeMessage, isWelcomeMessageHidden }) => isWelcomeMessageHidden === false ? (
   <OutputBar onCloseClick={hideWelcomeMessage}>
-    Welcome to the ChordMaster app. If you would like a feature or a chord please click Feedback above or visit the <A href={settings.githubRepoUrl} context="Feedback form">GitHub repo</A>. Thank you.
+    Welcome to the ChordMaster app. If you would like a feature or a chord please click Feedback above or visit the <A href={settings.githubRepoUrl} context="Welcome message">GitHub repo</A>. Thank you.
   </OutputBar>
 ) : null
 
