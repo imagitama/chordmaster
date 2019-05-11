@@ -5,7 +5,7 @@ import { increaseBaseFret, toggleDoNotPlayString, toggleFingerOnString, increase
 import ContentArea from '../../components/content-area/content-area'
 import { Chord } from '../../components/chord/chord-creator-chord'
 import { ChordsWrapper as Chords } from '../../components/chords/chords'
-import { barFret } from '../../chords'
+import { barFret } from 'guitar-chord-definitions/dist/chords'
 
 const getJsonForChordCreator = (strings, frets) => `{
   strings: {

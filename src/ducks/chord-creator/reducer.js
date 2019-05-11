@@ -1,4 +1,4 @@
-import { doNotPlayString, barFret } from '../../chords'
+import { doNotPlayString, barFret } from 'guitar-chord-definitions/dist/chords'
 import { TOGGLE_DO_NOT_PLAY_STRING, TOGGLE_FINGER_ON_STRING, INCREASE_BASE_FRET, INCREASE_FINGER_ON_STRING } from './actions'
 
 const defaultState = {

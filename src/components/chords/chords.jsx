@@ -4,7 +4,7 @@ import ChordsStyled from './chords.styles'
 import Chord from '../chord/chord'
 import OutputMessage from '../output-message/output-message'
 import { populateCopiedChords, filterCommonChordsOnly, sortChordsBySequence, filterChordsByChordProgression, filterChordsBySearchTerm, filterFavouriteChordsOnly } from '../../filters'
-import chordsDefinition from '../../chords'
+import chordsDefinition from 'guitar-chord-definitions/dist/chords'
 
 export const Chords = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm, majorMinorChordsOnly, favouriteChords, favouritesOnly }) => {
   let chords = populateCopiedChords(chordsDefinition)

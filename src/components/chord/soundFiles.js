@@ -1,4 +1,4 @@
-import chordsDefinition from '../../chords'
+import chordsDefinition from 'guitar-chord-definitions/dist/chords'
 import { cleanNameForSounds } from '../../utils'
 
 const buildSoundFiles = () => {

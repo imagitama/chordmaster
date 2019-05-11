@@ -1,6 +1,6 @@
 import React from 'react'
 import { EmptyFingerNumber, ChordStyled, ChordChartStyled, BarFretStyled, FretNumberStyled, FretStyled, StringStyled, StringStatesStyled, StringStateStyled, FingerNumberStyled } from './chord.styles'
-import { doNotPlayString, barFret } from '../../chords'
+import { doNotPlayString, barFret } from 'guitar-chord-definitions/dist/chords'
 import { cleanNameForSounds } from '../../utils'
 import AudioPlayer from '../audio-player/audio-player'
 import soundFiles from './soundFiles'

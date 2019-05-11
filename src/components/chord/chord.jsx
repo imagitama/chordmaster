@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { ChordStyled, ChordChartStyled, BarFretStyled, FretNumberStyled, FretStyled, StringStyled, StringStatesStyled, StringStateStyled, FingerNumberStyled } from './chord.styles'
-import { doNotPlayString, barFret } from '../../chords'
+import { doNotPlayString, barFret } from 'guitar-chord-definitions/dist/chords'
 import { isChordShortNameInKey, getKeyFromShortName, cleanNameForSounds } from '../../utils'
 import AudioPlayer from '../audio-player/audio-player'
 import soundFiles from './soundFiles'

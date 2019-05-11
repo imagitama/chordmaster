@@ -9,6 +9,7 @@
     "@fortawesome/fontawesome-free": "^5.8.1",
     "@sentry/browser": "^4.6.6",
     "emotion-theming": "^10.0.10",
+    "guitar-chord-definitions": "^1.0.0",
     "moment": "^2.24.0",
     "query-string": "^6.4.2",
     "react": "^16.8.4",

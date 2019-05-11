@@ -1,5 +1,5 @@
-import keysDefinition from './keys'
-import chordsDefinition from './chords'
+import keysDefinition from 'guitar-chord-definitions/dist/keys'
+import chordsDefinition from 'guitar-chord-definitions/dist/chords'
 
 export const isChordShortNameInKey = (key, chordShortName) => key.chords && Object.values(key.chords).includes(chordShortName)
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import songsDefinition from '../../songs'
-import keysDefinition from '../../keys'
+import keysDefinition from 'guitar-chord-definitions/dist/keys'
 import ContentArea from '../../components/content-area/content-area'
 import A from '../../components/anchor/anchor'
 import { getLinkToSongWithArtistAndTitle } from '../../utils'
