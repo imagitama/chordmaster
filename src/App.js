@@ -27,10 +27,10 @@ export const App = ({ isDarkModeEnabled }) => (
   <ThemeProvider theme={isDarkModeEnabled ? darkTheme : lightTheme}>
     <Global styles={globalStyles} />
     <Helmet>
-      <title>{process.env.REACT_APP_DEFAULT_TITLE}</title>
+      <title>{process.env.REACT_APP_DEFAULT_DOCUMENT_TITLE}</title>
       <meta
         name="description"
-        content={process.env.REACT_APP_DEFAULT_DESCRIPTION}
+        content={process.env.REACT_APP_DEFAULT_DOCUMENT_DESCRIPTION}
       />
     </Helmet>
     <Header />

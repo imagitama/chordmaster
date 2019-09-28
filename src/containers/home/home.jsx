@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { parse } from 'query-string'
@@ -17,10 +17,10 @@ const HomeContainer = ({ search, selectKey }) => {
   }, [search])
 
   return (
-    <>
+    <Fragment>
       <Chords />
       <SongsForKey />
-    </>
+    </Fragment>
   )
 }
 
