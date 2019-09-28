@@ -10,9 +10,9 @@ export default (state = defaultState, action = {}) => {
     case GET_COMMITS:
       return {
         ...state,
-        isGettingCommits: true,
+        isGettingCommits: true
       }
-    
+
     case GOT_COMMITS: {
       return {
         ...state,

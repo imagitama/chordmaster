@@ -1,4 +1,9 @@
-import { TOGGLE_DARK_MODE, HIDE_WELCOME_MESSAGE, SHOW_FEEDBACK_FORM, HIDE_FEEDBACK_FORM } from './actions'
+import {
+  TOGGLE_DARK_MODE,
+  HIDE_WELCOME_MESSAGE,
+  SHOW_FEEDBACK_FORM,
+  HIDE_FEEDBACK_FORM
+} from './actions'
 
 export const defaultState = {
   isDarkModeEnabled: false,
@@ -13,7 +18,7 @@ export default (state = defaultState, action = {}) => {
         ...state,
         isDarkModeEnabled: !state.isDarkModeEnabled
       }
-    
+
     case HIDE_WELCOME_MESSAGE:
       return {
         ...state,

@@ -10,7 +10,9 @@ const MostRecentCommits = ({ commits, getCommits, gotCommits }) => {
   useEffect(() => {
     getCommits()
 
-    performFetch(`https://api.github.com/repos/imagitama/chordmaster/commits?per_page=10`)
+    performFetch(
+      `https://api.github.com/repos/imagitama/chordmaster/commits?per_page=10`
+    )
       .then(commits => {
         gotCommits(commits)
       })
@@ -27,7 +29,10 @@ const MostRecentCommits = ({ commits, getCommits, gotCommits }) => {
     <ul>
       {commits.map(({ html_url: url, commit: { message, committer } }) => (
         <li key={message}>
-          <A href={url} context="Most recent commits">{message}</A> - {moment(committer.date).fromNow()}
+          <A href={url} context="Most recent commits">
+            {message}
+          </A>{' '}
+          - {moment(committer.date).fromNow()}
         </li>
       ))}
     </ul>
@@ -38,9 +43,16 @@ const mapStateToProps = ({ commits: { commits } }) => ({
   commits
 })
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-  getCommits,
-  gotCommits
-}, dispatch)
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      getCommits,
+      gotCommits
+    },
+    dispatch
+  )
 
-export default connect(mapStateToProps, mapDispatchToProps)(MostRecentCommits)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(MostRecentCommits)

@@ -5,7 +5,8 @@ import songsDefinition from '../../songs'
 import { getLinkToSongWithArtistAndTitle } from '../../utils'
 import ContentArea from '../content-area/content-area'
 
-const getSongsInKey = keyShortName => songsDefinition.filter(({ key }) => key === keyShortName)
+const getSongsInKey = keyShortName =>
+  songsDefinition.filter(({ key }) => key === keyShortName)
 
 export const SongsForKey = ({ selectedKeyShortName }) => {
   if (!selectedKeyShortName) {
@@ -24,12 +25,17 @@ export const SongsForKey = ({ selectedKeyShortName }) => {
       <ul>
         {songsInKey.map(({ artistAndTitle }) => (
           <li key={artistAndTitle}>
-            <A href={getLinkToSongWithArtistAndTitle(artistAndTitle)} isInternal>{artistAndTitle}</A>
+            <A
+              href={getLinkToSongWithArtistAndTitle(artistAndTitle)}
+              isInternal
+            >
+              {artistAndTitle}
+            </A>
           </li>
         ))}
       </ul>
     </ContentArea>
-  )  
+  )
 }
 
 const mapStateToProps = ({ keys: { selectedKeyShortName } }) => ({

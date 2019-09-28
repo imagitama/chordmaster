@@ -6,7 +6,7 @@ import Button from '../button/button'
 import TextInput from '../text-input/text-input'
 import OutputBar from '../output-bar/output-bar'
 
-const encode = (data) => {
+const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
@@ -40,13 +40,18 @@ export const FeedbackForm = ({ isFeedbackFormVisible, hideFeedbackForm }) => {
 
     hideFeedbackForm()
   }
-   
+
   return (
     <OutputBar onCloseClick={hideFeedbackForm}>
       <p>
-        Want a feature? Want a chord added? Please let me know. Please include your email!
+        Want a feature? Want a chord added? Please let me know. Please include
+        your email!
       </p>
-      <TextInput onChange={event => setFeedbackTextInput(event.target.value)} placeholder="Your message" onFocus={e => e.stopPropagation()} />
+      <TextInput
+        onChange={event => setFeedbackTextInput(event.target.value)}
+        placeholder="Your message"
+        onFocus={e => e.stopPropagation()}
+      />
       &nbsp;
       <Button onClick={submitFeedback}>Submit</Button>
     </OutputBar>
@@ -57,6 +62,10 @@ const mapStateToProps = ({ app: { isFeedbackFormVisible } }) => ({
   isFeedbackFormVisible
 })
 
-const mapDispatchToProps = dispatch => bindActionCreators({ hideFeedbackForm }, dispatch)
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ hideFeedbackForm }, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(FeedbackForm)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(FeedbackForm)

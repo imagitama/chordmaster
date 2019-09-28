@@ -1,5 +1,10 @@
 import { doNotPlayString, barFret } from 'guitar-chord-definitions/dist/chords'
-import { TOGGLE_DO_NOT_PLAY_STRING, TOGGLE_FINGER_ON_STRING, INCREASE_BASE_FRET, INCREASE_FINGER_ON_STRING } from './actions'
+import {
+  TOGGLE_DO_NOT_PLAY_STRING,
+  TOGGLE_FINGER_ON_STRING,
+  INCREASE_BASE_FRET,
+  INCREASE_FINGER_ON_STRING
+} from './actions'
 
 const defaultState = {
   strings: {
@@ -27,7 +32,10 @@ export default (state = defaultState, action = {}) => {
         ...state,
         strings: {
           ...state.strings,
-          [action.payload.stringNumber]: state.strings[action.payload.stringNumber] === doNotPlayString ? null : doNotPlayString
+          [action.payload.stringNumber]:
+            state.strings[action.payload.stringNumber] === doNotPlayString
+              ? null
+              : doNotPlayString
         }
       }
 
@@ -50,7 +58,11 @@ export default (state = defaultState, action = {}) => {
           ...newState.frets,
           [action.payload.fretNumber]: {
             ...newState.frets[action.payload.fretNumber],
-            [action.payload.stringNumber]: newState.frets[action.payload.fretNumber][action.payload.stringNumber] ? null : 1
+            [action.payload.stringNumber]: newState.frets[
+              action.payload.fretNumber
+            ][action.payload.stringNumber]
+              ? null
+              : 1
           }
         }
       }
@@ -59,7 +71,14 @@ export default (state = defaultState, action = {}) => {
         ...newState,
         frets: {
           ...newState.frets,
-          [action.payload.fretNumber]: Object.values(newState.frets[action.payload.fretNumber]).length === 6 && Object.values(newState.frets[action.payload.fretNumber]).every(fingerNumber => parseInt(fingerNumber) === 1) ? barFret : newState.frets[action.payload.fretNumber]
+          [action.payload.fretNumber]:
+            Object.values(newState.frets[action.payload.fretNumber]).length ===
+              6 &&
+            Object.values(newState.frets[action.payload.fretNumber]).every(
+              fingerNumber => parseInt(fingerNumber) === 1
+            )
+              ? barFret
+              : newState.frets[action.payload.fretNumber]
         }
       }
 
@@ -82,7 +101,14 @@ export default (state = defaultState, action = {}) => {
           ...newState2.frets,
           [action.payload.fretNumber]: {
             ...newState2.frets[action.payload.fretNumber],
-            [action.payload.stringNumber]: newState2.frets[action.payload.fretNumber][action.payload.stringNumber] === 6 ? null : newState2.frets[action.payload.fretNumber][action.payload.stringNumber] + 1
+            [action.payload.stringNumber]:
+              newState2.frets[action.payload.fretNumber][
+                action.payload.stringNumber
+              ] === 6
+                ? null
+                : newState2.frets[action.payload.fretNumber][
+                    action.payload.stringNumber
+                  ] + 1
           }
         }
       }
@@ -90,16 +116,20 @@ export default (state = defaultState, action = {}) => {
     case INCREASE_BASE_FRET:
       return {
         ...state,
-        frets: Object.entries(state.frets).reduce((allFrets, [fretNumber, fingers]) => {
-          return {
-            ...allFrets,
-            [parseInt(Object.keys(state.frets)[0]) === 10 ? parseInt(fretNumber) - 9 : parseInt(fretNumber) + 1]: fingers
-          }
-        }, {})
+        frets: Object.entries(state.frets).reduce(
+          (allFrets, [fretNumber, fingers]) => {
+            return {
+              ...allFrets,
+              [parseInt(Object.keys(state.frets)[0]) === 10
+                ? parseInt(fretNumber) - 9
+                : parseInt(fretNumber) + 1]: fingers
+            }
+          },
+          {}
+        )
       }
 
     default:
       return state
   }
 }
-

@@ -10,21 +10,36 @@ export const Footer = () => (
   <FooterStyled>
     <Navigation>
       <NavigationItem>
-        <A href="/about" isInternal context="Header">About</A>
+        <A href="/about" isInternal context="Header">
+          About
+        </A>
       </NavigationItem>
       <NavigationItem>
-        <A href="/changes" isInternal context="Header">Recent Changes</A>
+        <A href="/changes" isInternal context="Header">
+          Recent Changes
+        </A>
       </NavigationItem>
       <NavigationItem>
-        <A href="/songs" isInternal context="Header">Songs</A>
+        <A href="/songs" isInternal context="Header">
+          Songs
+        </A>
       </NavigationItem>
     </Navigation>
     <Navigation>
       <NavigationItem>
-        Made by <A href={settings.personalSiteUrl} context="Footer">Jared Williams</A>
+        Made by{' '}
+        <A href={settings.personalSiteUrl} context="Footer">
+          Jared Williams
+        </A>
       </NavigationItem>
       <NavigationItem>
-        <A href={settings.githubRepoUrl} title="View the GitHub repo" context="Footer">GitHub</A>
+        <A
+          href={settings.githubRepoUrl}
+          title="View the GitHub repo"
+          context="Footer"
+        >
+          GitHub
+        </A>
       </NavigationItem>
       <NavigationItem>
         <DarkModeToggle />

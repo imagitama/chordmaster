@@ -1,144 +1,136 @@
 export default [
   {
-    artistAndTitle: "Snow Patrol - Chasing Cars",
-    artist: "Snow Patrol",
-    title: "Chasing Cars",
-    key: "A",
+    artistAndTitle: 'Snow Patrol - Chasing Cars',
+    artist: 'Snow Patrol',
+    title: 'Chasing Cars',
+    key: 'A',
     verses: [
       {
-        verseTitle: "Intro",
-        lyricsWithChords: [
-          [
-            "A",
-            ""
-          ]
-        ]
+        verseTitle: 'Intro',
+        lyricsWithChords: [['A', '']]
       },
       {
-        verseTitle: "Verse 1",
+        verseTitle: 'Verse 1',
         lyricsWithChords: [
           [
-            "A             E/G#       D               A",
+            'A             E/G#       D               A',
             "We'll do it all, everything, on our own."
           ],
           [
-            "A          E/G#       D             A",
+            'A          E/G#       D             A',
             "We don't need anything, or anyone."
           ]
         ]
       },
       {
-        verseTitle: "Chorus",
+        verseTitle: 'Chorus',
         lyricsWithChords: [
           [
-            "         A                E/G#",
-            "If I lay here, if I just lay here"
+            '         A                E/G#',
+            'If I lay here, if I just lay here'
           ],
           [
-            "                Dmaj7                                A",
-            "Would you lie with me, and just forget the world."
+            '                Dmaj7                                A',
+            'Would you lie with me, and just forget the world.'
           ]
         ]
       },
       {
-        verseTitle: "Verse 2",
+        verseTitle: 'Verse 2',
         lyricsWithChords: [
           [
-            "A              E/G#         D             A",
+            'A              E/G#         D             A',
             "I don't quite know how to say how I feel"
           ],
           [
-            "A              E/G#               D                 A",
-            "Those three words, I said too much, but not enough."
+            'A              E/G#               D                 A',
+            'Those three words, I said too much, but not enough.'
           ]
         ]
       },
       {
-        verseTitle: "Chorus",
+        verseTitle: 'Chorus',
         lyricsWithChords: [
           [
-            "         A                E/G#",
-            "If I lay here, if I just lay here"
+            '         A                E/G#',
+            'If I lay here, if I just lay here'
           ],
           [
-            "                Dmaj7                                 A",
-            "Would you lie with me, and just forget the world."
+            '                Dmaj7                                 A',
+            'Would you lie with me, and just forget the world.'
           ],
           [
-            "                 A                      E/G#",
+            '                 A                      E/G#',
             "Forget what we're told, before we get too old"
           ],
           [
-            "           Dmaj7                                A",
+            '           Dmaj7                                A',
             "Show me a garden that's bursting into life."
           ]
         ]
       },
       {
-        verseTitle: "Verse 3",
+        verseTitle: 'Verse 3',
         lyricsWithChords: [
           [
-            "A               E/G#          D                   A",
+            'A               E/G#          D                   A',
             "Let's waste time, chasing cars, around our heads."
           ],
           [
-            "A              E/G#          D                   A",
-            "I need your grace to remind me, to find my own."
+            'A              E/G#          D                   A',
+            'I need your grace to remind me, to find my own.'
           ]
         ]
       },
       {
-        verseTitle: "Chorus",
+        verseTitle: 'Chorus',
         lyricsWithChords: [
           [
-            "         A                E/G#",
-            "If I lay here, if I just lay here"
+            '         A                E/G#',
+            'If I lay here, if I just lay here'
           ],
           [
-            "                  Dmaj7                               A",
-            "Would you lie with me, and just forget the world."
+            '                  Dmaj7                               A',
+            'Would you lie with me, and just forget the world.'
           ],
           [
-            "                 A                      E/G#",
+            '                 A                      E/G#',
             "Forget what we're told, before we get too old"
           ],
           [
-            "           Dmaj7                                A",
+            '           Dmaj7                                A',
             "Show me a garden that's bursting into life."
           ],
           [
-            "              A             E/G#",
-            "All that I am, all that I ever was"
+            '              A             E/G#',
+            'All that I am, all that I ever was'
           ],
           [
-            "                        Dmaj7                            A",
+            '                        Dmaj7                            A',
             "Is here in your perfect eyes, they're all I can see"
           ],
           [
-            "               A                          E/G#",
+            '               A                          E/G#',
             "I don't know where, confused about how as well"
           ],
           [
-            "                        Dmaj7                                  A",
-            "just know that these things will never change for us at all."
+            '                        Dmaj7                                  A',
+            'just know that these things will never change for us at all.'
           ]
         ]
       },
       {
-        verseTitle: "Outro",
+        verseTitle: 'Outro',
         lyricsWithChords: [
           [
-            "A                         E/G#",
-            "If I lay here, if I just lay here"
+            'A                         E/G#',
+            'If I lay here, if I just lay here'
           ],
           [
-            "                Dmaj7                                 A",
-            "Would you lie with me, and just forget the world."
+            '                Dmaj7                                 A',
+            'Would you lie with me, and just forget the world.'
           ],
-          [
-            "A",
-            ""
-          ]
+          ['A', '']
         ]
       }
     ]
@@ -153,19 +145,13 @@ export default [
       {
         verseTitle: 'Chorus 1',
         lyricsWithChords: [
+          [`Am        F              C`, ` How long, how long will I slide?`],
+          [`G            Am    F`, `Separate my side`],
           [
-            `Am        F              C`,
-            ` How long, how long will I slide?`
-          ], [
-            `G            Am    F`,
-            `Separate my side`
-          ], [
             `C        G                 Am    F`,
             `I don't, don't believe it's bad`
-          ], [
-            `C                   G`,
-            `Slittin' my throat it's all I ever`
-          ]
+          ],
+          [`C                   G`, `Slittin' my throat it's all I ever`]
         ]
       },
 
@@ -174,100 +160,61 @@ export default [
         lyricsWithChords: [
           [
             `Am                         Em`,
-            `I heard your voice through a photograph`,
-          ], [
+            `I heard your voice through a photograph`
+          ],
+          [
             `Am                           Em`,
-            `I thought it up and brought up the past`,
-          ], [
+            `I thought it up and brought up the past`
+          ],
+          [
             `Am                          Em`,
             `Once you know you can never go back`
-          ], [
-            `G                       A`,
-            `I've got to take it on the otherside`
-          ]
+          ],
+          [`G                       A`, `I've got to take it on the otherside`]
         ]
       },
 
       {
         verseTitle: 'Verse 2',
         lyricsWithChords: [
-          [
-            `Am                    Em`,
-            `Centuries are what it meant to me`
-          ], [
-            `Am                  Em`,
-            `A cemetery where I marry the sea`
-          ], [
-            `Am                     Em`,
-            `Stranger things never change my mind`
-          ], [
-            `G                       A`,
-            `I've got to take it on the otherside`,
-          ], [
-            `G           A`,
-            `Take it on the otherside`,
-          ], [
-            `G`,
-            `Take it on`,
-          ], [
-            `A`,
-            `Take it on`
-          ]
-
+          [`Am                    Em`, `Centuries are what it meant to me`],
+          [`Am                  Em`, `A cemetery where I marry the sea`],
+          [`Am                     Em`, `Stranger things never change my mind`],
+          [`G                       A`, `I've got to take it on the otherside`],
+          [`G           A`, `Take it on the otherside`],
+          [`G`, `Take it on`],
+          [`A`, `Take it on`]
         ]
       },
 
       {
         verseTitle: 'Chorus 2',
-        copyFrom: 'Chorus 1',
+        copyFrom: 'Chorus 1'
       },
 
       {
         verseTitle: 'Verse 3',
         lyricsWithChords: [
+          [`Am                  Em`, `Pour my life into a paper cup`],
           [
-            `Am                  Em`,
-            `Pour my life into a paper cup`,
-          ], [
             `Am                         Em`,
-            `The ashtray's full and I'm spillin' my guts`,
-          ], [
-            `Am                    Em`,
-            `She wants to know am I still a slut`,
-          ], [
-            `G                       A`,
-            `I've got to take it on the otherside`
-          ]
-
+            `The ashtray's full and I'm spillin' my guts`
+          ],
+          [`Am                    Em`, `She wants to know am I still a slut`],
+          [`G                       A`, `I've got to take it on the otherside`]
         ]
       },
 
       {
         verseTitle: 'Verse 4',
         lyricsWithChords: [
-          [
-            `Am                   Em`,
-            `Scarlet starlet and she's in my bed`
-          ], [
-            `Am                  Em`,
-            `A candidate for my soul mate bled`
-          ], [
-            `Am                   Em`,
-            `Push the trigger and pull the thread`
-          ], [
-            `G                       A`,
-            `I've got to take it on the otherside`
-          ], [
-            `G           A`,
-            `Take it on the otherside`
-          ], [
-            `G`,
-            `Take it on`,
-          ], [
-            `A`,
-            `Take it on`
-
-          ]
+          [`Am                   Em`, `Scarlet starlet and she's in my bed`],
+          [`Am                  Em`, `A candidate for my soul mate bled`],
+          [`Am                   Em`, `Push the trigger and pull the thread`],
+          [`G                       A`, `I've got to take it on the otherside`],
+          [`G           A`, `Take it on the otherside`],
+          [`G`, `Take it on`],
+          [`A`, `Take it on`]
         ]
       },
 
@@ -278,57 +225,29 @@ export default [
 
       {
         verseTitle: 'Instrumental 1',
-        lyricsWithChords: [
-
-          [
-            `Em  C`,
-            ``
-          ], [
-            `Em  C`,
-            ``
-          ]
-
-        ]
+        lyricsWithChords: [[`Em  C`, ``], [`Em  C`, ``]]
       },
 
       {
         verseTitle: 'Bridge',
         lyricsWithChords: [
-          [
-            `Em`,
-            `Turn me on take me for a hard ride`
-          ], [
-            `C`,
-            `Burn me out leave me on the otherside`
-          ], [
-            `Em`,
-            `I yell and tell it that`
-          ], [
-            '',
-            `It's not my friend`
-          ],[
-            `C`,
-            `I tear it down I tear it down`,
-          ],[
-            '',
-            `And then it's born again`
-          ]
+          [`Em`, `Turn me on take me for a hard ride`],
+          [`C`, `Burn me out leave me on the otherside`],
+          [`Em`, `I yell and tell it that`],
+          ['', `It's not my friend`],
+          [`C`, `I tear it down I tear it down`],
+          ['', `And then it's born again`]
         ]
       },
 
       {
         verseTitle: 'Instrumental 2',
-        lyricsWithChords: [
-          [
-            `Am  F  C  G`,
-            ''
-          ]
-        ]
+        lyricsWithChords: [[`Am  F  C  G`, '']]
       },
 
       {
         verseTitle: 'Chorus 4',
-        copyFrom: 'Chorus 1',
+        copyFrom: 'Chorus 1'
       }
     ]
   },
@@ -340,240 +259,152 @@ export default [
     key: 'B',
     verses: [
       {
-        verseTitle: "Intro",
+        verseTitle: 'Intro',
+        lyricsWithChords: [['C  G  Am  F', '']]
+      },
+      {
+        verseTitle: 'Verse 1',
         lyricsWithChords: [
-          [
-            "C  G  Am  F",
-            ""
-          ]
+          ['      C', "Well, you done done me an' you bet I felt it."],
+          ['  G', "I tried to be chill, but you're so hot that I melted."],
+          ['  Am', 'I fell right through the cracks.'],
+          ['        F', "Now I'm trying to get back."]
         ]
       },
       {
-        verseTitle: "Verse 1",
+        verseTitle: 'Verse 2',
         lyricsWithChords: [
           [
-            "      C",
-            "Well, you done done me an' you bet I felt it."
-          ],
-          [
-            "  G",
-            "I tried to be chill, but you're so hot that I melted."
-          ],
-          [
-            "  Am",
-            "I fell right through the cracks."
-          ],
-          [
-            "        F",
-            "Now I'm trying to get back."
-          ]
-        ]
-      },
-      {
-        verseTitle: "Verse 2",
-        lyricsWithChords: [
-          [
-            "C                                                   G",
+            'C                                                   G',
             "Before the cool done run out, I'll be giving it my bestest,"
           ],
           [
-            "                       Am",
+            '                       Am',
             "And nothing's gonna stop me but divine intervention."
           ],
           [
-            "                                      F",
+            '                                      F',
             "I reckon it's again my turn"
           ],
-          [
-            "                     D7/F#",
-            "To win some or learn some."
-          ]
+          ['                     D7/F#', 'To win some or learn some.']
         ]
       },
       {
-        verseTitle: "Chorus 1",
+        verseTitle: 'Chorus 1',
         lyricsWithChords: [
           [
-            "    C           G               Am",
+            '    C           G               Am',
             "But I won't hesitate no more, no more."
           ],
-          [
-            "          F           C",
-            "It cannot wait, I'm yours."
-          ],
-          [
-            "    G        Am",
-            "Mm, mm, hmm, mm..."
-          ],
-          [
-            "                       F",
-            "Hey, hey-ey, hey, hey, hey..."
-          ]
+          ['          F           C', "It cannot wait, I'm yours."],
+          ['    G        Am', 'Mm, mm, hmm, mm...'],
+          ['                       F', 'Hey, hey-ey, hey, hey, hey...']
         ]
       },
       {
-        verseTitle: "Verse 3",
+        verseTitle: 'Verse 3',
         lyricsWithChords: [
           [
-            "C                                    G",
-            "Well, open up your mind and see like me."
+            'C                                    G',
+            'Well, open up your mind and see like me.'
           ],
           [
-            "                                     Am",
+            '                                     Am',
             "Open up your plans and, damn, you're free."
           ],
           [
-            "                                     F",
+            '                                     F',
             "Look into your heart and you'll find love, love, love, love."
           ]
         ]
       },
       {
-        verseTitle: "Verse 4",
+        verseTitle: 'Verse 4',
         lyricsWithChords: [
           [
-            "C                                                   G",
-            "Listen to the music of the moment; people dance and sing."
+            'C                                                   G',
+            'Listen to the music of the moment; people dance and sing.'
           ],
+          ['                       Am', "We're just one big family."],
           [
-            "                       Am",
-            "We're just one big family."
-          ],
-          [
-            "                                      F",
+            '                                      F',
             "And it's our god forsaken right to be loved,"
           ],
-          [
-            "                     D7/F#",
-            "Loved, loved, loved, loved."
-          ]
+          ['                     D7/F#', 'Loved, loved, loved, loved.']
         ]
       },
       {
-        verseTitle: "Chorus 2",
+        verseTitle: 'Chorus 2',
         lyricsWithChords: [
           [
-            "   C           G               Am",
+            '   C           G               Am',
             "So I won't hesitate no more, no more."
           ],
-          [
-            "          F",
-            "It cannot wait, I'm sure."
-          ],
-          [
-            "           C             G",
-            "There's no need to complicate."
-          ],
-          [
-            "            Am",
-            "Our time is short."
-          ],
-          [
-            "            F",
-            "This is our fate, I'm yours."
-          ],
-          [
-            "C       G/B Am G",
-            "Tuch-tu..."
-          ],
-          [
-            "               F",
-            "Skooch on over closer, dear,"
-          ],
-          [
-            "                       D7/F#",
-            "And I will nibble your ear."
-          ]
+          ['          F', "It cannot wait, I'm sure."],
+          ['           C             G', "There's no need to complicate."],
+          ['            Am', 'Our time is short.'],
+          ['            F', "This is our fate, I'm yours."],
+          ['C       G/B Am G', 'Tuch-tu...'],
+          ['               F', 'Skooch on over closer, dear,'],
+          ['                       D7/F#', 'And I will nibble your ear.']
         ]
       },
       {
-        verseTitle: "Interlude",
-        lyricsWithChords: [
-          [
-            "C   G/B  Am   G   F       D7/F#",
-            ""
-          ]
-        ]
+        verseTitle: 'Interlude',
+        lyricsWithChords: [['C   G/B  Am   G   F       D7/F#', '']]
       },
       {
-        verseTitle: "Verse 5",
+        verseTitle: 'Verse 5',
         lyricsWithChords: [
           [
-            "                   C",
+            '                   C',
             "I've been spending way too long checking my tongue in the mirror"
           ],
           [
-            "    G",
-            "And bending over backwards just to try to see it clearer."
+            '    G',
+            'And bending over backwards just to try to see it clearer.'
           ],
-          [
-            "    Am",
-            "But my breath fogged up the glass,"
-          ],
-          [
-            "         F",
-            "And so I drew a new face and I laughed."
-          ]
+          ['    Am', 'But my breath fogged up the glass,'],
+          ['         F', 'And so I drew a new face and I laughed.']
         ]
       },
       {
-        verseTitle: "Verse 6",
+        verseTitle: 'Verse 6',
         lyricsWithChords: [
           [
-            "  C",
+            '  C',
             "I guess what I'll be saying is there ain't no better reason"
           ],
-          [
-            "   G",
-            "To rid yourself of vanities and just go with the seasons."
-          ],
-          [
-            "Am",
-            "It's what we aim to do."
-          ],
-          [
-            "    F",
-            "Our name is our virtue."
-          ]
+          ['   G', 'To rid yourself of vanities and just go with the seasons.'],
+          ['Am', "It's what we aim to do."],
+          ['    F', 'Our name is our virtue.']
         ]
       },
       {
-        verseTitle: "Chorus 3",
+        verseTitle: 'Chorus 3',
         lyricsWithChords: [
           [
-            "    C           G               Am",
+            '    C           G               Am',
             "But I won't hesitate no more, no more."
           ],
+          ['          F', "It cannot wait, I'm yours."],
           [
-            "          F",
-            "It cannot wait, I'm yours."
+            'C                              G',
+            'Open up your mind and see like me.'
           ],
           [
-            "C                              G",
-            "Open up your mind and see like me."
-          ],
-          [
-            "                                     Am",
+            '                                     Am',
             "Open up your plans and, damn, you're free."
           ],
           [
-            "                                     F",
+            '                                     F',
             "Look into your heart and you'll find that the sky is yours."
           ],
+          ['   C', "So please don't, please don't, please don't..."],
+          ['           G', "There's no need to complicate."],
+          ['           Am', "'Cause our time is short."],
           [
-            "   C",
-            "So please don't, please don't, please don't..."
-          ],
-          [
-            "           G",
-            "There's no need to complicate."
-          ],
-          [
-            "           Am",
-            "'Cause our time is short."
-          ],
-          [
-            "                              F           D7/F#  C G Am F",
+            '                              F           D7/F#  C G Am F',
             "This, oh this, oh this is our fate. I'm yours."
           ]
         ]
@@ -593,13 +424,16 @@ export default [
           [
             `C              G                 Am          Fmaj7    F6`,
             `When I find myself in times of trouble, Mother Mary comes to me`
-          ], [
+          ],
+          [
             `C                 G              F  C/E Dm C`,
             `Speaking words of wisdom, let it be`
-          ], [
+          ],
+          [
             `    C              G                 Am              Fmaj7    F6`,
             `And in my hour of darkness, She is standing right in front of me`
-          ], [
+          ],
+          [
             `C                 G              F  C/E Dm C`,
             `Speaking words of wisdom, Let it be`
           ]
@@ -611,7 +445,8 @@ export default [
           [
             `        Am        C/G          F          C`,
             `Let it be, let it be,  let it be, let it be`
-          ], [
+          ],
+          [
             `C                G              F  C/E Dm C`,
             ` Whisper words of wisdom, let it be`
           ]
@@ -623,13 +458,16 @@ export default [
           [
             `       C              G              Am           Fmaj7    F6`,
             `And when the broken hearted people, Living in the world agree`
-          ], [
+          ],
+          [
             `C                 G              F  C/E Dm C`,
             `There will be an answer, let it be`
-          ], [
+          ],
+          [
             `       C                 G              Am                  Fmaj7    F6`,
             `For though they may be parted, There is still a chance that they may see`
-          ], [
+          ],
+          [
             `C                 G              F  C/E Dm C`,
             `There will be an answer, let it be`
           ]
@@ -642,50 +480,39 @@ export default [
       {
         verseTitle: 'Instrumental',
         lyricsWithChords: [
-          [
-            `F   C/E Dm C   Bb F/A G    F    C`,
-            ''
-          ],
-          [
-            `F   C/E Dm C   Bb F/A G    F    C`,
-            ''
-          ]
+          [`F   C/E Dm C   Bb F/A G    F    C`, ''],
+          [`F   C/E Dm C   Bb F/A G    F    C`, '']
         ]
       },
       {
         verseTitle: 'Solo',
         lyricsWithChords: [
-          [
-            `C  G  Am  F  C  G  F  C`,
-            ''
-          ],
-          [
-            `C  G  Am  F  C  G  F  C`,
-            ''
-          ]
+          [`C  G  Am  F  C  G  F  C`, ''],
+          [`C  G  Am  F  C  G  F  C`, '']
         ]
       },
 
       {
         verseTitle: 'Chorus 3',
-        copyFrom: 'Chorus 1',
+        copyFrom: 'Chorus 1'
       },
       {
         verseTitle: 'Verse 3',
         lyricsWithChords: [
+          [`      C                 G`, `And when the night is cloudy,`],
           [
-            `      C                 G`,
-            `And when the night is cloudy,`
-          ], [
             `                 Am          Fmaj7    F6`,
             `There is still a light that shines on me`
-          ], [
+          ],
+          [
             `   C             G              F  C/E Dm C`,
             `Shine on till tomorrow, let it be`
-          ], [
+          ],
+          [
             `   C               G               Am        Fmaj7    F6`,
             `I wake up to the sound of music, Mother Mary comes to me`
-          ], [
+          ],
+          [
             `   C                G            F  C/E Dm C`,
             `Speaking words of wisdom, let it be`
           ]
@@ -697,187 +524,179 @@ export default [
       },
       {
         verseTitle: 'Outro',
-        lyricsWithChords: [
-          [
-            `F   C/E Dm C   Bb F/A G    F    C`,
-            ''
-          ]
-        ]
+        lyricsWithChords: [[`F   C/E Dm C   Bb F/A G    F    C`, '']]
       }
     ]
   },
 
   {
-    artistAndTitle: "The Eagles - Hotel California",
-    key: "Bm",
-    artist: "The Eagles",
-    title: "Hotel California",
+    artistAndTitle: 'The Eagles - Hotel California',
+    key: 'Bm',
+    artist: 'The Eagles',
+    title: 'Hotel California',
     verses: [
       {
-        verseTitle: "Verse",
+        verseTitle: 'Verse',
         lyricsWithChords: [
           [
-            "Bm                        F#7",
-            "On a dark desert highway, cool wind in my hair"
+            'Bm                        F#7',
+            'On a dark desert highway, cool wind in my hair'
           ],
           [
-            "A                     E7",
-            "Warm smell of colitas rising up through the air"
+            'A                     E7',
+            'Warm smell of colitas rising up through the air'
           ],
           [
-            "G                         D",
-            "Up ahead in the distance, I saw a shimmering light"
+            'G                         D',
+            'Up ahead in the distance, I saw a shimmering light'
           ],
           [
-            "Em                                        F#7",
-            "My head grew heavy and my sight grew dim; I had to stop for the night."
+            'Em                                        F#7',
+            'My head grew heavy and my sight grew dim; I had to stop for the night.'
           ]
         ]
       },
       {
-        verseTitle: "Verse",
+        verseTitle: 'Verse',
         lyricsWithChords: [
           [
-            "Bm                              F#7",
-            "There she stood in the doorway; I heard the mission bell"
+            'Bm                              F#7',
+            'There she stood in the doorway; I heard the mission bell'
           ],
           [
-            "A                                            E7",
-            "And I was thinking to myself, \"This could be Heaven or this could be Hell\""
+            'A                                            E7',
+            'And I was thinking to myself, "This could be Heaven or this could be Hell"'
           ],
           [
-            "G                        D",
-            "Then she lit up a candle and she showed me the way"
+            'G                        D',
+            'Then she lit up a candle and she showed me the way'
           ],
           [
-            "Em                                  F#7",
-            "There were voices down the corridor I thought I heard them say..."
+            'Em                                  F#7',
+            'There were voices down the corridor I thought I heard them say...'
           ]
         ]
       },
       {
-        verseTitle: "Chorus",
+        verseTitle: 'Chorus',
         lyricsWithChords: [
           [
-            "G                        D ",
-            "Welcome to the Hotel California... "
+            'G                        D ',
+            'Welcome to the Hotel California... '
           ],
           [
-            "       F#7                                      Bm        F#7  Bm",
-            "Such a lovely place,(such a lovely place)such a lovely face..."
+            '       F#7                                      Bm        F#7  Bm',
+            'Such a lovely place,(such a lovely place)such a lovely face...'
           ],
           [
-            "G                               D",
-            "Plenty of room at the Hotel California... "
+            'G                               D',
+            'Plenty of room at the Hotel California... '
           ],
           [
-            "    Em                                     F#7",
-            "Any time of year,(any time of year)you can find it here..."
+            '    Em                                     F#7',
+            'Any time of year,(any time of year)you can find it here...'
           ]
         ]
       },
       {
-        verseTitle: "Verse",
+        verseTitle: 'Verse',
         lyricsWithChords: [
           [
-            "Bm                           F#7",
-            "Her mind is Tiffany-twisted, she got the Mercedes Bends"
+            'Bm                           F#7',
+            'Her mind is Tiffany-twisted, she got the Mercedes Bends'
           ],
           [
-            "A                                     E7",
-            "She got a lot of pretty, pretty boys, that she calls friends"
+            'A                                     E7',
+            'She got a lot of pretty, pretty boys, that she calls friends'
           ],
           [
-            "G                                D",
-            "How they dance in the courtyard, sweet summer sweat"
+            'G                                D',
+            'How they dance in the courtyard, sweet summer sweat'
           ],
           [
-            "Em                      F#7",
-            "Some dance to remember, some dance to forget"
+            'Em                      F#7',
+            'Some dance to remember, some dance to forget'
           ]
         ]
       },
       {
-        verseTitle: "Verse",
+        verseTitle: 'Verse',
         lyricsWithChords: [
           [
-            "Bm                           F#7",
-            "So I called up the Captain, \"Please bring me my wine\""
+            'Bm                           F#7',
+            'So I called up the Captain, "Please bring me my wine"'
           ],
           [
-            "          A                                     E7",
-            "He said, \"We haven't had that spirit here since nineteen sixty nine\""
+            '          A                                     E7',
+            'He said, "We haven\'t had that spirit here since nineteen sixty nine"'
           ],
           [
-            "G                                       D",
-            "And still those voices are calling from far away,"
+            'G                                       D',
+            'And still those voices are calling from far away,'
           ],
           [
-            "Em                                     F#7",
-            "Wake you up in the middle of the night just to hear them say..."
+            'Em                                     F#7',
+            'Wake you up in the middle of the night just to hear them say...'
           ]
         ]
       },
       {
-        verseTitle: "Chorus",
+        verseTitle: 'Chorus',
         lyricsWithChords: [
           [
-            "G                        D ",
-            "Welcome to the Hotel California... "
+            'G                        D ',
+            'Welcome to the Hotel California... '
           ],
           [
-            "       F#7                                      Bm        F#7  Bm  ",
-            "Such a lovely place,(such a lovely place)such a lovely face..."
+            '       F#7                                      Bm        F#7  Bm  ',
+            'Such a lovely place,(such a lovely place)such a lovely face...'
           ],
           [
-            "G                                  D",
+            'G                                  D',
             "They livin' it up at the Hotel California... "
           ],
           [
-            "       Em                                             F#7",
-            "What a nice surprise,(what a nice surprise)bring your alibis..."
+            '       Em                                             F#7',
+            'What a nice surprise,(what a nice surprise)bring your alibis...'
           ]
         ]
       },
       {
-        verseTitle: "Verse",
+        verseTitle: 'Verse',
         lyricsWithChords: [
           [
-            "Bm                      F#7",
-            "Mirrors on the ceiling, the pink champagne on ice"
+            'Bm                      F#7',
+            'Mirrors on the ceiling, the pink champagne on ice'
           ],
           [
-            "              A                               E7",
-            "And she said \"We are all just prisoners here, of our own device\""
+            '              A                               E7',
+            'And she said "We are all just prisoners here, of our own device"'
           ],
+          ['G', "And in the master's chambers, they gathered for the feast"],
           [
-            "G",
-            "And in the master's chambers, they gathered for the feast"
-          ],
-          [
-            "Em",
+            'Em',
             "They stab it with their steely knives, but they just can't kill the beast"
           ]
         ]
       },
       {
-        verseTitle: "Verse",
+        verseTitle: 'Verse',
         lyricsWithChords: [
           [
-            "Bm                           F#7",
-            "Last thing I remember, I was running for the door"
+            'Bm                           F#7',
+            'Last thing I remember, I was running for the door'
           ],
           [
-            "A                                 E7",
-            "I had to find the passage back to place I was before"
+            'A                                 E7',
+            'I had to find the passage back to place I was before'
           ],
           [
-            "G                                   D",
-            "\"Relax\" said the night man, \"We are programmed to receive."
+            'G                                   D',
+            '"Relax" said the night man, "We are programmed to receive.'
           ],
           [
-            "Em                                   F#7",
-            "You can check out any time you like, but you can never leave\"."
+            'Em                                   F#7',
+            'You can check out any time you like, but you can never leave".'
           ]
         ]
       }
@@ -887,236 +706,131 @@ export default [
   {
     artistAndTitle: "Guns N' Roses - Sweet Child O Mine",
     artist: "Guns N' Roses",
-    title: "Sweet Child O Mine",
-    key: "D",
+    title: 'Sweet Child O Mine',
+    key: 'D',
     verses: [
       {
-        verseTitle: "Intro",
+        verseTitle: 'Intro',
+        lyricsWithChords: [['D C G D', ''], ['D C G D', ''], ['D C G D', '']]
+      },
+      {
+        verseTitle: 'Verse',
         lyricsWithChords: [
+          ['D', "She's got a smile that it seems to me"],
+          ['  C', 'Reminds me of childhood memories'],
+          ['       G', 'Where everything'],
           [
-            "D C G D",
-            ""
+            '                                D',
+            'Was as fresh as a bright blue sky'
           ],
-          [
-            "D C G D",
-            ""
-          ],
-          [
-            "D C G D",
-            ""
-          ]
+          ['D', 'Now and then when I see her face'],
+          ['    C', 'She takes me away to that special place'],
+          ['         G', 'And if I stared to long'],
+          ['                              D', "I'd probably break down and cry"]
         ]
       },
       {
-        verseTitle: "Verse",
+        verseTitle: 'Chorus',
         lyricsWithChords: [
+          ['A               C              D', "Whoa Oh, Sweet child o' mine"],
           [
-            "D",
-            "She's got a smile that it seems to me"
-          ],
-          [
-            "  C",
-            "Reminds me of childhood memories"
-          ],
-          [
-            "       G",
-            "Where everything"
-          ],
-          [
-            "                                D",
-            "Was as fresh as a bright blue sky"
-          ],
-          [
-            "D",
-            "Now and then when I see her face"
-          ],
-          [
-            "    C",
-            "She takes me away to that special place"
-          ],
-          [
-            "         G",
-            "And if I stared to long"
-          ],
-          [
-            "                              D",
-            "I'd probably break down and cry"
-          ]
-        ]
-      },
-      {
-        verseTitle: "Chorus",
-        lyricsWithChords: [
-          [
-            "A               C              D",
-            "Whoa Oh, Sweet child o' mine"
-          ],
-          [
-            "A               C              D",
+            'A               C              D',
             "Whoa, Oh, Oh, Oh Sweet love o' mine"
           ]
         ]
       },
       {
-        verseTitle: "Instrumental",
+        verseTitle: 'Instrumental',
+        lyricsWithChords: [['D C G D', '']]
+      },
+      {
+        verseTitle: 'Verse',
         lyricsWithChords: [
-          [
-            "D C G D",
-            ""
-          ]
+          ['D', "She's got eyes of the bluest skies"],
+          ['   C', 'As if they thought of rain'],
+          ['  G', 'I hate to look into those eyes'],
+          ['    D', 'And see an ounce of pain'],
+          ['    D', 'Her hair reminds me of a warm safe place'],
+          ['      C', "Where as a child I'd hide"],
+          ['    G', 'And pray for the thunder and rain'],
+          ['     D', 'To quietly pass me by']
         ]
       },
       {
-        verseTitle: "Verse",
+        verseTitle: 'Chorus',
         lyricsWithChords: [
+          ['A        C              D', "Whoa Oh, oh, Sweet child o' mine"],
           [
-            "D",
-            "She's got eyes of the bluest skies"
-          ],
-          [
-            "   C",
-            "As if they thought of rain"
-          ],
-          [
-            "  G",
-            "I hate to look into those eyes"
-          ],
-          [
-            "    D",
-            "And see an ounce of pain"
-          ],
-          [
-            "    D",
-            "Her hair reminds me of a warm safe place"
-          ],
-          [
-            "      C",
-            "Where as a child I'd hide"
-          ],
-          [
-            "    G",
-            "And pray for the thunder and rain"
-          ],
-          [
-            "     D",
-            "To quietly pass me by"
-          ]
-        ]
-      },
-      {
-        verseTitle: "Chorus",
-        lyricsWithChords: [
-          [
-            "A        C              D",
-            "Whoa Oh, oh, Sweet child o' mine"
-          ],
-          [
-            "A              C                D",
+            'A              C                D',
             "Whoa, Oh, Oh, Oh Sweet love o' mine"
           ]
         ]
       },
       {
-        verseTitle: "Instrumental",
-        lyricsWithChords: [
-          [
-            "D C G D",
-            ""
-          ],
-          [
-            "D C G D",
-            ""
-          ]
-        ]
+        verseTitle: 'Instrumental',
+        lyricsWithChords: [['D C G D', ''], ['D C G D', '']]
       },
       {
-        verseTitle: "Chorus",
+        verseTitle: 'Chorus',
         lyricsWithChords: [
+          ['A               C              D', "Whoa Oh, Sweet child o' mine"],
           [
-            "A               C              D",
-            "Whoa Oh, Sweet child o' mine"
-          ],
-          [
-            "A               C              D",
+            'A               C              D',
             "Whoa, Oh, Oh, Oh Sweet love o' mine"
           ],
           [
-            "A               C              D",
+            'A               C              D',
             "Whoa Oh, Oh, Oh Sweet child o' mine"
           ],
-          [
-            "A               C         D",
-            "Ooooooooh Sweet love o' mine"
-          ]
+          ['A               C         D', "Ooooooooh Sweet love o' mine"]
         ]
       },
       {
-        verseTitle: "Instrumental",
+        verseTitle: 'Instrumental',
         lyricsWithChords: [
-          [
-            "Em C B A",
-            ""
-          ],
-          [
-            "Em C B A ",
-            ""
-          ],
-          [
-            "Em C B A ",
-            ""
-          ],
-          [
-            "Em C B A",
-            ""
-          ],
-          [
-            "Em G A C D",
-            ""
-          ],
-          [
-            "Em G A C D ",
-            ""
-          ],
-          [
-            "Em G A C D",
-            ""
-          ]
+          ['Em C B A', ''],
+          ['Em C B A ', ''],
+          ['Em C B A ', ''],
+          ['Em C B A', ''],
+          ['Em G A C D', ''],
+          ['Em G A C D ', ''],
+          ['Em G A C D', '']
         ]
       },
       {
-        verseTitle: "Outro",
+        verseTitle: 'Outro',
         lyricsWithChords: [
           [
-            "Em              G               A                 C D",
-            "Where do we go, Where do we go, Where do we go now----"
+            'Em              G               A                 C D',
+            'Where do we go, Where do we go, Where do we go now----'
           ],
           [
-            "Em              G               A                 C D",
-            "Where do we go, Where do we go, Where do we go now----"
+            'Em              G               A                 C D',
+            'Where do we go, Where do we go, Where do we go now----'
           ],
           [
-            "Em              G            A                 C D",
-            "Where do we go, Sweet child, Where do we go now----"
+            'Em              G            A                 C D',
+            'Where do we go, Sweet child, Where do we go now----'
           ],
           [
-            " Em                  G             A                              C D",
-            " Aih, Aih, Aih, Aih, Aih, Aih, Aih where do we gooooooooooooo  now----"
+            ' Em                  G             A                              C D',
+            ' Aih, Aih, Aih, Aih, Aih, Aih, Aih where do we gooooooooooooo  now----'
           ],
           [
-            " Em            G          A                 C D",
-            "Where do we gooooooooooo, where do we go now----"
+            ' Em            G          A                 C D',
+            'Where do we gooooooooooo, where do we go now----'
           ],
           [
-            "Em            G       A                 C D",
-            "Where do we gooooooo, where do we go now---- "
+            'Em            G       A                 C D',
+            'Where do we gooooooo, where do we go now---- '
           ],
           [
-            "Em             G     A                  C           D",
-            "Where do we go-----, where do we go now Now-now-now-now-now-now-now"
+            'Em             G     A                  C           D',
+            'Where do we go-----, where do we go now Now-now-now-now-now-now-now'
           ],
           [
-            " Em     G             A C D      Em  ",
-            "Sweet child, sweet chi-. . ld of mine"
+            ' Em     G             A C D      Em  ',
+            'Sweet child, sweet chi-. . ld of mine'
           ]
         ]
       }
@@ -1124,512 +838,383 @@ export default [
   },
 
   {
-    artistAndTitle: "Red Hot Chili Peppers - Under The Bridge",
-    artist: "Red Hot Chili Peppers",
-    title: "Under The Bridge",
-    key: "E",
+    artistAndTitle: 'Red Hot Chili Peppers - Under The Bridge',
+    artist: 'Red Hot Chili Peppers',
+    title: 'Under The Bridge',
+    key: 'E',
     verses: [
       {
-        verseTitle: "Verse",
+        verseTitle: 'Verse',
         lyricsWithChords: [
           [
-            "E/B       B             C#m          G#m A",
+            'E/B       B             C#m          G#m A',
             "Sometimes I feel like I don't have a partner"
           ],
           [
-            "E/B       B           C#m     A",
-            "Sometimes I feel like my only friend"
+            'E/B       B           C#m     A',
+            'Sometimes I feel like my only friend'
           ],
           [
-            "       E/B    B            C#m     G#m  A",
-            "Is the city I live in, the city of angels"
+            '       E/B    B            C#m     G#m  A',
+            'Is the city I live in, the city of angels'
           ],
           [
-            "E/B       B       C#m       A      Emaj7",
-            "Lonely as I am, together we cry"
+            'E/B       B       C#m       A      Emaj7',
+            'Lonely as I am, together we cry'
           ]
         ]
       },
       {
-        verseTitle: "Verse",
+        verseTitle: 'Verse',
         lyricsWithChords: [
           [
-            "E/B            B              C#m         G#m  A",
+            'E/B            B              C#m         G#m  A',
             "I drive on her streets 'cause she's my companion"
           ],
           [
-            "E/B                B            C#m             A",
+            'E/B                B            C#m             A',
             "I walk through her hills 'cause she knows who I am"
           ],
           [
-            "    E/B          B             C#m       G#m  A",
-            "She sees my good deeds and she kisses me windy"
+            '    E/B          B             C#m       G#m  A',
+            'She sees my good deeds and she kisses me windy'
           ],
           [
-            "E/B     B          C#m       A       Emaj7",
-            "I never worry, now that is a lie."
+            'E/B     B          C#m       A       Emaj7',
+            'I never worry, now that is a lie.'
           ]
         ]
       },
       {
-        verseTitle: "Chorus",
+        verseTitle: 'Chorus',
         lyricsWithChords: [
           [
-            "      F#m                  E/B  B      F#m",
+            '      F#m                  E/B  B      F#m',
             "Well, I don't ever want to feel like I did that day"
           ],
           [
-            "F#m                    E/B   B       F#m",
-            "Take me to the place I love, take me all the way"
+            'F#m                    E/B   B       F#m',
+            'Take me to the place I love, take me all the way'
           ],
           [
-            "F#m                  E/B  B      F#m",
+            'F#m                  E/B  B      F#m',
             "I don't ever want to feel like I did that day"
           ],
           [
-            "F#m                    E/B   B       F#m       E/B  B   C#m   G#m    A    E/B    B    C#m    A",
-            "Take me to the place I love, take me all the way, yeah, yeah, yeah"
+            'F#m                    E/B   B       F#m       E/B  B   C#m   G#m    A    E/B    B    C#m    A',
+            'Take me to the place I love, take me all the way, yeah, yeah, yeah'
           ]
         ]
       },
       {
-        verseTitle: "Verse",
+        verseTitle: 'Verse',
         lyricsWithChords: [
           [
-            "     E/B        B                 C#m    G#m A",
+            '     E/B        B                 C#m    G#m A',
             "It's hard to believe that there's nobody out there"
           ],
           [
-            "     E/B        B        C#m     A",
+            '     E/B        B        C#m     A',
             "It's hard to believe and I'm all alone"
           ],
           [
-            "   E/B          B             C#m      G#m   A",
-            "At least I have her love, the city she loves me"
+            '   E/B          B             C#m      G#m   A',
+            'At least I have her love, the city she loves me'
           ],
           [
-            "E/B       B       C#m       A      Emaj7",
-            "Lonely as I am, together we cry"
+            'E/B       B       C#m       A      Emaj7',
+            'Lonely as I am, together we cry'
           ]
         ]
       },
       {
-        verseTitle: "Chorus",
+        verseTitle: 'Chorus',
         lyricsWithChords: [
           [
-            "     F#m                  E/B  B      F#m    ",
+            '     F#m                  E/B  B      F#m    ',
             "Well, I don't ever want to feel like I did that day"
           ],
           [
-            "F#m                    E/B   B       F#m",
-            "Take me to the place I love, take me all the way"
+            'F#m                    E/B   B       F#m',
+            'Take me to the place I love, take me all the way'
           ],
           [
-            "      F#m                  E/B  B      F#m",
+            '      F#m                  E/B  B      F#m',
             "Well, I don't ever want to feel like I did that day"
           ],
           [
-            "F#m                    E/B   B       F#m       A  Am    G     F    ",
-            "Take me to the place I love, take me all the way, yeah, yeah, yeah"
+            'F#m                    E/B   B       F#m       A  Am    G     F    ',
+            'Take me to the place I love, take me all the way, yeah, yeah, yeah'
           ]
         ]
       },
       {
-        verseTitle: "Bridge",
+        verseTitle: 'Bridge',
         lyricsWithChords: [
-          [
-            "A  Am          G     F",
-            "oh no, no, no, yeah, yeah"
-          ],
-          [
-            "A    Am         G    F",
-            "love me, i say, yeah yeah"
-          ]
+          ['A  Am          G     F', 'oh no, no, no, yeah, yeah'],
+          ['A    Am         G    F', 'love me, i say, yeah yeah']
         ]
       },
       {
-        verseTitle: "Verse",
+        verseTitle: 'Verse',
         lyricsWithChords: [
-          [
-            "A                    Am",
-            "under the bridge downtown"
-          ],
-          [
-            "G             F",
-            "...is where I drew some blood"
-          ],
-          [
-            "A                    Am",
-            "under the bridge downtown"
-          ],
-          [
-            "G              F",
-            "...I could not get enough"
-          ],
-          [
-            "A                    Am",
-            "under the bridge downtown"
-          ],
-          [
-            "G          F",
-            "...forgot about my love"
-          ],
-          [
-            "A                    Am",
-            "under the bridge downtown"
-          ],
-          [
-            "G            F",
-            "...I gave my life away"
-          ]
+          ['A                    Am', 'under the bridge downtown'],
+          ['G             F', '...is where I drew some blood'],
+          ['A                    Am', 'under the bridge downtown'],
+          ['G              F', '...I could not get enough'],
+          ['A                    Am', 'under the bridge downtown'],
+          ['G          F', '...forgot about my love'],
+          ['A                    Am', 'under the bridge downtown'],
+          ['G            F', '...I gave my life away']
         ]
       },
       {
-        verseTitle: "Outro",
+        verseTitle: 'Outro',
         lyricsWithChords: [
-          [
-            "A    Am    G     F    ",
-            "way, yeah, yeah, yeah"
-          ],
-          [
-            "A  Am          G     F",
-            "oh no, no, no, no, yeah, yeah"
-          ],
-          [
-            "A  Am         G    F",
-            "Oh no, i say, yeah yeah"
-          ],
-          [
-            "A  Am         G    F",
-            "              yeah yeah"
-          ]
+          ['A    Am    G     F    ', 'way, yeah, yeah, yeah'],
+          ['A  Am          G     F', 'oh no, no, no, no, yeah, yeah'],
+          ['A  Am         G    F', 'Oh no, i say, yeah yeah'],
+          ['A  Am         G    F', '              yeah yeah']
         ]
       },
       {
-        verseTitle: "Instrumental",
+        verseTitle: 'Instrumental',
         lyricsWithChords: [
-          [
-            "A  C    G    F",
-            ""
-          ],
-          [
-            "A  C    G    F ",
-            ""
-          ],
-          [
-            "A  C    G    F ",
-            ""
-          ],
-          [
-            "A  C    G    F ",
-            ""
-          ],
-          [
-            "A",
-            ""
-          ]
+          ['A  C    G    F', ''],
+          ['A  C    G    F ', ''],
+          ['A  C    G    F ', ''],
+          ['A  C    G    F ', ''],
+          ['A', '']
         ]
       }
     ]
   },
 
   {
-    artistAndTitle: "The Beatles - Eleanor Rigby",
-    artist: "The Beatles",
-    title: "Eleanor Rigby",
-    key: "Em",
+    artistAndTitle: 'The Beatles - Eleanor Rigby',
+    artist: 'The Beatles',
+    title: 'Eleanor Rigby',
+    key: 'Em',
     verses: [
       {
-        verseTitle: "Intro",
+        verseTitle: 'Intro',
         lyricsWithChords: [
           [
-            "C                          Em",
-            "Ah, look at all the lonely people"
+            'C                          Em',
+            'Ah, look at all the lonely people'
           ],
-          [
-            "C                          Em",
-            "Ah, look at all the lonely people"
-          ]
+          ['C                          Em', 'Ah, look at all the lonely people']
         ]
       },
       {
-        verseTitle: "Verse",
+        verseTitle: 'Verse',
         lyricsWithChords: [
           [
-            "Em                                                                C            ",
-            "Eleanor Rigby picks up the rice in the church where a wedding has been"
+            'Em                                                                C            ',
+            'Eleanor Rigby picks up the rice in the church where a wedding has been'
           ],
+          ['', 'Lives in a dream'],
           [
-            "",
-            "Lives in a dream"
+            'Em                                                                   C',
+            'Waits at the window, wearing the face that she keeps in a jar by the door'
           ],
-          [
-            "Em                                                                   C",
-            "Waits at the window, wearing the face that she keeps in a jar by the door",
-          ],
-          [
-            "          Em",
-            "Who is it for?"
-          ]
+          ['          Em', 'Who is it for?']
         ]
       },
       {
-        verseTitle: "Chorus",
+        verseTitle: 'Chorus',
         lyricsWithChords: [
-          [
-            "Em7            Em6",
-            "All the lonely people"
-          ],
-          [
-            "C                      Em",
-            "Where do they all come from?"
-          ],
-          [
-            "Em7            Em6",
-            "All the lonely people"
-          ],
-          [
-            "C                   Em",
-            "Where do they all belong?"
-          ]
+          ['Em7            Em6', 'All the lonely people'],
+          ['C                      Em', 'Where do they all come from?'],
+          ['Em7            Em6', 'All the lonely people'],
+          ['C                   Em', 'Where do they all belong?']
         ]
       },
       {
-        verseTitle: "Verse 2",
+        verseTitle: 'Verse 2',
         lyricsWithChords: [
           [
-            "Em                                                             C",
-            "Father McKenzie writing the words of a sermon that no one will hear"
+            'Em                                                             C',
+            'Father McKenzie writing the words of a sermon that no one will hear'
           ],
+          ['', 'No one comes near.'],
           [
-            "",
-            "No one comes near.",
-          ],
-          [
-            "Em                                                                      C",
+            'Em                                                                      C',
             "Look at him working. darning his socks in the night when there's nobody there"
           ],
-          [
-            "             Em",
-            "What does he care?"
-          ]
+          ['             Em', 'What does he care?']
         ]
       },
       {
-        verseTitle: "Chorus",
+        verseTitle: 'Chorus',
         lyricsWithChords: [
+          ['Em7            Em6', 'All the lonely people'],
+          ['C                      Em', 'Where do they all come from?'],
+          ['Em7            Em6', 'All the lonely people'],
+          ['C                   Em', 'Where do they all belong?'],
           [
-            "Em7            Em6",
-            "All the lonely people"
+            'C                          Em     ',
+            'Ah, look at all the lonely people'
           ],
-          [
-            "C                      Em",
-            "Where do they all come from?"
-          ],
-          [
-            "Em7            Em6",
-            "All the lonely people"
-          ],
-          [
-            "C                   Em",
-            "Where do they all belong?"
-          ],
-          [
-            "C                          Em     ",
-            "Ah, look at all the lonely people"
-          ],
-          [
-            "C                         Em",
-            "Ah, look at All the lonely people"
-          ]
+          ['C                         Em', 'Ah, look at All the lonely people']
         ]
       },
       {
-        verseTitle: "Verse 3",
+        verseTitle: 'Verse 3',
         lyricsWithChords: [
           [
-            "Em                                                             C",
-            "Eleanor Rigby died in the church and was buried along with her name"
+            'Em                                                             C',
+            'Eleanor Rigby died in the church and was buried along with her name'
           ],
+          ['', 'Nobody came'],
           [
-            "",
-            "Nobody came",
+            'Em                                                                  C',
+            'Father McKenzie wiping the dirt from his hands as he walks from the grave'
           ],
-          [
-            "Em                                                                  C",
-            "Father McKenzie wiping the dirt from his hands as he walks from the grave",
-          ],
-          [
-            "           Em",
-            "No one was saved"
-          ]
+          ['           Em', 'No one was saved']
         ]
       },
       {
-        verseTitle: "Chorus",
+        verseTitle: 'Chorus',
         lyricsWithChords: [
-          [
-            "Em7            Em6",
-            "All the lonely people"
-          ],
-          [
-            "C                      Em",
-            "Where do they all come from?"
-          ],
-          [
-            "Em7            Em6",
-            "All the lonely people"
-          ],
-          [
-            "C                   Em",
-            "Where do they all belong?"
-          ]
+          ['Em7            Em6', 'All the lonely people'],
+          ['C                      Em', 'Where do they all come from?'],
+          ['Em7            Em6', 'All the lonely people'],
+          ['C                   Em', 'Where do they all belong?']
         ]
       }
     ]
   },
 
   {
-    artistAndTitle: "Fleetwood Mac - Go Your Own Way",
-    artist: "Fleetwood Mac",
-    title: "Go Your Own Way",
-    key: "F",
-    source: "https://tabs.ultimate-guitar.com/tab/fleetwood_mac/go_your_own_way_chords_13586",
+    artistAndTitle: 'Fleetwood Mac - Go Your Own Way',
+    artist: 'Fleetwood Mac',
+    title: 'Go Your Own Way',
+    key: 'F',
+    source:
+      'https://tabs.ultimate-guitar.com/tab/fleetwood_mac/go_your_own_way_chords_13586',
     verses: [
       {
-        verseTitle: "Intro",
+        verseTitle: 'Intro',
+        lyricsWithChords: [['F', '']]
+      },
+      {
+        verseTitle: 'Verse',
         lyricsWithChords: [
           [
-            "F",
-            ""
+            'F                                       C  Bb',
+            'Loving you,   isn t the right thing to do?'
+          ],
+          [
+            'Bb                                      F        ',
+            'How can I,    ever change things that I feel'
+          ],
+          [
+            'F                                   C    Bb',
+            'If I could,   maybe I d give you my world'
+          ],
+          [
+            'Bb                                       F',
+            'How can I,    when you wont take it from me?'
           ]
         ]
       },
       {
-        verseTitle: "Verse",
+        verseTitle: 'Chorus',
         lyricsWithChords: [
           [
-            "F                                       C  Bb",
-            "Loving you,   isn t the right thing to do?"
+            'Dm      Bb          C ',
+            'You can go your own way,     Go your own way'
           ],
           [
-            "Bb                                      F        ",
-            "How can I,    ever change things that I feel"
+            'Dm      Bb       C         ',
+            'You can call it  Another lonely day'
           ],
           [
-            "F                                   C    Bb",
-            "If I could,   maybe I d give you my world"
-          ],
-          [
-            "Bb                                       F",
-            "How can I,    when you wont take it from me?"
+            'Dm      Bb          C ',
+            'You can go your own way,   Go your own way'
           ]
         ]
       },
       {
-        verseTitle: "Chorus",
+        verseTitle: 'Verse',
         lyricsWithChords: [
           [
-            "Dm      Bb          C ",
-            "You can go your own way,     Go your own way"
+            'F                                 C     Bb',
+            'Tell me why,   everything turned around?'
           ],
           [
-            "Dm      Bb       C         ",
-            "You can call it  Another lonely day"
+            'Bb                                          F',
+            'Packing up,    shacking up is all you wanna do'
           ],
           [
-            "Dm      Bb          C ",
-            "You can go your own way,   Go your own way"
+            'F                                    C    Bb',
+            'If I could,    baby Id give you my world'
+          ],
+          [
+            'Bb                                      F',
+            'Open up,       everything s waiting for you'
           ]
         ]
       },
       {
-        verseTitle: "Verse",
+        verseTitle: 'Chorus',
         lyricsWithChords: [
           [
-            "F                                 C     Bb",
-            "Tell me why,   everything turned around?"
+            'Dm      Bb          C ',
+            'You can go your own way,     Go your own way'
           ],
           [
-            "Bb                                          F",
-            "Packing up,    shacking up is all you wanna do"
+            'Dm      Bb       C         ',
+            'You can call it  Another lonely day'
           ],
           [
-            "F                                    C    Bb",
-            "If I could,    baby Id give you my world"
-          ],
-          [
-            "Bb                                      F",
-            "Open up,       everything s waiting for you"
+            'Dm      Bb          C ',
+            'You can go your own way,   Go your own way'
           ]
         ]
       },
       {
-        verseTitle: "Chorus",
+        verseTitle: 'Break 1',
+        lyricsWithChords: [
+          ['F  C   Bb   F    C   Bb    F    C    Bb     F    C    Bb    F', '']
+        ]
+      },
+      {
+        verseTitle: 'Chorus',
         lyricsWithChords: [
           [
-            "Dm      Bb          C ",
-            "You can go your own way,     Go your own way"
+            'Dm      Bb          C ',
+            'You can go your own way,     Go your own way'
           ],
           [
-            "Dm      Bb       C         ",
-            "You can call it  Another lonely day"
+            'Dm      Bb       C         ',
+            'You can call it  Another lonely day'
           ],
           [
-            "Dm      Bb          C ",
-            "You can go your own way,   Go your own way"
+            'Dm      Bb          C ',
+            'You can go your own way,   Go your own way'
           ]
         ]
       },
       {
-        verseTitle: "Break 1",
-        lyricsWithChords: [
-          [
-            "F  C   Bb   F    C   Bb    F    C    Bb     F    C    Bb    F",
-            ""
-          ]
-        ]
+        verseTitle: 'Solo',
+        lyricsWithChords: [['Dm Bb C   ', '']]
       },
       {
-        verseTitle: "Chorus",
+        verseTitle: 'Chorus',
         lyricsWithChords: [
           [
-            "Dm      Bb          C ",
-            "You can go your own way,     Go your own way"
+            'Dm      Bb          C ',
+            'You can go your own way,     Go your own way'
           ],
           [
-            "Dm      Bb       C         ",
-            "You can call it  Another lonely day"
+            'Dm      Bb       C         ',
+            'You can call it  Another lonely day'
           ],
           [
-            "Dm      Bb          C ",
-            "You can go your own way,   Go your own way"
-          ]
-        ]
-      },
-      {
-        verseTitle: "Solo",
-        lyricsWithChords: [
-          [
-            "Dm Bb C   ",
-            ""
-          ]
-        ]
-      },
-      {
-        verseTitle: "Chorus",
-        lyricsWithChords: [
-          [
-            "Dm      Bb          C ",
-            "You can go your own way,     Go your own way"
-          ],
-          [
-            "Dm      Bb       C         ",
-            "You can call it  Another lonely day"
-          ],
-          [
-            "Dm      Bb          C ",
-            "You can go your own way,   Go your own way"
+            'Dm      Bb          C ',
+            'You can go your own way,   Go your own way'
           ]
         ]
       }
@@ -1645,18 +1230,12 @@ export default [
       {
         verseTitle: 'Verse 1',
         lyricsWithChords: [
-          [
-            'Fm              G#',
-            'I walk a lonely road'
-          ],
+          ['Fm              G#', 'I walk a lonely road'],
           [
             '    D#            A#          Fm',
             'The only one that I have ever known'
           ],
-          [
-            'Fm                  G#',
-            `Don't know where it goes`
-          ],
+          ['Fm                  G#', `Don't know where it goes`],
           [
             'D#               A#            Fm',
             `But it's home to me and I walk alone`
@@ -1666,18 +1245,12 @@ export default [
       {
         verseTitle: 'Verse 2',
         lyricsWithChords: [
-          [
-            'Fm          G#',
-            'I walk this empty street'
-          ],
+          ['Fm          G#', 'I walk this empty street'],
           [
             'D#                  A#     Fm',
             'On the Boulevard of Broken Dreams'
           ],
-          [
-            'Fm             G#',
-            `Where the city sleeps`
-          ],
+          ['Fm             G#', `Where the city sleeps`],
           [
             '    D#           A#             Fm',
             `and I'm the only one and I walk alone`
@@ -1699,27 +1272,18 @@ export default [
             '    C#      G#               D#         A#',
             `Sometimes I wish someone out there will find me`
           ],
-          [
-            '     C#   G#     C',
-            `'Til then I walk alone`
-          ]
+          ['     C#   G#     C', `'Til then I walk alone`]
         ]
       },
       {
         verseTitle: 'Verse 3',
         lyricsWithChords: [
-          [
-            'Fm              G#',
-            `I'm walking down the line`
-          ],
+          ['Fm              G#', `I'm walking down the line`],
           [
             '    D#            A#          Fm',
             'That divides me somewhere in my mind'
           ],
-          [
-            'Fm            G#',
-            `On the border line`
-          ],
+          ['Fm            G#', `On the border line`],
           [
             'D#               A#            Fm',
             `Of the edge and where I walk alone`
@@ -1729,18 +1293,12 @@ export default [
       {
         verseTitle: 'Verse 4',
         lyricsWithChords: [
-          [
-            'Fm               G#',
-            `Read between the lines`
-          ],
+          ['Fm               G#', `Read between the lines`],
           [
             'D#                   A#           Fm',
             `What's fucked up and everything's alright`
           ],
-          [
-            'Fm             G#',
-            `Check my vital signs`
-          ],
+          ['Fm             G#', `Check my vital signs`],
           [
             'D#                A#               Fm',
             `To know I'm still alive and I walk alone`
@@ -1763,190 +1321,133 @@ export default [
   },
 
   {
-    artistAndTitle: "Green Day - Good Riddance (Time Of Your Life)",
-    artist: "Green Day",
-    title: "Good Riddance (Time Of Your Life)",
-    key: "G",
-    source: "https://tabs.ultimate-guitar.com/tab/green_day/good_riddance_time_of_your_life_chords_12835",
+    artistAndTitle: 'Green Day - Good Riddance (Time Of Your Life)',
+    artist: 'Green Day',
+    title: 'Good Riddance (Time Of Your Life)',
+    key: 'G',
+    source:
+      'https://tabs.ultimate-guitar.com/tab/green_day/good_riddance_time_of_your_life_chords_12835',
     verses: [
       {
-        verseTitle: "Intro",
-        lyricsWithChords: [
-          [
-            "G G Cadd9 D",
-            ""
-          ],
-          [
-            "G G Cadd9 D",
-            ""
-          ]
-        ]
+        verseTitle: 'Intro',
+        lyricsWithChords: [['G G Cadd9 D', ''], ['G G Cadd9 D', '']]
       },
       {
-        verseTitle: "Verse 1",
+        verseTitle: 'Verse 1',
         lyricsWithChords: [
           [
-            "G                       C                 D",
-            "Another turning point a fork stuck in the road,"
+            'G                       C                 D',
+            'Another turning point a fork stuck in the road,'
           ],
           [
-            "G                                C                   D  ",
-            "Time grabs you by the wrist, and directs you where to go"
+            'G                                C                   D  ',
+            'Time grabs you by the wrist, and directs you where to go'
           ],
           [
-            "Em          D            C                 G",
+            'Em          D            C                 G',
             "So make the best of this test and don't ask why"
           ],
           [
-            "Em         D              C                 G",
+            'Em         D              C                 G',
             "It's not a question but a lesson learned in time"
           ]
         ]
       },
       {
-        verseTitle: "Chorus",
+        verseTitle: 'Chorus',
         lyricsWithChords: [
           [
-            "Em                    G           Em           G             ",
+            'Em                    G           Em           G             ',
             "Its something unpredictable but in the end it's right"
           ],
           [
-            "Em                 D            G ",
-            "I hope you had the time of your life."
+            'Em                 D            G ',
+            'I hope you had the time of your life.'
           ]
         ]
       },
       {
-        verseTitle: "Interlude",
-        lyricsWithChords: [
-          [
-            "G G Cadd9 D",
-            ""
-          ],
-          [
-            "G G Cadd9 D",
-            ""
-          ]
-        ]
+        verseTitle: 'Interlude',
+        lyricsWithChords: [['G G Cadd9 D', ''], ['G G Cadd9 D', '']]
       },
       {
-        verseTitle: "Verse 2",
+        verseTitle: 'Verse 2',
         lyricsWithChords: [
           [
-            "G                             C                    D",
-            "So take the photographs and still frames in your mind"
+            'G                             C                    D',
+            'So take the photographs and still frames in your mind'
           ],
           [
-            "G                         C                    D",
-            "Hang it on a shelf and in good health and good time"
+            'G                         C                    D',
+            'Hang it on a shelf and in good health and good time'
           ],
           [
-            "Em          D             C            G",
-            "Tattoos of memories and dead skin on trial"
+            'Em          D             C            G',
+            'Tattoos of memories and dead skin on trial'
           ],
           [
-            "Em            D            C             G    ",
+            'Em            D            C             G    ',
             "For what it's worth it was worth all the while"
           ]
         ]
       },
       {
-        verseTitle: "Chorus",
+        verseTitle: 'Chorus',
         lyricsWithChords: [
           [
-            "Em                    G           Em           G             ",
+            'Em                    G           Em           G             ',
             "Its something unpredictable but in the end it's right"
           ],
           [
-            "Em                 D            G",
-            "I hope you had the time of your life."
+            'Em                 D            G',
+            'I hope you had the time of your life.'
           ]
         ]
       },
       {
-        verseTitle: "Instrumental",
+        verseTitle: 'Instrumental',
         lyricsWithChords: [
-          [
-            "G G Cadd9 D",
-            ""
-          ],
-          [
-            "G G Cadd9 D",
-            ""
-          ],
-          [
-            "G G Cadd9 D ",
-            ""
-          ],
-          [
-            "G G Cadd9 D ",
-            ""
-          ],
-          [
-            "Em  D  C  G",
-            ""
-          ],
-          [
-            "Em  D  C  G",
-            ""
-          ]
+          ['G G Cadd9 D', ''],
+          ['G G Cadd9 D', ''],
+          ['G G Cadd9 D ', ''],
+          ['G G Cadd9 D ', ''],
+          ['Em  D  C  G', ''],
+          ['Em  D  C  G', '']
         ]
       },
       {
-        verseTitle: "Chorus",
+        verseTitle: 'Chorus',
         lyricsWithChords: [
           [
-            "Em                    G           Em           G             ",
+            'Em                    G           Em           G             ',
             "Its something unpredictable but in the end it's right"
           ],
           [
-            "Em                 D            G",
-            "I hope you had the time of your life."
+            'Em                 D            G',
+            'I hope you had the time of your life.'
           ]
         ]
       },
       {
-        verseTitle: "Interlude",
-        lyricsWithChords: [
-          [
-            "G G Cadd9 D",
-            ""
-          ],
-          [
-            "G G Cadd9 D ",
-            ""
-          ]
-        ]
+        verseTitle: 'Interlude',
+        lyricsWithChords: [['G G Cadd9 D', ''], ['G G Cadd9 D ', '']]
       },
       {
-        verseTitle: "Chorus",
+        verseTitle: 'Chorus',
         lyricsWithChords: [
           [
-            "Em                    G           Em           G             ",
+            'Em                    G           Em           G             ',
             "Its something unpredictable but in the end it's right"
           ],
           [
-            "Em                 D            G",
-            "I hope you had the time of your life."
+            'Em                 D            G',
+            'I hope you had the time of your life.'
           ]
         ]
       },
       {
-        verseTitle: "Outro",
-        lyricsWithChords: [
-          [
-            "G G Cadd9 D",
-            ""
-          ],
-          [
-            "G G Cadd9 D",
-            ""
-          ],
-          [
-            "G",
-            ""
-          ]
-        ]
+        verseTitle: 'Outro',
+        lyricsWithChords: [['G G Cadd9 D', ''], ['G G Cadd9 D', ''], ['G', '']]
       }
     ]
   }

@@ -16,7 +16,7 @@ const { store } = createStore()
 let changeHistory
 
 const TestWrapper = withRouter(({ children, history }) => {
-  changeHistory = (url) => history.push(url)
+  changeHistory = url => history.push(url)
   return <>{children}</>
 })
 

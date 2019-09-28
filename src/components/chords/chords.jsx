@@ -3,10 +3,25 @@ import { connect } from 'react-redux'
 import ChordsStyled from './chords.styles'
 import Chord from '../chord/chord'
 import OutputMessage from '../output-message/output-message'
-import { populateCopiedChords, filterCommonChordsOnly, sortChordsBySequence, filterChordsByChordProgression, filterChordsBySearchTerm, filterFavouriteChordsOnly } from '../../filters'
+import {
+  populateCopiedChords,
+  filterCommonChordsOnly,
+  sortChordsBySequence,
+  filterChordsByChordProgression,
+  filterChordsBySearchTerm,
+  filterFavouriteChordsOnly
+} from '../../filters'
 import chordsDefinition from 'guitar-chord-definitions/dist/chords'
 
-export const Chords = ({ selectedKeyShortName, sortBySequence, selectedChordProgressionIdx, searchTerm, majorMinorChordsOnly, favouriteChords, favouritesOnly }) => {
+export const Chords = ({
+  selectedKeyShortName,
+  sortBySequence,
+  selectedChordProgressionIdx,
+  searchTerm,
+  majorMinorChordsOnly,
+  favouriteChords,
+  favouritesOnly
+}) => {
   let chords = populateCopiedChords(chordsDefinition)
 
   if (!favouritesOnly) {
@@ -19,7 +34,11 @@ export const Chords = ({ selectedKeyShortName, sortBySequence, selectedChordProg
     }
 
     if (selectedKeyShortName && selectedChordProgressionIdx) {
-      chords = filterChordsByChordProgression(chords, selectedKeyShortName, selectedChordProgressionIdx)
+      chords = filterChordsByChordProgression(
+        chords,
+        selectedKeyShortName,
+        selectedChordProgressionIdx
+      )
     }
   }
 
@@ -32,45 +51,37 @@ export const Chords = ({ selectedKeyShortName, sortBySequence, selectedChordProg
   }
 
   if (!chords.length) {
-    return <OutputMessage>No chords found. Maybe try turning off a filter?</OutputMessage>
+    return (
+      <OutputMessage>
+        No chords found. Maybe try turning off a filter?
+      </OutputMessage>
+    )
   }
 
   return (
     <ChordsStyled>
-      {chords.map(chord => <Chord key={chord.shortName} {...chord} />)}
+      {chords.map(chord => (
+        <Chord key={chord.shortName} {...chord} />
+      ))}
     </ChordsStyled>
   )
 }
 
 export const ChordsWrapper = ({ children }) => (
-  <ChordsStyled>
-    {children}
-  </ChordsStyled>
+  <ChordsStyled>{children}</ChordsStyled>
 )
 
-
-const mapStateToProps =
-  ({ 
-    keys: {
-      selectedKeyShortName,
-      sortBySequence,
-      selectedChordProgressionIdx
-    },
-    chords: {
-      searchTerm,
-      majorMinorChordsOnly,
-      favouritesOnly,
-      favouriteChords
-    }
-  }) =>
-  ({ 
-    selectedKeyShortName, 
-    sortBySequence, 
-    selectedChordProgressionIdx,
-    searchTerm,
-    majorMinorChordsOnly,
-    favouriteChords,
-    favouritesOnly
-  })
+const mapStateToProps = ({
+  keys: { selectedKeyShortName, sortBySequence, selectedChordProgressionIdx },
+  chords: { searchTerm, majorMinorChordsOnly, favouritesOnly, favouriteChords }
+}) => ({
+  selectedKeyShortName,
+  sortBySequence,
+  selectedChordProgressionIdx,
+  searchTerm,
+  majorMinorChordsOnly,
+  favouriteChords,
+  favouritesOnly
+})
 
 export default connect(mapStateToProps)(Chords)

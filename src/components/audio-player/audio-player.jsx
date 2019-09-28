@@ -13,7 +13,7 @@ const audioStates = {
 const AudioPlayer = ({ src }) => {
   const [audioState, setAudioState] = useState(audioStates.WAITING)
   const audio = useRef(null)
-  
+
   const load = () => {
     audio.current = new Audio(src)
 
@@ -27,9 +27,13 @@ const AudioPlayer = ({ src }) => {
       setAudioState(audioStates.ERROR)
     })
 
-    audio.current.addEventListener('pause', () => setAudioState(audioStates.PAUSED))
+    audio.current.addEventListener('pause', () =>
+      setAudioState(audioStates.PAUSED)
+    )
 
-    audio.current.addEventListener('playing', () => setAudioState(audioStates.PLAYING))
+    audio.current.addEventListener('playing', () =>
+      setAudioState(audioStates.PLAYING)
+    )
   }
 
   const play = () => {
@@ -47,14 +51,26 @@ const AudioPlayer = ({ src }) => {
   const getOutput = () => {
     switch (audioState) {
       case audioStates.WAITING:
-        return <span onClick={play}><i className="fas fa-play"></i></span>
+        return (
+          <span onClick={play}>
+            <i className="fas fa-play"></i>
+          </span>
+        )
       case audioStates.LOADING:
       case audioStates.READY:
         return <i className="fas fa-stopwatch"></i>
       case audioStates.PAUSED:
-        return <span onClick={play}><i className="fas fa-play"></i></span>
+        return (
+          <span onClick={play}>
+            <i className="fas fa-play"></i>
+          </span>
+        )
       case audioStates.PLAYING:
-        return <span onClick={pause}><i className="fas fa-pause"></i></span>
+        return (
+          <span onClick={pause}>
+            <i className="fas fa-pause"></i>
+          </span>
+        )
       case audioStates.ERROR:
         return <span>Error</span>
       default:

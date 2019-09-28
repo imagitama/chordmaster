@@ -19,9 +19,16 @@ const PrintModeHandler = ({ enterPrintMode, leavePrintMode }) => {
   return null
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-  enterPrintMode,
-  leavePrintMode
-}, dispatch)
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      enterPrintMode,
+      leavePrintMode
+    },
+    dispatch
+  )
 
-export default connect(null, mapDispatchToProps)(PrintModeHandler)
+export default connect(
+  null,
+  mapDispatchToProps
+)(PrintModeHandler)

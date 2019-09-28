@@ -7,15 +7,18 @@ describe('Songs reducer', () => {
       expect(reducer()).toEqual(defaultState)
     })
   })
-  
+
   describe(TOGGLE_EASIER_CHORDS, () => {
     it('Toggles easier chords', () => {
-      const result = reducer({
-        ...defaultState,
-        easierChordsEnabled: false
-      }, {
-        type: TOGGLE_EASIER_CHORDS
-      })
+      const result = reducer(
+        {
+          ...defaultState,
+          easierChordsEnabled: false
+        },
+        {
+          type: TOGGLE_EASIER_CHORDS
+        }
+      )
 
       expect(result.easierChordsEnabled).toBe(true)
     })

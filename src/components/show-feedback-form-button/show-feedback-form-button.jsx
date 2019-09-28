@@ -8,6 +8,10 @@ export const ShowFeedbackFormButton = ({ showFeedbackForm }) => (
   <Button onClick={() => showFeedbackForm()}>Feedback (top)</Button>
 )
 
-const mapDispatchToProps = dispatch => bindActionCreators({ showFeedbackForm }, dispatch)
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ showFeedbackForm }, dispatch)
 
-export default connect(null, mapDispatchToProps)(ShowFeedbackFormButton)
+export default connect(
+  null,
+  mapDispatchToProps
+)(ShowFeedbackFormButton)

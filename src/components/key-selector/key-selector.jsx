@@ -7,31 +7,64 @@ import { selectKey, toggleSortBySequence } from '../../ducks/keys/actions'
 import keysDefinition from 'guitar-chord-definitions/dist/keys'
 
 const KeyOption = ({ shortName, alternativeShortName }) => (
-  <DropDownOption value={shortName} label={`${shortName}${alternativeShortName ? ` (${alternativeShortName})` : ''}`} />
+  <DropDownOption
+    value={shortName}
+    label={`${shortName}${
+      alternativeShortName ? ` (${alternativeShortName})` : ''
+    }`}
+  />
 )
 
-export const KeySelector = ({ selectedKeyShortName, selectKey, toggleSortBySequence, sortBySequence }) => (
+export const KeySelector = ({
+  selectedKeyShortName,
+  selectKey,
+  toggleSortBySequence,
+  sortBySequence
+}) => (
   <React.Fragment>
     <span>Key: </span>
-    <Dropdown onChange={event => selectKey(event.target.value)} value={selectedKeyShortName}>
+    <Dropdown
+      onChange={event => selectKey(event.target.value)}
+      value={selectedKeyShortName}
+    >
       <DropDownOption value="" label="(none)" />
       <optgroup label="Common keys">
-        {keysDefinition.filter(({ isCommonKey }) => isCommonKey === true).map(key => <KeyOption key={key.shortName} {...key} />)}
+        {keysDefinition
+          .filter(({ isCommonKey }) => isCommonKey === true)
+          .map(key => (
+            <KeyOption key={key.shortName} {...key} />
+          ))}
       </optgroup>
       <optgroup label="More keys">
-        {keysDefinition.filter(({ isCommonKey }) => isCommonKey !== true).map(key => <KeyOption key={key.shortName} {...key} />)}
+        {keysDefinition
+          .filter(({ isCommonKey }) => isCommonKey !== true)
+          .map(key => (
+            <KeyOption key={key.shortName} {...key} />
+          ))}
       </optgroup>
     </Dropdown>
     {selectedKeyShortName && <br />}
-    {selectedKeyShortName && <ToggleInput onChange={() => toggleSortBySequence()} isEnabled={sortBySequence} label="Filter" />}
+    {selectedKeyShortName && (
+      <ToggleInput
+        onChange={() => toggleSortBySequence()}
+        isEnabled={sortBySequence}
+        label="Filter"
+      />
+    )}
   </React.Fragment>
 )
 
-const mapStateToProps = ({ keys: { selectedKeyShortName, sortBySequence } }) => ({
+const mapStateToProps = ({
+  keys: { selectedKeyShortName, sortBySequence }
+}) => ({
   selectedKeyShortName,
   sortBySequence
 })
 
-const mapDispatchToProps = dispatch => bindActionCreators({ selectKey, toggleSortBySequence }, dispatch)
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ selectKey, toggleSortBySequence }, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(KeySelector)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(KeySelector)

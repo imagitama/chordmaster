@@ -6,7 +6,11 @@ import { toggleDarkMode } from '../../ducks/app/actions'
 
 export const DarkModeToggle = ({ toggleDarkMode, isDarkModeEnabled }) => (
   <React.Fragment>
-    <ToggleInput onChange={toggleDarkMode} label="Dark mode" isEnabled={isDarkModeEnabled} />
+    <ToggleInput
+      onChange={toggleDarkMode}
+      label="Dark mode"
+      isEnabled={isDarkModeEnabled}
+    />
   </React.Fragment>
 )
 
@@ -14,6 +18,10 @@ const mapStateToProps = ({ app: { isDarkModeEnabled } }) => ({
   isDarkModeEnabled
 })
 
-const mapDispatchToProps = dispatch => bindActionCreators({ toggleDarkMode }, dispatch)
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ toggleDarkMode }, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(DarkModeToggle)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(DarkModeToggle)

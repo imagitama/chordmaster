@@ -27,9 +27,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint src/**/*/*.{js,jsx}",
+    "lint": "eslint src/**/*.{js,jsx}",
     "ultimate-guitar-converter": "node tools/ultimate-guitar-converter/main.js",
-    "prettier": "prettier src/**/*/*.{js,jsx}"
+    "prettier": "prettier src/**/*.{js,jsx}"
   },
   "eslintConfig": {
     "extends": [

@@ -4,9 +4,7 @@ import OutputBarStyled, { CloseButton } from './output-bar.styles'
 export const OutputBar = ({ children, onCloseClick = () => null }) => (
   <OutputBarStyled>
     {children}
-    <CloseButton onClick={onCloseClick}>
-      Hide
-    </CloseButton>
+    <CloseButton onClick={onCloseClick}>Hide</CloseButton>
   </OutputBarStyled>
 )
 

@@ -7,15 +7,18 @@ describe('Commits reducer', () => {
       expect(reducer()).toEqual(defaultState)
     })
   })
-  
+
   describe(GET_COMMITS, () => {
     it('Stores that it gets commits', () => {
-      const result = reducer({
-        ...defaultState,
-        isGettingCommits: false
-      }, {
-        type: GET_COMMITS
-      })
+      const result = reducer(
+        {
+          ...defaultState,
+          isGettingCommits: false
+        },
+        {
+          type: GET_COMMITS
+        }
+      )
 
       expect(result.isGettingCommits).toBe(true)
     })
@@ -25,10 +28,13 @@ describe('Commits reducer', () => {
     it('Stores the commits', () => {
       const commits = [{ author: 'me', message: 'Changed something' }]
 
-      const result = reducer({
-        ...defaultState,
-        commits: ['a', 'b', 'c']
-      }, gotCommits(commits))
+      const result = reducer(
+        {
+          ...defaultState,
+          commits: ['a', 'b', 'c']
+        },
+        gotCommits(commits)
+      )
 
       expect(result.commits).toEqual(commits)
     })

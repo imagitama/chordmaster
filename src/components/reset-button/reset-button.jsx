@@ -9,6 +9,10 @@ export const ResetButton = ({ resetChords, resetKeys }) => (
   <Button onClick={() => resetChords() && resetKeys()}>Reset</Button>
 )
 
-const mapDispatchToProps = dispatch => bindActionCreators({ resetChords, resetKeys }, dispatch)
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ resetChords, resetKeys }, dispatch)
 
-export default connect(null, mapDispatchToProps)(ResetButton)
+export default connect(
+  null,
+  mapDispatchToProps
+)(ResetButton)

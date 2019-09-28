@@ -5,10 +5,12 @@ export const SearchTermStyled = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  fontSize: 200%;
-  opacity: ${({ searchTermVisible }) => searchTermVisible ? 1 : '0.1'};
-  background: ${({ searchTermVisible }) => searchTermVisible ? 'rgba(0, 0, 0, 0.5)' : ''};
-  color: ${({ searchTermVisible, theme }) => searchTermVisible ? theme.searchTermTextColor : ''};
+  fontsize: 200%;
+  opacity: ${({ searchTermVisible }) => (searchTermVisible ? 1 : '0.1')};
+  background: ${({ searchTermVisible }) =>
+    searchTermVisible ? 'rgba(0, 0, 0, 0.5)' : ''};
+  color: ${({ searchTermVisible, theme }) =>
+    searchTermVisible ? theme.searchTermTextColor : ''};
 `
 
 export const SearchTermTextStyled = styled.div`

@@ -18,15 +18,17 @@ if (process.env.NODE_ENV === 'production') {
 
 const rootElement = document.getElementById('root')
 
-const render = Component => ReactDOM.render(
-  <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
-      <Router>
-        <Component />
-      </Router>
-    </PersistGate>
-  </Provider>,
-  rootElement)
+const render = Component =>
+  ReactDOM.render(
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <Router>
+          <Component />
+        </Router>
+      </PersistGate>
+    </Provider>,
+    rootElement
+  )
 
 render(App)
 

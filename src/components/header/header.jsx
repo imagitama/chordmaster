@@ -1,14 +1,14 @@
-import React from "react";
-import { withRouter } from "react-router-dom";
-import HeaderStyled, { Logo, ReturnToMainAppLink } from "./header.styles";
-import Filters from "../filters/filters";
+import React from 'react'
+import { withRouter } from 'react-router-dom'
+import HeaderStyled, { Logo, ReturnToMainAppLink } from './header.styles'
+import Filters from '../filters/filters'
 
 export const Header = ({ location: { pathname } }) => (
   <HeaderStyled>
     <Logo href="/" isInternal context="Header">
       chord.guide
     </Logo>
-    {pathname === "/" ? (
+    {pathname === '/' ? (
       <Filters />
     ) : (
       <ReturnToMainAppLink href="/" isInternal>
@@ -16,6 +16,6 @@ export const Header = ({ location: { pathname } }) => (
       </ReturnToMainAppLink>
     )}
   </HeaderStyled>
-);
+)
 
-export default withRouter(Header);
+export default withRouter(Header)

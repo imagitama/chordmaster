@@ -3,7 +3,9 @@ import { cleanNameForSounds } from '../../utils'
 
 const buildSoundFiles = () => {
   return chordsDefinition.reduce((obj, { shortName, copyFrom }) => {
-    const fileName = copyFrom ? cleanNameForSounds(copyFrom) : cleanNameForSounds(shortName)
+    const fileName = copyFrom
+      ? cleanNameForSounds(copyFrom)
+      : cleanNameForSounds(shortName)
 
     try {
       const fileContents = require(`../../sounds/${fileName}.mp3`)

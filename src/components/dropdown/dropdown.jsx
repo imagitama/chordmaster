@@ -1,5 +1,10 @@
 import React from 'react'
-import { DropdownWrapperStyled, DropdownStyled, DropdownOptionStyled, IconStyled } from './dropdown.styles'
+import {
+  DropdownWrapperStyled,
+  DropdownStyled,
+  DropdownOptionStyled,
+  IconStyled
+} from './dropdown.styles'
 
 export const Dropdown = props => (
   <DropdownWrapperStyled>
@@ -10,6 +15,8 @@ export const Dropdown = props => (
   </DropdownWrapperStyled>
 )
 
-export const DropDownOption = ({ label, ...props }) => <DropdownOptionStyled {...props}>{label}</DropdownOptionStyled>
+export const DropDownOption = ({ label, ...props }) => (
+  <DropdownOptionStyled {...props}>{label}</DropdownOptionStyled>
+)
 
 export default Dropdown

@@ -4,7 +4,7 @@ const stringWidth = '1px'
 
 export const ChordStyled = styled.div`
   text-align: center;
-  opacity: ${({ isHighlighted }) => isHighlighted ? 1 : 0.1};
+  opacity: ${({ isHighlighted }) => (isHighlighted ? 1 : 0.1)};
   margin: 0.5rem 0;
 `
 
@@ -28,8 +28,8 @@ export const StringStyled = styled.div`
   background: ${({ theme }) => theme.textColor};
   position: absolute;
   top: 0;
-  left: ${({ idx }) => ((idx) / 5) * 100}%;
-  margin-left: ${({ idx }) => idx === 0 ? 0 : '-1px'};
+  left: ${({ idx }) => (idx / 5) * 100}%;
+  margin-left: ${({ idx }) => (idx === 0 ? 0 : '-1px')};
   transform: scale(1.01);
 `
 
@@ -63,7 +63,7 @@ export const StringStatesStyled = styled.div`
 export const StringStateStyled = styled.div`
   position: absolute;
   top: 0;
-  left: ${({ idx }) => ((idx) / 5) * 100}%;
+  left: ${({ idx }) => (idx / 5) * 100}%;
   width: ${100 / 6}%;
   margin: -0.5rem 0 0 -0.8rem;
 `

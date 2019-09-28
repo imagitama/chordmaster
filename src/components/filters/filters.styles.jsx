@@ -18,7 +18,7 @@ export const Filter = styled.div`
     padding: 0.25rem 1rem;
   }
 
-  :empty { 
+  :empty {
     padding: 0;
   }
 `

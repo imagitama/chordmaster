@@ -12,7 +12,7 @@ export const ToggleInputStyled = styled.input`
 
   :checked {
     ::before {
-      content: "\f00d";
+      content: '\f00d';
       font-family: 'Font Awesome 5 Free';
       font-weight: 900;
       position: absolute;

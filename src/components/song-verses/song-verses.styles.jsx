@@ -6,13 +6,13 @@ const listStyleReset = css`
 `
 
 export const VersesListStyled = styled.ul`
-${listStyleReset}
+  ${listStyleReset}
 `
 
 export const VersesListItemStyled = styled.li``
 
 export const LyricsWithChordsListStyled = styled.ul`
-${listStyleReset}
+  ${listStyleReset}
   font-family: monospace;
   margin: 1rem 0 1rem;
 `
