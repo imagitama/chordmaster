@@ -1,20 +1,21 @@
-import React from 'react'
-import { withRouter } from 'react-router-dom'
-import HeaderStyled, { Logo, ReturnToMainAppLink } from './header.styles'
-import Filters from '../filters/filters'
-import A from '../anchor/anchor'
+import React from "react";
+import { withRouter } from "react-router-dom";
+import HeaderStyled, { Logo, ReturnToMainAppLink } from "./header.styles";
+import Filters from "../filters/filters";
 
 export const Header = ({ location: { pathname } }) => (
   <HeaderStyled>
     <Logo href="/" isInternal context="Header">
-      Chordmaster
+      chord.guide
     </Logo>
-    {pathname === '/' ? <Filters /> : (
+    {pathname === "/" ? (
+      <Filters />
+    ) : (
       <ReturnToMainAppLink href="/" isInternal>
         Return to main app
       </ReturnToMainAppLink>
     )}
   </HeaderStyled>
-)
+);
 
-export default withRouter(Header)
+export default withRouter(Header);

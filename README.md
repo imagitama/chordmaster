@@ -1,6 +1,6 @@
-# ChordMaster
+# Chord Guide
 
-A React app that shows chords, keys and more.
+A React web app that lists all popular and not popular chords, keys and songs.
 
 ## Usage
 
@@ -22,5 +22,9 @@ All chords are defined in `src/chords.js` and all keys in `src/keys.js`.
 
 <img src="./browserstack-logo.png" />
 
-Thanks to [BrowserStack](https://www.browserstack.com/) for providing me a way to test 
+Thanks to [BrowserStack](https://www.browserstack.com/) for providing me a way to test
 in all browsers and devices when I don't own them!
+
+## Deployment
+
+Deployed via the awesome [Netlify](https://www.netlify.com/).

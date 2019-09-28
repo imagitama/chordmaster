@@ -1,5 +1,5 @@
 {
-  "name": "chordmaster",
+  "name": "chord.guide",
   "description": "A React app that shows chords, keys and more.",
   "version": "1.0.0",
   "private": true,
