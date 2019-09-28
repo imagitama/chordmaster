@@ -1,19 +1,20 @@
 import { getKeyFromShortName, isChordShortNameInKey } from './utils'
 
-export const populateCopiedChords = chords => chords.map(chordDefinition => {
-  const copyFromName = chordDefinition.copyFrom
+export const populateCopiedChords = chords =>
+  chords.map(chordDefinition => {
+    const copyFromName = chordDefinition.copyFrom
 
-  const sourceChord = chords.find(item => item.shortName === copyFromName)
+    const sourceChord = chords.find(item => item.shortName === copyFromName)
 
-  if (sourceChord) {
-    return {
-      ...chordDefinition,
-      frets: sourceChord.frets,
-      strings: sourceChord.strings
+    if (sourceChord) {
+      return {
+        ...chordDefinition,
+        frets: sourceChord.frets,
+        strings: sourceChord.strings
+      }
     }
-  }
-  return chordDefinition
-})
+    return chordDefinition
+  })
 
 export const sortChordsBySequence = (chords, selectedKeyShortName) => {
   let selectedKey = getKeyFromShortName(selectedKeyShortName)
@@ -28,62 +29,88 @@ export const sortChordsBySequence = (chords, selectedKeyShortName) => {
     return []
   }
 
-  const chordsInKey = chords.filter(({ shortName: shortNameUnderTest }) => isChordShortNameInKey(selectedKey, shortNameUnderTest))
+  const chordsInKey = chords.filter(({ shortName: shortNameUnderTest }) =>
+    isChordShortNameInKey(selectedKey, shortNameUnderTest)
+  )
 
-  Object.values(keyChordDefinition).forEach(
-    shortName => chords.find(({ shortName: shortNameUnderTest }) => shortNameUnderTest === shortName) === undefined ?
-    chordsInKey.push({
-      shortName,
-      fullName: `Unknown chord ${shortName}`
-    })
-    : null
+  Object.values(keyChordDefinition).forEach(shortName =>
+    chords.find(
+      ({ shortName: shortNameUnderTest }) => shortNameUnderTest === shortName
+    ) === undefined
+      ? chordsInKey.push({
+          shortName,
+          fullName: `Unknown chord ${shortName}`
+        })
+      : null
   )
 
   const keyNamesInOrder = Object.values(keyChordDefinition)
 
-  return chordsInKey.sort((chordA, chordB) => keyNamesInOrder.indexOf(chordA.shortName) - keyNamesInOrder.indexOf(chordB.shortName)) 
+  return chordsInKey.sort(
+    (chordA, chordB) =>
+      keyNamesInOrder.indexOf(chordA.shortName) -
+      keyNamesInOrder.indexOf(chordB.shortName)
+  )
 }
 
-export const filterChordsByChordProgression = (chords, selectedKeyShortName, selectedChordProgressionIdx) => {
+export const filterChordsByChordProgression = (
+  chords,
+  selectedKeyShortName,
+  selectedChordProgressionIdx
+) => {
   const selectedKey = getKeyFromShortName(selectedKeyShortName)
   const keyChordProgressions = selectedKey.chordProgressions
   const keyChordDefinition = selectedKey.chords
-  
-  const selectedChordProgression = keyChordProgressions[selectedChordProgressionIdx]
 
-  const chordProgressionShortNames = selectedChordProgression.map(romanNumeral => keyChordDefinition[romanNumeral])
+  const selectedChordProgression =
+    keyChordProgressions[selectedChordProgressionIdx]
+
+  const chordProgressionShortNames = selectedChordProgression.map(
+    romanNumeral => keyChordDefinition[romanNumeral]
+  )
 
   return chords
-    .filter(({ shortName: shortNameUnderTest }) => chordProgressionShortNames.includes(shortNameUnderTest))
-    .sort((chordA, chordB) => chordProgressionShortNames.indexOf(chordA.shortName) - chordProgressionShortNames.indexOf(chordB.shortName))
+    .filter(({ shortName: shortNameUnderTest }) =>
+      chordProgressionShortNames.includes(shortNameUnderTest)
+    )
+    .sort(
+      (chordA, chordB) =>
+        chordProgressionShortNames.indexOf(chordA.shortName) -
+        chordProgressionShortNames.indexOf(chordB.shortName)
+    )
 }
 
-const replaceCommonTerms = searchTerm => searchTerm
-  .replace('sharp', '#')
-  .replace('shar', '#')
-  .replace('sha', '#')
-  .replace('sh', '#')
-  .replace('flat', 'b')
-  .replace('fla', 'b')
-  .replace('fl', 'b')
-  .replace('minor', 'm')
-  .replace('mino', 'm')
-  .replace('min', 'm')
-  .replace('mi', 'm')
-  .replace('suspended', 'sus')
-  .replace('suspende', 'sus')
-  .replace('suspend', 'sus')
-  .replace('suspen', 'sus')
-  .replace('suspe', 'sus')
-  .replace('susp', 'sus')
+const replaceCommonTerms = searchTerm =>
+  searchTerm
+    .replace('sharp', '#')
+    .replace('shar', '#')
+    .replace('sha', '#')
+    .replace('sh', '#')
+    .replace('flat', 'b')
+    .replace('fla', 'b')
+    .replace('fl', 'b')
+    .replace('minor', 'm')
+    .replace('mino', 'm')
+    .replace('min', 'm')
+    .replace('mi', 'm')
+    .replace('suspended', 'sus')
+    .replace('suspende', 'sus')
+    .replace('suspend', 'sus')
+    .replace('suspen', 'sus')
+    .replace('suspe', 'sus')
+    .replace('susp', 'sus')
 
 const cleanUpSearchTerm = searchTerm => searchTerm.replace(/ /g, '')
 
-export const filterChordsBySearchTerm = (chords, searchTerm) => 
+export const filterChordsBySearchTerm = (chords, searchTerm) =>
   chords.filter(({ shortName }) =>
-    shortName.toLowerCase().includes(cleanUpSearchTerm(replaceCommonTerms(searchTerm.toLowerCase())))
+    shortName
+      .toLowerCase()
+      .includes(cleanUpSearchTerm(replaceCommonTerms(searchTerm.toLowerCase())))
   )
 
-export const filterCommonChordsOnly = chords => chords.filter(({ isCommonChord }) => isCommonChord === true)
+export const filterCommonChordsOnly = chords =>
+  chords.filter(({ isCommonChord }) => isCommonChord === true)
 
-export const filterFavouriteChordsOnly = (chords, favouriteChords) => chords.filter(({ shortName }) => favouriteChords.includes(shortName))
+export const filterFavouriteChordsOnly = (chords, favouriteChords) =>
+  chords.filter(({ shortName }) => favouriteChords.includes(shortName))

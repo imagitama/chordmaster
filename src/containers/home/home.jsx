@@ -24,6 +24,10 @@ const HomeContainer = ({ search, selectKey }) => {
   )
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators({ selectKey }, dispatch)
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ selectKey }, dispatch)
 
-export default connect(null, mapDispatchToProps)(HomeContainer)
+export default connect(
+  null,
+  mapDispatchToProps
+)(HomeContainer)

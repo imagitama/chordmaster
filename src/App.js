@@ -1,30 +1,38 @@
-import React from "react";
-import { connect } from "react-redux";
-import { Global } from "@emotion/core";
-import { ThemeProvider } from "emotion-theming";
-import { Switch, Route } from "react-router-dom";
-import darkTheme from "./themes/dark";
-import lightTheme from "./themes/light";
-import Header from "./components/header/header";
-import Footer from "./components/footer/footer";
-import globalStyles from "./globalStyles";
-import WelcomeMessage from "./components/welcome-message/welcome-message";
-import FeedbackForm from "./components/feedback-form/feedback-form";
-import HomeContainer from "./containers/home/home";
-import AboutContainer from "./containers/about/about";
-import ChangesContainer from "./containers/changes/changes";
-import SongContainer from "./containers/song/song";
-import ChordContainer from "./containers/chord/chord";
-import SongsContainer from "./containers/songs/songs";
-import ChordCreatorContainer from "./containers/chord-creator/chord-creator";
-import PrintModeHandler from "./components/print-mode-handler/print-mode-handler";
+import React from 'react'
+import { connect } from 'react-redux'
+import { Global } from '@emotion/core'
+import { ThemeProvider } from 'emotion-theming'
+import { Switch, Route } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
+import darkTheme from './themes/dark'
+import lightTheme from './themes/light'
+import Header from './components/header/header'
+import Footer from './components/footer/footer'
+import globalStyles from './globalStyles'
+import WelcomeMessage from './components/welcome-message/welcome-message'
+import FeedbackForm from './components/feedback-form/feedback-form'
+import HomeContainer from './containers/home/home'
+import AboutContainer from './containers/about/about'
+import ChangesContainer from './containers/changes/changes'
+import SongContainer from './containers/song/song'
+import ChordContainer from './containers/chord/chord'
+import SongsContainer from './containers/songs/songs'
+import ChordCreatorContainer from './containers/chord-creator/chord-creator'
+import PrintModeHandler from './components/print-mode-handler/print-mode-handler'
 
 const parseArtistAndTitle = artistAndTitleFromUrl =>
-  artistAndTitleFromUrl.replace(/\+/g, " ");
+  artistAndTitleFromUrl.replace(/\+/g, ' ')
 
 export const App = ({ isDarkModeEnabled }) => (
   <ThemeProvider theme={isDarkModeEnabled ? darkTheme : lightTheme}>
     <Global styles={globalStyles} />
+    <Helmet>
+      <title>{process.env.REACT_APP_DEFAULT_TITLE}</title>
+      <meta
+        name="description"
+        content={process.env.REACT_APP_DEFAULT_DESCRIPTION}
+      />
+    </Helmet>
     <Header />
     <div>
       <WelcomeMessage />
@@ -68,10 +76,10 @@ export const App = ({ isDarkModeEnabled }) => (
     <Footer />
     <PrintModeHandler />
   </ThemeProvider>
-);
+)
 
 const mapStateToProps = ({ app: { isDarkModeEnabled } }) => ({
   isDarkModeEnabled
-});
+})
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps)(App)
