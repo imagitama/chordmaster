@@ -7,6 +7,7 @@ import * as Sentry from '@sentry/browser'
 import { BrowserRouter as Router } from 'react-router-dom'
 import App from './App'
 import createStore from './store'
+import history from './history'
 
 const { store, persistor } = createStore()
 
@@ -22,7 +23,7 @@ const render = Component =>
   ReactDOM.render(
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <Router>
+        <Router history={history}>
           <Component />
         </Router>
       </PersistGate>

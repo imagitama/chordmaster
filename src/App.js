@@ -16,6 +16,7 @@ import AboutContainer from './containers/about/about'
 import ChangesContainer from './containers/changes/changes'
 import SongContainer from './containers/song/song'
 import ChordContainer from './containers/chord/chord'
+import KeyContainer from './containers/key/key'
 import SongsContainer from './containers/songs/songs'
 import ChordCreatorContainer from './containers/chord-creator/chord-creator'
 import PrintModeHandler from './components/print-mode-handler/print-mode-handler'
@@ -70,6 +71,14 @@ export const App = ({ isDarkModeEnabled }) => (
           }) => (
             <ChordContainer chordShortName={chordShortName.toLowerCase()} />
           )}
+        />
+        <Route
+          path="/key/:keyShortName"
+          component={({
+            match: {
+              params: { keyShortName }
+            }
+          }) => <KeyContainer keyShortName={keyShortName.toLowerCase()} />}
         />
       </Switch>
     </div>

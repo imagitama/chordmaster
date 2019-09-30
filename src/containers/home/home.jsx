@@ -3,11 +3,11 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { parse } from 'query-string'
 import Chords from '../../components/chords/chords'
-import SongsForKey from '../../components/songs-for-key/songs-for-key'
 import { selectKey } from '../../ducks/keys/actions'
 import { doesKeyShortNameExist } from '../../utils'
+import LearnAboutKeyMessage from '../../components/learn-about-key-message/learn-about-key-message'
 
-const HomeContainer = ({ search, selectKey }) => {
+const HomeContainer = ({ search, selectKey, selectedKeyShortName }) => {
   const { key: providedKeyShortName } = parse(search)
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const HomeContainer = ({ search, selectKey }) => {
   return (
     <Fragment>
       <Chords />
-      <SongsForKey />
+      <LearnAboutKeyMessage />
     </Fragment>
   )
 }

@@ -9,6 +9,12 @@ export const getKeyFromShortName = shortName =>
     ({ shortName: shortNameUnderTest }) => shortNameUnderTest === shortName
   )
 
+export const getKeyFromShortNameLowercase = shortNameLowercase =>
+  keysDefinition.find(
+    ({ shortName: shortNameUnderTest }) =>
+      shortNameUnderTest.toLowerCase() === shortNameLowercase
+  )
+
 export const cleanNameForSounds = name =>
   name.replace('#', 'sharp').toLowerCase()
 

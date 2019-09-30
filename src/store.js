@@ -1,6 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import logger from 'redux-logger'
 import { persistStore, persistReducer } from 'redux-persist'
+import thunkMiddleware from 'redux-thunk'
 import storage from 'redux-persist/lib/storage' // defaults to localStorage for web and AsyncStorage for react-native
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2'
 import keysReducer from './ducks/keys/reducer'
@@ -33,7 +34,7 @@ export default () => {
     process.env.NODE_ENV !== 'test'
       ? createStore(
           persistedReducer,
-          applyMiddleware(logger, analyticsMiddleware)
+          applyMiddleware(logger, analyticsMiddleware, thunkMiddleware)
         )
       : createStore(rootReducer)
   const persistor = persistStore(store)

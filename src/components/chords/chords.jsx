@@ -20,7 +20,8 @@ export const Chords = ({
   searchTerm,
   majorMinorChordsOnly,
   favouriteChords,
-  favouritesOnly
+  favouritesOnly,
+  canFavourite = true
 }) => {
   let chords = populateCopiedChords(chordsDefinition)
 
@@ -61,7 +62,7 @@ export const Chords = ({
   return (
     <ChordsStyled>
       {chords.map(chord => (
-        <Chord key={chord.shortName} {...chord} />
+        <Chord key={chord.shortName} {...chord} canFavourite={canFavourite} />
       ))}
     </ChordsStyled>
   )
