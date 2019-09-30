@@ -12,10 +12,10 @@ export const FiltersStyled = styled.div`
 `
 
 export const Filter = styled.div`
-  padding: 1rem;
+  padding: 0 1rem;
 
   @media (max-width: ${mediaQuery.small}) {
-    padding: 0.25rem 1rem;
+    padding: 0.5rem 0;
   }
 
   :empty {

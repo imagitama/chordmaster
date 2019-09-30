@@ -15,15 +15,8 @@ export const HeaderStyled = styled.header`
 export const Logo = styled(A)`
   text-decoration: none;
   font-weight: bold;
-  padding: 1rem;
-
-  @media (max-width: ${mediaQuery.small}) {
-    padding: 1rem 1rem 0;
-  }
 `
 
-export const ReturnToMainAppLink = styled(A)`
-  padding: 1rem;
-`
+export const ReturnToMainAppLink = styled(A)``
 
 export default HeaderStyled
