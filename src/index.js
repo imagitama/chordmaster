@@ -11,6 +11,8 @@ import history from './history'
 
 const { store, persistor } = createStore()
 
+const basePath = process.env.REACT_APP_BASE_PATH || undefined;
+
 if (process.env.NODE_ENV === 'production') {
   Sentry.init({
     dsn: 'https://f4afba1340004de7b22b7e7eccbec25c@sentry.io/1427601'
@@ -23,7 +25,7 @@ const render = Component =>
   ReactDOM.render(
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <Router history={history}>
+        <Router history={history} basename={basePath}>
           <Component />
         </Router>
       </PersistGate>
