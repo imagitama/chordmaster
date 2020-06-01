@@ -9,6 +9,12 @@ Available [HERE](http://imagitama.github.io/chordmaster).
     npm i
     npm start
 
+### Alternative
+
+After you have installed Docker and Docker compose, you can run the app with a single command
+
+    docker-compose up
+
 ## About
 
 Technologies:

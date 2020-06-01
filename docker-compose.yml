@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  node:
+    image: node:14.3.0
+    restart: always
+    stdin_open: true
+    ports:
+      - 3335:3000
+    volumes:
+      - .:/client
+    command: bash -c "cd client && yarn install && yarn start"
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
