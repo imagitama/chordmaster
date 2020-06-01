@@ -2,6 +2,7 @@
   "name": "chord.guide",
   "description": "A React app that shows chords, keys and more.",
   "version": "1.0.0",
+  "homepage": "http://imagitama.github.io/chordmaster",
   "private": true,
   "dependencies": {
     "@emotion/core": "^10.0.7",
@@ -30,7 +31,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.{js,jsx}",
     "ultimate-guitar-converter": "node tools/ultimate-guitar-converter/main.js",
-    "prettier": "prettier src/**/*.{js,jsx}"
+    "prettier": "prettier src/**/*.{js,jsx}",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -54,6 +57,7 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
     "enzyme-to-json": "^3.3.5",
+    "gh-pages": "^3.0.0",
     "jest-emotion": "^10.0.10",
     "jest-fetch-mock": "^2.1.2",
     "prettier": "^1.18.2"
