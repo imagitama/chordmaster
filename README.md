@@ -2,10 +2,18 @@
 
 A React web app that lists all popular and not popular chords, keys and songs.
 
+Available [HERE](http://imagitama.github.io/chordmaster).
+
 ## Usage
 
     npm i
     npm start
+
+### Alternative
+
+After you have installed Docker and Docker compose, you can run the app with a single command
+
+    docker-compose up
 
 ## About
 
